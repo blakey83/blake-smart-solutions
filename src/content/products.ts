@@ -6,7 +6,7 @@ export const specials: Product[] = [
     description:
       "An on-site review of coverage, speed, device placement, and common network issues, with practical advice on the best next step.",
     price: "$149",
-    image: "/wifi-health-check.jpg",
+    image: "/images/wifi_health.jpeg",
     imageAlt: "Technician testing home Wi-Fi performance",
     badge: "Special Offer",
     features: [
