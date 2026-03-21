@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-labelledby="title desc" role="img">
+  <title id="title">Data cabling icon</title>
+  <desc id="desc">A clean line icon showing an RJ45 plug connected to a cable and data node.</desc>
+  <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 14h18l6 6v12a6 6 0 0 1-6 6H24a6 6 0 0 1-6-6V14Z"/>
+    <path d="M36 14v8h8"/>
+    <path d="M24 22v6"/>
+    <path d="M29 22v6"/>
+    <path d="M34 22v6"/>
+    <path d="M19 28h22"/>
+    <path d="M30 38v8c0 2.8-2.2 5-5 5h-6"/>
+    <path d="M19 51a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+    <path d="M41 38v5c0 2.2 1.8 4 4 4h4c2.2 0 4 1.8 4 4v0"/>
+    <path d="M53 55a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"/>
+  </g>
+</svg>

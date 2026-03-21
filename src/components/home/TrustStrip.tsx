@@ -1,19 +1,14 @@
-const trustItems = [
-  "Perth-based service",
-  "Homes and businesses",
-  "ABN 66 695 399 761",
-  "Security Agent Licence SA84208",
-];
+import { trustItems } from "@/content/products";
 
 export function TrustStrip() {
   return (
-    <section className="border-y border-[var(--color-border)] bg-white">
-      <div className="mx-auto max-w-6xl px-5 py-5 sm:px-6 lg:px-8">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {trustItems.map((item) => (
+    <section className="bg-[var(--color-ink)] text-white">
+      <div className="mx-auto max-w-6xl px-5 py-6 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4">
+          {trustItems.map((item, i) => (
             <div
               key={item}
-              className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] px-4 py-4 text-center text-sm font-medium text-[var(--color-ink)]"
+              className="py-3 text-center text-sm font-medium opacity-90 border-white/10 sm:border-r last:border-r-0"
             >
               {item}
             </div>

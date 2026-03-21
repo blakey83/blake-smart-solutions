@@ -8,38 +8,38 @@ type ProductCardProps = {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <article className="overflow-hidden rounded-[24px] border border-[var(--color-border)] bg-white shadow-[0_14px_30px_rgba(15,23,42,0.04)]">
+    <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-white shadow-[0_14px_30px_rgba(15,23,42,0.04)]">
       {product.image ? (
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
-          <Image
-            src={product.image}
-            alt={product.imageAlt || product.name}
-            fill
-            className="object-cover"
-          />
+        <div className="flex h-44 w-full items-center justify-center overflow-hidden bg-white p-6">
+          <div className="relative h-full w-full">
+            <Image
+              src={product.image}
+              alt={product.imageAlt || product.name}
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
       ) : null}
 
-      <div className="p-6">
-        <div className="flex flex-col gap-4 border-b border-[var(--color-border)] pb-5 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            {product.badge ? (
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-                {product.badge}
-              </p>
-            ) : null}
+      <div className="flex flex-1 flex-col p-6">
+        <div className="flex flex-wrap items-center gap-3">
+          {product.badge ? (
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+              {product.badge}
+            </span>
+          ) : null}
 
-            <h3 className="mt-2 text-2xl font-semibold text-[var(--color-ink)]">
-              {product.name}
-            </h3>
-          </div>
-
-          <p className="text-3xl font-semibold text-[var(--color-ink)]">
+          <span className="rounded-full bg-[var(--color-accent-soft)] px-3 py-1 text-sm font-semibold text-[var(--color-accent)]">
             {product.price}
-          </p>
+          </span>
         </div>
 
-        <p className="mt-5 text-sm leading-6 text-[var(--color-muted)]">
+        <h3 className="mt-4 text-2xl font-semibold leading-tight text-[var(--color-ink)]">
+          {product.name}
+        </h3>
+
+        <p className="mt-3 min-h-[84px] text-sm leading-7 text-[var(--color-muted)]">
           {product.description}
         </p>
 
