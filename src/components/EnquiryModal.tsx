@@ -131,7 +131,7 @@ export default function EnquiryModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 p-4">
+    <div className="fixed inset-0 z-999 flex items-center justify-center bg-slate-950/70 p-4">
       <div className="relative w-full max-w-xl rounded-[28px] bg-white p-6 shadow-2xl sm:p-8">
         <button
           type="button"
