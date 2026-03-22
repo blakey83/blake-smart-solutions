@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { openEnquiryModal } from "@/lib/enquiryModal";
 
 export function HeroSection() {
   return (
@@ -16,7 +17,7 @@ export function HeroSection() {
         >
           <div className="relative aspect-[4/5] w-full sm:aspect-[4/3] lg:aspect-[3/2]">
             <Image
-              src="/images/daniel-bss-hero.png"
+              src="/images/daniel-bss-director.png"
               alt="Blake Smart Solutions technician on site"
               fill
               priority
@@ -59,12 +60,13 @@ export function HeroSection() {
               Call 0477 948 079
             </Link>
 
-            <Link
-              href="/#final-cta"
+            <button
+              type="button"
+              onClick={() => openEnquiryModal()}
               className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Request a Quote
-            </Link>
+            </button>
           </div>
         </motion.div>
       </div>

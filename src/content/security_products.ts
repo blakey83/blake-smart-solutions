@@ -3,7 +3,7 @@ import type { Product } from "@/lib/types";
 export const alarmIntro = {
   title: "Alarm & Access Control",
   intro:
-    "Choose alarm systems and access solutions that improve security without adding complexity, with clean installation and simple handover.",
+    "Protect your home or business with a reliable alarm system that’s simple to use and built to actually deter intruders. We install professional systems with smart sensor placement, loud deterrents, and easy control from your phone or keypad. Whether you want basic internal protection or a more complete setup with entry monitoring and access control, every system is tailored to suit your property. The options below are common setups and guide pricing.",
 };
 
 export const securityProducts: Product[] = [

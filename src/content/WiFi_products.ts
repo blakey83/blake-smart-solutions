@@ -3,7 +3,7 @@ import type { Product } from "@/lib/types";
 export const wifiDataIntro = {
   title: "Wi-Fi & Wireless Solutions",
   intro:
-    "Fix weak coverage, dead spots, and unstable connections with practical Wi-Fi upgrades designed around how your property is actually used day to day.",
+    "Slow speeds, dropouts, or Wi-Fi that doesn’t reach where you need it? Reliable Wi-Fi isn’t about guesswork — it comes down to proper testing, smart design, and the right equipment installed in the right locations. We assess your network, identify the root cause of issues, and deliver a tailored solution, whether that’s improving coverage inside, extending Wi-Fi outdoors, or linking separate buildings like sheds or offices. The services below are typical solutions and guide pricing, with every system designed to suit your property and how you actually use it.",
 };
 
 export const wifiProducts: Product[] = [
@@ -29,7 +29,7 @@ export const wifiProducts: Product[] = [
     description:
       "Ideal for homes with weak signal areas, this system adds additional coverage to eliminate dropouts and improve performance where you need it most.",
     price: "From $449",
-    image: "/images/deco_x55_2pack.png",
+    image: "/images/328143_large_15016431-8027-4ea9-9c08-08fd4f7e863b.webp",
     imageAlt: "TP-Link Deco X55 mesh WiFi system",
     badge: "Most Popular",
     features: [
@@ -46,7 +46,7 @@ export const wifiProducts: Product[] = [
     description:
       "A complete mesh WiFi solution designed to provide consistent coverage across your entire home, ideal for larger properties or multiple living areas.",
     price: "From $649",
-    image: "/images/deco_x55_3pack.png",
+    image: "/images/tplink-deco-x55-pro-stack-side.avif",
     imageAlt: "TP-Link Deco X55 3 pack mesh WiFi system",
     badge: "Full Coverage",
     features: [
@@ -59,11 +59,11 @@ export const wifiProducts: Product[] = [
     href: "/#final-cta",
   },
   {
-    name: "Shed & Outdoor WiFi Link",
+    name: "Shed or Granny flat WiFi Link",
     description:
       "Connect your shed, workshop, or granny flat with a reliable wireless bridge and dedicated access point for fast and stable internet beyond the main house.",
     price: "From $999",
-    image: "/images/wireless_bridge_kit.png",
+    image: "/images/wifi_to_shed.png",
     imageAlt: "Wireless bridge and access point setup for shed WiFi",
     badge: "Extended Coverage",
     features: [
@@ -90,23 +90,6 @@ export const wifiProducts: Product[] = [
       "Professionally installed and configured",
     ],
     ctaLabel: "Message Now",
-    href: "/#final-cta",
-  },
-  {
-    name: "Large Area Outdoor WiFi",
-    description:
-      "Designed for large backyards, rural blocks, or wide outdoor areas requiring extended coverage and stronger performance over longer distances.",
-    price: "From $799",
-    image: "/images/outdoor_ap_pro.png",
-    imageAlt: "High power outdoor WiFi access point for large areas",
-    badge: "High Performance",
-    features: [
-      "High-performance outdoor access point",
-      "Extended range for large properties",
-      "Handles multiple users and devices outdoors",
-      "Installed and tuned for optimal coverage",
-    ],
-    ctaLabel: "Upgrade your property",
     href: "/#final-cta",
   },
 ];

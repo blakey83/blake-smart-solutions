@@ -1,6 +1,6 @@
 import { specials } from "@/content/products";
 import { SectionHeading } from "../ui/SectionHeading";
-import ProductCard from "../ui/ProductCard";
+import { ProductCardGrid } from "../products/ProductCardGrid";
 
 export function SpecialsSection() {
   return (
@@ -12,10 +12,11 @@ export function SpecialsSection() {
           description="Fixed-price entry offers designed to solve common Wi-Fi and security problems without overcomplicating the process."
         />
 
-        <div className="mt-8 grid gap-4 lg:grid-cols-2">
-          {specials.map((special) => (
-            <ProductCard key={special.name} product={special} />
-          ))}
+        <div className="mt-8">
+          <ProductCardGrid
+            products={specials}
+            className="grid gap-4 lg:grid-cols-2"
+          />
         </div>
       </div>
     </section>

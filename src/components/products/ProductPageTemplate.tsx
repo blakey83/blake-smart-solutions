@@ -1,5 +1,5 @@
 import type { Product } from "@/lib/types";
-import ProductCard from "@/components/ui/ProductCard";
+import { ProductCardGrid } from "@/components/products/ProductCardGrid";
 
 type ProductPageTemplateProps = {
   title: string;
@@ -32,11 +32,7 @@ export function ProductPageTemplate({
 
       <section className="bg-[var(--color-section)]">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {products.map((product) => (
-              <ProductCard key={product.name} product={product} />
-            ))}
-          </div>
+          <ProductCardGrid products={products} />
         </div>
       </section>
     </div>

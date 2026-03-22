@@ -1,9 +1,9 @@
 import type { Product } from "@/lib/types";
 
 export const antennasIntro = {
-  title: "TV Antennas",
+  title: "TV Reception & Antenna Services",
   intro:
-    "Restore or improve free-to-air TV reception with practical antenna repairs, new outlets, and complete antenna replacements suited to Perth conditions.",
+    "Pixelation, dropouts, or no signal? We diagnose and fix TV reception issues fast. The services below are common jobs and guide pricing — we’ll recommend the right solution for your home.",
 };
 
 export const antennaProducts: Product[] = [
@@ -29,7 +29,7 @@ export const antennaProducts: Product[] = [
     description:
       "Add a new TV outlet anywhere in your home for a clean, reliable connection. Perfect for bedrooms, living areas, or wall-mounted TVs without messy cables.",
     price: "$199 per point",
-    image: "/images/tv_point_install.png",
+    image: "/images/TV-Point-Installation-Image.webp",
     imageAlt: "Wall mounted TV with hidden data and antenna outlet",
     badge: "Best Value",
     features: [
@@ -46,7 +46,7 @@ export const antennaProducts: Product[] = [
     description:
       "Upgrade to a high-performance Hills Black Arrow antenna for crystal-clear reception across all free-to-air channels. Built to handle Perth conditions and deliver reliable signal for years.",
     price: "From $499",
-    image: "/images/antenna_install.png",
+    image: "/images/hills_blak_arrow.jpg",
     imageAlt: "New Hills antenna installed on residential roof",
     badge: "Premium",
     features: [

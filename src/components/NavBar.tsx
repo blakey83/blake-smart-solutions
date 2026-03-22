@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { openEnquiryModal } from "@/lib/enquiryModal";
 
 const primaryLinks = [
   { label: "Home", href: "/" },
@@ -55,12 +56,13 @@ export default function NavBar() {
           </nav>
 
           <div className="hidden xl:flex">
-            <Link
-              href="/#final-cta"
+            <button
+              type="button"
+              onClick={() => openEnquiryModal()}
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
             >
               Request a Quote
-            </Link>
+            </button>
           </div>
 
           <button
