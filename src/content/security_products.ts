@@ -1,5 +1,11 @@
 import type { Product } from "@/lib/types";
 
+export const alarmIntro = {
+  title: "Alarm & Access Control",
+  intro:
+    "Choose alarm systems and access solutions that improve security without adding complexity, with clean installation and simple handover.",
+};
+
 export const securityProducts: Product[] = [
   {
     name: "Essential Security Package",

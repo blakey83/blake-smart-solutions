@@ -1,78 +1,72 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { ButtonLink } from "../ui/ButtonLink";
-import { heroContent, services } from "@/content/products";
-
+import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section className="border-b border-[var(--color-border)] bg-white">
-      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div className="max-w-2xl">
-            <p className="inline-flex rounded-full bg-[var(--color-accent-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
-              Perth Smart Technology Specialists
-            </p>
+    <section className="bg-white">
+      <div className="mx-auto max-w-6xl px-5 pt-6 pb-12 sm:px-6 lg:px-8 lg:pt-8 lg:pb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.9, ease: "easeOut" }}
+          className="relative mx-auto max-w-6xl overflow-hidden rounded-[28px] border border-[var(--color-border)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
+        >
+          <div className="relative aspect-[4/5] w-full sm:aspect-[4/3] lg:aspect-[3/2]">
+            <Image
+              src="/images/daniel-bss-hero.png"
+              alt="Blake Smart Solutions technician on site"
+              fill
+              priority
+              className="object-cover object-[center_18%]"
+            />
+          </div>
+        </motion.div>
 
-            <h1 className="mt-5 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
-              {heroContent.largeText}
-            </h1>
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2.1, delay: 0.35, ease: "easeOut" }}
+          className="relative mx-auto -mt-8 max-w-5xl rounded-[28px] bg-[var(--color-accent)] p-6 text-white shadow-[0_20px_50px_rgba(15,23,42,0.18)] sm:-mt-10 sm:p-8 lg:-mt-20 lg:px-10 lg:py-9"
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+            Perth&apos;s technology specialists
+          </p>
 
-            <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-              {heroContent.smallText}
-            </p>
+          <h1 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+            Practicle solutions for homes and business
+          </h1>
 
-            <div className="mt-6">
-              <Link
-                href="tel:0477948079"
-                className="inline-flex items-center text-base font-semibold text-[var(--color-accent)] underline-offset-4 hover:underline"
-              >
-                Call 0477 948 079
-              </Link>
-            </div>
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90 sm:text-base sm:leading-7">
+            Blake Smart Solutions delivers clean, professional installations,
+            clear advice, and reliable systems for security, Wi-Fi, Starlink,
+            NBN smart wiring, and TV reception.
+          </p>
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="tel:0477948079">Call Now</ButtonLink>
-              <ButtonLink href="#final-cta" variant="secondary">
-                Request a Quote
-              </ButtonLink>
-            </div>
+          <div className="mt-5 grid gap-2 text-sm text-white/90 sm:grid-cols-3">
+            <p>✔ Perth-based local service</p>
+            <p>✔ Fully insured &amp; qualified</p>
+            <p>✔ ABN 66 695 399 761</p>
+          </div>
 
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="#specials"
-              className="mt-4 inline-flex text-sm font-medium text-[var(--color-ink)] underline underline-offset-4"
+              href="tel:0477948079"
+              className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-[var(--color-accent)] transition hover:bg-white/95"
             >
-              See current specials
+              Call 0477 948 079
             </Link>
 
-            <div className="mt-6 flex flex-wrap gap-3">
-              {services.map((service) => (
-                <span
-                  key={service.title}
-                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-card)] px-4 py-2 text-sm font-medium text-[var(--color-ink)]"
-                >
-                  {service.title }
-                </span>
-              ))}
-            </div>
+            <Link
+              href="/#final-cta"
+              className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Request a Quote
+            </Link>
           </div>
-
-          <div className="space-y-4">
-            <div className="overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[0_20px_45px_rgba(15,23,42,0.08)]">
-              <div className="relative aspect-[4/5] w-full sm:aspect-[5/4] lg:aspect-[4/5]">
-                <Image
-                  src="/images/daniel-bss-hero.png"
-                  alt="Blake Smart Solutions technician on site"
-                  fill
-                  priority
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

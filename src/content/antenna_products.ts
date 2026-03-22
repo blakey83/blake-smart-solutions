@@ -1,5 +1,11 @@
 import type { Product } from "@/lib/types";
 
+export const antennasIntro = {
+  title: "TV Antennas",
+  intro:
+    "Restore or improve free-to-air TV reception with practical antenna repairs, new outlets, and complete antenna replacements suited to Perth conditions.",
+};
+
 export const antennaProducts: Product[] = [
   {
     name: "TV Reception Repair",

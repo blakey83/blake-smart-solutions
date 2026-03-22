@@ -1,5 +1,11 @@
 import type { Product } from "@/lib/types";
 
+export const wifiDataIntro = {
+  title: "Wi-Fi & Wireless Solutions",
+  intro:
+    "Fix weak coverage, dead spots, and unstable connections with practical Wi-Fi upgrades designed around how your property is actually used day to day.",
+};
+
 export const wifiProducts: Product[] = [
   {
     name: "WiFi Health Check",
@@ -32,7 +38,7 @@ export const wifiProducts: Product[] = [
       "Eliminates dead zones and weak spots",
       "Installed and optimised for your layout",
     ],
-    ctaLabel: "Get a Free Quote",
+    ctaLabel: "Ask About a boost",
     href: "/#final-cta",
   },
   {
@@ -49,7 +55,7 @@ export const wifiProducts: Product[] = [
       "Supports multiple users and devices",
       "Professionally installed and configured",
     ],
-    ctaLabel: "Get a Free Quote",
+    ctaLabel: "Upgrade your WiFi",
     href: "/#final-cta",
   },
   {
@@ -66,7 +72,7 @@ export const wifiProducts: Product[] = [
       "Stable connection between buildings",
       "Fully installed and aligned for reliability",
     ],
-    ctaLabel: "Get a Free Quote",
+    ctaLabel: "Ask Us How",
     href: "/#final-cta",
   },
   {
@@ -83,7 +89,7 @@ export const wifiProducts: Product[] = [
       "Strong signal in open outdoor spaces",
       "Professionally installed and configured",
     ],
-    ctaLabel: "Get a Free Quote",
+    ctaLabel: "Message Now",
     href: "/#final-cta",
   },
   {
@@ -100,7 +106,7 @@ export const wifiProducts: Product[] = [
       "Handles multiple users and devices outdoors",
       "Installed and tuned for optimal coverage",
     ],
-    ctaLabel: "Get a Free Quote",
+    ctaLabel: "Upgrade your property",
     href: "/#final-cta",
   },
 ];

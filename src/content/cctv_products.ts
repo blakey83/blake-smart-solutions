@@ -1,5 +1,11 @@
 import type { Product } from "@/lib/types";
 
+export const cctvIntro = {
+  title: "CCTV & Security Cameras",
+  intro:
+    "Protect your home or small business with professionally installed CCTV systems that give you clear coverage, reliable recording, and straightforward remote access.",
+};
+
 export const cctvProducts: Product[] = [
   {
     name: "Dahua 4 Camera Security Package",

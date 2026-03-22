@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { services } from "@/content/products";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -14,10 +15,10 @@ export function ServicesSection() {
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
-            <article
+            <Link
               key={service.title}
-              id={service.title}
-              className="flex h-full flex-col rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_38px_rgba(15,23,42,0.07)]"
+              href={service.href}
+              className="group flex h-full flex-col rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_38px_rgba(15,23,42,0.07)]"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--color-accent-soft)]">
                 <Image
@@ -37,7 +38,11 @@ export function ServicesSection() {
               <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">
                 {service.description}
               </p>
-            </article>
+
+              <span className="mt-5 inline-flex items-center text-sm font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
+                View service
+              </span>
+            </Link>
           ))}
         </div>
       </div>

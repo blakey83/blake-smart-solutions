@@ -9,11 +9,12 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  { label: "CCTV & Security Cameras", href: "/#services" },
-  { label: "Wi-Fi & Wireless", href: "/#services" },
-  { label: "Starlink", href: "/#services" },
-  { label: "Data Cabling", href: "/#services" },
-  { label: "TV Antennas", href: "/#services" },
+  { label: "CCTV & Security Cameras", href: "/cctv" },
+  { label: "Wi-Fi & Wireless", href: "/wifi-data" },
+  { label: "Alarm & Access Control", href: "/alarms" },
+  { label: "Starlink", href: "/starlink" },
+  { label: "Data Cabling", href: "/data-cabling" },
+  { label: "TV Antennas", href: "/antennas" },
 ];
 
 export function Footer() {

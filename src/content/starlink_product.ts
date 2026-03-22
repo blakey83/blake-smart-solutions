@@ -1,5 +1,11 @@
 import type { Product } from "@/lib/types";
 
+export const starlinkIntro = {
+  title: "Starlink Installation",
+  intro:
+    "Get Starlink installed properly with smart dish placement, tidy cable routing, and upgrades that help you make the most of your connection indoors and out.",
+};
+
 export const starlinkProducts: Product[] = [
   {
     name: "Starlink Installation",

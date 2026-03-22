@@ -22,7 +22,7 @@ export const specials: Product[] = [
     name: "Dahua 4 Camera Security Package",
     description:
       "A professionally installed Dahua security system for homes and small businesses wanting reliable day and night coverage, remote viewing, and room to expand later.",
-    price: "From $1,799",
+    price: "From $1,999",
     image: "/dahua_4cam_kit1.png",
     imageAlt: "Dahua 4 camera CCTV security package with NVR",
     badge: "Security Essentials",
@@ -42,36 +42,42 @@ export const services = [
     description:
       "Camera systems for homes and small businesses, with clear coverage, remote viewing, and practical protection around entry points, driveways, and key areas.",
     icon: "/icons/service-cctv.svg",
+    href: "/cctv",
   },
   {
     title: "Wi-Fi & Wireless Solutions",
     description:
       "Fix weak coverage, dropouts, and slow connections with better Wi-Fi design, mesh systems, outdoor access points, and wireless links to sheds or outbuildings.",
     icon: "/icons/service-wifi.svg",
+    href: "/wifi-data",
   },
   {
     title: "Alarm & Access Control",
     description:
       "Straightforward alarm and access solutions designed to improve security without making the system hard to use day to day.",
     icon: "/icons/icon-alarms-access-control.svg",
+    href: "/alarms",
   },
   {
     title: "Starlink Installation",
     description:
       "Professional Starlink mounting and setup, with practical placement and cable routing to help get the best performance from your service.",
     icon: "/icons/service-starlink.svg",
+    href: "/starlink",
   },
   {
     title: "Data Cabling",
     description:
       "Neat, professional cabling for new data points, network upgrades, and hard-wired connections where Wi-Fi alone is not the best solution.",
     icon: "/icons/icon-data-cabling.svg",
+    href: "/data-cabling",
   },
   {
     title: "TV Antennas",
     description:
       "Antenna installation, fault finding, and reception improvements for homes that still want reliable free-to-air TV where streaming is not always ideal.",
     icon: "/icons/service-antennas.svg",
+    href: "/antennas",
   },
 ];
 

@@ -1,5 +1,11 @@
 import type { Product } from "@/lib/types";
 
+export const dataIntro = {
+  title: "Data Cabling",
+  intro:
+    "Add reliable hard-wired connections for offices, TVs, gaming, Wi-Fi backhaul, and new builds with neat Cat6 cabling and tested performance.",
+};
+
 export const dataCablingProducts: Product[] = [
   {
     name: "NBN Smart Home – Essential",

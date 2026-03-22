@@ -12,19 +12,19 @@ const primaryLinks = [
 ];
 
 const serviceLinks = [
-  { label: "CCTV", href: "/#cctv-security-cameras" },
-  { label: "Alarms", href: "/#alarm-systems" },
-  { label: "Wi-Fi & Data", href: "/#wi-fi-data" },
-  { label: "Starlink", href: "/#starlink-installation" },
-  { label: "Antennas", href: "/#tv-antennas" },
-  { label: "Home Entertainment", href: "/#home-entertainment" },
+  { label: "CCTV", href: "/cctv" },
+  { label: "Wi-Fi", href: "/wifi-data" },
+  { label: "Alarms", href: "/alarms" },
+  { label: "Starlink", href: "/starlink" },
+  { label: "Data Cabling", href: "/data-cabling" },
+  { label: "Antennas", href: "/antennas" },
 ];
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/95 text-white backdrop-blur">
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
         <div className="flex min-h-20 items-center justify-between gap-4">
           <Link
@@ -38,11 +38,11 @@ export default function NavBar() {
               width={280}
               height={72}
               priority
-              className="h-auto w-[180px] sm:w-[220px]"
+              className="h-auto w-[240px] sm:w-[330px]"
             />
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav className="hidden items-center gap-6 xl:flex">
             {primaryLinks.map((link) => (
               <Link
                 key={link.label}
@@ -54,7 +54,7 @@ export default function NavBar() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex">
+          <div className="hidden xl:flex">
             <Link
               href="/#final-cta"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
@@ -67,7 +67,7 @@ export default function NavBar() {
             type="button"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-nav"
-            className="inline-flex min-h-12 min-w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/8 text-white lg:hidden"
+            className="inline-flex min-h-12 min-w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/8 text-white xl:hidden"
             onClick={() => setIsMenuOpen((prev) => !prev)}
           >
             <span className="sr-only">Toggle navigation menu</span>
@@ -96,10 +96,24 @@ export default function NavBar() {
           </button>
         </div>
 
+        <div className="hidden border-t border-white/10 py-3 xl:block">
+          <nav className="flex flex-wrap items-center justify-center gap-3">
+            {serviceLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="inline-flex min-h-10 items-center rounded-full border border-white/12 bg-white/6 px-4 text-sm font-medium text-white transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
         {isMenuOpen ? (
           <div
             id="mobile-nav"
-            className="border-t border-white/10 py-4 lg:hidden"
+            className="border-t border-white/10 py-4 xl:hidden"
           >
             <nav className="flex flex-col gap-2">
               {primaryLinks.map((link) => (
