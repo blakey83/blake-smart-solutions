@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { Product } from "@/lib/types";
 
 const INITIAL_FORM_DATA = {
@@ -18,6 +18,10 @@ type EnquiryModalProps = {
   onClose: () => void;
 };
 
+function getInitialMessage(product: Product) {
+  return `Hi, I'm interested in the ${product.name}.`;
+}
+
 export default function EnquiryModal({
   product,
   isOpen,
@@ -34,12 +38,30 @@ export default function EnquiryModal({
     message: "",
   });
 
+  const resetForm = useCallback((nextProduct: Product | null) => {
+    setFormStartedAt(Date.now());
+    setIsSubmitting(false);
+    setStatus({
+      type: "idle",
+      message: "",
+    });
+    setFormData({
+      ...INITIAL_FORM_DATA,
+      message: nextProduct ? getInitialMessage(nextProduct) : "",
+    });
+  }, []);
+
+  const handleClose = useCallback(() => {
+    resetForm(null);
+    onClose();
+  }, [onClose, resetForm]);
+
   useEffect(() => {
     if (!isOpen) return;
 
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        onClose();
+        handleClose();
       }
     };
 
@@ -50,21 +72,12 @@ export default function EnquiryModal({
       document.removeEventListener("keydown", handleEscape);
       document.body.style.overflow = "";
     };
-  }, [isOpen, onClose]);
+  }, [handleClose, isOpen]);
 
   useEffect(() => {
     if (!product) return;
-
-    setFormStartedAt(Date.now());
-    setStatus({
-      type: "idle",
-      message: "",
-    });
-    setFormData({
-      ...INITIAL_FORM_DATA,
-      message: `Hi, I'm interested in the ${product.name}.`,
-    });
-  }, [product]);
+    resetForm(product);
+  }, [product, resetForm]);
 
   if (!isOpen || !product) return null;
 
@@ -114,11 +127,7 @@ export default function EnquiryModal({
 
       setStatus({
         type: "success",
-        message: "Your enquiry has been sent. We will get back to you shortly.",
-      });
-      setFormData({
-        ...INITIAL_FORM_DATA,
-        message: `Hi, I'm interested in the ${product.name}.`,
+        message: "We’ve received your message and will be in touch shortly.",
       });
     } catch {
       setStatus({
@@ -135,7 +144,7 @@ export default function EnquiryModal({
       <div className="relative w-full max-w-xl rounded-[28px] bg-white p-6 shadow-2xl sm:p-8">
         <button
           type="button"
-          onClick={onClose}
+          onClick={handleClose}
           aria-label="Close enquiry form"
           className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-xl text-slate-700 transition hover:bg-slate-200"
         >
@@ -155,85 +164,95 @@ export default function EnquiryModal({
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-          <input
-            name="website"
-            type="text"
-            tabIndex={-1}
-            autoComplete="off"
-            value={formData.website}
-            onChange={handleChange}
-            className="hidden"
-            aria-hidden="true"
-          />
-
-          <input
-            name="name"
-            type="text"
-            placeholder="Your name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
-          />
-
-          <input
-            name="phone"
-            type="tel"
-            placeholder="Phone number"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
-          />
-
-          <input
-            name="email"
-            type="email"
-            placeholder="Email address"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
-          />
-
-          <input
-            name="suburb"
-            type="text"
-            placeholder="Suburb"
-            value={formData.suburb}
-            onChange={handleChange}
-            className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
-          />
-
-          <textarea
-            name="message"
-            placeholder="Tell me what you need"
-            value={formData.message}
-            onChange={handleChange}
-            rows={5}
-            required
-            className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
-          />
-
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full rounded-2xl bg-sky-500 px-6 py-4 text-lg font-semibold text-slate-950 transition hover:bg-sky-400"
-          >
-            {isSubmitting ? "Sending..." : "Send Enquiry"}
-          </button>
-
-          {status.type !== "idle" ? (
-            <p
-              className={
-                status.type === "success"
-                  ? "text-sm text-green-600"
-                  : "text-sm text-red-600"
-              }
-            >
+        {status.type === "success" ? (
+          <div className="mt-8 rounded-[24px] border border-slate-200 bg-slate-50 p-6 sm:p-8">
+            <h3 className="text-2xl font-bold tracking-tight text-slate-900">
+              Thanks for your enquiry
+            </h3>
+            <p className="mt-3 text-base leading-7 text-slate-600">
               {status.message}
             </p>
-          ) : null}
-        </form>
+            <button
+              type="button"
+              onClick={handleClose}
+              className="mt-6 w-full rounded-2xl bg-sky-500 px-6 py-4 text-lg font-semibold text-slate-950 transition hover:bg-sky-400"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+            <input
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={formData.website}
+              onChange={handleChange}
+              className="hidden"
+              aria-hidden="true"
+            />
+
+            <input
+              name="name"
+              type="text"
+              placeholder="Your name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
+            />
+
+            <input
+              name="phone"
+              type="tel"
+              placeholder="Phone number"
+              value={formData.phone}
+              onChange={handleChange}
+              className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
+            />
+
+            <input
+              name="email"
+              type="email"
+              placeholder="Email address"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
+            />
+
+            <input
+              name="suburb"
+              type="text"
+              placeholder="Suburb"
+              value={formData.suburb}
+              onChange={handleChange}
+              className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
+            />
+
+            <textarea
+              name="message"
+              placeholder="Tell me what you need"
+              value={formData.message}
+              onChange={handleChange}
+              rows={5}
+              required
+              className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
+            />
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full rounded-2xl bg-sky-500 px-6 py-4 text-lg font-semibold text-slate-950 transition hover:bg-sky-400"
+            >
+              {isSubmitting ? "Sending..." : "Send Enquiry"}
+            </button>
+
+            {status.type === "error" ? (
+              <p className="text-sm text-red-600">{status.message}</p>
+            ) : null}
+          </form>
+        )}
       </div>
     </div>
   );
