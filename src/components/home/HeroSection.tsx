@@ -17,7 +17,7 @@ export function HeroSection() {
         >
           <div className="relative aspect-[4/5] w-full sm:aspect-[4/3] lg:aspect-[3/2]">
             <Image
-              src="/images/daniel-bss-director.png"
+              src="/images/daniel-bss-hero.png"
               alt="Blake Smart Solutions technician on site"
               fill
               priority
