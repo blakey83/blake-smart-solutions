@@ -86,6 +86,14 @@ export function Footer() {
                   0477 948 079
                 </a>
               </li>
+              <li>
+                <a
+                  href="mailto:info@blakesmartsolutions.com.au"
+                  className="transition hover:text-white"
+                >
+                  info@blakesmartsolutions.com.au
+                </a>
+              </li>
               <li>Perth, Western Australia</li>
               <li>ABN 66 695 399 761</li>
               <li>SA 84208</li>
