@@ -49,7 +49,7 @@ export const services = [
     description:
       "Fix weak coverage, dropouts, and slow connections with better Wi-Fi design, mesh systems, outdoor access points, and wireless links to sheds or outbuildings.",
     icon: "/icons/service-wifi.svg",
-    href: "/wifi-data",
+    href: "/wifi-solutions-perth",
   },
   {
     title: "Alarm & Access Control",

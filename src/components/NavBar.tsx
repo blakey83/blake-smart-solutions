@@ -6,19 +6,9 @@ import Link from "next/link";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 const primaryLinks = [
-  { label: "Home", href: "/" },
-  { label: "Specials", href: "/#specials" },
-  { label: "Services", href: "/#services" },
-  { label: "Contact", href: "/#final-cta" },
-];
-
-const serviceLinks = [
-  { label: "CCTV", href: "/cctv" },
-  { label: "Wi-Fi", href: "/wifi-data" },
-  { label: "Alarms", href: "/alarms" },
-  { label: "Starlink", href: "/starlink" },
-  { label: "Data Cabling", href: "/data-cabling" },
-  { label: "Antennas", href: "/antennas" },
+  { label: "Wi-Fi & Network Solutions", href: "/wifi-solutions-perth" },
+  { label: "Security Camera Solutions", href: "/cctv" },
+  { label: "Alarm & Access Control", href: "/alarms" },
 ];
 
 export default function NavBar() {
@@ -98,20 +88,6 @@ export default function NavBar() {
           </button>
         </div>
 
-        <div className="hidden border-t border-white/10 py-3 xl:block">
-          <nav className="flex flex-wrap items-center justify-center gap-3">
-            {serviceLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="inline-flex min-h-10 items-center rounded-full border border-white/12 bg-white/6 px-4 text-sm font-medium text-white transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
         {isMenuOpen ? (
           <div
             id="mobile-nav"
@@ -129,24 +105,6 @@ export default function NavBar() {
                 </Link>
               ))}
             </nav>
-
-            <div className="mt-4 border-t border-white/10 pt-4">
-              <p className="px-4 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-                Service Links
-              </p>
-              <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                {serviceLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="inline-flex min-h-12 items-center rounded-2xl border border-white/10 bg-white/6 px-4 text-sm font-medium text-white transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
           </div>
         ) : null}
       </div>
