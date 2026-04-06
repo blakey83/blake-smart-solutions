@@ -32,8 +32,8 @@ export function Footer() {
             />
             <p className="mt-4 max-w-xs text-sm leading-6 text-white/70">
               Practical technology solutions for Perth homes and small
-              businesses, with a focus on security, connectivity, and tidy
-              workmanship.
+              businesses, with a focus on security, connectivity, and
+              professional service
             </p>
           </div>
 
