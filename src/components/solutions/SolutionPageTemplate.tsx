@@ -31,7 +31,11 @@ function SolutionCta({
 
   if (button.action === "enquiry") {
     return (
-      <button type="button" onClick={() => openEnquiryModal()} className={classes}>
+      <button
+        type="button"
+        onClick={() => openEnquiryModal()}
+        className={classes}
+      >
         {button.label}
       </button>
     );
@@ -159,7 +163,9 @@ export function SolutionPageTemplate({
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
             <div
               className={`items-center gap-8 lg:gap-12 ${
-                brandBlock.image ? "grid lg:grid-cols-[1.05fr_0.95fr]" : "max-w-4xl"
+                brandBlock.image
+                  ? "grid lg:grid-cols-[1.05fr_0.95fr]"
+                  : "max-w-4xl"
               }`}
             >
               <div className={brandBlock.image ? "" : "max-w-4xl"}>

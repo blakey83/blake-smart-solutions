@@ -16,8 +16,9 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     action: "enquiry",
   },
   secondaryCta: {
-    label: "Get a Quote",
-    action: "enquiry",
+    label: "Call now for a quote",
+    action: "link",
+    href: "tel:0477948079",
   },
 
   problemsEyebrow: "Common Wi-Fi problems",
