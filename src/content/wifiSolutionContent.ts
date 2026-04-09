@@ -102,7 +102,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
       "WiFi installation in Perth — designed properly for reliable coverage",
     intro:
       "We do more than plug in hardware and hope for the best. Blake Smart Solutions reviews the layout, coverage requirements and intended use of the space, then recommends a practical solution that suits the site. For Perth homes that might mean a simple mesh upgrade. For workshops, offices and more demanding jobs, it can mean business-grade access points, switching and wireless links designed for reliable day-to-day use.",
-    image: "/images/blake_casual.png",
+    image: "/Blake_shop_front.jpeg",
     imageAlt: "Daniel ready to work",
   },
 
