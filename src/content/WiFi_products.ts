@@ -5,7 +5,7 @@ export const wifiProducts: Product[] = [
     name: "WiFi Health Check",
     description:
       "Not sure why your WiFi is bad? This on-site check finds the real issue so you don’t waste money on the wrong gear.",
-    price: "$9 fixed price",
+    price: "$99 fixed price",
     image: "/images/wifi_survey.png",
     imageAlt: "Wi-Fi survey heatmap across a home or office floor plan",
     badge: "Start Here",
