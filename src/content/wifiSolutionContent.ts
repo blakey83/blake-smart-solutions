@@ -7,7 +7,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   intro:
     "Blake Smart Solutions designs and installs reliable Wi-Fi systems for homes, workshops, businesses and large properties across Perth and the surrounding suburbs, including outdoor areas and multi-building setups. Whether you're dealing with dead zones, unstable connections or poor coverage between buildings, we design systems that actually solve the problem — not just patch it.",
 
-  heroEyebrow: "Ruijie-backed Wi-Fi solutions",
+  heroEyebrow: "Professional Wi-Fi solutions",
   heroImage: "/images/WiFi_hero.png",
   heroImageAlt: "Blake Smart Solutions WiFi",
 
@@ -79,11 +79,11 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     image: "/images/rayee_partner.png",
     imageAlt: "Ruijie Rayee",
     points: [
-      "• Built for offices, workshops, retail and demanding home setups",
-      "• Handles more devices without slowing down or dropping out",
-      "• Optional cloud-managed systems for easier support and changes",
-      "• Scalable setups that grow with your coverage needs",
-      "• A smarter alternative to basic off-the-shelf WiFi",
+      "Built for offices, workshops, retail and demanding home setups",
+      "Handles more devices without slowing down or dropping out",
+      "Optional cloud-managed systems for easier support and changes",
+      "Scalable setups that grow with your coverage needs",
+      "A smarter alternative to basic off-the-shelf WiFi",
     ],
   },
 
