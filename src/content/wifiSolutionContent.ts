@@ -76,7 +76,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     eyebrow: "Commercial WiFi systems Perth",
     title: "Designed with business-grade thinking, backed by Ruijie",
     intro:
-      "Because reliability matters, Blake Smart Solutions partners with Ruijie to deliver stable, scalable WiFi systems using both Ruijie and Reyee platforms. That means stronger performance, cleaner management and better suitability for offices, workshops, retail spaces and more demanding residential installs.",
+      "Because reliability matters, Blake Smart Solutions partners with Ruijie to deliver stable, scalable WiFi systems using both Ruijie and Reyee platforms. That means stronger performance, cleaner management and better suitability for offices, workshops, retail spaces and more demanding residential environments.",
     image: "/images/rayee_partner.png",
     imageAlt: "Ruijie Rayee",
     points: [
