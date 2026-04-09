@@ -4,16 +4,16 @@ export const wifiProducts: Product[] = [
   {
     name: "WiFi Health Check",
     description:
-      "Not sure why your WiFi is bad? This on-site check finds the real issue so you don’t waste money on the wrong gear.",
+      "Not sure why your Wi-Fi is underperforming? Our on-site WiFi Health Check identifies the real cause of poor coverage, dropouts or weak performance, so you can make the right upgrade the first time",
     price: "$99 fixed price",
     image: "/images/wifi_survey.png",
     imageAlt: "Wi-Fi survey heatmap across a home or office floor plan",
     badge: "Start Here",
     features: [
       "On-site testing and coverage review",
-      "Identify weak spots and interference",
-      "Full report with heat map, and clear explaination",
-      "Practical recommendations to fix problem areas",
+      "Identify weak signal areas and likely interference",
+      "Heat map report with clear findings",
+      "Practical recommendations taylored to your business or home",
       "$99 credited towards any solution we install",
     ],
     ctaLabel: "Book a WiFi Check",
