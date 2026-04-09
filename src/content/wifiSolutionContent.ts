@@ -3,7 +3,7 @@ import { wifiProducts } from "@/content/WiFi_products";
 
 export const wifiSolutionContent: SolutionPageTemplateProps = {
   title:
-    "WiFi that actually works — across Perth homes, businesses & properties",
+    "WiFi solutions Perth — reliable coverage for homes, businesses & large properties",
   intro:
     "Blake Smart Solutions designs and installs reliable Wi-Fi systems for homes, workshops, businesses and large properties across Perth and the surrounding suburbs, including outdoor areas and multi-building setups. Whether you're dealing with dead zones, unstable connections or poor coverage between buildings, we design systems that actually solve the problem — not just patch it.",
 
@@ -22,7 +22,8 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   },
 
   problemsEyebrow: "Common Wi-Fi problems",
-  problemsTitle: "Most WiFi problems aren’t your internet connection",
+  problemsTitle:
+    "Most WiFi problems aren’t your internet connection — they’re coverage issues",
   problemsIntro:
     "If your WiFi drops out, struggles in certain rooms, or doesn’t reach outside, the issue usually isn’t your provider. It’s poor placement, the wrong equipment, or a network that was never designed properly in the first place. That’s where a properly designed WiFi system makes the difference.",
 
@@ -72,7 +73,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   ],
 
   brandBlock: {
-    eyebrow: "Commercial-grade approach",
+    eyebrow: "Commercial WiFi systems Perth",
     title: "Designed with business-grade thinking, backed by Ruijie",
     intro:
       "When reliability matters, Blake Smart Solutions uses Ruijie and Reyee networking equipment to deliver more reliable, scalable and professional Wi-Fi systems. That means stronger performance, cleaner management and better suitability for offices, workshops, retail spaces and more demanding residential installs.",
@@ -88,7 +89,8 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   },
 
   productsEyebrow: "Popular options",
-  productsTitle: "Wi-Fi solutions for Perth homes and small businesses",
+  productsTitle:
+    "WiFi solutions in Perth for homes, businesses, sheds and outdoor areas",
   productsIntro:
     "These are some of the most common Wi-Fi and coverage upgrades we install. Final recommendations depend on your layout, building materials, outdoor areas and how the network is actually being used.",
 
@@ -96,7 +98,8 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
 
   imageSectionEyebrow: "Installed properly",
   imageSection: {
-    title: "Better Wi-Fi starts with better planning",
+    title:
+      "WiFi installation in Perth — designed properly for reliable coverage",
     intro:
       "We do more than plug in hardware and hope for the best. Blake Smart Solutions reviews the layout, coverage requirements and intended use of the space, then recommends a practical solution that suits the site. For Perth homes that might mean a simple mesh upgrade. For workshops, offices and more demanding jobs, it can mean business-grade access points, switching and wireless links designed for reliable day-to-day use.",
     image: "/images/blake_casual.png",
@@ -104,7 +107,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   },
 
   finalCtaEyebrow: "Talk to Blake Smart Solutions",
-  finalCtaTitle: "Need better Wi-Fi in Perth?",
+  finalCtaTitle: "Need better WiFi in Perth? Let’s fix your coverage properly",
   finalCtaIntro:
     "Whether you need a WiFi Health Check, wider coverage across the home, outdoor access, or a more commercial-grade network setup for your business, Blake Smart Solutions can help you work out the right next step.",
   finalCtaButton: {
