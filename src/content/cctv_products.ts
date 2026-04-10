@@ -1,61 +1,70 @@
 import type { Product } from "@/lib/types";
 
-export const cctvIntro = {
-  title: "Security Camera Systems",
-  intro:
-    "Want to keep an eye on your home or business, even when you're not there? We install reliable CCTV systems with clear coverage, smart camera placement, and easy remote access from your phone. Whether you’re securing entry points, monitoring your property, or just want peace of mind, we design systems that actually cover what matters. The options below are common setups and guide pricing, with every system tailored to suit your layout and security needs.",
-};
-
 export const cctvProducts: Product[] = [
   {
-    name: "Dahua 4 Camera Security Package",
+    name: "CCTV Call-Out & Repair",
     description:
-      "A professionally installed Dahua security system for homes and small businesses wanting reliable day and night coverage, remote viewing, and room to expand later.",
-    price: "From $1,999",
-    image: "/dahua_4cam_kit1.png",
-    imageAlt: "Dahua 4 camera CCTV security package with NVR",
-    badge: "Essentials",
-    features: [
-      "4 x Dahua WizSense AI turret cameras",
-      "8-channel NVR with 4TB hard drive",
-      "Remote viewing setup on your phone",
-      "Installed, configured, and ready to use",
-    ],
-    ctaLabel: "Get a Free Quote",
-    href: "/#final-cta",
-  },
-  {
-    name: "Dahua 6 Camera Security Package",
-    description:
-      "A complete security solution for larger homes, corner blocks, and properties needing stronger coverage across entry points, outdoor areas, and blind spots.",
-    price: "From $2,499",
-    image: "/images/DH6Cam8Ch.jpg",
-    imageAlt: "Dahua 6 camera CCTV security package with NVR",
+      "Cameras not working? No recording, poor image or constant dropouts? Book a call-out and we’ll diagnose and fix it on-site — no guesswork.",
+    price: "$159 Call Out",
+    image: "/images/products/security/call_out2.jpg",
+    imageAlt: "Technician repairing CCTV system",
     badge: "Most Popular",
     features: [
-      "6 x Dahua WizSense AI turret cameras",
-      "8-channel NVR with 4TB hard drive",
-      "Improved perimeter and driveway coverage",
-      "Professionally installed and configured",
+      "Same-day service where available",
+      "On-site fault finding and diagnosis",
+      "Fix recording, connection or image issues",
+      "Repairs completed on the same visit where possible",
+      "Clear advice if upgrades are needed",
     ],
-    ctaLabel: "Get a Free Quote",
+    ctaLabel: "Book a Call-Out",
     href: "/#final-cta",
   },
   {
-    name: "Dahua 8 Camera Security Package",
+    name: "Smart Detection Cameras (WizSense)",
     description:
-      "A full coverage Dahua system designed for large homes, workshops, and small business sites requiring maximum visibility and complete perimeter security.",
-    price: "From $2,999",
-    image: "/images/8camDahuaColor4k8MP.png",
-    imageAlt: "Dahua 8 camera CCTV security package with NVR",
-    badge: "Full Coverage",
+      "Reduce constant false alerts and get notifications that actually matter. Smart detection systems can identify people and vehicles, helping you focus on real activity instead of noise.",
+    image: "/images/products/security/wizsense.png",
+    imageAlt: "Smart detection CCTV camera",
+    badge: "Smart Detection",
     features: [
-      "8 x Dahua WizSense AI turret cameras",
-      "8-channel NVR fully utilised with 4TB HDD",
-      "Designed for full-site camera coverage",
-      "Installed, tested, and ready to use",
+      "Human and vehicle detection",
+      "Fewer false alerts from movement or weather",
+      "More useful mobile notifications",
+      "Better day-to-day awareness of your property",
     ],
-    ctaLabel: "Get a Free Quote",
+    ctaLabel: "Get a Quote",
+    href: "/#final-cta",
+  },
+  {
+    name: "Full-Colour Night Cameras (WizColor)",
+    description:
+      "See clear, full-colour footage even in low light. These cameras are designed for better visibility at night, helping with identification when most incidents occur.",
+    image: "/images/products/security/wizcolor.png",
+    imageAlt: "Full colour night CCTV footage",
+    badge: "Night Performance",
+    features: [
+      "Full-colour footage at night",
+      "Improved detail for identification",
+      "Better performance in low-light areas",
+      "Ideal for driveways, yards and entry points",
+    ],
+    ctaLabel: "Get a Quote",
+    href: "/#final-cta",
+  },
+  {
+    name: "Active Deterrence Cameras (TiOC)",
+    description:
+      "More than just recording — these cameras actively help protect your property. Built-in lights and warnings can trigger when someone approaches, helping deter unwanted activity before it escalates.",
+    image: "/images/products/security/tioc.png",
+    imageAlt: "Active deterrence security camera with lights",
+    badge: "Active Protection",
+    features: [
+      "Built-in lights and warning alerts",
+      "Designed to deter intruders before entry",
+      "Strong perimeter awareness",
+      "Ideal for higher-risk areas and properties",
+    ],
+    ctaLabel: "Get a Quote",
     href: "/#final-cta",
   },
 ];

@@ -7,7 +7,7 @@ import { openEnquiryModal } from "@/lib/enquiryModal";
 
 const primaryLinks = [
   { label: "Wi-Fi & Network Solutions", href: "/wifi-solutions-perth" },
-  { label: "Security Camera Solutions", href: "/cctv" },
+  { label: "Security Camera Solutions", href: "/security-cameras-perth" },
   { label: "Alarm & Access Control", href: "/alarms" },
 ];
 

@@ -6,7 +6,7 @@ export const wifiProducts: Product[] = [
     description:
       "Not sure why your Wi-Fi is underperforming? Our on-site WiFi Health Check identifies the real cause of poor coverage, dropouts or weak performance, so you can make the right upgrade the first time",
     price: "$99 fixed price",
-    image: "/images/wifi_survey.png",
+    image: "/images/products/wifi/wifi_survey.png",
     imageAlt: "Wi-Fi survey heatmap across a home or office floor plan",
     badge: "Start Here",
     features: [
@@ -23,7 +23,7 @@ export const wifiProducts: Product[] = [
     name: "Managed WiFi System",
     description:
       "A properly designed WiFi setup using dedicated access points, not just a router struggling to cover everything.",
-    image: "/images/managed_wifi.png",
+    image: "/images/products/wifi/managed_wifi.png",
     imageAlt: "Installed WiFi access point system providing full coverage",
     badge: "Recommended",
     features: [
@@ -40,7 +40,7 @@ export const wifiProducts: Product[] = [
     description:
       "WiFi that can actually handle staff, customers and devices without slowing down or dropping out.",
     price: "Custom Quote",
-    image: "/images/commercial_wifi.png",
+    image: "/images/products/wifi/commercial_wifi.png",
     imageAlt: "Ruijie business wireless access point",
     badge: "Commercial",
     features: [
@@ -56,7 +56,7 @@ export const wifiProducts: Product[] = [
     name: "Building-to-Building WiFi Link",
     description:
       "Get fast, reliable internet to your shed, workshop or granny flat without trenching cables.",
-    image: "/images/wifi_to_shed.png",
+    image: "/images/products/wifi/wifi_to_shed.png",
     imageAlt: "Wireless bridge connecting a house to a shed or workshop",
     badge: "Specialist",
     features: [
@@ -72,7 +72,7 @@ export const wifiProducts: Product[] = [
     name: "Outdoor WiFi Coverage",
     description:
       "Reliable WiFi outside where you actually use it, not just whatever signal leaks through the walls.",
-    image: "/images/outdoor_ap.png",
+    image: "/images/products/wifi/outdoor_ap.png",
     imageAlt: "Outdoor WiFi access point mounted externally",
     badge: "Outdoor",
     features: [

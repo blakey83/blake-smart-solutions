@@ -12,7 +12,7 @@ export const securityProducts: Product[] = [
     description:
       "A professionally installed Bosch alarm system providing reliable internal protection and a strong audible deterrent. Ideal for smaller homes or those wanting a simple, no-fuss security solution.",
     price: "From $1,459",
-    image: "/images/alarm_essential.png",
+    image: "/images/products/alarms/alarm_essential.png",
     imageAlt:
       "Bosch alarm system with keypad and motion sensors installed in a home",
     badge: "Entry Level",
@@ -30,7 +30,7 @@ export const securityProducts: Product[] = [
     description:
       "Adds smart control and remote access to your alarm system. Arm, disarm, and monitor your home from anywhere, with a professionally installed system built for reliability and convenience.",
     price: "From $1,849",
-    image: "/images/alarm_smart.png",
+    image: "/images/products/alarms/alarm_smart.png",
     imageAlt: "Smart alarm system with mobile app control",
     badge: "Most Popular",
     features: [
@@ -47,7 +47,7 @@ export const securityProducts: Product[] = [
     description:
       "A more comprehensive system with expanded internal coverage and entry-point protection. Designed for larger homes or customers wanting maximum peace of mind with full smart control.",
     price: "From $2,199",
-    image: "/images/alarm_complete.png",
+    image: "/images/products/alarms/alarm_complete.png",
     imageAlt:
       "Complete home alarm system with multiple sensors and app control",
     badge: "Premium",

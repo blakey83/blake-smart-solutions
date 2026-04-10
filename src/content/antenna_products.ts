@@ -12,7 +12,7 @@ export const antennaProducts: Product[] = [
     description:
       "Having issues with pixelation, dropouts, or missing channels? We’ll diagnose and fix your TV signal fast. Ideal for homes with poor reception, storm damage, or ageing antenna systems.",
     price: "$149 fixed price",
-    image: "/images/antenna_repair.png",
+    image: "/images/products/antenna/antenna_repair.png",
     imageAlt: "Technician testing TV antenna signal on roof",
     badge: "Popular",
     features: [
@@ -29,7 +29,7 @@ export const antennaProducts: Product[] = [
     description:
       "Add a new TV outlet anywhere in your home for a clean, reliable connection. Perfect for bedrooms, living areas, or wall-mounted TVs without messy cables.",
     price: "$199 per point",
-    image: "/images/TV-Point-Installation-Image.webp",
+    image: "/images/products/antenna/TV-Point-Installation-Image.webp",
     imageAlt: "Wall mounted TV with hidden data and antenna outlet",
     badge: "Best Value",
     features: [
@@ -46,7 +46,7 @@ export const antennaProducts: Product[] = [
     description:
       "Upgrade to a high-performance Hills Black Arrow antenna for crystal-clear reception across all free-to-air channels. Built to handle Perth conditions and deliver reliable signal for years.",
     price: "From $499",
-    image: "/images/hills_blak_arrow.jpg",
+    image: "/images/products/antenna/hills_blak_arrow.jpg",
     imageAlt: "New Hills antenna installed on residential roof",
     badge: "Premium",
     features: [

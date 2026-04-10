@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "Specials", href: "/#specials" },
-  { label: "Services", href: "/#services" },
-  { label: "Contact", href: "/#final-cta" },
-];
+// const quickLinks = [
+//   { label: "Home", href: "/" },
+//   { label: "Specials", href: "/#specials" },
+//   { label: "Services", href: "/#services" },
+//   { label: "Contact", href: "/#final-cta" },
+// ];
 
 const serviceLinks = [
-  { label: "CCTV & Security Cameras", href: "/cctv" },
+  { label: "CCTV & Security Cameras", href: "/security-cameras-perth" },
   { label: "Wi-Fi & Wireless", href: "/wifi-solutions-perth" },
   { label: "Alarm & Access Control", href: "/alarms" },
   { label: "Starlink", href: "/starlink" },
@@ -37,7 +37,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-white/90">
               Quick Links
             </h3>
@@ -53,7 +53,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-white/90">

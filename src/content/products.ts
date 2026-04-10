@@ -6,7 +6,7 @@ export const specials: Product[] = [
     description:
       "A fixed-price on-site check to find weak coverage, poor placement, and common WiFi issues.",
     price: "$149 fixed price",
-    image: "/images/wifi_survey.png",
+    image: "/images/products/wifi/wifi_survey.png",
     imageAlt: "Wi-Fi survey heatmap across a home floor plan",
     badge: "Popular",
     features: [

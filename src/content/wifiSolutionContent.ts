@@ -8,7 +8,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     "Blake Smart Solutions designs and installs reliable Wi-Fi systems for homes, workshops, businesses and large properties across Perth and the surrounding suburbs, including outdoor areas and multi-building setups. Whether you're dealing with dead zones, unstable connections or poor coverage between buildings, we design systems that actually solve the problem — not just patch it.",
 
   heroEyebrow: "Professional Wi-Fi solutions",
-  heroImage: "/images/WiFi_hero.png",
+  heroImage: "/images/solutions/wifi/WiFi_hero.png",
   heroImageAlt: "Blake Smart Solutions WiFi",
 
   primaryCta: {
@@ -32,42 +32,42 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
       title: "Dead zones indoors",
       description:
         "Weak signal in bedrooms, back rooms, upstairs areas or home offices can make streaming, work and general day-to-day use frustrating.",
-      image: "/images/bedroom_wifi.webp",
+      image: "/images/solutions/wifi/bedroom_wifi.webp",
       imageAlt: "Bedroom wifi",
     },
     {
       title: "Dropouts in busy environments",
       description:
         "Retail, office and workshop environments can struggle when too many devices are competing on a network that was never designed for business use.",
-      image: "/images/busy_office.png",
+      image: "/images/solutions/wifi/busy_office.png",
       imageAlt: "Busy Office",
     },
     {
       title: "Poor outdoor coverage",
       description:
         "Patios, yards, entertaining areas and external workspaces often fall outside the usable range of a standard indoor router.",
-      image: "/images/outdoor_solution.png",
+      image: "/images/solutions/wifi/outdoor_solution.png",
       imageAlt: "Outdoor Solution",
     },
     {
       title: "Shed, granny flat or workshop not connected",
       description:
         "Separate buildings often need more than a mesh add-on. A properly aligned wireless bridge and dedicated access point can deliver far better performance and reliability.",
-      image: "/images/shed_wifi_solution.png",
+      image: "/images/solutions/wifi/shed_wifi_solution.png",
       imageAlt: "Shed Wifi Solution",
     },
     {
       title: "WiFi not keeping up with demand",
       description:
         "Off-the-shelf kits can work in some homes, but larger properties and more demanding environments often need a more considered approach.",
-      image: "/images/crowded_area_wifi.png",
+      image: "/images/solutions/wifi/crowded_area_wifi.png",
       imageAlt: "Crowded area WiFi",
     },
     {
       title: "No clear plan for improvement",
       description:
         "A lot of people know their Wi-Fi is bad, but not why. A proper assessment helps identify the real issue before money gets wasted on the wrong hardware.",
-      image: "/images/wifi_testing.jpg",
+      image: "/images/solutions/wifi/wifi_testing.jpg",
       imageAlt: "WiFi Testing",
     },
   ],
@@ -77,7 +77,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     title: "Designed with business-grade thinking, backed by Ruijie",
     intro:
       "Because reliability matters, Blake Smart Solutions partners with Ruijie to deliver stable, scalable WiFi systems using both Ruijie and Reyee platforms. That means stronger performance, cleaner management and better suitability for offices, workshops, retail spaces and more demanding residential environments.",
-    image: "/images/rayee_partner.png",
+    image: "/images/solutions/wifi/rayee_partner.png",
     imageAlt: "Ruijie Rayee",
     points: [
       "Built for offices, workshops, retail and demanding home setups",
