@@ -5,7 +5,7 @@ export const specials: Product[] = [
     name: "WiFi Health Check",
     description:
       "A fixed-price on-site check to find weak coverage, poor placement, and common WiFi issues.",
-    price: "$149 fixed price",
+    price: "$99 fixed price",
     image: "/images/products/wifi/wifi_survey.png",
     imageAlt: "Wi-Fi survey heatmap across a home floor plan",
     badge: "Popular",
