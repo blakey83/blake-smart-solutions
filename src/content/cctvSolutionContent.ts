@@ -121,8 +121,8 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const cctvSolutionTrustItems = [
-  "WA Police Licensed",
-  "Fully Insured",
+  "Local WA-Based Service",
+  "WA Police Licensed & Fully Insurance",
   "Dahua Certified",
   "Designed for Real World Performance",
 ];
