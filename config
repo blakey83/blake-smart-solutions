@@ -1,0 +1,5 @@
+Host vps
+    HostName 5.223.42.44
+    User syncuser
+    LocalForward 8385 127.0.0.1:8384
+    IdentityFile ~/.ssh/id_ed25519
