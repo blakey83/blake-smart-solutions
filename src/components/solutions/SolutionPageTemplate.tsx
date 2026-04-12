@@ -9,6 +9,7 @@ import type {
   CtaButton,
   SolutionPageTemplateProps,
 } from "@/components/solutions/types";
+import { TrustStrip } from "../home/TrustStrip";
 
 type SolutionCtaProps = {
   button: CtaButton;
@@ -48,6 +49,10 @@ function SolutionCta({
   );
 }
 
+interface TrustItems {
+  trustItems: string[];
+}
+
 export function SolutionPageTemplate({
   title,
   intro,
@@ -72,7 +77,8 @@ export function SolutionPageTemplate({
   finalCtaTitle,
   finalCtaIntro,
   finalCtaButton,
-}: SolutionPageTemplateProps) {
+  trustItems,
+}: SolutionPageTemplateProps & TrustItems) {
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
       <section className="border-b border-[var(--color-border)] bg-white">
@@ -117,6 +123,8 @@ export function SolutionPageTemplate({
           </div>
         </div>
       </section>
+
+      <TrustStrip trustItems={trustItems} />
 
       <section className="bg-[var(--color-section)]">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">

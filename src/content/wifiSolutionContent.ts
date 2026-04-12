@@ -115,3 +115,10 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     action: "enquiry",
   },
 };
+
+export const wifiSolutionTrustItems = [
+  "Perth-Based Local Service",
+  "Advanced WiFi Testing",
+  "Ruijie Partner Systems",
+  "Reliable Coverage Solutions",
+];

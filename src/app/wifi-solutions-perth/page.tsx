@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
 import { wifiSolutionContent } from "@/content/wifiSolutionContent";
+import { wifiSolutionTrustItems } from "@/content/wifiSolutionContent";
 
 export const metadata: Metadata = {
   title: "WiFi Solutions Perth | Home, Business & Outdoor WiFi Installation",
@@ -9,5 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function WifiSolutionsPerthPage() {
-  return <SolutionPageTemplate {...wifiSolutionContent} />;
+  return (
+    <SolutionPageTemplate
+      {...wifiSolutionContent}
+      trustItems={wifiSolutionTrustItems}
+    />
+  );
 }

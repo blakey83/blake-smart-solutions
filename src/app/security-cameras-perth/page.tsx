@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
 import { cctvSolutionContent } from "@/content/cctvSolutionContent";
+import { cctvSolutionTrustItems } from "@/content/cctvSolutionContent";
 
 export const metadata: Metadata = {
   title:
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function SecurityCamerasPerthPage() {
-  return <SolutionPageTemplate {...cctvSolutionContent} />;
+  return (
+    <SolutionPageTemplate
+      {...cctvSolutionContent}
+      trustItems={cctvSolutionTrustItems}
+    />
+  );
 }

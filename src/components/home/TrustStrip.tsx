@@ -1,6 +1,10 @@
-import { trustItems } from "@/content/products";
+// import { trustItems } from "@/content/products";
 
-export function TrustStrip() {
+interface TrustItem {
+  trustItems: string[];
+}
+
+export function TrustStrip({ trustItems }: TrustItem) {
   return (
     <section className="bg-[var(--color-ink)] text-white">
       <div className="mx-auto max-w-6xl px-5 py-6 sm:px-6 lg:px-8">
