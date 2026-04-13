@@ -25,7 +25,7 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
   problemsTitle:
     "Why most security camera systems fail to protect the property",
   problemsIntro:
-    "Most CCTV systems don’t fail because of the hardware — they fail because they’re not designed properly for the site. Poor placement, the wrong cameras and generic setups can leave gaps in coverage, unreliable footage and systems that don’t actually improve security.",
+    "Most security camera systems don’t fail because of the hardware — they fail because they’re not designed properly for the site. Poor placement, the wrong cameras and generic setups can leave blind spots, unreliable footage and systems that don’t actually improve security.",
 
   problems: [
     {
