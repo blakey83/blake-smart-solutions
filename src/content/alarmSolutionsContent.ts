@@ -103,7 +103,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
       "Alarm installation in Perth — planned properly for coverage, usability and peace of mind",
     intro:
       "An alarm system only works properly when it is designed around the property and the people using it. Blake Smart Solutions looks at access points, internal movement, likely risk areas and how you want the system to operate day to day, then builds a setup that makes sense. The result is a smarter, cleaner and more practical security system that is easy to use and ready when it matters.",
-    image: "/images/solutions/alarms/installed-properly.jpg",
+    image: "/Blake_shop_front.jpeg",
     imageAlt: "Professional Ajax alarm installation in Perth",
   },
 
