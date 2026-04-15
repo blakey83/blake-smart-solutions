@@ -3,29 +3,29 @@ import { cctvProducts } from "@/content/cctv_products";
 
 export const cctvSolutionContent: SolutionPageTemplateProps = {
   title:
-    "Security camera installation Perth — smart CCTV systems for homes and businesses",
+    "Security camera installation Perth — smarter camera systems for homes and businesses",
   intro:
-    "Blake Smart Solutions installs smart security camera systems for homes, businesses, workshops and commercial properties across Perth and the surrounding suburbs. Whether you want better visibility around your property, clearer evidence when something happens, or a system that actively helps deter intruders, we design CCTV solutions that are practical, reliable and built around the site.",
+    "Blake Smart Solutions installs smart security camera systems for homes, businesses, workshops and commercial properties across Perth and the surrounding suburbs. Whether you want better visibility around your property, clearer evidence when something happens, or cameras that actively help deter unwanted activity, we design CCTV solutions that are practical, reliable and built around the way your property is used.",
 
   heroEyebrow: "Professional CCTV solutions",
   heroImage: "/images/solutions/cctv/hero.png",
   heroImageAlt: "Security camera installation by Blake Smart Solutions",
 
   primaryCta: {
-    label: "Book a CCTV Quote",
+    label: "Book A Security Camera Quote",
     action: "enquiry",
   },
   secondaryCta: {
-    label: "Call now for a quote",
+    label: "Call for Free Expert Advice",
     action: "link",
     href: "tel:0477948079",
   },
 
   problemsEyebrow: "Common issues",
   problemsTitle:
-    "Why most security camera systems fail to protect the property",
+    "Why many security camera systems leave people with false confidence",
   problemsIntro:
-    "Most security camera systems don’t fail because of the hardware — they fail because they’re not designed properly for the site. Poor placement, the wrong cameras and generic setups can leave blind spots, unreliable footage and systems that don’t actually improve security.",
+    "A good security camera system should help you feel more aware, more in control and more confident about what’s happening around your property. Poor placement, the wrong cameras and generic setups often leave blind spots, weak night footage and systems that only record incidents after they happen — instead of helping deter them in the first place.",
 
   problems: [
     {
@@ -50,7 +50,7 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
       imageAlt: "Active deterrence security camera",
     },
     {
-      title: "Existing cameras not working or poorly installed",
+      title: "Existing cameras that no longer perform properly",
       description:
         "Many properties already have cameras installed, but they may be unreliable, badly positioned or no longer fit for purpose. Fault finding, upgrades and system redesign can often improve performance without starting from scratch.",
       image: "/images/solutions/cctv/poorly_placed_cctv.jpg",
@@ -121,8 +121,8 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const cctvSolutionTrustItems = [
-  "Local WA-Based Service",
-  "WA Police Licensed & Fully Insurance",
-  "Dahua Certified",
-  "Designed for Real World Performance",
+  "Perth's Smart Security Camera Specialists",
+  "Crystal Clear Footage & Instant Alerts",
+  "WA Police Licensed & Dahua Certified",
+  "Clean, Reliable Installation",
 ];
