@@ -2,7 +2,7 @@ import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 import { securityProducts } from "./security_products";
 
 export const alarmsSolutionContent: SolutionPageTemplateProps = {
-  title: "Ajax alarm installation Perth — smarter security for peace of mind",
+  title: "Ajax alarm installation Perth — feel safer with smart security that actually works",
   intro:
     "Blake Smart Solutions installs Ajax alarm systems for homes, businesses, workshops and commercial properties across Perth. Whether you want peace of mind while you’re away, instant alerts when something happens, or a system that’s simple to use every day, we design smart security solutions that look great, work reliably and are built around your property.",
 
@@ -11,11 +11,11 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
   heroImageAlt: "Ajax alarm installation by Blake Smart Solutions",
 
   primaryCta: {
-    label: "Book an Alarm Quote",
+    label: "Book a Free Security Assessment",
     action: "enquiry",
   },
   secondaryCta: {
-    label: "Call now for a quote",
+    label: "Call now for a free quote",
     action: "link",
     href: "tel:0477948079",
   },
@@ -123,14 +123,14 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
   finalCtaIntro:
     "Whether you need a simple smart alarm for a home, better protection for a business, or a more modern alternative to an outdated system, Blake Smart Solutions can help you work out the right Ajax solution for the site.",
   finalCtaButton: {
-    label: "Send an Enquiry",
+    label: "Book a Free Security Assessment",
     action: "enquiry",
   },
 };
 
 export const alarmsSolutionTrustItems = [
-  "Ajax Partner Systems & Professional Setup",
-  "Modern, User-Friendly Smart Security",
-  "WA Police Licensed & Fully Insured",
-  "Clean, Reliable Installations",
+  "Certified Ajax Systems & Expert Setup",
+"Smart Security That’s Easy to Use",
+"WA Police Licensed & Fully Insured",
+"Clean, Reliable Installation",
 ];
