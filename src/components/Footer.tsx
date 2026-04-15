@@ -11,7 +11,7 @@ const quickLinks = [
 const serviceLinks = [
   { label: "CCTV & Security Cameras", href: "/security-cameras-perth" },
   { label: "Wi-Fi & Wireless", href: "/wifi-solutions-perth" },
-  { label: "Alarm & Access Control", href: "/alarms" },
+  { label: "Alarm & Access Control", href: "/ajax-security-perth" },
   { label: "Starlink", href: "/starlink" },
   { label: "Data Cabling", href: "/data-cabling" },
   { label: "TV Antennas", href: "/antennas" },

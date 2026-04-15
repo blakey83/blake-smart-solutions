@@ -1,63 +1,61 @@
 import type { Product } from "@/lib/types";
 
 export const alarmIntro = {
-  title: "Alarm & Access Control",
+  title: "Ajax Smart Alarm Systems",
   intro:
-    "Protect your home or business with a reliable alarm system that’s simple to use and built to actually deter intruders. We install professional systems with smart sensor placement, loud deterrents, and easy control from your phone or keypad. Whether you want basic internal protection or a more complete setup with entry monitoring and access control, every system is tailored to suit your property. The options below are common setups and guide pricing.",
+    "Protect your home or business with a professionally installed Ajax alarm system designed around how you actually use the property. From everyday intrusion protection and instant alerts to photo verification and smart safety devices, every system is tailored to suit your layout, routines and level of security required.",
 };
 
 export const securityProducts: Product[] = [
   {
-    name: "Essential Security Package",
+    name: "Smart Home Alarm Systems",
     description:
-      "A professionally installed Bosch alarm system providing reliable internal protection and a strong audible deterrent. Ideal for smaller homes or those wanting a simple, no-fuss security solution.",
-    price: "From $1,459",
-    image: "/images/products/alarms/alarm_essential.png",
-    imageAlt:
-      "Bosch alarm system with keypad and motion sensors installed in a home",
-    badge: "Entry Level",
-    features: [
-      "Bosch 6000 hardwired alarm system",
-      "3 x motion sensors (PIRs)",
-      "Internal siren and external strobe",
-      "Installed, configured, and ready to use",
-    ],
-    ctaLabel: "Get a Free Quote",
-    href: "/#final-cta",
-  },
-  {
-    name: "Smart Security Package",
-    description:
-      "Adds smart control and remote access to your alarm system. Arm, disarm, and monitor your home from anywhere, with a professionally installed system built for reliability and convenience.",
-    price: "From $1,849",
-    image: "/images/products/alarms/alarm_smart.png",
-    imageAlt: "Smart alarm system with mobile app control",
+      "Professionally installed Ajax alarm systems designed to protect key entry points and internal areas of your home. Ideal for practical everyday security with instant alerts and simple app control.",
+    image: "/images/products/alarms/smart_security.jpg",
+    imageAlt: "Ajax smart alarm system installed in a modern home",
     badge: "Most Popular",
     features: [
-      "Everything in Essential Security Package",
-      "App control and remote access",
-      "Real-time alerts and notifications",
-      "Full setup and customer handover",
+      "Smart intrusion detection",
+      "Door and window protection",
+      "Internal motion detection",
+      "Instant phone alerts",
+      "Clean wireless installation",
     ],
-    ctaLabel: "Get a Free Quote",
+    ctaLabel: "Book an Alarm Quote",
     href: "/#final-cta",
   },
   {
-    name: "Complete Home Protection",
+    name: "Photo Verification Alarm Systems",
     description:
-      "A more comprehensive system with expanded internal coverage and entry-point protection. Designed for larger homes or customers wanting maximum peace of mind with full smart control.",
-    price: "From $2,199",
-    image: "/images/products/alarms/alarm_complete.png",
-    imageAlt:
-      "Complete home alarm system with multiple sensors and app control",
-    badge: "Premium",
+      "Ajax MotionCam systems can send photo verification alerts when an alarm is triggered, helping you quickly understand what’s happening and reducing false alarm stress.",
+    image: "/images/products/alarms/MotionCam-Promo.gif",
+    imageAlt: "Ajax MotionCam alarm system with photo verification alerts",
+    badge: "Smart Detection",
     features: [
-      "Everything in Smart Security Package",
-      "5 x motion sensors for wider coverage",
-      "3 x door/window sensors",
-      "Full system setup, testing, and optimisation",
+      "Photo verification alerts",
+      "Faster incident awareness",
+      "Reduced false alarm uncertainty",
+      "Ideal for higher-risk areas",
+      "Greater confidence when away",
     ],
-    ctaLabel: "Get a Free Quote",
+    ctaLabel: "Book an Alarm Quote",
+    href: "/#final-cta",
+  },
+  {
+    name: "Small Business Alarm Protection",
+    description:
+      "Ajax alarm systems designed for offices, workshops, retail spaces and commercial properties needing reliable after-hours protection and flexible user access.",
+    image: "/images/products/alarms/smb.png",
+    imageAlt: "Ajax alarm system installed in a commercial property",
+    badge: "Commercial",
+    features: [
+      "Entry point and internal area protection",
+      "Instant alerts and remote control",
+      "Multiple user permissions",
+      "Flexible site access options",
+      "Scalable for growing businesses",
+    ],
+    ctaLabel: "Book an Alarm Quote",
     href: "/#final-cta",
   },
 ];
