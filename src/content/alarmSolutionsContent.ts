@@ -2,10 +2,9 @@ import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 import { securityProducts } from "./security_products";
 
 export const alarmsSolutionContent: SolutionPageTemplateProps = {
-  title:
-    "Ajax alarm installation Perth — smart security systems for homes and businesses",
+  title: "Ajax alarm installation Perth — smarter security for peace of mind",
   intro:
-    "Blake Smart Solutions installs Ajax alarm systems for homes, businesses, workshops and commercial properties across Perth and the surrounding suburbs. Whether you want better protection around entry points, instant alerts when something happens, or a smarter system that is actually easy to use day to day, we design alarm solutions that are practical, reliable and built around the property.",
+    "Blake Smart Solutions installs Ajax alarm systems for homes, businesses, workshops and commercial properties across Perth. Whether you want peace of mind while you’re away, instant alerts when something happens, or a system that’s simple to use every day, we design smart security solutions that look great, work reliably and are built around your property.",
 
   heroEyebrow: "Smart alarm solutions",
   heroImage: "/images/solutions/ajaxSecurity/ajax_hero.png",
@@ -22,69 +21,80 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
   },
 
   problemsEyebrow: "Common issues",
-  problemsTitle: "Why most alarm systems fail to properly protect the property",
+
+  problemsTitle: "Why many alarm systems leave people feeling exposed",
+
   problemsIntro:
-    "Most alarm systems don’t fail because they lack sensors — they fail because they’re not designed properly for the property or the people using them. Poor sensor placement, missed entry points and clunky old systems often lead to false alarms, weak coverage and setups that people stop using properly.",
+    "A good alarm system should help you feel safer, not create more stress. Poorly planned systems often leave gaps around entry points, trigger false alarms, feel frustrating to use or fail to give you confidence when you're away from the property.",
 
   problems: [
     {
       title: "Worried about break-ins or vulnerable entry points",
       description:
-        "Doors, windows, side access, garages and rear areas are often the weakest parts of a property. If these points are not considered properly, the system may leave obvious gaps that reduce the value of having an alarm in the first place.",
+        "Doors, windows, garages, side access and rear areas are often the first places intruders look for easy access. If these areas are not properly considered, the system may leave obvious weak spots that reduce the whole point of having security.",
       image: "/images/solutions/ajaxSecurity/break_in.jpg",
-      imageAlt: "Concern about break-ins and property security",
+      imageAlt: "Concern about break-ins and vulnerable entry points",
     },
+
     {
-      title: "False alarms caused by poor sensor placement",
+      title: "False alarms that become frustrating",
       description:
-        "Motion detectors need to be positioned properly to suit the layout, room use and movement through the property. Poor placement can lead to nuisance alarms, frustration and systems that are eventually ignored or left disarmed.",
+        "Poor sensor placement and outdated detectors can lead to nuisance alarms, interruptions and stress. Over time, many people start ignoring alerts or stop using the system properly altogether.",
       image: "/images/solutions/ajaxSecurity/false_alarms.jpg",
-      imageAlt: "Poor alarm sensor placement causing false alarms",
+      imageAlt: "False alarms causing frustration",
     },
+
     {
-      title: "Old systems that are confusing or hard to use",
+      title: "Alarm systems that are confusing or hard to manage",
       description:
-        "Many older alarm systems are unreliable, awkward to manage and offer a poor user experience. If arming, disarming or checking the system feels like a hassle, people are less likely to use it properly when it matters most.",
+        "If arming, disarming or checking your alarm feels clunky or unreliable, it quickly becomes something you avoid using. A system should feel simple and work properly when you need it.",
       image: "/images/solutions/ajaxSecurity/old-keypad.jpg",
-      imageAlt: "Outdated alarm system keypad",
+      imageAlt: "Outdated and confusing alarm system",
     },
+
     {
-      title: "No visibility when you're away from the property",
+      title: "No visibility when you're away",
       description:
-        "A modern alarm system should do more than make noise onsite. Instant alerts, clear event information and practical app control help you stay aware of what is happening, whether you are at work, travelling or simply away from the property.",
-      // image: "/images/solutions/ajaxSecurity/app-alerts.jpg",
-      // imageAlt: "Alarm alerts and control from smartphone app",
+        "Whether you're at work, travelling or just out for the day, not knowing what is happening at home or at your business can be stressful. Modern alarms should give you instant alerts and clear control wherever you are.",
+      image: "/images/solutions/ajaxSecurity/fifo_2.jpg",
+      imageAlt: "Outdated and confusing alarm system",
     },
+
     {
-      title: "Commercial sites with weak after-hours protection",
+      title: "After-hours risks for workshops and businesses",
       description:
-        "Workshops, offices, retail spaces and small commercial properties often need stronger protection after hours. Poorly planned alarm coverage can leave access points, internal zones or key areas exposed when the site is unattended.",
-      // image: "/images/solutions/ajaxSecurity/commercial-alarm.jpg",
-      // imageAlt: "Commercial alarm system protection",
+        "Commercial sites often have vulnerable access points, storage areas or internal spaces that need proper after-hours protection. Weak alarm coverage can leave valuable equipment and stock exposed.",
+      image: "/images/solutions/ajaxSecurity/afterhours.jpg",
+      imageAlt:
+        "After-hours security risks for businesses and commercial properties",
     },
+
     {
-      title: "Cheap off-the-shelf systems that don't suit the property",
+      title: "Generic alarm kits that don't suit the property",
       description:
-        "Every property is different. A small home, larger family property, workshop or business all need different devices, coverage and user setup. Generic alarm kits often miss what actually matters and create more hassle than confidence.",
-      // image: "/images/solutions/ajaxSecurity/generic-alarm-kit.jpg",
-      // imageAlt: "Generic alarm kit not suited to the property",
+        "Every property is different. A proper system should suit the layout, lifestyle and level of risk. Cheap off-the-shelf kits often create more hassle than confidence.",
+      image: "/images/solutions/ajaxSecurity/alarm_essential2.png",
+      imageAlt: "Generic alarm kits that don't suit the property",
     },
   ],
 
   brandBlock: {
     eyebrow: "Ajax alarm systems Perth",
-    title:
-      "Built around practical protection, with Ajax smart security technology",
+
+    title: "Modern security that feels simple to use and easy to trust",
+
     intro:
-      "Blake Smart Solutions has partnered with Ajax, using modern alarm systems designed for real-world security and a better user experience. Rather than dated alarm panels and clunky interfaces, Ajax offers fast alerts, strong wireless performance, app control and smarter devices that make the system easier to live with and easier to trust.",
+      " Blake Smart Solutions have partnered with Ajax systems, as they genuinely stand out. Ajax combines reliable wireless protection, beautifully designed devices and one of the best smart security apps available. The result is a system that looks clean, works properly day to day and gives you confidence that your property is protected.",
+
     image: "/images/solutions/ajaxSecurity/Ajax-partner.png",
     imageAlt: "Ajax alarm systems",
+
     points: [
-      "Ajax partner systems with professional setup and configuration",
-      "App control for arming, disarming and checking system status remotely",
-      "Detailed notifications with device name, time and event information",
-      "Photo verification options with compatible MotionCam detectors",
-      "Wireless devices for clean, modern installations without the mess of traditional systems",
+      "Certified Ajax installation with professional setup, testing and app configuration",
+      "Reliable encrypted wireless devices built for fast response and stable performance",
+      "Instant alerts and full system control from a polished, easy-to-use phone app",
+      "Photo verification options that help confirm what is happening before you respond",
+      "Clean modern devices that look better and suit the space",
       "Expandable ecosystem including intrusion, fire, flood and smart automation devices",
     ],
   },
