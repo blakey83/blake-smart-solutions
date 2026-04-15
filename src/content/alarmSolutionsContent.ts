@@ -119,8 +119,8 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const alarmsSolutionTrustItems = [
-  "Local WA-Based Service",
+  "Ajax Partner Systems & Professional Setup",
+  "Modern, User-Friendly Smart Security",
   "WA Police Licensed & Fully Insured",
-  "Ajax Smart Security Systems",
-  "Designed for Real World Protection",
+  "Clean, Reliable Installations",
 ];
