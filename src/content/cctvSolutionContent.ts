@@ -3,20 +3,19 @@ import { cctvProducts } from "@/content/cctv_products";
 
 export const cctvSolutionContent: SolutionPageTemplateProps = {
   title:
-    "Security camera installation Perth — smarter camera systems for homes and businesses",
+    "Dahua Security Camera Specialists — Perth homes and business",
   intro:
-    "Blake Smart Solutions installs smart security camera systems for homes, businesses, workshops and commercial properties across Perth and the surrounding suburbs. Whether you want better visibility around your property, clearer evidence when something happens, or cameras that actively help deter unwanted activity, we design CCTV solutions that are practical, reliable and built around the way your property is used.",
-
+    "Blake Smart Solutions installs professional security camera systems across Perth for homes, businesses and commercial sites. We don’t just install cameras — we design systems that give you clear visibility, reliable evidence and real protection when it matters. From entry points and blind spots to full property coverage, every system is built to suit how your property is actually used.",
   heroEyebrow: "Professional CCTV solutions",
   heroImage: "/images/solutions/cctv/hero.png",
   heroImageAlt: "Security camera installation by Blake Smart Solutions",
 
   primaryCta: {
-    label: "Book A Security Camera Quote",
+    label: "Get a Security Camera Quote",
     action: "enquiry",
   },
   secondaryCta: {
-    label: "Call for Free Expert Advice",
+    label: "Speak to a professional",
     action: "link",
     href: "tel:0477948079",
   },
@@ -121,8 +120,8 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const cctvSolutionTrustItems = [
-  "Perth's Smart Security Camera Specialists",
-  "Crystal Clear Footage & Instant Alerts",
-  "WA Police Licensed & Dahua Certified",
-  "Clean, Reliable Installation",
+  "Dahua Certified installers",
+  "WA Police Licensed",
+  "Fully Insured",
+  "Perth-Based Professionals",
 ];

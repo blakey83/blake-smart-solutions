@@ -2,11 +2,13 @@ import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 import { securityProducts } from "./security_products";
 
 export const alarmsSolutionContent: SolutionPageTemplateProps = {
-  title: "Ajax alarm installation Perth — feel safer with smart security that actually works",
+  title: "Ajax alarm systems professionally installed — Perth homes and businesses",
+
   intro:
-    "Blake Smart Solutions installs Ajax alarm systems for homes, businesses, workshops and commercial properties across Perth. Whether you want peace of mind while you’re away, instant alerts when something happens, or a system that’s simple to use every day, we design smart security solutions that look great, work reliably and are built around your property.",
+    "Looking for a smarter way to protect your home or business? Blake Smart Solutions installs Ajax wireless alarm systems across Perth, designed to give you real confidence — not frustration. No messy cabling, no clunky keypads, and no complicated setups. Just clean, reliable security with instant alerts and full control from your phone.",
 
   heroEyebrow: "Smart alarm solutions",
+
   heroImage: "/images/solutions/ajaxSecurity/ajax_hero.png",
   heroImageAlt: "Ajax alarm installation by Blake Smart Solutions",
 
@@ -14,6 +16,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     label: "Book a Free Security Assessment",
     action: "enquiry",
   },
+
   secondaryCta: {
     label: "Call now for a free quote",
     action: "link",
@@ -129,8 +132,8 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const alarmsSolutionTrustItems = [
-"Certified Ajax installers",
-"Smart Security That’s Easy to Use",
-"WA Police Licensed & Fully Insured",
-"Clean, Reliable Installation",
+"Certified Ajax partner",
+"WA Police Licensed",
+"Fully Insured",
+"Perth-Based Professional Installers",
 ];
