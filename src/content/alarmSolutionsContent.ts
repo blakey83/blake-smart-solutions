@@ -129,7 +129,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const alarmsSolutionTrustItems = [
-  "Certified Ajax Systems & Expert Setup",
+"Certified Ajax installers",
 "Smart Security That’s Easy to Use",
 "WA Police Licensed & Fully Insured",
 "Clean, Reliable Installation",
