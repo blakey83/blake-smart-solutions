@@ -43,7 +43,7 @@ export const services = [
     description:
       "Camera systems for homes and small businesses, with clear coverage, remote viewing, and practical protection around entry points, driveways, and key areas.",
     icon: "/icons/service-cctv.svg",
-    href: "/cctv",
+    href: "/security-cameras-perth",
   },
   {
     title: "Wi-Fi & Wireless Solutions",
@@ -57,7 +57,7 @@ export const services = [
     description:
       "Straightforward alarm and access solutions designed to improve security without making the system hard to use day to day.",
     icon: "/icons/icon-alarms-access-control.svg",
-    href: "/alarms",
+    href: "/ajax-security-perth",
   },
   {
     title: "Starlink Installation",
