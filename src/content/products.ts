@@ -40,26 +40,26 @@ export const specials: Product[] = [
 
 export const problemPaths = [
   {
-    title: "Wi-Fi drops out or doesn’t reach everywhere",
+    title: "Wi-Fi drops out or doesn’t reach",
     description: "Dead zones, slow speeds or unreliable coverage.",
     href: "/wifi-solutions-perth",
     image: "/images/solutions/wifi/bedroom_wifi.webp",
   },
   {
-    title: "Worried about security around your property",
+    title: "Concerned about security around your property",
     description:
-      "Blind spots, poor visibility or uncertainty about what’s happening.",
+      "Blind spots, poor visibility or unclear footage from your cameras.",
     href: "/security-cameras-perth",
     image: "/images/solutions/cctv/crim.png",
   },
   {
     title: "Alarm system is frustrating or unreliable",
-    description: "False alarms, clunky controls or a system you don’t trust.",
+    description: "False alarms, clunky controls or systems you don’t trust",
     href: "/ajax-security-perth",
     image: "/images/solutions/ajaxSecurity/old-keypad.jpg",
   },
   {
-    title: "Starlink works inside, but not where you need it",
+    title: "Starlink doesn’t reach where you need it",
     description:
       "Weak coverage in outdoor areas, sheds or separate workspaces.",
     href: "/starlink",
