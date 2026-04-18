@@ -7,8 +7,8 @@ export function SpecialsSection() {
     <section id="specials" className="bg-[var(--color-section)]">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
         <SectionHeading
-          eyebrow="Specials"
-          title="Straightforward offers for common callouts and upgrades."
+          eyebrow="Common Services"
+          title="Straightforward offers for common callouts"
           description="Fixed-price entry offers designed to solve common Wi-Fi and security problems without overcomplicating the process."
         />
 
