@@ -37,6 +37,36 @@ export const specials: Product[] = [
     href: "/#final-cta",
   },
 ];
+
+export const problemPaths = [
+  {
+    title: "Wi-Fi drops out or doesn’t reach everywhere",
+    description: "Dead zones, slow speeds or unreliable coverage.",
+    href: "/wifi-solutions-perth",
+    image: "/images/solutions/wifi/bedroom_wifi.webp",
+  },
+  {
+    title: "Worried about security around your property",
+    description:
+      "Blind spots, poor visibility or uncertainty about what’s happening.",
+    href: "/security-cameras-perth",
+    image: "/images/solutions/cctv/crim.png",
+  },
+  {
+    title: "Alarm system is frustrating or unreliable",
+    description: "False alarms, clunky controls or a system you don’t trust.",
+    href: "/ajax-security-perth",
+    image: "/images/solutions/ajaxSecurity/old-keypad.jpg",
+  },
+  {
+    title: "Starlink works inside, but not where you need it",
+    description:
+      "Weak coverage in outdoor areas, sheds or separate workspaces.",
+    href: "/starlink",
+    image: "/images/solutions/wifi/outdoor_solution.png",
+  },
+];
+
 export const services = [
   {
     title: "CCTV & Security Cameras",
@@ -90,8 +120,8 @@ export const heroContent = {
 };
 
 export const trustItems = [
-  "Perth-based local service",
-  "Fully insured & qualified",
+  "WA Police Licensed (SA 84208)",
+  "Fully Insured",
+  "Perth-Based Professionals",
   "ABN 66 695 399 761",
-  "SA 84208",
 ];

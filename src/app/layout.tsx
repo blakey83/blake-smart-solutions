@@ -29,12 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NavBar />
         <main>{children}</main>
         <Footer />
         <EnquiryModalProvider />
-        <GoogleAnalytics gaId="G-ZFPD80HG5B" />  
+        <GoogleAnalytics gaId="G-ZFPD80HG5B" />
       </body>
     </html>
   );
