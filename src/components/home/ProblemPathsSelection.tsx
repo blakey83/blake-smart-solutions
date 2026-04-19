@@ -6,7 +6,7 @@ import { SectionHeading } from "../ui/SectionHeading";
 export function ProblemPathsSelection() {
   return (
     <section id="problems" className="bg-[var(--color-page)]">
-      <div className="mx-auto max-w-5xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-5xl px-5 py-12 sm:px-6 lg:px-8 lg:py-20">
         <SectionHeading
           eyebrow="Common Problems"
           title="Situations we see often"
@@ -33,15 +33,15 @@ export function ProblemPathsSelection() {
                 </div>
               ) : null}
 
-              <div className="flex flex-1 flex-col p-5">
+              <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-lg font-semibold leading-snug text-[var(--color-ink)]">
                   {problem.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
+                <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
                   {problem.description}
                 </p>
-                <p className="mt-4 text-sm font-medium text-[var(--color-accent)]">
+                <p className="mt-4 text-base font-medium text-[var(--color-accent)]">
                   Learn more →
                 </p>
               </div>

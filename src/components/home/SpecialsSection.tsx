@@ -5,7 +5,7 @@ import { ProductCardGrid } from "../products/ProductCardGrid";
 export function SpecialsSection() {
   return (
     <section id="specials" className="bg-[var(--color-section)]">
-      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-6 lg:px-8 lg:py-20">
         <SectionHeading
           eyebrow="Common Services"
           title="Straightforward offers for common callouts"
@@ -15,7 +15,7 @@ export function SpecialsSection() {
         <div className="mt-8">
           <ProductCardGrid
             products={specials}
-            className="grid gap-4 lg:grid-cols-2"
+            className="grid gap-6 lg:grid-cols-2"
           />
         </div>
       </div>

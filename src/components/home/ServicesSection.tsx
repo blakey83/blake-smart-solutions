@@ -6,14 +6,14 @@ import { SectionHeading } from "../ui/SectionHeading";
 export function ServicesSection() {
   return (
     <section id="services" className="bg-white">
-      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-6 lg:px-8 lg:py-20">
         <SectionHeading
           eyebrow="Services"
           title="Practical technology services for Perth homes and small businesses."
           description="From CCTV and Wi-Fi to Starlink, data cabling, alarms and TV antennas, Blake Smart Solutions delivers tidy installs, clear advice, and systems that work properly day to day."
         />
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
             <Link
               key={service.title}
@@ -35,11 +35,11 @@ export function ServicesSection() {
                 {service.title}
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">
+              <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)] sm:leading-7">
                 {service.description}
               </p>
 
-              <span className="mt-5 inline-flex items-center text-sm font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
+              <span className="mt-5 inline-flex min-h-12 items-center text-base font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
                 View service
               </span>
             </Link>

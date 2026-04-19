@@ -9,7 +9,7 @@ import { heroSectionContent } from "@/content/home/heroSection";
 export function HeroSection() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-6xl px-5 pt-6 pb-6 sm :px-6 lg:px-8 lg:pt-8 lg:pb-10">
+      <div className="mx-auto max-w-6xl px-5 pt-6 pb-10 sm:px-6 lg:px-8 lg:pt-8 lg:pb-10">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,14 +41,14 @@ export function HeroSection() {
             {heroSectionContent.title}
           </h1>
 
-          <p className="mt-4 max-w-3xl text-sm leading-6 text-white/90 sm:text-base sm:leading-7">
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/90 sm:leading-7">
             {heroSectionContent.description}
           </p>
 
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="tel:0477948079"
-              className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-[var(--color-accent)] transition hover:bg-white/95"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-black px-4 py-3 text-base font-semibold text-[var(--color-accent)] transition hover:bg-white/95 sm:w-auto sm:px-5"
             >
               {heroSectionContent.callCTA}
             </Link>
@@ -56,7 +56,7 @@ export function HeroSection() {
             <button
               type="button"
               onClick={() => openEnquiryModal()}
-              className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-black px-4 py-3 text-base font-semibold text-white transition hover:bg-white/10 sm:w-auto sm:px-5"
             >
               {heroSectionContent.quoteCTA}
             </button>
