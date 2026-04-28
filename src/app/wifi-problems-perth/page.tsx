@@ -25,89 +25,75 @@ function renderParagraphs(paragraphs: string[], className: string) {
   ));
 }
 
-function FixList({ title, items }: { title: string; items: string[] }) {
-  if (items.length === 0) {
-    return null;
-  }
+function parseBodySections(body: string) {
+  return body
+    .trim()
+    .split("\n\n")
+    .map((section) => section.trim())
+    .filter(Boolean)
+    .map((section) => {
+      const lines = section
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean);
 
-  return (
-    <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-4 sm:p-5">
-      <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]">
-        {title}
-      </h3>
-      <ul className="mt-4 space-y-3">
-        {items.map((item) => (
-          <li
-            key={`${title}-${item}`}
-            className="flex items-start gap-3 text-sm leading-6 text-[var(--color-ink)] sm:text-base"
-          >
-            <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[var(--color-accent)]" />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+      const bulletLines = lines.filter((line) => line.startsWith("- "));
+
+      if (bulletLines.length === lines.length) {
+        return {
+          type: "list" as const,
+          items: bulletLines.map((line) => line.slice(2).trim()),
+        };
+      }
+
+      return {
+        type: "paragraph" as const,
+        text: lines.join(" "),
+      };
+    });
 }
 
-function FixCard({ fix, index }: { fix: Fix; index: number }) {
+function FixSection({ fix, index }: { fix: Fix; index: number }) {
+  const sections = parseBodySections(fix.body);
+
   return (
-    <article className="rounded-[24px] border border-[var(--color-border)] bg-white p-6 sm:p-8">
+    <article className="border-t border-[var(--color-border)] pt-10 first:border-t-0 first:pt-0">
       <div className="flex items-start gap-3">
-        <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-sm font-semibold text-[var(--color-accent)]">
+        <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-sm font-semibold text-[var(--color-accent)]">
           {index + 1}
         </span>
-        <h2 className="pt-1 text-2xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-3xl">
+        <h2 className="pt-0.5 text-2xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-3xl">
           {fix.title}
         </h2>
       </div>
 
-      {fix.intro ? (
-        <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--color-ink)]">
-          {fix.intro}
-        </p>
-      ) : null}
-
-      {fix.body?.length ? (
-        <div className="mt-5 space-y-4">
-          {renderParagraphs(
-            fix.body,
-            "text-base leading-7 text-[var(--color-muted)]",
-          )}
-        </div>
-      ) : null}
-
-      <div className="mt-6 grid gap-4 lg:grid-cols-2">
-        <FixList title="Try this" items={fix.tryThis ?? []} />
-        <FixList title="Look for" items={fix.lookFor ?? []} />
-        <FixList title="Avoid" items={fix.avoid ?? []} />
-        <FixList title="Better approach" items={fix.better ?? []} />
-        <FixList title="Signal blockers" items={fix.blockers ?? []} />
-        <FixList title="Common causes" items={fix.causes ?? []} />
-        <FixList title="Bands to know" items={fix.bands ?? []} />
+      <div className="mt-5 max-w-3xl space-y-4">
+        {sections.map((section, sectionIndex) =>
+          section.type === "paragraph" ? (
+            <p
+              key={`${fix.title}-paragraph-${sectionIndex}`}
+              className="text-base leading-7 text-[var(--color-muted)] sm:text-lg"
+            >
+              {section.text}
+            </p>
+          ) : (
+            <ul
+              key={`${fix.title}-list-${sectionIndex}`}
+              className="space-y-2"
+            >
+              {section.items.map((item) => (
+                <li
+                  key={`${fix.title}-${item}`}
+                  className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
+                >
+                  <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[var(--color-accent)]" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          ),
+        )}
       </div>
-
-      {fix.mistake ? (
-        <div className="mt-6 rounded-2xl border-l-4 border-amber-300 bg-amber-50/70 p-5">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
-            Common mistake
-          </h3>
-          <p className="mt-3 text-base leading-7 text-amber-950">
-            {fix.mistake}
-          </p>
-        </div>
-      ) : null}
-
-      {fix.takeaway ? (
-        <div className="mt-6 rounded-2xl border-l-4 border-[var(--color-accent)] bg-[var(--color-accent-soft)]/35 p-5">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]">
-            Key takeaway
-          </h3>
-          <p className="mt-3 text-base leading-7 text-[var(--color-ink)]">
-            {fix.takeaway}
-          </p>
-        </div>
-      ) : null}
     </article>
   );
 }
@@ -149,9 +135,9 @@ export default function WifiProblemsPerthPage() {
             description="Start with the simple checks first, then work through the practical reasons Wi-Fi often breaks down around a home."
           />
 
-          <div className="mt-10 space-y-6">
+          <div className="mx-auto mt-10 max-w-3xl space-y-10">
             {fixes.map((fix, index) => (
-              <FixCard key={fix.title} fix={fix} index={index} />
+              <FixSection key={fix.title} fix={fix} index={index} />
             ))}
           </div>
           <div className="mt-10">

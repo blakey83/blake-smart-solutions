@@ -20,103 +20,179 @@ export const wifiLandingPageContent = {
   fixes: [
     {
       title: "Find Where Your Internet Actually Breaks Down",
-      intro: "Don’t guess — map it out.",
-      body: ["Start by testing your speed in different parts of the house."],
-      tryThis: [
-        "Stand next to your router and run a speed test",
-        "Move to the bedroom, office, backyard and test again",
-      ],
-      lookFor: [
-        "Where speed drops sharply",
-        "Where it becomes unstable",
-        "Where it barely works at all",
-      ],
-      takeaway:
-        "You’re not fixing anything yet — you’re finding the weak spots first, and that stops you wasting money on the wrong fix.",
+      body: `
+Most people think they either have “good internet” or “bad internet.”
+
+In reality, your connection changes depending on where you are in the house.
+
+Standing right next to your router, everything might feel fast and stable. But as soon as you move into a bedroom, home office, or outside area, the experience can drop off quickly — slower speeds, buffering, or connections that barely work at all.
+
+That’s not your internet plan changing.
+
+That’s your Wi-Fi struggling to reach those areas.
+
+Wi-Fi doesn’t spread evenly. It weakens with distance, gets absorbed by walls, and loses strength as it moves through your home.
+
+Before trying to fix anything, you need to understand exactly where it’s breaking down.
+
+Start by testing your connection in a few key spots:
+- Right next to the router
+- The room where you notice issues
+- Any outdoor or fringe areas
+
+You’re not fixing anything yet — you’re mapping the problem.
+
+This one step alone stops you wasting money on the wrong solution.
+`,
     },
     {
       title: "Move Your Router to a Better Spot",
-      intro: "Where your router sits matters more than most people realise.",
-      avoid: [
-        "Garages",
-        "Inside cupboards or cabinets",
-        "Corners of the house",
-        "Behind TVs or furniture",
-      ],
-      better: [
-        "As central as possible",
-        "Off the floor",
-        "In open space, not hidden away",
-      ],
-      takeaway:
-        "If your router is in the wrong spot, the signal simply can’t reach properly — no matter how fast your plan is.",
+      body: `
+One of the most common mistakes is assuming a faster internet plan will fix Wi-Fi issues.
+
+In most homes, it doesn’t.
+
+Where your router is placed has a much bigger impact than most people realise.
+
+Routers often end up in places that are convenient for cabling, not performance — garages, cupboards, corners of the house, or tucked away behind furniture.
+
+From a signal point of view, these are some of the worst possible locations.
+
+Wi-Fi spreads outward from the router. If it starts in a poor location, large parts of the house will always struggle — no matter how fast your plan is.
+
+This is even more noticeable in double-brick homes, which are common in Perth. Brick walls absorb and weaken the signal far more than people expect.
+
+A better setup is simple:
+- Keep the router as central as possible
+- Elevate it off the floor
+- Keep it in open space, not hidden away
+- Avoid placing it near large objects or appliances
+
+Even small changes here can make a noticeable difference across the home.
+`,
     },
     {
       title: "Understand What’s Blocking the Signal",
-      intro: "Wi-Fi doesn’t travel evenly through a home.",
-      blockers: [
-        "Brick or double-brick walls",
-        "Bathrooms, tiles, mirrors and pipes",
-        "Kitchens and large appliances",
-        "Metal, TVs, fridges and shelving",
-      ],
-      takeaway:
-        "Wi-Fi isn’t broken — it’s just being absorbed or blocked before it reaches you.",
+      body: `
+Wi-Fi doesn’t travel freely through your home.
+
+It’s constantly being weakened or blocked by the environment around it.
+
+The biggest culprits are:
+- Brick and double-brick walls
+- Bathrooms (tiles, mirrors, pipes)
+- Kitchens and large appliances
+- Metal objects like fridges, TVs and shelving
+
+In many homes, the signal doesn’t just get weaker — it gets disrupted before it even reaches certain areas.
+
+This is why you might have strong connection in one room, but almost nothing just a few metres away.
+
+It’s not random. It’s physical.
+
+Understanding this changes how you approach the problem.
+
+Instead of assuming “my internet is slow”, you start to see that the signal simply isn’t reaching properly.
+
+At that point, the focus shifts from upgrading your plan… to fixing how Wi-Fi is actually moving through your home.
+`,
     },
     {
       title: "Reduce Interference From Other Devices",
-      intro: "Even strong Wi-Fi can perform badly if it’s being interrupted.",
-      causes: [
-        "Neighbouring Wi-Fi networks",
-        "Smart home devices",
-        "Wireless electronics like baby monitors or cameras",
-      ],
-      tryThis: [
-        "Set your Wi-Fi channel to Auto, or change it manually if you know how",
-        "Keep the router away from other electronics",
-      ],
-      takeaway:
-        "Your Wi-Fi might be strong — but if it’s competing with everything around it, performance suffers.",
+      body: `
+Even when your Wi-Fi signal is strong, performance can still suffer if it’s competing with other devices.
+
+Every wireless network operates on shared channels. In busy areas — especially suburban Perth — there can be dozens of overlapping Wi-Fi networks all fighting for space.
+
+On top of that, devices inside your home can also contribute to interference:
+- Smart home systems
+- Wireless cameras
+- Baby monitors
+- Bluetooth devices
+
+The result is a connection that feels unstable — not because the signal is weak, but because it’s constantly being interrupted.
+
+In many cases, your Wi-Fi isn’t broken — it’s just crowded.
+
+You can improve this by:
+- Letting your router automatically select the best channel
+- Keeping it away from other electronics
+- Minimising interference around its location
+
+These small changes can help stabilise your connection, especially in high-density areas.
+`,
     },
     {
-      title: "Add Another Wi-Fi Point and Place It Properly",
-      intro:
-        "If your home is bigger, long, or double-brick, one router usually isn’t enough.",
-      body: [
-        "Instead of a basic booster, look for a second Wi-Fi unit that works with your main router — often called a mesh system.",
-      ],
-      mistake: "Putting the second unit in the dead zone.",
-      better: [
-        "Place it halfway between the router and the problem area",
-        "Put it where the signal is still decent",
-      ],
-      takeaway:
-        "If Wi-Fi drops out in parts of your home, you don’t need a faster plan — you need to bring the signal closer to those areas.",
+      title: "Add Another Wi-Fi Point (The Right Way)",
+      body: `
+If your home is larger, long in layout, or built with double brick, a single router is often not enough.
+
+This is where many people try a “booster” — and end up disappointed.
+
+The problem isn’t just adding another device. It’s where and how it’s placed.
+
+A common mistake is putting the second unit in the area with poor signal.
+
+But if that spot already has weak Wi-Fi, the new device has nothing reliable to work with — so it simply repeats a bad connection.
+
+Instead, additional Wi-Fi points need to be placed where the signal is still strong, and then extend coverage outward from there.
+
+Modern systems (often called mesh systems) are designed to do this properly, but placement still matters.
+
+Think of it like handing off the signal, not stretching it.
+
+Done correctly, this can completely transform coverage across your home — including outdoor areas and sheds.
+`,
     },
     {
-      title: "Check the Device and the Wi-Fi Band It’s Using",
-      intro:
-        "Sometimes the problem isn’t your Wi-Fi — it’s how your device is connecting to it.",
-      bands: [
-        "2.4 GHz: slower, but reaches further",
-        "5 GHz and Wi-Fi 6: faster, but doesn’t travel as far",
-      ],
-      tryThis: [
-        "Turn Wi-Fi off and back on",
-        "Move closer and test again",
-        "Try another phone or laptop in the same spot",
-      ],
-      takeaway:
-        "Not all devices connect the same way — and sometimes they pick the wrong signal.",
+      title: "Check How Your Devices Are Connecting",
+      body: `
+Sometimes the issue isn’t your Wi-Fi at all — it’s how your device is connecting to it.
+
+Modern routers broadcast multiple signals (bands), typically:
+- 2.4 GHz (slower, but longer range)
+- 5 GHz or Wi-Fi 6 (faster, but shorter range)
+
+Devices automatically choose which one to use — but they don’t always choose well.
+
+This can lead to situations where:
+- A device stays connected to a weak signal
+- Speeds drop even though a better connection is available
+- Performance improves just by moving a few metres
+
+You can test this easily:
+- Turn Wi-Fi off and back on
+- Move closer to the router and compare speeds
+- Try another device in the same location
+
+If one device performs much worse than another, it’s often a connection issue rather than a network problem.
+
+Understanding this helps avoid replacing equipment unnecessarily.
+`,
     },
     {
       title: "Make Sure Your Setup Matches Your Home",
-      intro: "Not all homes need the same setup.",
-      body: [
-        "A small apartment might work perfectly with one router. A larger home, double-brick house, or place with outdoor areas might need multiple Wi-Fi points, better placement, or a more thought-out setup.",
-      ],
-      takeaway:
-        "If you’ve tried the steps above and still have issues, it’s usually because the setup simply isn’t suited to the space — and that’s where guessing starts to get confusing.",
+      body: `
+Not all homes need the same Wi-Fi setup.
+
+A small apartment might work perfectly with a single router.
+
+But larger homes, double-brick builds, or properties with outdoor areas often need a more considered approach.
+
+This is where many people get stuck.
+
+They’ve tried moving the router. Maybe even added equipment. Things improve slightly… but never quite work properly.
+
+That’s usually because the setup simply isn’t suited to the space.
+
+At this point, you’re no longer dealing with a simple fix.
+
+You’re dealing with layout, materials, interference, and how everything works together.
+
+And that’s where trial-and-error starts to become frustrating — and expensive.
+
+If you’ve worked through the steps above and still have issues, it’s usually a sign that you need a clearer picture of what’s actually happening in your home.
+`,
     },
   ],
 
