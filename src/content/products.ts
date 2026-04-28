@@ -42,7 +42,7 @@ export const problemPaths = [
   {
     title: "Wi-Fi drops out or doesn’t reach",
     description: "Dead zones, slow speeds or unreliable coverage.",
-    href: "/wifi-solutions-perth",
+    href: "/wifi-problems-perth",
     image: "/images/solutions/wifi/bedroom_wifi.webp",
   },
   {
