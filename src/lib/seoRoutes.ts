@@ -46,7 +46,11 @@ async function collectPageRoutes(
         continue;
       }
 
-      if (segment.startsWith("@") || segment.startsWith(".") || segment.includes("[")) {
+      if (
+        segment.startsWith("@") ||
+        segment.startsWith(".") ||
+        segment.includes("[")
+      ) {
         continue;
       }
 
@@ -54,10 +58,10 @@ async function collectPageRoutes(
         continue;
       }
 
-      const nestedRoutes = await collectPageRoutes(path.join(directory, segment), [
-        ...segments,
-        segment,
-      ]);
+      const nestedRoutes = await collectPageRoutes(
+        path.join(directory, segment),
+        [...segments, segment],
+      );
       nestedRoutes.forEach((route) => routes.add(route));
       continue;
     }
@@ -97,6 +101,7 @@ export function getRoutePriority(route: string): number {
     "/starlink-installation-perth",
     "/data-cabling",
     "/tv-antennas-perth",
+    "/wifi-problems-perth",
   ]);
 
   if (serviceRoutes.has(route)) {
