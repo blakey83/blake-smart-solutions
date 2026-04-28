@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function DataCablingPage() {
   return (
     <ProductPageTemplate
+      currentPath="/data-cabling"
       title={dataIntro.title}
       intro={dataIntro.intro}
       products={dataCablingProducts}

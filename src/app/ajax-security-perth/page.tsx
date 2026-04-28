@@ -14,6 +14,7 @@ export default function WifiSolutionsPerthPage() {
   return (
     <SolutionPageTemplate
       {...alarmsSolutionContent}
+      currentPath="/ajax-security-perth"
       trustItems={alarmsSolutionTrustItems}
     />
   );

@@ -13,6 +13,7 @@ export default function WifiSolutionsPerthPage() {
   return (
     <SolutionPageTemplate
       {...wifiSolutionContent}
+      currentPath="/wifi-solutions-perth"
       trustItems={wifiSolutionTrustItems}
     />
   );

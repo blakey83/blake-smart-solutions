@@ -12,9 +12,9 @@ const serviceLinks = [
   { label: "CCTV & Security Cameras", href: "/security-cameras-perth" },
   { label: "Wi-Fi & Wireless", href: "/wifi-solutions-perth" },
   { label: "Alarm & Access Control", href: "/ajax-security-perth" },
-  { label: "Starlink", href: "/starlink" },
+  { label: "Starlink", href: "/starlink-installation-perth" },
   { label: "Data Cabling", href: "/data-cabling" },
-  { label: "TV Antennas", href: "/antennas" },
+  { label: "TV Antennas", href: "/tv-antennas-perth" },
 ];
 
 export function Footer() {

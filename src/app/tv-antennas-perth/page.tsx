@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function AntennasPage() {
   return (
     <ProductPageTemplate
+      currentPath="/tv-antennas-perth"
       title={antennasIntro.title}
       intro={antennasIntro.intro}
       products={antennaProducts}

@@ -30,6 +30,7 @@ export type ImageTextSection = {
 };
 
 export type SolutionPageTemplateProps = {
+  currentPath?: string;
   title: string;
   intro: string;
   heroEyebrow?: string;

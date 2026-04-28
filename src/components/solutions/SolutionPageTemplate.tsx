@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProductCardGrid } from "@/components/products/ProductCardGrid";
+import { RelatedServicesSection } from "@/components/services/RelatedServicesSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type {
@@ -54,6 +55,7 @@ interface TrustItems {
 }
 
 export function SolutionPageTemplate({
+  currentPath = "/",
   title,
   intro,
   heroEyebrow = "Solutions",
@@ -264,6 +266,8 @@ export function SolutionPageTemplate({
           </div>
         </section>
       ) : null}
+
+      <RelatedServicesSection currentPath={currentPath} />
 
       <section
         id="final-cta"

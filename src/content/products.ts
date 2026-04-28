@@ -62,7 +62,7 @@ export const problemPaths = [
     title: "Starlink doesn’t reach where you need it",
     description:
       "Weak coverage in outdoor areas, sheds or separate workspaces.",
-    href: "/starlink",
+    href: "/starlink-installation-perth",
     image: "/images/solutions/wifi/outdoor_solution.png",
   },
 ];
@@ -94,7 +94,7 @@ export const services = [
     description:
       "Professional Starlink mounting and setup, with practical placement and cable routing to help get the best performance from your service.",
     icon: "/icons/service-starlink.svg",
-    href: "/starlink",
+    href: "/starlink-installation-perth",
   },
   {
     title: "Data Cabling",
@@ -108,7 +108,7 @@ export const services = [
     description:
       "Antenna installation, fault finding, and reception improvements for homes that still want reliable free-to-air TV where streaming is not always ideal.",
     icon: "/icons/service-antennas.svg",
-    href: "/antennas",
+    href: "/tv-antennas-perth",
   },
 ];
 

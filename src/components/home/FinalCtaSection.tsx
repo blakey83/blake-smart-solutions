@@ -22,7 +22,7 @@ export function FinalCtaSection() {
 
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
           <ButtonLink href="tel:0477948079">Call 0477 948 079</ButtonLink>
-          <ButtonLink href="/#contact" variant="secondary">
+          <ButtonLink href="/#final-cta" variant="secondary">
             Request a Quote
           </ButtonLink>
         </div>

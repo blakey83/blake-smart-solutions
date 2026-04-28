@@ -14,6 +14,7 @@ export default function SecurityCamerasPerthPage() {
   return (
     <SolutionPageTemplate
       {...cctvSolutionContent}
+      currentPath="/security-cameras-perth"
       trustItems={cctvSolutionTrustItems}
     />
   );

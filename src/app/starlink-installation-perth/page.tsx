@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function StarlinkPage() {
   return (
     <ProductPageTemplate
+      currentPath="/starlink-installation-perth"
       title={starlinkIntro.title}
       intro={starlinkIntro.intro}
       products={starlinkProducts}
