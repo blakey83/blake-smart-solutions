@@ -9,7 +9,8 @@ type Fix = (typeof wifiLandingPageContent.fixes)[number];
 const pagePath = "/wifi-problems-perth";
 
 export const metadata: Metadata = {
-  title: "Wi-Fi Problems Perth | Fix Slow Internet & Wi-Fi Dropouts",
+  title:
+    "Why Your Internet Still Sucks (Even With Fast NBN) — 7 Ways to Fix It at Home",
   description:
     "Learn why your internet still feels slow even with fast NBN, Starlink or fixed wireless, and how Blake Smart Solutions can diagnose Wi-Fi issues with a $99 Wi-Fi Health Check.",
   alternates: {
@@ -77,10 +78,7 @@ function FixSection({ fix, index }: { fix: Fix; index: number }) {
               {section.text}
             </p>
           ) : (
-            <ul
-              key={`${fix.title}-list-${sectionIndex}`}
-              className="space-y-2"
-            >
+            <ul key={`${fix.title}-list-${sectionIndex}`} className="space-y-2">
               {section.items.map((item) => (
                 <li
                   key={`${fix.title}-${item}`}
@@ -157,16 +155,9 @@ export default function WifiProblemsPerthPage() {
       >
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-              Professional Wi-Fi diagnostic
-            </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-              Know Exactly What’s Causing Your Wi-Fi Issues — and the Right Way
-              to Fix Them
-            </h2>
-            <p className="mt-3 text-xl font-semibold tracking-tight text-[var(--color-muted)] sm:text-2xl">
               {offer.title}
-            </p>
+            </h2>
             <div className="mt-6 space-y-4">
               {renderParagraphs(
                 offer.intro,
@@ -181,10 +172,8 @@ export default function WifiProblemsPerthPage() {
 
           <div className="mt-10 rounded-[24px] border border-[var(--color-border)] bg-[var(--color-page)] p-6 sm:p-8">
             <p className="text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-              You can get a full diagnostic for{" "}
-              <span className="font-semibold text-[var(--color-ink)]">$99</span>
-              . We test the property properly, explain what is going wrong, and
-              give you practical next-step advice.
+              For just $99, you can get a complete picture of what’s actually
+              going on with your Wi-Fi — and exactly what needs to be fixed.
             </p>
 
             <div className="mt-8">

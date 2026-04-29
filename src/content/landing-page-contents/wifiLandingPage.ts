@@ -197,12 +197,12 @@ If you’ve worked through the steps above and still have issues, it’s usually
   ],
 
   offer: {
-    title: "Complete Wi-Fi Diagnostic — $99",
+    title: "Still not working the way it should?",
     intro: [
-      "By now, you’ve probably realised something…",
-      "You can improve your Wi-Fi with a few changes — and if you’ve worked through the steps above, you likely would have already seen that.",
-      "But in many cases, getting the right tools and expertise on-site is what actually solves it.",
-      "Wi-Fi issues come down to how signals move through your home, where they weaken, and what’s interfering with them.",
+      "By now, you’ve probably noticed something",
+      "Some changes help — but the problem never completely goes away.",
+      "That’s because most Wi-Fi issues aren’t caused by one simple thing.",
+      "It’s oftern a combination of layout, signal behaviour, interference, and how everything is set up to work together.",
       "That’s why we offer a complete Wi-Fi diagnostic of your home.",
       "We don’t guess — we test it properly, so you know exactly where your internet is strong, weak, or not working at all.",
     ],
