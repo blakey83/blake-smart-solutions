@@ -16,9 +16,14 @@ type EnquiryModalProps = {
   product: Product | null;
   isOpen: boolean;
   onClose: () => void;
+  onSuccess?: () => void;
 };
 
 function getInitialMessage(product: Product) {
+  if (product.name === "General Quote Request") {
+    return "I'm interested in a quote.";
+  }
+
   return `Hi, I'm interested in the ${product.name}.`;
 }
 
@@ -26,6 +31,7 @@ export default function EnquiryModal({
   product,
   isOpen,
   onClose,
+  onSuccess,
 }: EnquiryModalProps) {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [formStartedAt, setFormStartedAt] = useState<number>(Date.now());
@@ -129,6 +135,7 @@ export default function EnquiryModal({
         type: "success",
         message: "We’ve received your message and will be in touch shortly.",
       });
+      onSuccess?.();
     } catch {
       setStatus({
         type: "error",

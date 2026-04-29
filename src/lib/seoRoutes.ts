@@ -104,6 +104,10 @@ export function getRoutePriority(route: string): number {
     "/wifi-problems-perth",
   ]);
 
+  if (route === "/enquiry") {
+    return 0.9;
+  }
+
   if (serviceRoutes.has(route)) {
     return 0.9;
   }
@@ -133,6 +137,10 @@ export function getRouteChangeFrequency(
 ): "weekly" | "monthly" | "yearly" {
   if (route === "/") {
     return "weekly";
+  }
+
+  if (route === "/enquiry") {
+    return "monthly";
   }
 
   if (
