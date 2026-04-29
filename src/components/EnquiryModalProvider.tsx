@@ -52,12 +52,16 @@ export function EnquiryModalProvider() {
         setSelectedProduct(null);
         setSuccessRedirectTo(null);
       }}
-      onSuccess={() => {
-        if (!successRedirectTo) return;
-        setSelectedProduct(null);
-        setSuccessRedirectTo(null);
-        router.push(successRedirectTo);
-      }}
+      onSuccess={
+        successRedirectTo
+          ? () => {
+              const redirectTo = successRedirectTo;
+              setSelectedProduct(null);
+              setSuccessRedirectTo(null);
+              router.push(redirectTo);
+            }
+          : undefined
+      }
     />
   );
 }

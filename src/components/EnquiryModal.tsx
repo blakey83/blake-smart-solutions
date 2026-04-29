@@ -58,9 +58,14 @@ export default function EnquiryModal({
   }, []);
 
   const handleClose = useCallback(() => {
+    if (status.type === "success" && onSuccess) {
+      onSuccess();
+      return;
+    }
+
     resetForm(null);
     onClose();
-  }, [onClose, resetForm]);
+  }, [onClose, onSuccess, resetForm, status.type]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -135,7 +140,6 @@ export default function EnquiryModal({
         type: "success",
         message: "We’ve received your message and will be in touch shortly.",
       });
-      onSuccess?.();
     } catch {
       setStatus({
         type: "error",
@@ -184,7 +188,7 @@ export default function EnquiryModal({
               onClick={handleClose}
               className="mt-6 w-full rounded-2xl bg-sky-500 px-6 py-4 text-lg font-semibold text-slate-950 transition hover:bg-sky-400"
             >
-              Close
+              OK
             </button>
           </div>
         ) : (
