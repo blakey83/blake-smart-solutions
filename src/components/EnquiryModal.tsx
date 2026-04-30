@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import type { Product } from "@/lib/types";
+import { trackEnquiryOpen, trackEnquirySubmit } from "@/lib/analytics";
 
 const INITIAL_FORM_DATA = {
   name: "",
@@ -90,6 +91,11 @@ export default function EnquiryModal({
     resetForm(product);
   }, [product, resetForm]);
 
+  useEffect(() => {
+    if (!isOpen || !product) return;
+    trackEnquiryOpen();
+  }, [isOpen, product]);
+
   if (!isOpen || !product) return null;
 
   const handleChange = (
@@ -140,6 +146,7 @@ export default function EnquiryModal({
         type: "success",
         message: "We’ve received your message and will be in touch shortly.",
       });
+      trackEnquirySubmit();
     } catch {
       setStatus({
         type: "error",
