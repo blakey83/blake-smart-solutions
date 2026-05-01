@@ -104,28 +104,27 @@ export default function WifiProblemsPerthPage() {
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
       <section className="border-b border-[var(--color-border)] bg-white">
-        <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-4xl px-5 pt-14 pb-10 sm:px-6 lg:px-8 lg:pt-20 lg:pb-12">
           <div className="max-w-3xl">
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
               {hero.title}
             </h1>
-            <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
+            <p className="mt-5 mb-6 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
               {hero.subtitle}
             </p>
           </div>
+          <WifiArticleInlineCta />
         </div>
       </section>
 
       <section className="bg-[var(--color-page)]">
-        <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <WifiArticleInlineCta className="mb-8" />
+        <div className="mx-auto max-w-4xl px-5 pt-8 pb-14 sm:px-6 lg:px-8 lg:pt-10 lg:pb-20">
           <div className="space-y-5">
             {renderParagraphs(
               intro,
               "max-w-3xl text-base leading-7 text-[var(--color-muted)] sm:text-lg",
             )}
           </div>
-          <div className="mt-7"></div>
         </div>
       </section>
 
@@ -172,15 +171,16 @@ export default function WifiProblemsPerthPage() {
               )}
             </div>
             <p className="mt-6 text-sm leading-6 text-[var(--color-muted)]">
-              This is the same process we use in homes across Perth dealing with
-              dropouts, dead zones, and unreliable coverage.
+              This is the same process we use in businesses across Perth dealing
+              with dropouts, dead zones, and unreliable coverage.
             </p>
           </div>
 
           <div className="mt-10 rounded-[24px] border border-[var(--color-border)] bg-[var(--color-page)] p-6 sm:p-8">
             <p className="text-base leading-7 text-[var(--color-muted)] sm:text-lg">
               For just $99, you can get a complete picture of what’s actually
-              going on with your Wi-Fi — and exactly what needs to be fixed.
+              going on with your Wi-Fi. A professional WiFi survey for your home
+              valued at $299.
             </p>
 
             <div className="mt-8">

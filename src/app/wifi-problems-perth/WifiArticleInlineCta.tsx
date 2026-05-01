@@ -2,13 +2,17 @@
 
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
-const DEFAULT_MESSAGE = "I need WiFi help";
+const DEFAULT_MESSAGE = "Come fix my Wi-Fi!";
 
-export function WifiArticleInlineCta({ className = "" }: { className?: string }) {
+export function WifiArticleInlineCta({
+  className = "",
+}: {
+  className?: string;
+}) {
   return (
     <div className={`max-w-3xl ${className}`.trim()}>
       <div className="inline-flex flex-wrap items-center gap-x-3 gap-y-2 rounded-full border border-[var(--color-border)] bg-white px-4 py-2 text-sm leading-6 shadow-sm">
-        <span className="text-[var(--color-muted)]">Need help sooner?</span>
+        <span className="text-[var(--color-muted)]">Need help in Perth?</span>
         <button
           type="button"
           onClick={() =>
@@ -22,7 +26,8 @@ export function WifiArticleInlineCta({ className = "" }: { className?: string })
           }
           className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
         >
-          Get a $99 WiFi diagnosis — we’ll show you exactly what’s wrong
+          Book a commercial-grade Wi-Fi survey to tell you exactly how to fix
+          your network for just $99 (valued at $399).
         </button>
       </div>
     </div>

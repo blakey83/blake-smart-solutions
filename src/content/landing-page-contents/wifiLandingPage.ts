@@ -3,7 +3,7 @@ export const wifiLandingPageContent = {
 
   hero: {
     title:
-      "Why Your Internet Still Sucks (Even With Fast NBN) — 7 Ways to Fix It at Home",
+      "Why Your Internet Still Sucks (Even With Fast NBN) — 7 Ways to Fix Your Perth Home",
     subtitle:
       "Most home internet problems aren’t caused by your connection — they’re caused by how Wi-Fi actually works inside your house. Here’s how to find the real issue and fix it properly.",
   },
@@ -212,7 +212,8 @@ If you’ve worked through the steps above and still have issues, it’s usually
       "A detailed, easy-to-understand report with diagnostics and coverage mapping",
       "Practical recommendations tailored to your home — placement, setup and equipment if needed",
     ],
-    price: "You can get a full, professional Wi-Fi diagnostic for just $99.",
+    price:
+      "You can get a full, professional Wi-Fi survey for just $99 ($299 value).",
     credit:
       "If you go ahead with any recommended work, that $99 is credited toward the solution — so you’re not paying twice.",
     premium:
