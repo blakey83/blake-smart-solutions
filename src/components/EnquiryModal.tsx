@@ -2,7 +2,11 @@
 
 import { useCallback, useEffect, useState } from "react";
 import type { Product } from "@/lib/types";
-import { trackEnquiryOpen, trackEnquirySubmit } from "@/lib/analytics";
+import {
+  trackEnquiryOpen,
+  trackEnquirySubmit,
+  type EnquiryOpenTrackingParams,
+} from "@/lib/analytics";
 
 const INITIAL_FORM_DATA = {
   name: "",
@@ -14,7 +18,9 @@ const INITIAL_FORM_DATA = {
 };
 
 type EnquiryModalProps = {
+  defaultMessage?: string;
   product: Product | null;
+  openTracking?: EnquiryOpenTrackingParams;
   isOpen: boolean;
   onClose: () => void;
   onSuccess?: () => void;
@@ -29,7 +35,9 @@ function getInitialMessage(product: Product) {
 }
 
 export default function EnquiryModal({
+  defaultMessage,
   product,
+  openTracking,
   isOpen,
   onClose,
   onSuccess,
@@ -45,18 +53,23 @@ export default function EnquiryModal({
     message: "",
   });
 
-  const resetForm = useCallback((nextProduct: Product | null) => {
-    setFormStartedAt(Date.now());
-    setIsSubmitting(false);
-    setStatus({
-      type: "idle",
-      message: "",
-    });
-    setFormData({
-      ...INITIAL_FORM_DATA,
-      message: nextProduct ? getInitialMessage(nextProduct) : "",
-    });
-  }, []);
+  const resetForm = useCallback(
+    (nextProduct: Product | null) => {
+      setFormStartedAt(Date.now());
+      setIsSubmitting(false);
+      setStatus({
+        type: "idle",
+        message: "",
+      });
+      setFormData({
+        ...INITIAL_FORM_DATA,
+        message: nextProduct
+          ? defaultMessage || getInitialMessage(nextProduct)
+          : "",
+      });
+    },
+    [defaultMessage],
+  );
 
   const handleClose = useCallback(() => {
     if (status.type === "success" && onSuccess) {
@@ -93,8 +106,8 @@ export default function EnquiryModal({
 
   useEffect(() => {
     if (!isOpen || !product) return;
-    trackEnquiryOpen();
-  }, [isOpen, product]);
+    trackEnquiryOpen(openTracking);
+  }, [isOpen, openTracking, product]);
 
   if (!isOpen || !product) return null;
 

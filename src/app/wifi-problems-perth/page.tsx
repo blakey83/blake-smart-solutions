@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Fragment } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { wifiLandingPageContent } from "@/contents/landing-page-contents/wifiLandingPageContent";
+import { WifiArticleInlineCta } from "./WifiArticleInlineCta";
 import { WifiLandingPageCtas } from "./WifiLandingPageCtas";
 
 type Fix = (typeof wifiLandingPageContent.fixes)[number];
@@ -122,6 +124,9 @@ export default function WifiProblemsPerthPage() {
               "max-w-3xl text-base leading-7 text-[var(--color-muted)] sm:text-lg",
             )}
           </div>
+          <div className="mt-7">
+            <WifiArticleInlineCta />
+          </div>
         </div>
       </section>
 
@@ -135,7 +140,10 @@ export default function WifiProblemsPerthPage() {
 
           <div className="mx-auto mt-10 max-w-3xl space-y-10">
             {fixes.map((fix, index) => (
-              <FixSection key={fix.title} fix={fix} index={index} />
+              <Fragment key={fix.title}>
+                <FixSection fix={fix} index={index} />
+                {index === 3 ? <WifiArticleInlineCta /> : null}
+              </Fragment>
             ))}
           </div>
           <div className="mt-10">

@@ -8,6 +8,8 @@ declare global {
       params: {
         event_category: "engagement" | "lead";
         event_label: string;
+        source?: string;
+        default_message?: string;
       },
     ) => void;
   }

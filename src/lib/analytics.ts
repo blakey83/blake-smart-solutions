@@ -1,7 +1,13 @@
-export function trackEnquiryOpen() {
+export type EnquiryOpenTrackingParams = {
+  source?: string;
+  default_message?: string;
+};
+
+export function trackEnquiryOpen(params: EnquiryOpenTrackingParams = {}) {
   window.gtag?.("event", "enquiry_open", {
     event_category: "engagement",
     event_label: "Enquiry modal opened",
+    ...params,
   });
 }
 
