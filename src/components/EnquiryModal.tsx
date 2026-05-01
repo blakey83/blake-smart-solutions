@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Product } from "@/lib/types";
 import {
   trackEnquiryOpen,
@@ -52,6 +52,7 @@ export default function EnquiryModal({
     type: "idle",
     message: "",
   });
+  const wasOpenRef = useRef(false);
 
   const resetForm = useCallback(
     (nextProduct: Product | null) => {
@@ -105,7 +106,11 @@ export default function EnquiryModal({
   }, [product, resetForm]);
 
   useEffect(() => {
-    if (!isOpen || !product) return;
+    const didOpen = !wasOpenRef.current && isOpen && product;
+    wasOpenRef.current = isOpen;
+
+    if (!didOpen) return;
+
     trackEnquiryOpen(openTracking);
   }, [isOpen, openTracking, product]);
 

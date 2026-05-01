@@ -4,7 +4,11 @@ export type EnquiryOpenTrackingParams = {
 };
 
 export function trackEnquiryOpen(params: EnquiryOpenTrackingParams = {}) {
-  window.gtag?.("event", "enquiry_open", {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "enquiry_open", {
     event_category: "engagement",
     event_label: "Enquiry modal opened",
     ...params,
@@ -12,7 +16,11 @@ export function trackEnquiryOpen(params: EnquiryOpenTrackingParams = {}) {
 }
 
 export function trackEnquirySubmit() {
-  window.gtag?.("event", "enquiry_submit", {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "enquiry_submit", {
     event_category: "lead",
     event_label: "Enquiry form submitted",
   });
