@@ -118,15 +118,14 @@ export default function WifiProblemsPerthPage() {
 
       <section className="bg-[var(--color-page)]">
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <WifiArticleInlineCta className="mb-8" />
           <div className="space-y-5">
             {renderParagraphs(
               intro,
               "max-w-3xl text-base leading-7 text-[var(--color-muted)] sm:text-lg",
             )}
           </div>
-          <div className="mt-7">
-            <WifiArticleInlineCta />
-          </div>
+          <div className="mt-7"></div>
         </div>
       </section>
 
@@ -263,7 +262,7 @@ export default function WifiProblemsPerthPage() {
 
           <WifiLandingPageCtas
             className="mt-8 justify-center"
-            primaryLabel="Book your Wi-Fi Health Check"
+            primaryLabel="Book your $99 WiFi Diagnosis"
             showSecondary={false}
           />
         </div>

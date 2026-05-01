@@ -4,9 +4,9 @@ import { openEnquiryModal } from "@/lib/enquiryModal";
 
 const DEFAULT_MESSAGE = "I need WiFi help";
 
-export function WifiArticleInlineCta() {
+export function WifiArticleInlineCta({ className = "" }: { className?: string }) {
   return (
-    <div className="max-w-3xl">
+    <div className={`max-w-3xl ${className}`.trim()}>
       <div className="inline-flex flex-wrap items-center gap-x-3 gap-y-2 rounded-full border border-[var(--color-border)] bg-white px-4 py-2 text-sm leading-6 shadow-sm">
         <span className="text-[var(--color-muted)]">Need help sooner?</span>
         <button
@@ -22,7 +22,7 @@ export function WifiArticleInlineCta() {
           }
           className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
         >
-          Book a technician now
+          Get a $99 WiFi diagnosis — we’ll show you exactly what’s wrong
         </button>
       </div>
     </div>
