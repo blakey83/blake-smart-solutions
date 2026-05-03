@@ -140,9 +140,21 @@ export default function WifiProblemsPerthPage() {
                 <WifiProblemsCta className="w-full px-6 sm:w-auto">
                   Book WiFi Fix — from $99
                 </WifiProblemsCta>
-                <p className="mt-4 max-w-xl text-sm leading-6 text-[var(--color-muted)]">
-                  Includes proper diagnosis, clear fix plan and practical fixes
-                  where possible.
+                <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-6 text-[var(--color-muted)]">
+                  <span>Prefer to speak to someone?</span>
+                  <a
+                    href="tel:0477948079"
+                    className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
+                  >
+                    Call
+                  </a>
+                  <span>or</span>
+                  <a
+                    href="sms:0477948079"
+                    className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
+                  >
+                    text 0477 948 079
+                  </a>
                 </p>
               </div>
             </div>
@@ -160,7 +172,7 @@ export default function WifiProblemsPerthPage() {
               </div>
               <div className="border-t border-[var(--color-border)] bg-white p-5 sm:p-6">
                 <p className="text-sm font-semibold text-[var(--color-ink)]">
-                  Proper testing before equipment recommendations.
+                  Professional Testing To Find The Real Issue
                 </p>
                 <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
                   We find the weak spots, interference and setup issues that

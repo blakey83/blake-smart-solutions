@@ -196,8 +196,26 @@ export default function EnquiryModal({
           </h2>
           <p className="mt-3 text-base leading-7 text-slate-600">
             Fill this out and We&apos;ll get back to you about this service.
-            Alternatively you can call 0477 948 079 during business hours
           </p>
+          <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+            <p className="text-sm font-semibold text-slate-900">
+              Prefer to speak to someone?
+            </p>
+            <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+              <a
+                href="tel:0477948079"
+                className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:border-sky-500 hover:text-sky-600"
+              >
+                Call 0477 948 079 during business hours
+              </a>
+              <a
+                href="sms:0477948079"
+                className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:border-sky-500 hover:text-sky-600"
+              >
+                Text anytime
+              </a>
+            </div>
+          </div>
         </div>
 
         {status.type === "success" ? (
