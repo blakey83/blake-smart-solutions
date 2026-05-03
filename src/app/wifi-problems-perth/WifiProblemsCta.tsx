@@ -2,7 +2,8 @@
 
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
-const DEFAULT_MESSAGE = "I need WiFi help";
+const DEFAULT_MESSAGE =
+  "Hi, I'm interested in getting help with my wireless network.";
 
 type WifiProblemsCtaProps = {
   children: React.ReactNode;
