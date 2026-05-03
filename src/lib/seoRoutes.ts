@@ -95,13 +95,13 @@ export function getRoutePriority(route: string): number {
   }
 
   const serviceRoutes = new Set([
+    "/wifi-problems-perth",
     "/wifi-solutions-perth",
     "/security-cameras-perth",
     "/ajax-security-perth",
     "/starlink-installation-perth",
     "/data-cabling",
     "/tv-antennas-perth",
-    "/wifi-problems-perth",
   ]);
 
   if (route === "/enquiry") {

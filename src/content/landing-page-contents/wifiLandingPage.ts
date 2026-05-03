@@ -1,5 +1,5 @@
 export const wifiLandingPageContent = {
-  slug: "wifi-problems-perth",
+  slug: "7-ways-to-fix-wifi",
 
   hero: {
     title:

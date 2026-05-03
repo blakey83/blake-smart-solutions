@@ -33,7 +33,7 @@ export default function WifiSolutionsPerthPage() {
               when a proper Wi-Fi Health Check makes sense.
             </p>
             <Link
-              href="/wifi-problems-perth"
+              href="/7-ways-to-fix-wifi"
               className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
             >
               Read the Wi-Fi problems Perth guide
