@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { TrustStrip } from "@/components/home/TrustStrip";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { WifiProblemsCta } from "./WifiProblemsCta";
 
 const pagePath = "/wifi-problems-perth";
 const pageUrl = `https://www.blakesmartsolutions.com.au${pagePath}`;
-const pageTitle = "WiFi Problems Perth | Fix Dropouts, Dead Zones & Slow Speeds";
+const pageTitle =
+  "WiFi Problems Perth | Fix Dropouts, Dead Zones & Slow Speeds";
 const pageDescription =
   "Perth WiFi help for homes with dropouts, dead zones, slow speeds and poor coverage. Book a WiFi fix visit from $99.";
 
@@ -43,13 +45,13 @@ const includedItems = [
   "Full WiFi diagnosis",
   "Clear fix plan",
   "Practical on-site improvements where possible",
-  "$99 credit towards any further improvements",
+  "$99 credit towards any further improvements, if needed",
 ];
 
 const trustItems = [
   "Perth-based service",
   "Fully insured",
-  "Proper diagnosis before equipment recommendations",
+  "Single visit improvements",
   "Practical fixes for real homes",
 ];
 
@@ -169,6 +171,8 @@ export default function WifiProblemsPerthPage() {
           </div>
         </div>
       </section>
+
+      <TrustStrip trustItems={trustItems} />
 
       <section className="bg-[var(--color-page)]">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
