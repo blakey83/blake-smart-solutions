@@ -141,7 +141,7 @@ export default function WifiProblemsPerthPage() {
                   Book WiFi Fix — from $99
                 </WifiProblemsCta>
                 <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-6 text-[var(--color-muted)]">
-                  <span>Prefer to speak to someone?</span>
+                  <span>Need help now?</span>
                   <a
                     href="tel:0477948079"
                     className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
@@ -172,11 +172,11 @@ export default function WifiProblemsPerthPage() {
               </div>
               <div className="border-t border-[var(--color-border)] bg-white p-5 sm:p-6">
                 <p className="text-sm font-semibold text-[var(--color-ink)]">
-                  Professional Testing To Find The Real Issue
+                  We Find the problem and Fix it properly
                 </p>
                 <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
-                  We find the weak spots, interference and setup issues that
-                  make WiFi unreliable around the home.
+                  We use commercial-grade testing to find the exact issue — and
+                  in most cases, fix it during the same visit.
                 </p>
               </div>
             </div>
@@ -194,7 +194,8 @@ export default function WifiProblemsPerthPage() {
                 What is really happening
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-                It’s usually not your internet — it’s your WiFi setup
+                Slow speeds, dropouts and dead zones aren’t usually an internet
+                problem — they’re a WiFi setup problem.
               </h2>
               <div className="mt-5 space-y-4 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
                 <p>
