@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Blake Smart Solutions | Security Cameras, Wi-Fi & Starlink Perth",
   description:
-    "Perth smart technology specialists for security cameras, smart alarms, Wi-Fi, Starlink and data solutions. Licensed, insured, and experienced in CCTV and smart security systems.",
+    "Perth smart technology specialists for CCTV, smart alarms, Wi-Fi, Starlink distribution and data solutions. Licensed, insured, and experienced in CCTV and smart security systems.",
 };
 
 export default function RootLayout({
