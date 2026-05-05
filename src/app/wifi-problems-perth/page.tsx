@@ -128,17 +128,18 @@ export default function WifiProblemsPerthPage() {
                 Perth WiFi help
               </p>
               <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
-                WiFi Problems in Perth? We Fix Dropouts, Dead Zones & Slow
-                Speeds
+                Stop Fighting Your WiFi
               </h1>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                Get reliable WiFi in every room — for streaming, work calls,
-                gaming and everyday use — without wasting money on the wrong
-                equipment.
+                Upgrade to reliable WiFi in every room — for working from home,
+                streaming movies, gaming and everyday use.
+              </p>
+              <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
+                We guarantee a solution or you don't pay for the visit.
               </p>
               <div className="mt-8">
                 <WifiProblemsCta className="w-full px-6 sm:w-auto">
-                  Book WiFi Fix — from $99
+                  Get Your WiFi Fixed – $99 Visit
                 </WifiProblemsCta>
                 <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-6 text-[var(--color-muted)]">
                   <span>Need help now?</span>
