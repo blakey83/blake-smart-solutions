@@ -131,7 +131,7 @@ export default function WifiProblemsPerthPage() {
                 Stop Fighting Your WiFi
               </h1>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                Upgrade to reliable WiFi in every room — for working from home,
+                Get reliable WiFi in every room — for working from home,
                 streaming movies, gaming and everyday use.
               </p>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
