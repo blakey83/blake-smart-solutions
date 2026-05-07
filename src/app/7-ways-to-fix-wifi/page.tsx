@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Fragment } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { wifiLandingPageContent } from "@/contents/landing-page-contents/wifiLandingPageContent";
+import { wifiLandingPageContent } from "@/content/landing-page-contents/wifiLandingPage";
 import { WifiArticleInlineCta } from "./WifiArticleInlineCta";
 import { WifiLandingPageCtas } from "./WifiLandingPageCtas";
 
