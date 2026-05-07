@@ -96,6 +96,7 @@ export function getRoutePriority(route: string): number {
 
   const serviceRoutes = new Set([
     "/wifi-problems-perth",
+    "/security",
     "/wifi-solutions-perth",
     "/security-cameras-perth",
     "/ajax-security-perth",

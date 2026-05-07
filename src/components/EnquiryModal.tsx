@@ -206,13 +206,13 @@ export default function EnquiryModal({
                 href="tel:0477948079"
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:border-sky-500 hover:text-sky-600"
               >
-                Call 0477 948 079 during business hours
+                Call 0477 948 079
               </a>
               <a
                 href="sms:0477948079"
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:border-sky-500 hover:text-sky-600"
               >
-                Text anytime
+                SMS anytime
               </a>
             </div>
           </div>
