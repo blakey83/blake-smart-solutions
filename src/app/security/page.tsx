@@ -3,8 +3,7 @@ import { LandingPage } from "@/components/landingPages/LandingPage";
 
 const pagePath = "/security";
 const pageUrl = `https://www.blakesmartsolutions.com.au${pagePath}`;
-const pageTitle =
-  "Security Camera Installation Perth | Active Deterrence CCTV";
+const pageTitle = "Security Camera Installation Perth | Active Deterrence CCTV";
 const pageDescription =
   "Deter intruders with active deterrence CCTV systems for Perth homes and businesses. TiOC cameras, full-colour night vision, smart alerts and professional installation.";
 
@@ -55,7 +54,7 @@ const serviceStructuredData = {
     name: "Blake Smart Solutions",
     url: "https://www.blakesmartsolutions.com.au",
     telephone: "+61477948079",
-    image: "https://www.blakesmartsolutions.com.au/Blake_shop_front.jpeg",
+    image: "https://www.blakesmartsolutions.com.au/me_and_charlotte.jpeg",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Perth",

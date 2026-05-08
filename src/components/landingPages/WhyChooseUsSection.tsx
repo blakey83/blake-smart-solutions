@@ -31,8 +31,8 @@ export function WhyChooseUsSection() {
             <div className="mt-10 overflow-hidden border border-zinc-200 bg-zinc-950 shadow-[0_24px_70px_rgba(15,23,42,0.16)]">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/Blake_shop_front.jpeg"
-                  alt="Blake Smart Solutions shop front in Perth"
+                  src="/images/me_and_charlotte.png"
+                  alt="Protect what matters most"
                   fill
                   sizes="(min-width: 1024px) 48vw, 100vw"
                   className="object-cover"
