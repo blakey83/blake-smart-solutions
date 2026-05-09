@@ -3,11 +3,11 @@ import { cctvProducts } from "@/content/cctv_products";
 
 export const cctvSolutionContent: SolutionPageTemplateProps = {
   title:
-    "Dahua Security Camera Specialists — Perth homes and business",
+    "Keep your home safe and secure, night and day, with professional security camera installation in Perth",
   intro:
     "Blake Smart Solutions installs professional security camera systems across Perth for homes, businesses and commercial sites. We don’t just install cameras — we design systems that give you clear visibility, reliable evidence and real protection when it matters. From entry points and blind spots to full property coverage, every system is built to suit how your property is actually used.",
   heroEyebrow: "Professional CCTV solutions",
-  heroImage: "/images/solutions/cctv/hero.png",
+  heroImage: "/images/products/security/tioc_burgler.png",
   heroImageAlt: "Security camera installation by Blake Smart Solutions",
 
   primaryCta: {
@@ -15,7 +15,7 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     action: "enquiry",
   },
   secondaryCta: {
-    label: "Speak to a professional",
+    label: "Call 0477 948 079",
     action: "link",
     href: "tel:0477948079",
   },
