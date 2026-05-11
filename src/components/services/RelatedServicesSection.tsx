@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { relatedServicesContent } from "@/content/siteContent";
 import { services } from "@/content/products";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -11,8 +12,8 @@ type RelatedServicesSectionProps = {
 
 export function RelatedServicesSection({
   currentPath,
-  title = "Explore related services",
-  description = "If this page is close to what you need, these related services are often worth comparing as well.",
+  title = relatedServicesContent.defaultTitle,
+  description = relatedServicesContent.defaultDescription,
 }: RelatedServicesSectionProps) {
   const relatedServices = services.filter((service) => service.href !== currentPath);
 
@@ -20,7 +21,7 @@ export function RelatedServicesSection({
     <section className="border-t border-[var(--color-border)] bg-white">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
         <SectionHeading
-          eyebrow="Related services"
+          eyebrow={relatedServicesContent.eyebrow}
           title={title}
           description={description}
         />
@@ -52,7 +53,7 @@ export function RelatedServicesSection({
               </p>
 
               <span className="mt-5 inline-flex min-h-12 items-center text-base font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
-                View service
+                {relatedServicesContent.serviceCta}
               </span>
             </Link>
           ))}
@@ -63,7 +64,7 @@ export function RelatedServicesSection({
             href="/#services"
             className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
           >
-            Back to all services
+            {relatedServicesContent.backCta}
           </Link>
         </div>
       </div>

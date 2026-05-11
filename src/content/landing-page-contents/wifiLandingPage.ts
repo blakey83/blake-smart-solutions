@@ -1,5 +1,11 @@
 export const wifiLandingPageContent = {
   slug: "7-ways-to-fix-wifi",
+  metadata: {
+    title:
+      "Why Your Internet Still Sucks (Even With Fast NBN) — 7 Ways to Fix It at Home",
+    description:
+      "Learn why your internet still feels slow even with fast NBN, Starlink or fixed wireless, and how Blake Smart Solutions can diagnose Wi-Fi issues with a $99 Wi-Fi Health Check.",
+  },
 
   hero: {
     title:
@@ -227,5 +233,32 @@ If you’ve worked through the steps above and still have issues, it’s usually
     closing:
       "If you’ve already tried fixing it and it’s still not working the way it should, this is the fastest way to get your home internet performing properly.",
     cta: "Book your Wi-Fi Health Check",
+  },
+
+  guideSection: {
+    eyebrow: "The guide",
+    title: "7 ways to fix it at home",
+    description:
+      "Start with the simple checks first, then work through the practical reasons Wi-Fi often breaks down around a home.",
+    solutionsLink: "View Wi-Fi solutions Perth",
+  },
+
+  diagnostic: {
+    processNote:
+      "This is the same process we use in businesses across Perth dealing with dropouts, dead zones, and unreliable coverage.",
+    priceDescription:
+      "For just $99, you can get a complete picture of what’s actually going on with your Wi-Fi. A professional WiFi survey for your home valued at $299.",
+    includedTitle: "What's included",
+    creditTitle: "Credited toward recommended work",
+    noObligationTitle: "No obligation",
+    guaranteeTitle: "Guarantee",
+  },
+
+  finalCta: {
+    eyebrow: "Ready when you are",
+    title:
+      "Get professional Wi-Fi diagnosis that gives you clarity and practical next steps?",
+    intro: "Credited toward any recommended work.",
+    cta: "Book your $99 WiFi Diagnosis",
   },
 };

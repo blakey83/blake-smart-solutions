@@ -1,3 +1,4 @@
+import { finalCtaSectionContent } from "@/content/home/sections";
 import { ButtonLink } from "../ui/ButtonLink";
 
 export function FinalCtaSection() {
@@ -8,22 +9,23 @@ export function FinalCtaSection() {
     >
       <div className="mx-auto max-w-4xl px-5 py-12 text-center sm:px-6 lg:px-8 lg:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-          Get in touch
+          {finalCtaSectionContent.eyebrow}
         </p>
 
         <h2 className="mt-4 text-2xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-          Ready to sort out your Wi-Fi, security or installation needs?
+          {finalCtaSectionContent.title}
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[var(--color-muted)] sm:leading-7">
-          Clear advice, practical solutions, and tidy workmanship for Perth
-          homes and small businesses.
+          {finalCtaSectionContent.description}
         </p>
 
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <ButtonLink href="tel:0477948079">Call 0477 948 079</ButtonLink>
+          <ButtonLink href="tel:0477948079">
+            {finalCtaSectionContent.callCta}
+          </ButtonLink>
           <ButtonLink href="/#final-cta" variant="secondary">
-            Request a Quote
+            {finalCtaSectionContent.quoteCta}
           </ButtonLink>
         </div>
       </div>

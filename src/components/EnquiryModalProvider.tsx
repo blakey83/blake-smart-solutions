@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { enquiryProductContent } from "@/content/siteContent";
 import type { Product } from "@/lib/types";
 import EnquiryModal from "@/components/EnquiryModal";
 import type { EnquiryOpenTrackingParams } from "@/lib/analytics";
@@ -40,7 +41,9 @@ export function EnquiryModalProvider() {
       setOpenTracking(customEvent.detail?.tracking ?? null);
       setSuccessRedirectTo(redirectTo || null);
       setSelectedProduct(
-        createEnquiryProduct(productName || "General Quote Request"),
+        createEnquiryProduct(
+          productName || enquiryProductContent.generalQuoteRequest,
+        ),
       );
     };
 

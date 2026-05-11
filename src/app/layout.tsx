@@ -6,6 +6,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { EnquiryModalProvider } from "@/components/EnquiryModalProvider";
+import { siteMetadataContent } from "@/content/siteContent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,9 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Blake Smart Solutions | Security Cameras, Wi-Fi & Starlink Perth",
-  description:
-    "Perth smart technology specialists for CCTV, smart alarms, Wi-Fi, Starlink distribution and data solutions. Licensed, insured, and experienced in CCTV and smart security systems.",
+  title: siteMetadataContent.title,
+  description: siteMetadataContent.description,
 };
 
 export default function RootLayout({

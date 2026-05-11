@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ProductCardGrid } from "@/components/products/ProductCardGrid";
 import { RelatedServicesSection } from "@/components/services/RelatedServicesSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { solutionPageTemplateContent } from "@/content/siteContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type {
   CtaButton,
@@ -58,24 +59,24 @@ export function SolutionPageTemplate({
   currentPath = "/",
   title,
   intro,
-  heroEyebrow = "Solutions",
+  heroEyebrow = solutionPageTemplateContent.heroEyebrow,
   heroImage,
   heroImageAlt,
   primaryCta,
   secondaryCta,
-  problemsEyebrow = "Common issues",
+  problemsEyebrow = solutionPageTemplateContent.problemsEyebrow,
   problemsTitle,
-  problemsIntro = "Solutions are planned around the problems you actually need solved, not just the hardware being installed.",
+  problemsIntro = solutionPageTemplateContent.problemsIntro,
   problems,
   brandBlock,
-  productsEyebrow = "Solutions",
+  productsEyebrow = solutionPageTemplateContent.productsEyebrow,
   productsTitle,
   productsIntro,
-  productsFallbackIntro = "These are common package options. Final recommendations and pricing can be tailored to the property, layout, and performance requirements.",
+  productsFallbackIntro = solutionPageTemplateContent.productsFallbackIntro,
   products,
-  imageSectionEyebrow = "On-site delivery",
+  imageSectionEyebrow = solutionPageTemplateContent.imageSectionEyebrow,
   imageSection,
-  finalCtaEyebrow = "Get in touch",
+  finalCtaEyebrow = solutionPageTemplateContent.finalCtaEyebrow,
   finalCtaTitle,
   finalCtaIntro,
   finalCtaButton,

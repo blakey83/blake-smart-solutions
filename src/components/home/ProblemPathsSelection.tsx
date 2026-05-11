@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { problemPathsSectionContent } from "@/content/home/sections";
 import { problemPaths } from "@/content/products";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -8,9 +9,9 @@ export function ProblemPathsSelection() {
     <section id="problems" className="bg-[var(--color-page)]">
       <div className="mx-auto max-w-5xl px-5 py-12 sm:px-6 lg:px-8 lg:py-20">
         <SectionHeading
-          eyebrow="Common Problems"
-          title="Situations we see often"
-          description="Some common issues we can help with."
+          eyebrow={problemPathsSectionContent.eyebrow}
+          title={problemPathsSectionContent.title}
+          description={problemPathsSectionContent.description}
         />
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -42,7 +43,7 @@ export function ProblemPathsSelection() {
                   {problem.description}
                 </p>
                 <p className="mt-4 text-base font-medium text-[var(--color-accent)]">
-                  Learn more →
+                  {problemPathsSectionContent.cta}
                 </p>
               </div>
             </Link>

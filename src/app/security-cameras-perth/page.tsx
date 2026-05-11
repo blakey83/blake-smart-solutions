@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
+import { servicePageMetadataContent } from "@/content/pageMetadata";
 import { cctvSolutionContent } from "@/content/cctvSolutionContent";
 import { cctvSolutionTrustItems } from "@/content/cctvSolutionContent";
 
 export const metadata: Metadata = {
-  title:
-    "Securty Camera Solutions | Business and Home Security Camera Solutions",
-  description:
-    "Professional security camera solutions in Perth. Fix dead zones, dropouts and poor coverage with properly designed systems for homes, businesses, sheds and outdoor areas.",
+  title: servicePageMetadataContent.securityCamerasPerth.title,
+  description: servicePageMetadataContent.securityCamerasPerth.description,
 };
 
 export default function SecurityCamerasPerthPage() {

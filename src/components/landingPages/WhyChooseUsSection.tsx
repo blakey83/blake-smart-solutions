@@ -1,14 +1,9 @@
 import Image from "next/image";
-
-const modernSystems = [
-  "active deterrence",
-  "smart alerts",
-  "remote access",
-  "AI human detection",
-  "full-colour night vision",
-];
+import { securityLandingPageContent } from "@/content/landing-page-contents/securityLandingPage";
 
 export function WhyChooseUsSection() {
+  const { whyChooseUs } = securityLandingPageContent;
+
   return (
     <section className="relative isolate overflow-hidden bg-white py-20 text-zinc-950 sm:py-24 lg:py-32">
       <div className="absolute inset-0 -z-30 bg-[radial-gradient(circle_at_82%_18%,rgba(13,160,245,0.12),transparent_24rem),radial-gradient(circle_at_12%_78%,rgba(220,38,38,0.1),transparent_26rem),linear-gradient(180deg,#ffffff_0%,#f6f8fb_100%)]" />
@@ -18,21 +13,20 @@ export function WhyChooseUsSection() {
         <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:gap-16">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.24em] text-red-600">
-              Why Choose Blake Smart Solutions
+              {whyChooseUs.eyebrow}
             </p>
             <h2 className="mt-4 max-w-2xl text-4xl font-black uppercase leading-[0.96] tracking-normal text-zinc-950 sm:text-5xl lg:text-6xl">
-              Local security work, installed properly.
+              {whyChooseUs.title}
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-700">
-              Perth-based advice, professional installation, and modern systems
-              designed around the way your property actually works.
+              {whyChooseUs.intro}
             </p>
 
             <div className="mt-10 overflow-hidden border border-zinc-200 bg-zinc-950 shadow-[0_24px_70px_rgba(15,23,42,0.16)]">
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/me_and_charlotte.png"
-                  alt="Protect what matters most"
+                  alt={whyChooseUs.imageAlt}
                   fill
                   sizes="(min-width: 1024px) 48vw, 100vw"
                   className="object-cover"
@@ -40,10 +34,10 @@ export function WhyChooseUsSection() {
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_48%,rgba(2,6,23,0.78))]" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white sm:p-6">
                   <p className="text-xs font-black uppercase tracking-[0.22em] text-sky-300">
-                    Perth local
+                    {whyChooseUs.imageEyebrow}
                   </p>
                   <p className="mt-2 text-2xl font-black uppercase leading-tight">
-                    Real business. Real support. Real accountability.
+                    {whyChooseUs.imageTitle}
                   </p>
                 </div>
               </div>
@@ -59,11 +53,10 @@ export function WhyChooseUsSection() {
                 </IconBadge>
                 <div>
                   <h3 className="text-2xl font-black uppercase leading-tight text-zinc-950">
-                    WA Police Licensed Security Installer
+                    {whyChooseUs.licenceTitle}
                   </h3>
                   <p className="mt-4 text-base leading-7 text-zinc-700">
-                    Licensed security installation for professionally installed
-                    CCTV and alarm systems.
+                    {whyChooseUs.licenceIntro}
                   </p>
                 </div>
               </div>
@@ -77,11 +70,10 @@ export function WhyChooseUsSection() {
                 </IconBadge>
                 <div>
                   <h3 className="text-2xl font-black uppercase leading-tight text-zinc-950">
-                    Perth-Based & Fully Insured
+                    {whyChooseUs.localTitle}
                   </h3>
                   <p className="mt-4 text-base leading-7 text-zinc-700">
-                    Local service with reliable support and professional
-                    workmanship.
+                    {whyChooseUs.localIntro}
                   </p>
                 </div>
               </div>
@@ -89,16 +81,16 @@ export function WhyChooseUsSection() {
 
             <article className="border border-zinc-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] sm:p-8">
               <p className="text-xs font-black uppercase tracking-[0.2em] text-red-600">
-                Modern Security Systems
+                {whyChooseUs.modernEyebrow}
               </p>
               <h3 className="mt-3 text-2xl font-black uppercase leading-tight text-zinc-950">
-                Security that does more than sit there recording.
+                {whyChooseUs.modernTitle}
               </h3>
               <p className="mt-4 text-base leading-7 text-zinc-700">
-                We focus on modern systems with:
+                {whyChooseUs.modernIntro}
               </p>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {modernSystems.map((item) => (
+                {whyChooseUs.modernSystems.map((item) => (
                   <div
                     key={item}
                     className="flex min-h-14 items-center gap-3 border border-red-100 bg-red-50 px-4 py-3"
@@ -111,21 +103,19 @@ export function WhyChooseUsSection() {
                 ))}
               </div>
               <p className="mt-6 border-t border-zinc-200 pt-5 text-base font-bold leading-7 text-zinc-950">
-                not outdated “set and forget” camera systems.
+                {whyChooseUs.modernClosing}
               </p>
             </article>
 
             <article className="border border-sky-200 bg-[linear-gradient(135deg,#f3f9ff_0%,#ffffff_48%,#fff5f5_100%)] p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] sm:p-8">
               <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-700">
-                Designed Around Real Properties
+                {whyChooseUs.propertyEyebrow}
               </p>
               <h3 className="mt-3 text-2xl font-black uppercase leading-tight text-zinc-950">
-                Good security is not just about buying cameras.
+                {whyChooseUs.propertyTitle}
               </h3>
               <p className="mt-5 text-lg leading-8 text-zinc-700">
-                Proper positioning, coverage, lighting and usability make the
-                difference between a system that helps, and one that gets
-                ignored.
+                {whyChooseUs.propertyIntro}
               </p>
             </article>
           </div>

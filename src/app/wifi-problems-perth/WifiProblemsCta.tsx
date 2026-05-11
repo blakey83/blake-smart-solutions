@@ -1,5 +1,6 @@
 "use client";
 
+import { enquiryProductContent } from "@/content/siteContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 const DEFAULT_MESSAGE =
@@ -18,7 +19,7 @@ export function WifiProblemsCta({
     <button
       type="button"
       onClick={() =>
-        openEnquiryModal("Wi-Fi Help", {
+        openEnquiryModal(enquiryProductContent.wifiHelp, {
           defaultMessage: DEFAULT_MESSAGE,
           tracking: {
             source: "wifi_problems_perth_landing",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { productPageTemplateContent } from "@/content/siteContent";
 import type { Product } from "@/lib/types";
 import { ProductCardGrid } from "@/components/products/ProductCardGrid";
 import { RelatedServicesSection } from "@/components/services/RelatedServicesSection";
@@ -22,7 +23,7 @@ export function ProductPageTemplate({
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-              Services
+              {productPageTemplateContent.heroEyebrow}
             </p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
               {title}
@@ -42,8 +43,8 @@ export function ProductPageTemplate({
 
       <RelatedServicesSection
         currentPath={currentPath}
-        title="Compare related services"
-        description="Many jobs overlap across Wi-Fi, cabling, Starlink, antennas and security. These nearby service pages can help you find the best fit."
+        title={productPageTemplateContent.relatedServicesTitle}
+        description={productPageTemplateContent.relatedServicesDescription}
       />
 
       <section
@@ -52,14 +53,13 @@ export function ProductPageTemplate({
       >
         <div className="mx-auto max-w-4xl px-5 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-            Get in touch
+            {productPageTemplateContent.finalCtaEyebrow}
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-            Need advice on the right option for your property?
+            {productPageTemplateContent.finalCtaTitle}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
-            Blake Smart Solutions can help you compare the practical options and
-            work out the best next step for the site.
+            {productPageTemplateContent.finalCtaIntro}
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -67,13 +67,13 @@ export function ProductPageTemplate({
               href="tel:0477948079"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
             >
-              Call 0477 948 079
+              {productPageTemplateContent.callCta}
             </a>
             <Link
               href="/#final-cta"
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
             >
-              Request a Quote
+              {productPageTemplateContent.quoteCta}
             </Link>
           </div>
         </div>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { ProductPageTemplate } from "@/components/products/ProductPageTemplate";
+import { servicePageMetadataContent } from "@/content/pageMetadata";
 import { antennaProducts, antennasIntro } from "@/content/antenna_products";
 
 export const metadata: Metadata = {
-  title: "TV Antennas | Blake Smart Solutions",
-  description:
-    "TV antenna repairs, extra points, and new antenna installations for Perth homes needing reliable free-to-air reception.",
+  title: servicePageMetadataContent.tvAntennasPerth.title,
+  description: servicePageMetadataContent.tvAntennasPerth.description,
 };
 
 export default function AntennasPage() {

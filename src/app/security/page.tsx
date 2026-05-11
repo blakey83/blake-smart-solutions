@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { LandingPage } from "@/components/landingPages/LandingPage";
+import { servicePageMetadataContent } from "@/content/pageMetadata";
+import { siteMetadataContent } from "@/content/siteContent";
 
-const pagePath = "/security";
-const pageUrl = `https://www.blakesmartsolutions.com.au${pagePath}`;
-const pageTitle = "Security Camera Installation Perth | Active Deterrence CCTV";
-const pageDescription =
-  "Deter intruders with active deterrence CCTV systems for Perth homes and businesses. TiOC cameras, full-colour night vision, smart alerts and professional installation.";
+const pagePath = servicePageMetadataContent.security.pagePath;
+const pageUrl = `${siteMetadataContent.website}${pagePath}`;
+const pageTitle = servicePageMetadataContent.security.pageTitle;
+const pageDescription = servicePageMetadataContent.security.pageDescription;
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -17,13 +18,13 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: pageUrl,
-    siteName: "Blake Smart Solutions",
+    siteName: siteMetadataContent.businessName,
     images: [
       {
-        url: "https://www.blakesmartsolutions.com.au/images/products/security/tioc_burgler.png",
-        width: 1448,
-        height: 1086,
-        alt: "Active deterrence security camera system for Perth homes and businesses",
+        url: servicePageMetadataContent.security.image.url,
+        width: servicePageMetadataContent.security.image.width,
+        height: servicePageMetadataContent.security.image.height,
+        alt: servicePageMetadataContent.security.image.alt,
       },
     ],
     locale: "en_AU",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     images: [
-      "https://www.blakesmartsolutions.com.au/images/products/security/tioc_burgler.png",
+      servicePageMetadataContent.security.image.url,
     ],
   },
 };
@@ -42,35 +43,34 @@ export const metadata: Metadata = {
 const serviceStructuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Security Camera Installation Perth",
+  name: servicePageMetadataContent.security.serviceName,
   description: pageDescription,
   url: pageUrl,
   areaServed: {
     "@type": "City",
-    name: "Perth",
+    name: siteMetadataContent.city,
   },
   provider: {
     "@type": "LocalBusiness",
-    name: "Blake Smart Solutions",
-    url: "https://www.blakesmartsolutions.com.au",
-    telephone: "+61477948079",
-    image: "https://www.blakesmartsolutions.com.au/me_and_charlotte.jpeg",
+    name: siteMetadataContent.businessName,
+    url: siteMetadataContent.website,
+    telephone: siteMetadataContent.telephone,
+    image: servicePageMetadataContent.security.providerImage,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Perth",
-      addressRegion: "WA",
-      addressCountry: "AU",
+      addressLocality: siteMetadataContent.city,
+      addressRegion: siteMetadataContent.region,
+      addressCountry: siteMetadataContent.country,
     },
   },
-  serviceType: "Security camera installation",
-  category: "Security System Installation",
+  serviceType: servicePageMetadataContent.security.serviceType,
+  category: servicePageMetadataContent.security.category,
   offers: {
     "@type": "Offer",
     url: pageUrl,
     priceCurrency: "AUD",
     availability: "https://schema.org/InStock",
-    description:
-      "Active deterrence CCTV design and installation for Perth homes and businesses.",
+    description: servicePageMetadataContent.security.offerDescription,
   },
 };
 

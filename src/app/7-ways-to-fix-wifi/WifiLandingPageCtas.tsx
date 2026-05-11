@@ -1,6 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import {
+  enquiryProductContent,
+  wifiArticleCtaContent,
+} from "@/content/siteContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 type WifiLandingPageCtasProps = {
@@ -11,8 +15,8 @@ type WifiLandingPageCtasProps = {
 };
 
 export function WifiLandingPageCtas({
-  primaryLabel = "Book your Wi-Fi Health Check",
-  secondaryLabel = "Call Blake Smart Solutions",
+  primaryLabel = wifiArticleCtaContent.defaultPrimaryLabel,
+  secondaryLabel = wifiArticleCtaContent.defaultSecondaryLabel,
   className = "",
   showSecondary = true,
 }: WifiLandingPageCtasProps) {
@@ -25,7 +29,7 @@ export function WifiLandingPageCtas({
     <div className={`flex flex-col gap-3 sm:flex-row ${className}`.trim()}>
       <button
         type="button"
-        onClick={() => openEnquiryModal("Wi-Fi Health Check")}
+        onClick={() => openEnquiryModal(enquiryProductContent.wifiHealthCheck)}
         className={primaryClasses}
       >
         {primaryLabel}

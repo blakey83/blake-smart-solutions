@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { servicesSectionContent } from "@/content/home/sections";
 import { services } from "@/content/products";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -8,9 +9,9 @@ export function ServicesSection() {
     <section id="services" className="bg-white">
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-6 lg:px-8 lg:py-20">
         <SectionHeading
-          eyebrow="Services"
-          title="Practical technology services for Perth homes and small businesses."
-          description="From CCTV and Wi-Fi to Starlink, data cabling, alarms and TV antennas, Blake Smart Solutions delivers tidy installs, clear advice, and systems that work properly day to day."
+          eyebrow={servicesSectionContent.eyebrow}
+          title={servicesSectionContent.title}
+          description={servicesSectionContent.description}
         />
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
@@ -40,7 +41,7 @@ export function ServicesSection() {
               </p>
 
               <span className="mt-5 inline-flex min-h-12 items-center text-base font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
-                View service
+                {servicesSectionContent.cta}
               </span>
             </Link>
           ))}

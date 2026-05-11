@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import { heroSectionContent } from "@/content/home/heroSection";
+import { heroSectionExtraContent } from "@/content/home/sections";
 
 export function HeroSection() {
   return (
@@ -67,7 +68,7 @@ export function HeroSection() {
                 href="#problems"
                 className="text-white/80 text-sm underline hover:text-white"
               >
-                ↓ See how we can help
+                {heroSectionExtraContent.problemLink}
               </a>
             </div>
           </div>

@@ -1,32 +1,9 @@
 import Image from "next/image";
-
-const deterrenceFeatures = [
-  "trigger warning lights",
-  "activate sirens",
-  "detect people accurately",
-  "send real-time alerts to your phone",
-];
-
-const assessmentItems = [
-  "vulnerable entry points",
-  "blind spots",
-  "lighting conditions",
-  "driveway visibility",
-  "side access areas",
-  "camera positioning",
-];
-
-const installTypes = [
-  "homes",
-  "workshops",
-  "garages",
-  "retail spaces",
-  "offices",
-  "warehouses",
-  "small businesses",
-];
+import { securityLandingPageContent } from "@/content/landing-page-contents/securityLandingPage";
 
 export function WhatWeDoSection() {
+  const { whatWeDo } = securityLandingPageContent;
+
   return (
     <section className="relative isolate overflow-hidden bg-[#f4f7fb] py-20 text-zinc-950 sm:py-24 lg:py-32">
       <div className="absolute inset-0 -z-30 bg-[radial-gradient(circle_at_14%_14%,rgba(13,160,245,0.16),transparent_24rem),radial-gradient(circle_at_88%_24%,rgba(220,38,38,0.13),transparent_26rem),linear-gradient(180deg,#ffffff_0%,#f4f7fb_48%,#eef3f8_100%)]" />
@@ -36,27 +13,22 @@ export function WhatWeDoSection() {
         <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-16">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.24em] text-red-600">
-              What We Do
+              {whatWeDo.eyebrow}
             </p>
             <h2 className="mt-4 max-w-2xl text-4xl font-black uppercase leading-[0.96] tracking-normal text-zinc-950 sm:text-5xl lg:text-6xl">
-              Modern security camera systems for Perth homes and businesses.
+              {whatWeDo.title}
             </h2>
             <div className="mt-7 max-w-xl space-y-5 text-lg leading-8 text-zinc-700">
-              <p>
-                We design and install modern security camera systems for Perth
-                homes and businesses.
-              </p>
-              <p>
-                Our systems are built around real-world protection, not just
-                recording footage after something happens.
-              </p>
+              {whatWeDo.intro.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
 
             <div className="mt-10 overflow-hidden border border-zinc-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.12)]">
               <div className="relative aspect-[16/10]">
                 <Image
                   src="/images/products/security/call_out2.jpg"
-                  alt="Security camera monitoring technology"
+                  alt={whatWeDo.imageAlt}
                   fill
                   sizes="(min-width: 1024px) 42vw, 100vw"
                   className="object-cover"
@@ -64,10 +36,10 @@ export function WhatWeDoSection() {
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,rgba(2,6,23,0.72))]" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
                   <p className="text-sm font-black uppercase tracking-[0.18em] text-sky-300">
-                    Smart protection
+                    {whatWeDo.imageEyebrow}
                   </p>
                   <p className="mt-2 text-2xl font-black uppercase leading-tight">
-                    Built for real properties, not spec sheets.
+                    {whatWeDo.imageTitle}
                   </p>
                 </div>
               </div>
@@ -79,43 +51,41 @@ export function WhatWeDoSection() {
               <div className="grid gap-6">
                 <div className="max-w-2xl">
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-red-600">
-                    Active Deterrence
+                    {whatWeDo.activeEyebrow}
                   </p>
                   <h3 className="mt-3 text-2xl font-black uppercase leading-tight text-zinc-950">
-                    Active deterrence camera systems
+                    {whatWeDo.activeTitle}
                   </h3>
                   <p className="mt-4 text-base leading-7 text-zinc-700">
-                    Modern TiOC camera systems can:
+                    {whatWeDo.activeIntro}
                   </p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2 2xl:grid-cols-4">
-                  {deterrenceFeatures.map((feature) => (
+                  {whatWeDo.deterrenceFeatures.map((feature) => (
                     <FeaturePill key={feature}>{feature}</FeaturePill>
                   ))}
                 </div>
               </div>
               <p className="mt-7 border-t border-zinc-200 pt-6 text-xl font-bold leading-8 text-zinc-950">
-                Designed to help deter intruders before damage is done.
+                {whatWeDo.activeClosing}
               </p>
             </article>
 
             <article className="grid overflow-hidden border border-zinc-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] lg:grid-cols-[0.88fr_1.12fr]">
               <div className="bg-zinc-950 p-6 text-white sm:p-8">
                 <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-300">
-                  Phone Access
+                  {whatWeDo.phoneEyebrow}
                 </p>
                 <h3 className="mt-3 text-2xl font-black uppercase leading-tight">
-                  Smart remote monitoring
+                  {whatWeDo.phoneTitle}
                 </h3>
               </div>
               <div className="p-6 sm:p-8">
                 <p className="text-base leading-7 text-zinc-700">
-                  View live cameras, playback footage, and receive alerts
-                  directly from your phone, whether you&apos;re at home, at
-                  work, or away.
+                  {whatWeDo.phoneIntro}
                 </p>
                 <p className="mt-5 text-lg font-bold leading-7 text-zinc-950">
-                  Simple, reliable access without complicated setups.
+                  {whatWeDo.phoneClosing}
                 </p>
               </div>
             </article>
@@ -124,38 +94,38 @@ export function WhatWeDoSection() {
               <div className="grid gap-8 xl:grid-cols-[0.86fr_1.14fr]">
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-red-600">
-                    Site Design
+                    {whatWeDo.siteEyebrow}
                   </p>
                   <h3 className="mt-3 text-2xl font-black uppercase leading-tight text-zinc-950">
-                    Professional camera installation
+                    {whatWeDo.siteTitle}
                   </h3>
                   <p className="mt-4 text-base leading-7 text-zinc-700">
-                    Every property is different. We assess:
+                    {whatWeDo.siteIntro}
                   </p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  {assessmentItems.map((item) => (
+                  {whatWeDo.assessmentItems.map((item) => (
                     <CheckItem key={item}>{item}</CheckItem>
                   ))}
                 </div>
               </div>
               <p className="mt-7 border-t border-zinc-200 pt-6 text-lg font-bold leading-7 text-zinc-950">
-                to create a system that actually works in the real world.
+                {whatWeDo.siteClosing}
               </p>
             </article>
 
             <article className="border border-sky-200 bg-[linear-gradient(135deg,#ffffff_0%,#f3f9ff_48%,#fff5f5_100%)] p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] sm:p-8">
               <p className="text-xs font-black uppercase tracking-[0.2em] text-sky-700">
-                Homes & Small Business
+                {whatWeDo.installEyebrow}
               </p>
               <h3 className="mt-3 text-2xl font-black uppercase leading-tight text-zinc-950">
-                Home & small business security
+                {whatWeDo.installTitle}
               </h3>
               <p className="mt-4 text-base leading-7 text-zinc-700">
-                We install systems for:
+                {whatWeDo.installIntro}
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {installTypes.map((type) => (
+                {whatWeDo.installTypes.map((type) => (
                   <div
                     key={type}
                     className="border border-zinc-200 bg-white px-4 py-3 text-sm font-black uppercase text-zinc-900"
@@ -165,8 +135,7 @@ export function WhatWeDoSection() {
                 ))}
               </div>
               <p className="mt-7 text-xl font-bold leading-8 text-zinc-950">
-                from simple front-door coverage through to full multi-camera
-                systems.
+                {whatWeDo.installClosing}
               </p>
             </article>
           </div>

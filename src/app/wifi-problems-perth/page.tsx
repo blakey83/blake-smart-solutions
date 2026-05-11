@@ -3,57 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { wifiProblemsPerthPageContent } from "@/content/page-contents/wifiProblemsPerth";
+import { siteMetadataContent } from "@/content/siteContent";
 import { WifiProblemsCta } from "./WifiProblemsCta";
 
-const pagePath = "/wifi-problems-perth";
-const pageUrl = `https://www.blakesmartsolutions.com.au${pagePath}`;
-const pageTitle =
-  "WiFi Problems Perth | Fix Dropouts, Dead Zones & Slow Speeds";
-const pageDescription =
-  "Perth WiFi help for homes with dropouts, dead zones, slow speeds and poor coverage. Book a WiFi fix visit from $99.";
-
-const problemItems = [
-  "WiFi drops out in certain rooms",
-  "Slow speeds away from the router",
-  "Dead zones in bedrooms, home offices or outdoor areas",
-  "Devices constantly reconnecting",
-  "Streaming, gaming or work calls becoming unreliable",
-];
-
-const processItems = [
-  {
-    step: "1",
-    title: "Test",
-    description:
-      "We check signal strength, coverage, interference and how your current setup is performing.",
-  },
-  {
-    step: "2",
-    title: "Diagnose",
-    description:
-      "We show you what is actually causing the issue, without guessing or randomly selling equipment.",
-  },
-  {
-    step: "3",
-    title: "Fix",
-    description:
-      "Where possible, we make practical improvements on the spot and recommend the right long-term solution if needed.",
-  },
-];
-
-const includedItems = [
-  "Full WiFi diagnosis",
-  "Clear fix plan",
-  "Practical on-site improvements where possible",
-  "$99 credit towards any further improvements, if needed",
-];
-
-const trustItems = [
-  "Perth-based service",
-  "Fully insured",
-  "Single visit improvements",
-  "Practical fixes for real homes",
-];
+const pagePath = wifiProblemsPerthPageContent.pagePath;
+const pageUrl = `${siteMetadataContent.website}${pagePath}`;
+const pageTitle = wifiProblemsPerthPageContent.pageTitle;
+const pageDescription = wifiProblemsPerthPageContent.pageDescription;
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -65,13 +22,13 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: pageUrl,
-    siteName: "Blake Smart Solutions",
+    siteName: wifiProblemsPerthPageContent.siteName,
     images: [
       {
-        url: "https://www.blakesmartsolutions.com.au/Blake_shop_front.jpeg",
-        width: 1536,
-        height: 1024,
-        alt: "Blake Smart Solutions WiFi technician in Perth",
+        url: wifiProblemsPerthPageContent.heroImage.url,
+        width: wifiProblemsPerthPageContent.heroImage.width,
+        height: wifiProblemsPerthPageContent.heroImage.height,
+        alt: wifiProblemsPerthPageContent.heroImage.alt,
       },
     ],
     locale: "en_AU",
@@ -81,33 +38,33 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["https://www.blakesmartsolutions.com.au/Blake_shop_front.jpeg"],
+    images: [wifiProblemsPerthPageContent.heroImage.url],
   },
 };
 
 const serviceStructuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "WiFi Problems Perth",
+  name: wifiProblemsPerthPageContent.serviceName,
   description: pageDescription,
   url: pageUrl,
   areaServed: {
     "@type": "City",
-    name: "Perth",
+    name: siteMetadataContent.city,
   },
   provider: {
     "@type": "LocalBusiness",
-    name: "Blake Smart Solutions",
-    url: "https://www.blakesmartsolutions.com.au",
-    telephone: "+61477948079",
-    image: "https://www.blakesmartsolutions.com.au/Blake_shop_front.jpeg",
+    name: siteMetadataContent.businessName,
+    url: siteMetadataContent.website,
+    telephone: siteMetadataContent.telephone,
+    image: wifiProblemsPerthPageContent.heroImage.url,
   },
   offers: {
     "@type": "Offer",
     price: "99",
     priceCurrency: "AUD",
     url: pageUrl,
-    description: "WiFi fix visit from $99",
+    description: wifiProblemsPerthPageContent.offerDescription,
   },
 };
 
@@ -125,36 +82,35 @@ export default function WifiProblemsPerthPage() {
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-                Perth WiFi help
+                {wifiProblemsPerthPageContent.hero.eyebrow}
               </p>
               <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
-                Stop Fighting Your WiFi
+                {wifiProblemsPerthPageContent.hero.title}
               </h1>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                Get reliable WiFi in every room — for working from home,
-                streaming movies, gaming and everyday use.
+                {wifiProblemsPerthPageContent.hero.intro}
               </p>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                We guarantee a solution or you don't pay for the visit.
+                {wifiProblemsPerthPageContent.hero.guarantee}
               </p>
               <div className="mt-8">
                 <WifiProblemsCta className="w-full px-6 sm:w-auto">
-                  Get Your WiFi Fixed – $99 Visit
+                  {wifiProblemsPerthPageContent.hero.cta}
                 </WifiProblemsCta>
                 <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-6 text-[var(--color-muted)]">
-                  <span>Need help now?</span>
+                  <span>{wifiProblemsPerthPageContent.hero.contactPrompt}</span>
                   <a
                     href="tel:0477948079"
                     className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
                   >
-                    Call
+                    {wifiProblemsPerthPageContent.hero.callLabel}
                   </a>
-                  <span>or</span>
+                  <span>{wifiProblemsPerthPageContent.hero.orLabel}</span>
                   <a
                     href="sms:0477948079"
                     className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
                   >
-                    text 0477 948 079
+                    {wifiProblemsPerthPageContent.hero.textLabel}
                   </a>
                 </p>
               </div>
@@ -163,8 +119,8 @@ export default function WifiProblemsPerthPage() {
             <div className="overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
               <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/Blake_shop_front.jpeg"
-                  alt="Blake Smart Solutions WiFi technician in Perth"
+                  src={wifiProblemsPerthPageContent.heroImage.src}
+                  alt={wifiProblemsPerthPageContent.heroImage.alt}
                   fill
                   sizes="(min-width: 1024px) 38rem, 100vw"
                   className="object-cover"
@@ -173,11 +129,10 @@ export default function WifiProblemsPerthPage() {
               </div>
               <div className="border-t border-[var(--color-border)] bg-white p-5 sm:p-6">
                 <p className="text-sm font-semibold text-[var(--color-ink)]">
-                  We Find the problem and Fix it properly
+                  {wifiProblemsPerthPageContent.hero.cardTitle}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
-                  We use commercial-grade testing to find the exact issue — and
-                  in most cases, fix it during the same visit.
+                  {wifiProblemsPerthPageContent.hero.cardDescription}
                 </p>
               </div>
             </div>
@@ -185,34 +140,29 @@ export default function WifiProblemsPerthPage() {
         </div>
       </section>
 
-      <TrustStrip trustItems={trustItems} />
+      <TrustStrip trustItems={wifiProblemsPerthPageContent.whySection.trustItems} />
 
       <section className="bg-[var(--color-page)]">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <div className="max-w-2xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-                What is really happening
+                {wifiProblemsPerthPageContent.problemSection.eyebrow}
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-                Slow speeds, dropouts and dead zones aren’t usually an internet
-                problem — they’re a WiFi setup problem.
+                {wifiProblemsPerthPageContent.problemSection.title}
               </h2>
               <div className="mt-5 space-y-4 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                <p>
-                  Most people upgrade their plan, restart the router, buy a new
-                  modem or switch providers… and still have the same problem.
-                </p>
-                <p>
-                  In many homes, the real issue is how WiFi is spreading through
-                  the house: walls, layout, router placement, interference and
-                  weak coverage.
-                </p>
+                {wifiProblemsPerthPageContent.problemSection.paragraphs.map(
+                  (paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ),
+                )}
               </div>
             </div>
 
             <ul className="grid gap-4 sm:grid-cols-2">
-              {problemItems.map((item) => (
+              {wifiProblemsPerthPageContent.problemItems.map((item) => (
                 <li
                   key={item}
                   className="rounded-2xl border border-[var(--color-border)] bg-white p-5 text-base leading-7 text-[var(--color-ink)] shadow-[0_10px_24px_rgba(15,23,42,0.03)]"
@@ -230,12 +180,12 @@ export default function WifiProblemsPerthPage() {
         <div className="mx-auto max-w-6xl px-5 pb-14 sm:px-6 lg:px-8 lg:pb-20">
           <div className="rounded-[28px] border border-[var(--color-border)] bg-white p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] sm:p-8 lg:p-10">
             <SectionHeading
-              eyebrow="Our process"
-              title="How we fix it properly"
-              description="A WiFi survey is part of the fix process, not the whole offer. The goal is reliable coverage that works in the rooms you actually use."
+              eyebrow={wifiProblemsPerthPageContent.processSection.eyebrow}
+              title={wifiProblemsPerthPageContent.processSection.title}
+              description={wifiProblemsPerthPageContent.processSection.description}
             />
             <div className="mt-10 grid gap-5 md:grid-cols-3">
-              {processItems.map((item) => (
+              {wifiProblemsPerthPageContent.processSection.items.map((item) => (
                 <div
                   key={item.title}
                   className="rounded-[24px] border border-[var(--color-border)] bg-[var(--color-page)] p-6"
@@ -261,29 +211,27 @@ export default function WifiProblemsPerthPage() {
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-                From $99
+                {wifiProblemsPerthPageContent.offerSection.eyebrow}
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-                WiFi Fix Visit from $99
+                {wifiProblemsPerthPageContent.offerSection.title}
               </h2>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                For most homes, the first step is a proper diagnosis. We test
-                your WiFi, show you what’s going wrong, and give you a clear
-                plan to get reliable coverage across the home.
+                {wifiProblemsPerthPageContent.offerSection.description}
               </p>
               <div className="mt-8">
                 <WifiProblemsCta className="w-full px-6 sm:w-auto">
-                  Book Your WiFi Fix
+                  {wifiProblemsPerthPageContent.offerSection.cta}
                 </WifiProblemsCta>
               </div>
             </div>
 
             <div className="rounded-[28px] border border-[var(--color-border)] bg-[var(--color-page)] p-6 sm:p-8">
               <h3 className="text-xl font-semibold tracking-tight text-[var(--color-ink)]">
-                Included in the visit
+                {wifiProblemsPerthPageContent.offerSection.includedTitle}
               </h3>
               <ul className="mt-6 space-y-4">
-                {includedItems.map((item) => (
+                {wifiProblemsPerthPageContent.offerSection.includedItems.map((item) => (
                   <li
                     key={item}
                     className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
@@ -304,19 +252,18 @@ export default function WifiProblemsPerthPage() {
             <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-                  Why Blake Smart Solutions
+                  {wifiProblemsPerthPageContent.whySection.eyebrow}
                 </p>
                 <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-                  Practical WiFi help for Perth homes
+                  {wifiProblemsPerthPageContent.whySection.title}
                 </h2>
                 <p className="mt-5 text-base leading-7 text-[var(--color-muted)]">
-                  We focus on what is happening inside your actual home, then
-                  recommend the simplest reliable fix.
+                  {wifiProblemsPerthPageContent.whySection.description}
                 </p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                {trustItems.map((item) => (
+                {wifiProblemsPerthPageContent.whySection.trustItems.map((item) => (
                   <div
                     key={item}
                     className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-5 text-sm font-semibold leading-6 text-[var(--color-ink)]"
@@ -334,13 +281,13 @@ export default function WifiProblemsPerthPage() {
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="text-center">
             <h2 className="text-2xl font-semibold tracking-tight text-[var(--color-ink)]">
-              Want to understand what might be causing the issue?
+              {wifiProblemsPerthPageContent.guideSection.title}
             </h2>
             <Link
               href="/7-ways-to-fix-wifi"
               className="mt-5 inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
             >
-              Read the 7 common reasons WiFi fails at home
+              {wifiProblemsPerthPageContent.guideSection.cta}
             </Link>
           </div>
         </div>

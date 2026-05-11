@@ -1,52 +1,39 @@
 "use client";
 
+import { securityLandingPageContent } from "@/content/landing-page-contents/securityLandingPage";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
-const trustItems = [
-  {
-    title: "WA Police Licensed",
-    caption: "Security installer",
-    icon: (
-      <path d="M12 3.75 5.25 6.1v5.55c0 4.32 2.83 7.36 6.75 8.6 3.92-1.24 6.75-4.28 6.75-8.6V6.1L12 3.75Zm0 4.2v6.75m-2.7-2.7 2.7 2.7 3.2-4.25" />
-    ),
-  },
-  {
-    title: "Fully Insured",
-    caption: "Peace of mind",
-    icon: (
-      <path d="m8 12.2 2.45 2.45L16.2 8.9M12 3.75 5.25 6.1v5.55c0 4.32 2.83 7.36 6.75 8.6 3.92-1.24 6.75-4.28 6.75-8.6V6.1L12 3.75Z" />
-    ),
-  },
-  {
-    title: "Perth Based",
-    caption: "Local & reliable",
-    icon: (
-      <>
-        <path d="M19 10.3c0 5-7 10-7 10s-7-5-7-10a7 7 0 1 1 14 0Z" />
-        <path d="M12 12.45a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" />
-      </>
-    ),
-  },
-  {
-    title: "Professional Installation",
-    caption: "Quality guaranteed",
-    icon: (
-      <>
-        <path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z" />
-        <path d="M12 2.9v2.2m0 13.8v2.2M4.95 4.95l1.55 1.55m11 11 1.55 1.55M2.9 12h2.2m13.8 0h2.2M4.95 19.05l1.55-1.55m11-11 1.55-1.55" />
-      </>
-    ),
-  },
-];
+const trustIcons = {
+  shield: (
+    <path d="M12 3.75 5.25 6.1v5.55c0 4.32 2.83 7.36 6.75 8.6 3.92-1.24 6.75-4.28 6.75-8.6V6.1L12 3.75Zm0 4.2v6.75m-2.7-2.7 2.7 2.7 3.2-4.25" />
+  ),
+  insured: (
+    <path d="m8 12.2 2.45 2.45L16.2 8.9M12 3.75 5.25 6.1v5.55c0 4.32 2.83 7.36 6.75 8.6 3.92-1.24 6.75-4.28 6.75-8.6V6.1L12 3.75Z" />
+  ),
+  location: (
+    <>
+      <path d="M19 10.3c0 5-7 10-7 10s-7-5-7-10a7 7 0 1 1 14 0Z" />
+      <path d="M12 12.45a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" />
+    </>
+  ),
+  installation: (
+    <>
+      <path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z" />
+      <path d="M12 2.9v2.2m0 13.8v2.2M4.95 4.95l1.55 1.55m11 11 1.55 1.55M2.9 12h2.2m13.8 0h2.2M4.95 19.05l1.55-1.55m11-11 1.55-1.55" />
+    </>
+  ),
+};
 
 export function LandingHero() {
+  const { hero } = securityLandingPageContent;
+
   return (
     <section className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-black text-white">
       {/* Actual hero image */}
       <div
         className="absolute inset-0 -z-30 bg-cover bg-[center_right] opacity-80"
         style={{
-          backgroundImage: "url('/images/products/security/tioc_burgler.png')",
+          backgroundImage: hero.backgroundImage,
         }}
       />
 
@@ -59,16 +46,15 @@ export function LandingHero() {
         <div className="relative z-20 max-w-4xl pb-10 pt-10 sm:pb-14 lg:pb-36">
           <h1 className="max-w-5xl font-black uppercase leading-[0.88] tracking-normal">
             <span className="block text-[clamp(5rem,14vw,12.4rem)] text-red-600 drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)]">
-              Deter.
+              {hero.titleLineOne}
             </span>
             <span className="mt-3 block text-[clamp(3.2rem,7.6vw,7.6rem)] text-white drop-shadow-[0_7px_18px_rgba(0,0,0,0.85)]">
-              Not Just Identify.
+              {hero.titleLineTwo}
             </span>
           </h1>
 
           <p className="mt-5 max-w-2xl text-balance text-xl font-medium leading-tight text-zinc-200 sm:text-2xl">
-            Active deterrence security camera systems for Perth homes and
-            businesses.
+            {hero.intro}
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -78,7 +64,7 @@ export function LandingHero() {
               className="inline-flex min-h-16 items-center justify-center gap-3 rounded-md bg-red-600 px-6 text-base font-black uppercase text-white shadow-[0_14px_38px_rgba(220,38,38,0.28)] transition hover:bg-red-700 sm:px-8 sm:text-lg"
             >
               <CalendarIcon />
-              Request a Security Quote
+              {hero.primaryCta}
             </button>
 
             <a
@@ -86,12 +72,12 @@ export function LandingHero() {
               className="inline-flex min-h-16 items-center justify-center gap-3 rounded-md border border-white/45 bg-black/35 px-6 text-base font-black uppercase text-white transition hover:border-white hover:bg-white/10 sm:px-8 sm:text-lg"
             >
               <PhoneIcon />
-              Call Now
+              {hero.secondaryCta}
             </a>
           </div>
 
           <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {trustItems.map((item) => (
+            {hero.trustItems.map((item) => (
               <div
                 key={item.title}
                 className="flex min-w-0 items-center gap-3 border-white/20 sm:border-r sm:pr-5 last:border-r-0"
@@ -106,7 +92,7 @@ export function LandingHero() {
                   strokeLinejoin="round"
                   strokeWidth="1.7"
                 >
-                  {item.icon}
+                  {trustIcons[item.icon as keyof typeof trustIcons]}
                 </svg>
                 <div className="min-w-0">
                   <p className="text-pretty text-base font-black uppercase leading-5 text-white">
@@ -124,14 +110,23 @@ export function LandingHero() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:flex-row lg:items-center lg:gap-9">
           <div className="inline-flex w-fit items-center bg-white/5 px-5 py-3">
             <span className="text-3xl font-black tracking-normal text-white">
-              Ti<span className="text-red-600">O</span>C
+              {hero.productBadgePrefix}
+              <span className="text-red-600">{hero.productBadgeHighlight}</span>
+              {hero.productBadgeSuffix}
             </span>
           </div>
           <p className="text-lg font-medium text-zinc-100 sm:text-2xl">
-            Full Color Night Vision <span className="px-2 text-red-600">•</span>
-            Active deterrence <span className="px-2 text-red-600">•</span>
-            AI human detection <span className="px-2 text-red-600">•</span>
-            Real-time alerts
+            {hero.features.map((feature, index) => (
+              <span key={feature}>
+                {index > 0 ? (
+                  <>
+                    {" "}
+                    <span className="px-2 text-red-600">•</span>{" "}
+                  </>
+                ) : null}
+                {feature}
+              </span>
+            ))}
           </p>
         </div>
       </div>

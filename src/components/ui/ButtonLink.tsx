@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { navContent } from "@/content/siteContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 type ButtonLinkProps = {
@@ -23,7 +24,7 @@ export function ButtonLink({
       : "border border-[var(--color-border-strong)] text-[var(--color-ink)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]";
   const classes = `${baseClasses} ${variantClasses}`;
 
-  if (children === "Request a Quote") {
+  if (children === navContent.quoteCta) {
     return (
       <button
         type="button"

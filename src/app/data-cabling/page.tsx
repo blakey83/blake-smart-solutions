@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { ProductPageTemplate } from "@/components/products/ProductPageTemplate";
+import { servicePageMetadataContent } from "@/content/pageMetadata";
 import { dataCablingProducts, dataIntro } from "@/content/data_products";
 
 export const metadata: Metadata = {
-  title: "Data Cabling | Blake Smart Solutions",
-  description:
-    "Cat6 data cabling and hard-wired network upgrades for Perth homes and small businesses.",
+  title: servicePageMetadataContent.dataCabling.title,
+  description: servicePageMetadataContent.dataCabling.description,
 };
 
 export default function DataCablingPage() {

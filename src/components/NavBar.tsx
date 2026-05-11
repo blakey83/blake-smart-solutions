@@ -3,13 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { navContent } from "@/content/siteContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
-
-const primaryLinks = [
-  { label: "Wi-Fi & Network Solutions", href: "/wifi-solutions-perth" },
-  { label: "Security Camera Solutions", href: "/security-cameras-perth" },
-  { label: "Alarm & Access Control", href: "/ajax-security-perth" },
-];
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +20,7 @@ export default function NavBar() {
           >
             <Image
               src="/BSS_logo_long2_nb.png"
-              alt="Blake Smart Solutions"
+              alt={navContent.logoAlt}
               width={280}
               height={72}
               priority
@@ -34,7 +29,7 @@ export default function NavBar() {
           </Link>
 
           <nav className="hidden items-center gap-6 xl:flex">
-            {primaryLinks.map((link) => (
+            {navContent.links.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
@@ -51,7 +46,7 @@ export default function NavBar() {
               onClick={() => openEnquiryModal()}
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
             >
-              Request a Quote
+              {navContent.quoteCta}
             </button>
           </div>
 
@@ -62,7 +57,7 @@ export default function NavBar() {
             className="inline-flex min-h-12 min-w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/8 text-white xl:hidden"
             onClick={() => setIsMenuOpen((prev) => !prev)}
           >
-            <span className="sr-only">Toggle navigation menu</span>
+            <span className="sr-only">{navContent.mobileToggleLabel}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -94,7 +89,7 @@ export default function NavBar() {
             className="border-t border-white/10 py-4 xl:hidden"
           >
             <nav className="flex flex-col gap-2">
-              {primaryLinks.map((link) => (
+              {navContent.links.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}

@@ -1,10 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
+import { enquiryPageContent } from "@/content/page-contents/enquiryPage";
+import { enquiryProductContent } from "@/content/siteContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 function openEnquiryPageModal() {
-  openEnquiryModal("General Quote Request", { redirectTo: "/" });
+  openEnquiryModal(enquiryProductContent.generalQuoteRequest, {
+    redirectTo: "/",
+  });
 }
 
 export function EnquiryPageClient() {
@@ -24,7 +28,7 @@ export function EnquiryPageClient() {
       onClick={openEnquiryPageModal}
       className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-6 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
     >
-      Open enquiry form
+      {enquiryPageContent.openCta}
     </button>
   );
 }

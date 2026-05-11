@@ -1,8 +1,11 @@
 "use client";
 
+import { securityLandingPageContent } from "@/content/landing-page-contents/securityLandingPage";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 export function MiniCTA() {
+  const { miniCta } = securityLandingPageContent;
+
   return (
     <section className="relative isolate overflow-hidden bg-black px-5 py-8 text-white sm:px-6 lg:px-8">
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(220,38,38,0.22),rgba(13,160,245,0.12)_48%,rgba(220,38,38,0.16))]" />
@@ -12,10 +15,10 @@ export function MiniCTA() {
       <div className="mx-auto flex max-w-7xl flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl">
           <p className="text-xs font-black uppercase tracking-[0.22em] text-red-500">
-            Get security advice
+            {miniCta.eyebrow}
           </p>
           <p className="mt-2 text-2xl font-black uppercase leading-tight text-white sm:text-3xl">
-            Want a system that deters, not just records?
+            {miniCta.title}
           </p>
         </div>
 
@@ -26,14 +29,14 @@ export function MiniCTA() {
             className="inline-flex min-h-14 items-center justify-center gap-3 rounded-md bg-red-600 px-5 text-sm font-black uppercase text-white shadow-[0_14px_38px_rgba(220,38,38,0.28)] transition hover:bg-red-700 sm:px-6"
           >
             <CalendarIcon />
-            Request a Security Quote
+            {miniCta.primaryCta}
           </button>
           <a
             href="tel:0477948079"
             className="inline-flex min-h-14 items-center justify-center gap-3 rounded-md border border-white/40 bg-black/35 px-5 text-sm font-black uppercase text-white transition hover:border-white hover:bg-white/10 sm:px-6"
           >
             <PhoneIcon />
-            0477 948 079
+            {miniCta.secondaryCta}
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { enquiryModalContent } from "@/content/siteContent";
 import type { Product } from "@/lib/types";
 import {
   trackEnquiryOpen,
@@ -27,11 +28,11 @@ type EnquiryModalProps = {
 };
 
 function getInitialMessage(product: Product) {
-  if (product.name === "General Quote Request") {
-    return "I'm interested in a quote.";
+  if (product.name === enquiryModalContent.generalQuoteProductName) {
+    return enquiryModalContent.generalQuoteMessage;
   }
 
-  return `Hi, I'm interested in the ${product.name}.`;
+  return `${enquiryModalContent.productMessagePrefix}${product.name}${enquiryModalContent.productMessageSuffix}`;
 }
 
 export default function EnquiryModal({
@@ -155,20 +156,20 @@ export default function EnquiryModal({
           type: "error",
           message:
             result.error ??
-            "We could not send your enquiry right now. Please try again.",
+            enquiryModalContent.sendError,
         });
         return;
       }
 
       setStatus({
         type: "success",
-        message: "We’ve received your message and will be in touch shortly.",
+        message: enquiryModalContent.successMessage,
       });
       trackEnquirySubmit();
     } catch {
       setStatus({
         type: "error",
-        message: "We could not send your enquiry right now. Please try again.",
+        message: enquiryModalContent.sendError,
       });
     } finally {
       setIsSubmitting(false);
@@ -181,7 +182,7 @@ export default function EnquiryModal({
         <button
           type="button"
           onClick={handleClose}
-          aria-label="Close enquiry form"
+          aria-label={enquiryModalContent.closeLabel}
           className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-xl text-slate-700 transition hover:bg-slate-200"
         >
           ×
@@ -189,30 +190,30 @@ export default function EnquiryModal({
 
         <div className="pr-10">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-500">
-            Send an enquiry
+            {enquiryModalContent.eyebrow}
           </p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
             {product.name}
           </h2>
           <p className="mt-3 text-base leading-7 text-slate-600">
-            Fill this out and We&apos;ll get back to you about this service.
+            {enquiryModalContent.intro}
           </p>
           <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">
-              Prefer to speak to someone?
+              {enquiryModalContent.preferPrompt}
             </p>
             <div className="mt-3 flex flex-col gap-2 sm:flex-row">
               <a
                 href="tel:0477948079"
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:border-sky-500 hover:text-sky-600"
               >
-                Call 0477 948 079
+                {enquiryModalContent.callCta}
               </a>
               <a
                 href="sms:0477948079"
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:border-sky-500 hover:text-sky-600"
               >
-                SMS anytime
+                {enquiryModalContent.smsCta}
               </a>
             </div>
           </div>
@@ -221,7 +222,7 @@ export default function EnquiryModal({
         {status.type === "success" ? (
           <div className="mt-8 rounded-[24px] border border-slate-200 bg-slate-50 p-6 sm:p-8">
             <h3 className="text-2xl font-bold tracking-tight text-slate-900">
-              Thanks for your enquiry
+              {enquiryModalContent.successTitle}
             </h3>
             <p className="mt-3 text-base leading-7 text-slate-600">
               {status.message}
@@ -231,7 +232,7 @@ export default function EnquiryModal({
               onClick={handleClose}
               className="mt-6 w-full rounded-2xl bg-sky-500 px-6 py-4 text-lg font-semibold text-slate-950 transition hover:bg-sky-400"
             >
-              OK
+              {enquiryModalContent.okCta}
             </button>
           </div>
         ) : (
@@ -250,7 +251,7 @@ export default function EnquiryModal({
             <input
               name="name"
               type="text"
-              placeholder="Your name"
+              placeholder={enquiryModalContent.placeholders.name}
               value={formData.name}
               onChange={handleChange}
               required
@@ -260,7 +261,7 @@ export default function EnquiryModal({
             <input
               name="phone"
               type="tel"
-              placeholder="Phone number"
+              placeholder={enquiryModalContent.placeholders.phone}
               value={formData.phone}
               onChange={handleChange}
               className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
@@ -269,7 +270,7 @@ export default function EnquiryModal({
             <input
               name="email"
               type="email"
-              placeholder="Email address"
+              placeholder={enquiryModalContent.placeholders.email}
               value={formData.email}
               onChange={handleChange}
               className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
@@ -278,7 +279,7 @@ export default function EnquiryModal({
             <input
               name="suburb"
               type="text"
-              placeholder="Suburb"
+              placeholder={enquiryModalContent.placeholders.suburb}
               value={formData.suburb}
               onChange={handleChange}
               className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
@@ -286,7 +287,7 @@ export default function EnquiryModal({
 
             <textarea
               name="message"
-              placeholder="Tell me what you need"
+              placeholder={enquiryModalContent.placeholders.message}
               value={formData.message}
               onChange={handleChange}
               rows={5}
@@ -299,7 +300,9 @@ export default function EnquiryModal({
               disabled={isSubmitting}
               className="w-full rounded-2xl bg-sky-500 px-6 py-4 text-lg font-semibold text-slate-950 transition hover:bg-sky-400"
             >
-              {isSubmitting ? "Sending..." : "Send Enquiry"}
+              {isSubmitting
+                ? enquiryModalContent.sendingCta
+                : enquiryModalContent.submitCta}
             </button>
 
             {status.type === "error" ? (
