@@ -4,7 +4,7 @@ export const wifiLandingPageContent = {
     title:
       "Why Your Internet Still Sucks (Even With Fast NBN) — 7 Ways to Fix It at Home",
     description:
-      "Learn why your internet still feels slow even with fast NBN, Starlink or fixed wireless, and how Blake Smart Solutions can diagnose Wi-Fi issues with a $99 Wi-Fi Health Check.",
+      "Learn why your internet still feels slow even with fast NBN, Starlink or fixed wireless, and how Blake Smart Solutions can diagnose Wi-Fi issues with a Wi-Fi Health Check.",
   },
 
   hero: {
@@ -218,12 +218,11 @@ If you’ve worked through the steps above and still have issues, it’s usually
       "A detailed, easy-to-understand report with diagnostics and coverage mapping",
       "Practical recommendations tailored to your home — placement, setup and equipment if needed",
     ],
-    price:
-      "You can get a full, professional Wi-Fi survey for just $99 ($299 value).",
+    price: "You can get a full, professional Wi-Fi survey",
     credit:
-      "If you go ahead with any recommended work, that $99 is credited toward the solution — so you’re not paying twice.",
+      "If you go ahead with any recommended upgrade, the cost of the survey is credited — so you’re not paying twice.",
     premium:
-      "We’ll also make small improvements on the spot where possible, so you can see immediate gains where it makes sense.",
+      "Most improvements are made on the spot where possible, so you can see immediate gains where it makes sense.",
     guarantee:
       "If we can’t clearly show you what’s causing your Wi-Fi issues — and what needs to be done to fix them — you don’t pay.",
     noObligation:
@@ -247,9 +246,9 @@ If you’ve worked through the steps above and still have issues, it’s usually
     processNote:
       "This is the same process we use in businesses across Perth dealing with dropouts, dead zones, and unreliable coverage.",
     priceDescription:
-      "For just $99, you can get a complete picture of what’s actually going on with your Wi-Fi. A professional WiFi survey for your home valued at $299.",
+      "You can get a complete picture of what’s actually going on with your Wi-Fi. A professional WiFi survey for your home",
     includedTitle: "What's included",
-    creditTitle: "Credited toward recommended work",
+    creditTitle: "Credit towards any upgrades",
     noObligationTitle: "No obligation",
     guaranteeTitle: "Guarantee",
   },
@@ -259,6 +258,6 @@ If you’ve worked through the steps above and still have issues, it’s usually
     title:
       "Get professional Wi-Fi diagnosis that gives you clarity and practical next steps?",
     intro: "Credited toward any recommended work.",
-    cta: "Book your $99 WiFi Diagnosis",
+    cta: "Book your WiFi Health check today",
   },
 };

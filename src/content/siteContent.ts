@@ -88,7 +88,7 @@ export const wifiArticleCtaContent = {
   defaultMessage: "Come fix my Wi-Fi!",
   inlinePrompt: "Need help in Perth?",
   inlineCta:
-    "Book a commercial-grade Wi-Fi survey to tell you exactly how to fix your network for just $99 (valued at $399).",
+    "Book a commercial-grade Wi-Fi survey to tell you exactly how to fix your network.",
   defaultPrimaryLabel: "Book your Wi-Fi Health Check",
   defaultSecondaryLabel: "Call Blake Smart Solutions",
 };
