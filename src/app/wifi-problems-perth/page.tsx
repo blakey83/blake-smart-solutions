@@ -88,6 +88,9 @@ export default function WifiProblemsPerthPage() {
                 {wifiProblemsPerthPageContent.hero.title}
               </h1>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
+                {wifiProblemsPerthPageContent.hero.what}
+              </p>
+              <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
                 {wifiProblemsPerthPageContent.hero.intro}
               </p>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
@@ -140,7 +143,9 @@ export default function WifiProblemsPerthPage() {
         </div>
       </section>
 
-      <TrustStrip trustItems={wifiProblemsPerthPageContent.whySection.trustItems} />
+      <TrustStrip
+        trustItems={wifiProblemsPerthPageContent.whySection.trustItems}
+      />
 
       <section className="bg-[var(--color-page)]">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
@@ -182,7 +187,9 @@ export default function WifiProblemsPerthPage() {
             <SectionHeading
               eyebrow={wifiProblemsPerthPageContent.processSection.eyebrow}
               title={wifiProblemsPerthPageContent.processSection.title}
-              description={wifiProblemsPerthPageContent.processSection.description}
+              description={
+                wifiProblemsPerthPageContent.processSection.description
+              }
             />
             <div className="mt-10 grid gap-5 md:grid-cols-3">
               {wifiProblemsPerthPageContent.processSection.items.map((item) => (
@@ -231,15 +238,17 @@ export default function WifiProblemsPerthPage() {
                 {wifiProblemsPerthPageContent.offerSection.includedTitle}
               </h3>
               <ul className="mt-6 space-y-4">
-                {wifiProblemsPerthPageContent.offerSection.includedItems.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
-                  >
-                    <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
-                    <span>{item}</span>
-                  </li>
-                ))}
+                {wifiProblemsPerthPageContent.offerSection.includedItems.map(
+                  (item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
+                    >
+                      <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                      <span>{item}</span>
+                    </li>
+                  ),
+                )}
               </ul>
             </div>
           </div>
@@ -263,14 +272,16 @@ export default function WifiProblemsPerthPage() {
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                {wifiProblemsPerthPageContent.whySection.trustItems.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-5 text-sm font-semibold leading-6 text-[var(--color-ink)]"
-                  >
-                    {item}
-                  </div>
-                ))}
+                {wifiProblemsPerthPageContent.whySection.trustItems.map(
+                  (item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-5 text-sm font-semibold leading-6 text-[var(--color-ink)]"
+                    >
+                      {item}
+                    </div>
+                  ),
+                )}
               </div>
             </div>
           </div>

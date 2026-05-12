@@ -5,7 +5,7 @@ export const wifiProblemsPerthPageContent = {
     "Perth WiFi help for homes with dropouts, dead zones, slow speeds and poor coverage. Book a WiFi fix visit from $99.",
   siteName: "Blake Smart Solutions",
   heroImage: {
-    src: "/Blake_shop_front.jpeg",
+    src: "/images/work_gallery/wifi_survey.jpeg",
     url: "https://www.blakesmartsolutions.com.au/Blake_shop_front.jpeg",
     width: 1536,
     height: 1024,
@@ -18,8 +18,9 @@ export const wifiProblemsPerthPageContent = {
     title: "Stop Fighting Your WiFi",
     intro:
       "Get reliable WiFi in every room — for working from home, streaming movies, gaming and everyday use.",
+    what: "We visit your home, find the cause of slow speeds, dead spots and dropouts, and fix them fast.",
     guarantee: "We guarantee a solution or you don't pay for the visit.",
-    cta: "Get Your WiFi Fixed – $99 Visit",
+    cta: "Get Your WiFi Fixed",
     contactPrompt: "Need help now?",
     callLabel: "Call",
     orLabel: "or",
