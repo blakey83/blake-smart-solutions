@@ -72,8 +72,8 @@ export const wifiProblemsPerthPageContent = {
     ],
   },
   offerSection: {
-    eyebrow: "From $99",
-    title: "WiFi Fix Visit from $99",
+    eyebrow: "In home Visit",
+    title: "WiFi Fix Visit",
     description:
       "For most homes, the first step is a proper diagnosis. We test your WiFi, show you what’s going wrong, and give you a clear plan to get reliable coverage across the home.",
     cta: "Book Your WiFi Fix",
@@ -82,7 +82,7 @@ export const wifiProblemsPerthPageContent = {
       "Full WiFi diagnosis",
       "Clear fix plan",
       "Practical on-site improvements where possible",
-      "$99 credit towards any further improvements, if needed",
+      "Credit towards any upgrades, if required",
     ],
   },
   whySection: {
