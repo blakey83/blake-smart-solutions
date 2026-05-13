@@ -17,15 +17,16 @@ export const wifiProblemsPerthPageContent = {
     eyebrow: "Perth WiFi help",
     title: "Stop Fighting Your WiFi",
     intro:
-      "Get reliable WiFi in every room — for working from home, streaming movies, gaming and everyday use.",
-    what: "We visit your home, find the cause of slow speeds, dead spots and dropouts, and fix them fast.",
-    guarantee: "We guarantee a solution or you don't pay for the visit.",
+      "Slow speeds, dead spots and WiFi dropouts usually aren’t an internet problem — they’re a home WiFi setup problem.",
+    what: "We visit your home, test your WiFi properly, find the real cause of the issue, and improve coverage where you actually use it.",
+    guarantee:
+      "In most homes, we can improve the WiFi during the same visit — and if we can’t help, we’ll tell you honestly.",
     cta: "Get Your WiFi Fixed",
     contactPrompt: "Need help now?",
     callLabel: "Call",
     orLabel: "or",
     textLabel: "text 0477 948 079",
-    cardTitle: "We Find the problem and Fix it properly",
+    cardTitle: "Real WiFi Testing — Not Guesswork",
     cardDescription:
       "We use commercial-grade testing to find the exact issue — and in most cases, fix it during the same visit.",
   },
@@ -42,12 +43,12 @@ export const wifiProblemsPerthPageContent = {
       "Slow speeds, dropouts and dead zones aren’t usually an internet problem — they’re a WiFi setup problem.",
     paragraphs: [
       "Most people upgrade their plan, restart the router, buy a new modem or switch providers… and still have the same problem.",
-      "In many homes, the real issue is how WiFi is spreading through the house: walls, layout, router placement, interference and weak coverage.",
+      "In many homes, the real issue is poor WiFi coverage caused by walls, layout, router placement, interference and overloaded equipment.",
     ],
   },
   processSection: {
     eyebrow: "Our process",
-    title: "How we fix it properly",
+    title: "How We Actually Fix The Problem",
     description:
       "A WiFi survey is part of the fix process, not the whole offer. The goal is reliable coverage that works in the rooms you actually use.",
     items: [
@@ -55,7 +56,7 @@ export const wifiProblemsPerthPageContent = {
         step: "1",
         title: "Test",
         description:
-          "We check signal strength, coverage, interference and how your current setup is performing.",
+          "We measure signal strength, coverage quality, interference and how the WiFi performs in the rooms you actually use.",
       },
       {
         step: "2",
@@ -67,7 +68,7 @@ export const wifiProblemsPerthPageContent = {
         step: "3",
         title: "Fix",
         description:
-          "Where possible, we make practical improvements on the spot and recommend the right long-term solution if needed.",
+          "Where possible, we improve the setup during the same visit and recommend the simplest long-term fix if extra equipment is needed.",
       },
     ],
   },
@@ -75,7 +76,7 @@ export const wifiProblemsPerthPageContent = {
     eyebrow: "In home Visit",
     title: "WiFi Fix Visit",
     description:
-      "For most homes, the first step is a proper diagnosis. We test your WiFi, show you what’s going wrong, and give you a clear plan to get reliable coverage across the home.",
+      "For most homes, the first step is finding out what is actually causing the issue. We test your WiFi, show you what’s going wrong, and give you a clear plan to get reliable coverage across the home.",
     cta: "Book Your WiFi Fix",
     includedTitle: "Included in the visit",
     includedItems: [
@@ -87,14 +88,14 @@ export const wifiProblemsPerthPageContent = {
   },
   whySection: {
     eyebrow: "Why Blake Smart Solutions",
-    title: "Practical WiFi help for Perth homes",
+    title: "Why Most WiFi Fixes Don’t Work",
     description:
-      "We focus on what is happening inside your actual home, then recommend the simplest reliable fix.",
+      "Most people waste money replacing routers, changing providers or buying random extenders without testing what is actually causing the issue first.",
     trustItems: [
-      "Perth-based service",
-      "Fully insured",
-      "Single visit improvements",
+      "Room-by-room WiFi testing",
+      "No lock-in equipment sales",
       "Practical fixes for real homes",
+      "Registered Technicians with 10+ years experience",
     ],
   },
   guideSection: {
