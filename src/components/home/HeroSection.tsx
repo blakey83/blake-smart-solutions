@@ -22,6 +22,7 @@ export function HeroSection() {
               src={heroSectionContent.imageSrc}
               alt={heroSectionContent.imageAlt}
               fill
+              sizes="(min-width: 1152px) 72rem, 100vw"
               priority
               className="object-cover object-[center_18%]"
             />

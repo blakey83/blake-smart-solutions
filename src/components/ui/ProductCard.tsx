@@ -15,6 +15,7 @@ export default function ProductCard({ product, onCtaClick }: ProductCardProps) {
             src={product.image}
             alt={product.imageAlt ?? product.name}
             fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
             className="object-cover"
           />
         </div>

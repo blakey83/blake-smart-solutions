@@ -5,7 +5,6 @@ export const specials: Product[] = [
     name: "WiFi Health Check",
     description:
       "A fixed-price on-site check to find weak coverage, poor placement, and common WiFi issues.",
-    price: "$99 fixed price",
     image: "/images/products/wifi/wifi_survey.png",
     imageAlt: "Wi-Fi survey heatmap across a home floor plan",
     badge: "Popular",
@@ -22,7 +21,6 @@ export const specials: Product[] = [
     name: "CCTV Call-Out & Repair",
     description:
       "Cameras not working? No recording, poor image or constant dropouts? Book a call-out and we’ll diagnose and fix it on-site — no guesswork.",
-    price: "$159 Call Out",
     image: "/images/products/security/call_out2.jpg",
     imageAlt: "Technician repairing CCTV system",
     badge: "Most Popular",
