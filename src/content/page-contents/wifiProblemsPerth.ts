@@ -80,10 +80,11 @@ export const wifiProblemsPerthPageContent = {
     cta: "Book Your WiFi Fix",
     includedTitle: "Included in the visit",
     includedItems: [
-      "Full WiFi diagnosis",
-      "Clear fix plan",
-      "Practical on-site improvements where possible",
-      "Credit towards any upgrades, if required",
+      "Room-by-room WiFi testing",
+      "Coverage and dead-zone analysis",
+      "Practical improvements where possible",
+      "Clear explanation of what’s causing the issue",
+      "Advice on the simplest reliable fix",
     ],
   },
   whySection: {

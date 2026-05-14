@@ -87,10 +87,10 @@ export default function WifiProblemsPerthPage() {
                 {wifiProblemsPerthPageContent.hero.title}
               </h1>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                {wifiProblemsPerthPageContent.hero.what}
+                {wifiProblemsPerthPageContent.hero.intro}
               </p>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                {wifiProblemsPerthPageContent.hero.intro}
+                {wifiProblemsPerthPageContent.hero.what}
               </p>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
                 {wifiProblemsPerthPageContent.hero.guarantee}
