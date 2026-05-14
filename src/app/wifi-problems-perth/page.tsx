@@ -5,7 +5,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { wifiProblemsPerthPageContent } from "@/content/page-contents/wifiProblemsPerth";
 import { siteMetadataContent } from "@/content/siteContent";
 import { WifiProblemsCta } from "./WifiProblemsCta";
-import WhyBSS from "@/components/landingPages/WhyBSS";
+import { whyChooseUsWiFi } from "@/content/page-contents/whyUsContent";
+import { WhyBSS } from "@/components/landingPages/WhyBSS";
 
 const pagePath = wifiProblemsPerthPageContent.pagePath;
 const pageUrl = `${siteMetadataContent.website}${pagePath}`;
@@ -251,7 +252,7 @@ export default function WifiProblemsPerthPage() {
         </div>
       </section>
 
-      <WhyBSS />
+      <WhyBSS content={whyChooseUsWiFi} />
 
       <section className="bg-[var(--color-page)]">
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">

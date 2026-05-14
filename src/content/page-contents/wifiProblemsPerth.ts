@@ -12,7 +12,7 @@ export const wifiProblemsPerthPageContent = {
     alt: "Blake Smart Solutions WiFi technician in Perth",
   },
   serviceName: "WiFi Problems Perth",
-  offerDescription: "WiFi fix visit from $99",
+  offerDescription: "WiFi fix visit",
   hero: {
     eyebrow: "Perth WiFi help",
     title: "Stop Fighting Your WiFi",
@@ -28,7 +28,7 @@ export const wifiProblemsPerthPageContent = {
     textLabel: "text 0477 948 079",
     cardTitle: "Real WiFi Testing — Not Guesswork",
     cardDescription:
-      "We use commercial-grade testing to find the exact issue — and in most cases, fix it during the same visit.",
+      "We use commercial-grade testing to find the exact issue — and in most cases, fix it on the spot.",
   },
   problemItems: [
     "WiFi drops out in certain rooms",
