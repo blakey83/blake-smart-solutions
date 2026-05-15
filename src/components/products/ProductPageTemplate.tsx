@@ -2,13 +2,15 @@ import Link from "next/link";
 import { productPageTemplateContent } from "@/content/siteContent";
 import type { Product } from "@/lib/types";
 import { ProductCardGrid } from "@/components/products/ProductCardGrid";
-import { RelatedServicesSection } from "@/components/services/RelatedServicesSection";
+import { WhyBSS } from "../landingPages/WhyBSS";
+import { WhyChooseUsContent } from "@/content/page-contents/whyUsContent";
 
 type ProductPageTemplateProps = {
   currentPath: string;
   title: string;
   intro: string;
   products: Product[];
+  content: WhyChooseUsContent;
 };
 
 export function ProductPageTemplate({
@@ -16,6 +18,7 @@ export function ProductPageTemplate({
   title,
   intro,
   products,
+  content,
 }: ProductPageTemplateProps) {
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
@@ -41,11 +44,7 @@ export function ProductPageTemplate({
         </div>
       </section>
 
-      <RelatedServicesSection
-        currentPath={currentPath}
-        title={productPageTemplateContent.relatedServicesTitle}
-        description={productPageTemplateContent.relatedServicesDescription}
-      />
+      <WhyBSS content={content} />
 
       <section
         id="final-cta"

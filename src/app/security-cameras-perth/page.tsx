@@ -3,6 +3,7 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { servicePageMetadataContent } from "@/content/pageMetadata";
 import { cctvSolutionContent } from "@/content/cctvSolutionContent";
 import { cctvSolutionTrustItems } from "@/content/cctvSolutionContent";
+import { whyChooseUsSecurity } from "@/content/page-contents/whyUsContent";
 
 export const metadata: Metadata = {
   title: servicePageMetadataContent.securityCamerasPerth.title,
@@ -15,6 +16,7 @@ export default function SecurityCamerasPerthPage() {
       {...cctvSolutionContent}
       currentPath="/security-cameras-perth"
       trustItems={cctvSolutionTrustItems}
+      content={whyChooseUsSecurity}
     />
   );
 }

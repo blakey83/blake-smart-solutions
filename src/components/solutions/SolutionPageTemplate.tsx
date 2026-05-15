@@ -12,6 +12,7 @@ import type {
   SolutionPageTemplateProps,
 } from "@/components/solutions/types";
 import { TrustStrip } from "../home/TrustStrip";
+import { WhyBSS } from "../landingPages/WhyBSS";
 
 type SolutionCtaProps = {
   button: CtaButton;
@@ -81,6 +82,7 @@ export function SolutionPageTemplate({
   finalCtaIntro,
   finalCtaButton,
   trustItems,
+  content,
 }: SolutionPageTemplateProps & TrustItems) {
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
@@ -236,39 +238,7 @@ export function SolutionPageTemplate({
         </div>
       </section>
 
-      {imageSection ? (
-        <section className="border-y border-[var(--color-border)] bg-white">
-          <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
-            <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
-              <div className="relative overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
-                <div className="relative aspect-[4/3] w-full">
-                  <Image
-                    src={imageSection.image}
-                    alt={imageSection.imageAlt}
-                    fill
-                    sizes="(min-width: 1024px) 34rem, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-
-              <div className="max-w-2xl">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-                  {imageSectionEyebrow}
-                </p>
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-                  {imageSection.title}
-                </h2>
-                <p className="mt-4 text-base leading-7 text-[var(--color-muted)]">
-                  {imageSection.intro}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      ) : null}
-
-      <RelatedServicesSection currentPath={currentPath} />
+      <WhyBSS content={content} />
 
       <section
         id="final-cta"
@@ -290,6 +260,7 @@ export function SolutionPageTemplate({
           </div>
         </div>
       </section>
+      <RelatedServicesSection currentPath={currentPath} />
     </div>
   );
 }

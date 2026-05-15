@@ -5,7 +5,6 @@ export const wifiProducts: Product[] = [
     name: "WiFi Health Check",
     description:
       "Not sure why your Wi-Fi is underperforming? Our on-site WiFi Health Check identifies the real cause of poor coverage, dropouts or weak performance, so you can make the right upgrade the first time",
-    price: "$99 fixed price",
     image: "/images/products/wifi/wifi_survey.png",
     imageAlt: "Wi-Fi survey heatmap across a home or office floor plan",
     badge: "Start Here",
@@ -17,39 +16,6 @@ export const wifiProducts: Product[] = [
       "$99 credited towards any solution we install",
     ],
     ctaLabel: "Book a WiFi Check",
-    href: "/#final-cta",
-  },
-  {
-    name: "Managed WiFi System",
-    description:
-      "A properly designed WiFi setup using dedicated access points, not just a router struggling to cover everything.",
-    image: "/images/products/wifi/managed_wifi.png",
-    imageAlt: "Installed WiFi access point system providing full coverage",
-    badge: "Recommended",
-    features: [
-      "Coverage designed for your layout",
-      "Multiple access points where needed",
-      "Stable performance across the property",
-      "Installed and configured properly",
-    ],
-    ctaLabel: "Fix My WiFi",
-    href: "/#final-cta",
-  },
-  {
-    name: "Commercial WiFi System",
-    description:
-      "WiFi that can actually handle staff, customers and devices without slowing down or dropping out.",
-    price: "Custom Quote",
-    image: "/images/products/wifi/commercial_wifi.png",
-    imageAlt: "Ruijie business wireless access point",
-    badge: "Commercial",
-    features: [
-      "Built for offices, retail and workshops",
-      "Handles higher device loads properly",
-      "Option for cloud-managed systems",
-      "Designed to scale as you grow",
-    ],
-    ctaLabel: "Discuss Your Setup",
     href: "/#final-cta",
   },
   {
@@ -83,6 +49,39 @@ export const wifiProducts: Product[] = [
       "Installed in the correct position for real coverage",
     ],
     ctaLabel: "Improve Outdoor WiFi",
+    href: "/#final-cta",
+  },
+  {
+    name: "Managed WiFi System",
+    description:
+      "A properly designed WiFi setup using dedicated access points, not just a router struggling to cover everything.",
+    image: "/images/products/wifi/managed_wifi.png",
+    imageAlt: "Installed WiFi access point system providing full coverage",
+    badge: "Recommended",
+    features: [
+      "Coverage designed for your layout",
+      "Multiple access points where needed",
+      "Stable performance across the property",
+      "Installed and configured properly",
+    ],
+    ctaLabel: "Fix My WiFi",
+    href: "/#final-cta",
+  },
+  {
+    name: "Commercial WiFi System",
+    description:
+      "WiFi that can actually handle staff, customers and devices without slowing down or dropping out.",
+    price: "Custom Quote",
+    image: "/images/products/wifi/commercial_wifi.png",
+    imageAlt: "Ruijie business wireless access point",
+    badge: "Commercial",
+    features: [
+      "Built for offices, retail and workshops",
+      "Handles higher device loads properly",
+      "Option for cloud-managed systems",
+      "Designed to scale as you grow",
+    ],
+    ctaLabel: "Discuss Your Setup",
     href: "/#final-cta",
   },
 ];

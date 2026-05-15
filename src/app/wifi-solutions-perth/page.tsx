@@ -4,6 +4,7 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { wifiSolutionsPerthPageContent } from "@/content/page-contents/wifiSolutionsPerth";
 import { wifiSolutionContent } from "@/content/wifiSolutionContent";
 import { wifiSolutionTrustItems } from "@/content/wifiSolutionContent";
+import { whyChooseUsWiFi } from "@/content/page-contents/whyUsContent";
 
 export const metadata: Metadata = {
   title: wifiSolutionsPerthPageContent.metadata.title,
@@ -17,6 +18,7 @@ export default function WifiSolutionsPerthPage() {
         {...wifiSolutionContent}
         currentPath="/wifi-solutions-perth"
         trustItems={wifiSolutionTrustItems}
+        content={whyChooseUsWiFi}
       />
       <section className="border-t border-[var(--color-border)] bg-[var(--color-page)]">
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProductPageTemplate } from "@/components/products/ProductPageTemplate";
 import { servicePageMetadataContent } from "@/content/pageMetadata";
 import { antennaProducts, antennasIntro } from "@/content/antenna_products";
+import { whyChooseUsHome } from "@/content/page-contents/whyUsContent";
 
 export const metadata: Metadata = {
   title: servicePageMetadataContent.tvAntennasPerth.title,
@@ -15,6 +16,7 @@ export default function AntennasPage() {
       title={antennasIntro.title}
       intro={antennasIntro.intro}
       products={antennaProducts}
+      content={whyChooseUsHome}
     />
   );
 }
