@@ -1,4 +1,3 @@
-import { WhyChooseUsContent } from "@/content/page-contents/whyUsContent";
 import type { Product } from "@/lib/types";
 
 export type CtaButton = {
@@ -55,5 +54,4 @@ export type SolutionPageTemplateProps = {
   finalCtaTitle: string;
   finalCtaIntro: string;
   finalCtaButton: CtaButton;
-  content: WhyChooseUsContent;
 };

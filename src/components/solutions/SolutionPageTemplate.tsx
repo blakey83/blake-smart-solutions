@@ -6,6 +6,7 @@ import { ProductCardGrid } from "@/components/products/ProductCardGrid";
 import { RelatedServicesSection } from "@/components/services/RelatedServicesSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { solutionPageTemplateContent } from "@/content/siteContent";
+import type { WhyChooseUsContent } from "@/content/page-contents/whyUsContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type {
   CtaButton,
@@ -56,6 +57,11 @@ interface TrustItems {
   trustItems: string[];
 }
 
+type SolutionPageTemplateViewProps = SolutionPageTemplateProps &
+  TrustItems & {
+    content: WhyChooseUsContent;
+  };
+
 export function SolutionPageTemplate({
   currentPath = "/",
   title,
@@ -83,7 +89,7 @@ export function SolutionPageTemplate({
   finalCtaButton,
   trustItems,
   content,
-}: SolutionPageTemplateProps & TrustItems) {
+}: SolutionPageTemplateViewProps) {
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
       <section className="border-b border-[var(--color-border)] bg-white">
