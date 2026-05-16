@@ -1,6 +1,7 @@
 "use client";
 
 import { enquiryProductContent } from "@/content/siteContent";
+import { trackClickToCall } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 const DEFAULT_MESSAGE =
@@ -31,5 +32,25 @@ export function WifiProblemsCta({
     >
       {children}
     </button>
+  );
+}
+
+type WifiProblemsCallLinkProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+export function WifiProblemsCallLink({
+  children,
+  className = "",
+}: WifiProblemsCallLinkProps) {
+  return (
+    <a
+      href="tel:0477948079"
+      onClick={trackClickToCall}
+      className={className}
+    >
+      {children}
+    </a>
   );
 }

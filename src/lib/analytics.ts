@@ -25,3 +25,16 @@ export function trackEnquirySubmit() {
     event_label: "Enquiry form submitted",
   });
 }
+
+export function trackClickToCall() {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "click_to_call", {
+    event_category: "lead",
+    event_label: "WiFi Problems Perth call button clicked",
+    page_path: "/wifi-problems-perth",
+    phone_number: "0477948079",
+  });
+}

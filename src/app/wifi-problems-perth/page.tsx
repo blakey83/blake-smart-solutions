@@ -4,7 +4,7 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { wifiProblemsPerthPageContent } from "@/content/page-contents/wifiProblemsPerth";
 import { siteMetadataContent } from "@/content/siteContent";
-import { WifiProblemsCta } from "./WifiProblemsCta";
+import { WifiProblemsCallLink, WifiProblemsCta } from "./WifiProblemsCta";
 import { whyChooseUsWiFi } from "@/content/page-contents/whyUsContent";
 import { WhyBSS } from "@/components/landingPages/WhyBSS";
 
@@ -103,12 +103,11 @@ export default function WifiProblemsPerthPage() {
                 </WifiProblemsCta>
                 <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-6 text-[var(--color-muted)]">
                   <span>{wifiProblemsPerthPageContent.hero.contactPrompt}</span>
-                  <a
-                    href="tel:0477948079"
+                  <WifiProblemsCallLink
                     className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
                   >
                     {wifiProblemsPerthPageContent.hero.callLabel}
-                  </a>
+                  </WifiProblemsCallLink>
                   <span>{wifiProblemsPerthPageContent.hero.orLabel}</span>
                   <a
                     href="sms:0477948079"
