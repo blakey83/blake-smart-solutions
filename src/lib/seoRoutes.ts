@@ -1,7 +1,10 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
+export const SITE_URL = "https://www.blakesmartsolutions.com.au";
+
 const APP_DIRECTORY = path.join(process.cwd(), "src", "app");
+const MAX_SITEMAP_URLS = 50_000;
 
 const EXCLUDED_SEGMENTS = new Set([
   "api",
@@ -86,7 +89,27 @@ async function collectPageRoutes(
 }
 
 export async function getPublicAppRoutes(): Promise<string[]> {
-  return collectPageRoutes(APP_DIRECTORY);
+  const routes = await collectPageRoutes(APP_DIRECTORY);
+
+  if (routes.length > MAX_SITEMAP_URLS) {
+    throw new Error(
+      `Sitemap contains ${routes.length} URLs, which exceeds Google's ${MAX_SITEMAP_URLS} URL limit.`,
+    );
+  }
+
+  return routes;
+}
+
+export function getAbsoluteCanonicalUrl(route: string): string {
+  if (!route.startsWith("/")) {
+    throw new Error(`Sitemap route must start with "/": ${route}`);
+  }
+
+  if (route.includes("?") || route.includes("#")) {
+    throw new Error(`Sitemap route cannot include query strings or fragments: ${route}`);
+  }
+
+  return `${SITE_URL}${route === "/" ? "" : route}`;
 }
 
 export function getRoutePriority(route: string): number {

@@ -14,7 +14,7 @@ export const wifiProblemsPerthPageContent = {
   serviceName: "WiFi Problems Perth",
   offerDescription: "WiFi fix visit",
   hero: {
-    eyebrow: "Perth WiFi help",
+    eyebrow: "Perth in-home WiFi troubleshooting",
     title: "Stop Fighting Your WiFi",
     intro:
       "Slow speeds, dead spots and WiFi dropouts usually aren’t an internet problem — they’re a home WiFi setup problem.",
