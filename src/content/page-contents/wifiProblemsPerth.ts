@@ -123,3 +123,8 @@ export const wifiProblemsPerthPageContent = {
     cta: "Read the 7 common reasons WiFi fails at home",
   },
 };
+
+export const wifiInlineReview = {
+  name: "Alan Star",
+  text: "Daniel did a great job fixing my WiFi setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
+};

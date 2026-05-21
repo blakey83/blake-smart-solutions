@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { wifiProblemsPerthPageContent } from "@/content/page-contents/wifiProblemsPerth";
+import {
+  wifiProblemsPerthPageContent,
+  wifiInlineReview,
+} from "@/content/page-contents/wifiProblemsPerth";
 import { siteMetadataContent } from "@/content/siteContent";
 import { WifiProblemsCallLink, WifiProblemsCta } from "./WifiProblemsCta";
 import { whyChooseUsWiFi } from "@/content/page-contents/whyUsContent";
 import { WhyBSS } from "@/components/landingPages/WhyBSS";
+import ReviewInsert from "@/components/ReviewInsert";
 
 const pagePath = wifiProblemsPerthPageContent.pagePath;
 const pageUrl = `${siteMetadataContent.website}${pagePath}`;
@@ -117,6 +121,11 @@ export default function WifiProblemsPerthPage() {
                   </a>
                 </p>
               </div>
+              <ReviewInsert
+                name={wifiInlineReview.name}
+                text={wifiInlineReview.text}
+                className="mt-6"
+              />
             </div>
 
             <div className="overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
