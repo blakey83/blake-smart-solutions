@@ -2,7 +2,7 @@ export const wifiProblemsPerthPageContent = {
   pagePath: "/wifi-problems-perth",
   pageTitle: "WiFi Problems Perth | Fix Dropouts, Dead Zones & Slow Speeds",
   pageDescription:
-    "Perth WiFi help for homes with dropouts, dead zones, slow speeds and poor coverage. Book a WiFi fix visit from $99.",
+    "Perth WiFi help for homes with dropouts, dead zones, slow speeds and poor coverage. Book a WiFi fix visit.",
   siteName: "Blake Smart Solutions",
   heroImage: {
     src: "/images/work_gallery/wifi_survey.jpeg",
@@ -15,20 +15,22 @@ export const wifiProblemsPerthPageContent = {
   offerDescription: "WiFi fix visit",
   hero: {
     eyebrow: "Perth in-home WiFi troubleshooting",
-    title: "Stop Fighting Your WiFi",
+    title: "WiFi Problems Around The Home?",
     intro:
-      "Slow speeds, dead spots and WiFi dropouts usually aren’t an internet problem — they’re a home WiFi setup problem.",
-    what: "We visit your home, test your WiFi properly, find the real cause of the issue, and improve coverage where you actually use it.",
+      "Slow speeds, buffering, dead spots and WiFi dropouts usually aren’t an internet problem, they’re a home WiFi setup problem.",
+    what: "We visit your home, find what’s causing the issue, and improve your WiFi where you actually use it.",
     guarantee:
       "In most homes, we can improve the WiFi during the same visit — and if we can’t help, we’ll tell you honestly.",
-    cta: "Get Your WiFi Fixed",
+    cta: "Fix My WiFi",
     contactPrompt: "Need help now?",
     callLabel: "Call",
     orLabel: "or",
     textLabel: "text 0477 948 079",
+
     cardTitle: "Real WiFi Testing — Not Guesswork",
+
     cardDescription:
-      "We use commercial-grade testing to find the exact issue — and in most cases, fix it on the spot.",
+      "We test coverage, interference and weak signal areas to find the real issue — and in most cases, improve it on the spot.",
   },
   problemItems: [
     "WiFi drops out in certain rooms",
@@ -120,7 +122,8 @@ export const wifiProblemsPerthPageContent = {
   },
   guideSection: {
     title: "Want to understand what might be causing the issue?",
-    cta: "Read the 7 common reasons WiFi fails at home",
+    cta: "Why your fast internet can feel slow in your home",
+    cta2: "7 common reasons WiFi fails and how to fix them",
   },
 };
 

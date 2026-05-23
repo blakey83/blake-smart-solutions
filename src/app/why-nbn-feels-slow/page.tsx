@@ -191,8 +191,8 @@ function ArticleBlockView({ block }: { block: ArticleBlock }) {
 
 export default function WhyNbnFeelsSlowPage() {
   const blocks = parseArticle(whyNbnFeelsSlowContent.article.body);
+  const leadBlock = blocks[0]?.type === "paragraph" ? blocks[0] : null;
   const imageAfterIndexes = new Map([
-    [9, whyNbnFeelsSlowImages[0]],
     [24, whyNbnFeelsSlowImages[1]],
     [48, whyNbnFeelsSlowImages[2]],
   ]);
@@ -206,30 +206,50 @@ export default function WhyNbnFeelsSlowPage() {
         }}
       />
       <section className="border-b border-[var(--color-border)] bg-white">
-        <div className="mx-auto max-w-4xl px-5 pt-14 pb-10 sm:px-6 lg:px-8 lg:pt-20 lg:pb-12">
-          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
-            {whyNbnFeelsSlowContent.article.title}
-          </h1>
-          <div className="mt-6"></div>
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:px-8 lg:py-20">
+          <div>
+            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
+              {whyNbnFeelsSlowContent.article.title}
+            </h1>
+            {leadBlock ? (
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
+                {leadBlock.text}
+              </p>
+            ) : null}
+          </div>
+
+          <figure className="overflow-hidden rounded-[24px] border border-[var(--color-border)] bg-white shadow-[0_16px_36px_rgba(15,23,42,0.08)]">
+            <div className="relative aspect-[4/3] w-full">
+              <Image
+                src={whyNbnFeelsSlowImages[0].src}
+                alt={whyNbnFeelsSlowImages[0].alt}
+                fill
+                sizes="(min-width: 1024px) 32rem, 100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </figure>
         </div>
       </section>
 
       <main className="mx-auto max-w-4xl px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
         <article className="max-w-3xl space-y-5">
-          {blocks.map((block, index) => (
-            <Fragment key={`${block.type}-${index}`}>
-              <ArticleBlockView block={block} />
-              {whyNbnFeelsSlowContent.inlineCtaIndexes.includes(index) ? (
-                <WifiArticleInlineCta className="my-8" />
-              ) : null}
-              {imageAfterIndexes.has(index) ? (
-                <ArticleImage
-                  image={imageAfterIndexes.get(index)!}
-                  priority={index === 9}
-                />
-              ) : null}
-            </Fragment>
-          ))}
+          {blocks.slice(1).map((block, offset) => {
+            const index = offset + 1;
+
+            return (
+              <Fragment key={`${block.type}-${index}`}>
+                <ArticleBlockView block={block} />
+                {whyNbnFeelsSlowContent.inlineCtaIndexes.includes(index) ? (
+                  <WifiArticleInlineCta className="my-12 sm:my-14" />
+                ) : null}
+                {imageAfterIndexes.has(index) ? (
+                  <ArticleImage image={imageAfterIndexes.get(index)!} />
+                ) : null}
+              </Fragment>
+            );
+          })}
         </article>
       </main>
 

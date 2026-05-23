@@ -107,9 +107,7 @@ export default function WifiProblemsPerthPage() {
                 </WifiProblemsCta>
                 <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-6 text-[var(--color-muted)]">
                   <span>{wifiProblemsPerthPageContent.hero.contactPrompt}</span>
-                  <WifiProblemsCallLink
-                    className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
-                  >
+                  <WifiProblemsCallLink className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline">
                     {wifiProblemsPerthPageContent.hero.callLabel}
                   </WifiProblemsCallLink>
                   <span>{wifiProblemsPerthPageContent.hero.orLabel}</span>
@@ -269,10 +267,17 @@ export default function WifiProblemsPerthPage() {
               {wifiProblemsPerthPageContent.guideSection.title}
             </h2>
             <Link
-              href="/7-ways-to-fix-wifi"
+              href="/why-nbn-feels-slow"
               className="mt-5 inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
             >
               {wifiProblemsPerthPageContent.guideSection.cta}
+            </Link>
+            <br />
+            <Link
+              href="/7-ways-to-fix-wifi"
+              className="mt-5 inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+            >
+              {wifiProblemsPerthPageContent.guideSection.cta2}
             </Link>
           </div>
         </div>

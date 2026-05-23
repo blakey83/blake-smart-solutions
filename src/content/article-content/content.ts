@@ -220,7 +220,7 @@ We help Perth homes and small businesses improve:
 · overall network stability
 Clean installation. Practical advice. Real-world solutions.`,
   },
-  inlineCtaIndexes: [5, 13],
+  inlineCtaIndexes: [27, 77],
   finalCta: {
     eyebrow: "Need Better Wi-Fi?",
     title: "Book a Wi‑Fi assessment with Blake Smart Solutions.",
