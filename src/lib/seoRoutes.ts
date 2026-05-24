@@ -6,7 +6,11 @@ export const SITE_URL = "https://www.blakesmartsolutions.com.au";
 const APP_DIRECTORY = path.join(process.cwd(), "src", "app");
 const MAX_SITEMAP_URLS = 50_000;
 
-const ARTICLE_ROUTES = new Set(["/7-ways-to-fix-wifi", "/why-nbn-feels-slow"]);
+const ARTICLE_ROUTES = new Set([
+  "/7-ways-to-fix-wifi",
+  "/starlink-setup-perth",
+  "/why-nbn-feels-slow",
+]);
 
 const EXCLUDED_SEGMENTS = new Set([
   "api",

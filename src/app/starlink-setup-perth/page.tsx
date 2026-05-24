@@ -10,12 +10,41 @@ const pageUrl = `${siteMetadataContent.website}${pagePath}`;
 const pageTitle = starlinkSetupGuideContent.pageTitle;
 const pageDescription = starlinkSetupGuideContent.pageDescription;
 const heroImageUrl = `${siteMetadataContent.website}${starlinkSetupGuideContent.hero.image.src}`;
+const allImageUrls = [
+  heroImageUrl,
+  `${siteMetadataContent.website}${starlinkSetupGuideContent.intro.image.src}`,
+  ...starlinkSetupGuideContent.sections.map(
+    (section) => `${siteMetadataContent.website}${section.image.src}`,
+  ),
+  `${siteMetadataContent.website}${starlinkSetupGuideContent.conclusion.image.src}`,
+];
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: [
+    "Starlink setup Perth",
+    "Starlink installation Perth",
+    "how to set up Starlink",
+    "Starlink dish mounting",
+    "Starlink cable routing",
+    "Starlink WiFi setup",
+  ],
   alternates: {
     canonical: pageUrl,
+  },
+  authors: [{ name: siteMetadataContent.businessName }],
+  category: "Starlink installation guide",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   openGraph: {
     title: pageTitle,
@@ -39,33 +68,87 @@ export const metadata: Metadata = {
   },
 };
 
-const articleStructuredData = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  headline: pageTitle,
-  description: pageDescription,
-  image: [
-    heroImageUrl,
-    `${siteMetadataContent.website}${starlinkSetupGuideContent.intro.image.src}`,
-    ...starlinkSetupGuideContent.sections.map(
-      (section) => `${siteMetadataContent.website}${section.image.src}`,
-    ),
-    `${siteMetadataContent.website}${starlinkSetupGuideContent.conclusion.image.src}`,
-  ],
-  mainEntityOfPage: pageUrl,
-  author: {
-    "@type": "Organization",
-    name: siteMetadataContent.businessName,
-    url: siteMetadataContent.website,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: siteMetadataContent.businessName,
-    logo: {
-      "@type": "ImageObject",
-      url: `${siteMetadataContent.website}/images/branding/BSS_logo.png`,
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `${pageUrl}#article`,
+      headline: pageTitle,
+      description: pageDescription,
+      image: allImageUrls,
+      articleSection: "Starlink setup guide",
+      inLanguage: "en-AU",
+      mainEntityOfPage: pageUrl,
+      author: {
+        "@type": "Organization",
+        name: siteMetadataContent.businessName,
+        url: siteMetadataContent.website,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: siteMetadataContent.businessName,
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteMetadataContent.website}/images/branding/BSS_logo.png`,
+        },
+      },
     },
-  },
+    {
+      "@type": "HowTo",
+      "@id": `${pageUrl}#howto`,
+      name: starlinkSetupGuideContent.hero.title,
+      description: pageDescription,
+      image: heroImageUrl,
+      inLanguage: "en-AU",
+      areaServed: {
+        "@type": "City",
+        name: siteMetadataContent.city,
+      },
+      provider: {
+        "@type": "LocalBusiness",
+        name: siteMetadataContent.businessName,
+        url: siteMetadataContent.website,
+        telephone: siteMetadataContent.telephone,
+      },
+      step: starlinkSetupGuideContent.sections.map((section, index) => ({
+        "@type": "HowToStep",
+        position: index + 1,
+        name: section.title,
+        url: `${pageUrl}#${section.id}`,
+        image: `${siteMetadataContent.website}${section.image.src}`,
+        text: [
+          section.intro,
+          ...(section.paragraphs ?? []),
+          ...section.bullets,
+        ].join(" "),
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteMetadataContent.website,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Starlink Installation Perth",
+          item: `${siteMetadataContent.website}/starlink-installation-perth`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: starlinkSetupGuideContent.hero.title,
+          item: pageUrl,
+        },
+      ],
+    },
+  ],
 };
 
 type StarlinkImageProps = {
@@ -112,7 +195,7 @@ export default function StarlinkSetupPerthPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleStructuredData),
+          __html: JSON.stringify(structuredData),
         }}
       />
 
