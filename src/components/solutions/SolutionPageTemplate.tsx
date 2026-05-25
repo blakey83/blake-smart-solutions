@@ -69,6 +69,11 @@ export function SolutionPageTemplate({
   heroEyebrow = solutionPageTemplateContent.heroEyebrow,
   heroImage,
   heroImageAlt,
+  bulletPoints,
+  heroBullets,
+  heroBulletPoints,
+  heroPoints,
+  heroSocialProof,
   primaryCta,
   secondaryCta,
   problemsEyebrow = solutionPageTemplateContent.problemsEyebrow,
@@ -90,6 +95,9 @@ export function SolutionPageTemplate({
   trustItems,
   content,
 }: SolutionPageTemplateViewProps) {
+  const heroBulletItems =
+    bulletPoints ?? heroBullets ?? heroBulletPoints ?? heroPoints;
+
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
       <section className="border-b border-[var(--color-border)] bg-white">
@@ -109,6 +117,42 @@ export function SolutionPageTemplate({
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
                 {intro}
               </p>
+
+              {heroBulletItems?.length ? (
+                <ul className="mt-6 space-y-2">
+                  {heroBulletItems.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
+                    >
+                      <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+
+              {heroSocialProof ? (
+                <div className="mt-6 max-w-2xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-5">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                    <span
+                      className="text-sm font-semibold tracking-[0.12em] text-amber-500"
+                      aria-label={heroSocialProof.ratingLabel}
+                    >
+                      ★★★★★
+                    </span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]">
+                      {heroSocialProof.eyebrow}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-[var(--color-ink)] sm:text-base">
+                    “{heroSocialProof.quote}”
+                  </p>
+                  <p className="mt-3 text-sm font-semibold text-[var(--color-muted)]">
+                    {heroSocialProof.author}
+                  </p>
+                </div>
+              ) : null}
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <SolutionCta button={primaryCta} />
@@ -243,6 +287,36 @@ export function SolutionPageTemplate({
           </div>
         </div>
       </section>
+
+      {imageSection ? (
+        <section className="border-y border-[var(--color-border)] bg-white">
+          <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:py-20">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+                {imageSectionEyebrow}
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+                {imageSection.title}
+              </h2>
+              <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
+                {imageSection.intro}
+              </p>
+            </div>
+
+            <div className="relative overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={imageSection.image}
+                  alt={imageSection.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 36rem, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <WhyBSS content={content} />
 

@@ -1,9 +1,10 @@
 import type { Product } from "@/lib/types";
+import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const starlinkIntro = {
-  title: "Starlink Solutions",
+  title: "Starlink Installation Perth",
   intro:
-    "Starlink gives you fast internet — but the standard setup rarely covers your whole home or property. We install Starlink properly, then extend your connection with reliable Wi-Fi indoors, outdoors, and out to sheds or separate buildings. From simple setups to full property coverage, we design systems that actually work where you need them. The options below are typical solutions and guide pricing, with every setup tailored to your layout.",
+    "Starlink can be a brilliant internet option for Perth homes, rural blocks and properties with poor fixed-line service. The difference between a frustrating setup and a reliable one is usually the install: clear dish placement, secure mounting, protected cable routing and Wi-Fi that actually reaches the rooms, patio or shed where you need it.",
 };
 
 export const starlinkProducts: Product[] = [
@@ -11,7 +12,7 @@ export const starlinkProducts: Product[] = [
     name: "Starlink Installation",
     description:
       "Get your Starlink set up properly the first time. We install the dish in the best position for a clear signal, run the cabling neatly, and make sure everything is working before we leave. Ideal for homes, new builds, and rural properties across Perth and surrounds.",
-    image: "/images/products/starlink/Starlink.jpg",
+    image: "/images/products/starlink/Starlink_on_roof.jpg",
     imageAlt:
       "Starlink dish installed on a roof with clear sky view in a Perth home",
     badge: "Essential",
@@ -76,4 +77,137 @@ export const starlinkProducts: Product[] = [
     ctaLabel: "Connect My Shed",
     href: "/#final-cta",
   },
+];
+
+export const starlinkSolutionContent: SolutionPageTemplateProps = {
+  title: "Starlink Installation Perth",
+  intro:
+    "Roof-mounted Starlink installations with careful cable management throughout the home. Dish alignment, router setup and system configuration are all handled as part of the installation.",
+  bulletPoints: [
+    "Roof mounting options",
+    "Clean cable entry into the home",
+    "Conduit protection for exposed cabling",
+    "Router and app setup",
+    "Final setup and alignment checks",
+  ],
+  heroEyebrow: "Fast & Reliable Starlink Setup",
+  heroImage: "/images/how_to/Starlink/martin_install.jpg",
+  heroImageAlt: "Starlink dish installed on a Perth roof",
+
+  heroSocialProof: {
+    eyebrow: "Google review",
+    ratingLabel: "Five star Google review",
+    quote: "Good communication and clean work.",
+    author: "Mark Lumacang",
+  },
+
+  primaryCta: {
+    label: "Request a Starlink Quote",
+    action: "enquiry",
+  },
+  secondaryCta: {
+    label: "Call 0477 948 079",
+    action: "link",
+    href: "tel:0477948079",
+  },
+
+  problemsEyebrow: "Common Starlink problems",
+  problemsTitle:
+    "Starlink performance depends on more than just plugging in the kit",
+  problemsIntro:
+    "The Starlink kit is designed to be approachable, but Perth homes still create practical installation issues. Roof type, cable entry, double brick walls, router location and Wi-Fi coverage all affect the end result.",
+
+  problems: [
+    {
+      title: "Poor dish location",
+      description:
+        "Trees, roof lines, antennas and neighbouring buildings can create obstruction warnings, dropouts or inconsistent speeds.",
+      image: "/images/products/starlink/mis-alined-starlink2.jpg",
+      imageAlt: "Starlink equipment ready for installation",
+    },
+    {
+      title: "Messy or exposed cable runs",
+      description:
+        "Loose cable across a roof or wall can look rough and may not hold up well in Perth sun and weather without proper protection.",
+      image: "/images/products/starlink/mis-aligned_starlink.jpg",
+      imageAlt: "Starlink dish mounted on a roof",
+    },
+    {
+      title: "Weak Wi-Fi inside the home",
+      description:
+        "The Starlink router can work well in smaller homes, but larger layouts, double brick and home offices often need better Wi-Fi design.",
+      image: "/images/work_gallery/wifi_survey.jpeg",
+      imageAlt: "WiFi equipment for improving Starlink coverage",
+    },
+    {
+      title: "No coverage outdoors or in sheds",
+      description:
+        "Patios, workshops, granny flats and sheds often need outdoor access points or dedicated wireless links rather than hoping the router reaches.",
+      image: "/images/products/wifi/wifi_to_shed.png",
+      imageAlt: "Wireless link used to extend Starlink internet to a shed",
+    },
+    {
+      title: "Difficult roof or wall access",
+      description:
+        "Tile roofs, Colorbond roofs and double brick homes need different mounting and cable-entry approaches to keep the install clean.",
+      image: "/images/products/wifi/outdoor_ap.png",
+      imageAlt: "Outdoor network equipment for extended property coverage",
+    },
+    {
+      title: "Setup without testing",
+      description:
+        "A connection showing online is not the same as a finished job. Dish alignment, app warnings and Wi-Fi coverage should be checked before handover.",
+      image: "/images/solutions/wifi/wifi_testing.jpg",
+      imageAlt: "Testing WiFi coverage after a Starlink installation",
+    },
+  ],
+
+  brandBlock: {
+    eyebrow: "How we approach Starlink installs",
+    title: "Dish, cable, router and Wi-Fi planned as one system",
+    intro:
+      "A good Starlink installation is not just putting the dish somewhere high. We check the app for obstructions, choose a sensible mount, protect exposed cable, bring the cable inside cleanly and make sure the router location gives the best chance of reliable coverage.",
+    image: "/images/products/starlink/Starlink_on_roof.jpg",
+    imageAlt: "Clean Starlink roof installation",
+    points: [
+      "Dish placement checked for clear sky view and practical cable routing",
+      "Mounting approach matched to tile, Colorbond or wall locations",
+      "Cable protected with conduit where exposed to sun or weather",
+      "Neat internal cable exit using a suitable plate where practical",
+      "Wi-Fi coverage checked after setup, with upgrade options if needed",
+    ],
+  },
+
+  productsEyebrow: "Starlink solutions",
+  productsTitle:
+    "Starlink installation options for homes, sheds and larger properties",
+  productsIntro:
+    "These are common Starlink solutions we install. The right option depends on roof type, property layout, where you need Wi-Fi and whether you need coverage beyond the main house.",
+
+  products: starlinkProducts,
+
+  imageSectionEyebrow: "Superior Starlink installations in Perth",
+  imageSection: {
+    title: "Starlink setup that still looks tidy after the installer leaves",
+    intro:
+      "We aim for practical, clean installations: secure mounting, protected cable, sensible router placement and clear advice about Wi-Fi coverage. If the Starlink router alone will not cover the property properly, we can recommend mesh Wi-Fi, wired access points, outdoor Wi-Fi or shed links.",
+    image: "/images/how_to/Starlink/martin_install.jpg",
+    imageAlt: "Starlink kit ready for professional setup",
+  },
+
+  finalCtaEyebrow: "Talk to Blake Smart Solutions",
+  finalCtaTitle: "Need Starlink installed properly in Perth?",
+  finalCtaIntro:
+    "Tell us about your roof type, suburb and where you need internet coverage. We can help with the install, cable route, router setup and any Wi-Fi upgrades needed for the home, outdoor areas or shed.",
+  finalCtaButton: {
+    label: "Send a Starlink Enquiry",
+    action: "enquiry",
+  },
+};
+
+export const starlinkSolutionTrustItems = [
+  "Starlink Certified Installations",
+  "ACMA Compliant Cabling",
+  "Local Perth Business",
+  "Wi-Fi Upgrades Available",
 ];

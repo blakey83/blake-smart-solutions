@@ -29,6 +29,13 @@ export type ImageTextSection = {
   imageAlt: string;
 };
 
+export type HeroSocialProof = {
+  eyebrow: string;
+  ratingLabel: string;
+  quote: string;
+  author: string;
+};
+
 export type SolutionPageTemplateProps = {
   currentPath?: string;
   title: string;
@@ -36,6 +43,11 @@ export type SolutionPageTemplateProps = {
   heroEyebrow?: string;
   heroImage?: string;
   heroImageAlt?: string;
+  bulletPoints?: string[];
+  heroBullets?: string[];
+  heroBulletPoints?: string[];
+  heroPoints?: string[];
+  heroSocialProof?: HeroSocialProof;
   primaryCta: CtaButton;
   secondaryCta?: CtaButton;
   problemsEyebrow?: string;
