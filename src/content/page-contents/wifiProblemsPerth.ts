@@ -14,63 +14,61 @@ export const wifiProblemsPerthPageContent = {
   serviceName: "WiFi Problems Perth",
   offerDescription: "WiFi fix visit",
   hero: {
-    eyebrow: "Perth in-home WiFi troubleshooting",
+    eyebrow: "ATTENTION PERTH HOME INTERNET USERS",
     title: "WiFi Problems Around The Home?",
     intro:
-      "Slow speeds, buffering, dead spots and WiFi dropouts usually aren’t an internet problem, they’re a home WiFi setup problem.",
-    what: "We visit your home, find what’s causing the issue, and improve your WiFi where you actually use it.",
-    guarantee:
-      "In most homes, we can improve the WiFi during the same visit — and if we can’t help, we’ll tell you honestly.",
-    cta: "Fix My WiFi",
-    contactPrompt: "Need help now?",
-    callLabel: "Call",
-    orLabel: "or",
-    textLabel: "text 0477 948 079",
+      "We visit your home, test the WiFi properly and help improve coverage where you actually use it most.",
+    bullets: [
+      "WiFi dropping out in certain rooms",
+      "Slow speeds away from the router",
+      "Weak signal in bedrooms or outdoor areas",
+      "Devices constantly reconnecting",
+      "Streaming and video calls becoming unreliable",
+    ],
+    cta: "Book WiFi Help",
 
     cardTitle: "Real WiFi Testing — Not Guesswork",
 
     cardDescription:
       "We test coverage, interference and weak signal areas to find the real issue — and in most cases, improve it on the spot.",
   },
-  problemItems: [
-    "WiFi drops out in certain rooms",
-    "Slow speeds away from the router",
-    "Dead zones in bedrooms, home offices or outdoor areas",
-    "Devices constantly reconnecting",
-    "Streaming, gaming or work calls becoming unreliable",
-  ],
   problemSection: {
-    eyebrow: "What is really happening",
+    eyebrow: "Why this happens",
     title:
-      "Slow speeds, dropouts and dead zones aren’t usually an internet problem — they’re a WiFi setup problem.",
+      "In many homes, the WiFi setup simply doesn’t match how the house is actually used.",
     paragraphs: [
-      "Most people upgrade their plan, restart the router, buy a new modem or switch providers… and still have the same problem.",
-      "In many homes, the real issue is poor WiFi coverage caused by walls, layout, router placement, interference and overloaded equipment.",
+      "Routers are often installed wherever the internet enters the home rather than where good coverage is actually needed. Walls, layout, interference and poor placement can all affect performance from room to room.",
+      "That’s why restarting the router or upgrading the internet plan often doesn’t solve the real issue. In many cases, better placement, improved setup or additional coverage in the right areas makes a much bigger difference.",
     ],
+    image: {
+      src: "/images/products/wifi/wifi_frustration.jpg",
+      alt: "Testing WiFi coverage inside a Perth home",
+    },
   },
+
   processSection: {
-    eyebrow: "Our process",
-    title: "How We Actually Fix The Problem",
+    eyebrow: "How we help",
+    title: "How We Improve WiFi Around The Home",
     description:
-      "A WiFi survey is part of the fix process, not the whole offer. The goal is reliable coverage that works in the rooms you actually use.",
+      "The goal is not just testing WiFi — it’s improving coverage and reliability in the rooms you actually use every day.",
     items: [
       {
         step: "1",
         title: "Test",
         description:
-          "We measure signal strength, coverage quality, interference and how the WiFi performs in the rooms you actually use.",
+          "We check signal strength, coverage quality and how the WiFi performs throughout the home.",
       },
       {
         step: "2",
-        title: "Diagnose",
+        title: "Identify",
         description:
-          "We show you what is actually causing the issue, without guessing or randomly selling equipment.",
+          "We find what is actually causing the issue, including weak coverage, interference and poor equipment placement.",
       },
       {
         step: "3",
-        title: "Fix",
+        title: "Improve",
         description:
-          "Where possible, we improve the setup during the same visit and recommend the simplest long-term fix if extra equipment is needed.",
+          "Where possible, we improve the setup during the same visit and recommend the simplest long-term solution if extra equipment is needed.",
       },
     ],
   },
@@ -123,7 +121,7 @@ export const wifiProblemsPerthPageContent = {
   guideSection: {
     title: "Want to understand what might be causing the issue?",
     cta: "Why your fast internet can feel slow in your home",
-    cta2: "7 common reasons WiFi fails and how to fix them",
+    cta2: "7 common WiFi fails, and how to fix them",
   },
 };
 

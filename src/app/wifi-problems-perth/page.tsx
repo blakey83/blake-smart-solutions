@@ -95,29 +95,24 @@ export default function WifiProblemsPerthPage() {
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
                 {wifiProblemsPerthPageContent.hero.intro}
               </p>
-              <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                {wifiProblemsPerthPageContent.hero.what}
-              </p>
-              <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                {wifiProblemsPerthPageContent.hero.guarantee}
-              </p>
-              <div className="mt-8">
+              <ul className="mt-6 space-y-2">
+                {wifiProblemsPerthPageContent.hero.bullets.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)] sm:text-lg"
+                  >
+                    <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <WifiProblemsCta className="w-full px-6 sm:w-auto">
                   {wifiProblemsPerthPageContent.hero.cta}
                 </WifiProblemsCta>
-                <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-6 text-[var(--color-muted)]">
-                  <span>{wifiProblemsPerthPageContent.hero.contactPrompt}</span>
-                  <WifiProblemsCallLink className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline">
-                    {wifiProblemsPerthPageContent.hero.callLabel}
-                  </WifiProblemsCallLink>
-                  <span>{wifiProblemsPerthPageContent.hero.orLabel}</span>
-                  <a
-                    href="sms:0477948079"
-                    className="font-semibold text-[var(--color-accent)] underline-offset-4 transition hover:text-[var(--color-accent-strong)] hover:underline"
-                  >
-                    {wifiProblemsPerthPageContent.hero.textLabel}
-                  </a>
-                </p>
+                <WifiProblemsCallLink className="inline-flex min-h-12 items-center justify-center rounded-full bg-emerald-600 px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(5,150,105,0.22)] transition hover:bg-emerald-700">
+                  Call 0477 948 079
+                </WifiProblemsCallLink>
               </div>
               <ReviewInsert
                 name={wifiInlineReview.name}
@@ -169,17 +164,17 @@ export default function WifiProblemsPerthPage() {
               </div>
             </div>
 
-            <ul className="grid gap-4 sm:grid-cols-2">
-              {wifiProblemsPerthPageContent.problemItems.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-2xl border border-[var(--color-border)] bg-white p-5 text-base leading-7 text-[var(--color-ink)] shadow-[0_10px_24px_rgba(15,23,42,0.03)]"
-                >
-                  <span className="mb-4 block h-1.5 w-10 rounded-full bg-[var(--color-accent)]" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={wifiProblemsPerthPageContent.problemSection.image.src}
+                  alt={wifiProblemsPerthPageContent.problemSection.image.alt}
+                  fill
+                  sizes="(min-width: 1024px) 38rem, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
