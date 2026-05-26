@@ -23,6 +23,8 @@ export const metadata: Metadata = {
   description: siteMetadataContent.description,
 };
 
+const isProduction = process.env.NODE_ENV === "production";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,19 +37,23 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <EnquiryModalProvider />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18035265737"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-tag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-18035265737');
-          `}
-        </Script>
-        <GoogleAnalytics gaId="G-ZFPD80HG5B" />
+        {isProduction && (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=AW-18035265737"
+              strategy="afterInteractive"
+            />
+            <Script id="google-ads-tag" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'AW-18035265737');
+              `}
+            </Script>
+            <GoogleAnalytics gaId="G-ZFPD80HG5B" />
+          </>
+        )}
       </body>
     </html>
   );
