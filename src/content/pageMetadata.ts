@@ -11,7 +11,8 @@ export const servicePageMetadataContent = {
       alt: "Active deterrence security camera system for Perth homes and businesses",
     },
     serviceName: "Security Camera Installation Perth",
-    providerImage: "https://www.blakesmartsolutions.com.au/me_and_charlotte.jpeg",
+    providerImage:
+      "https://www.blakesmartsolutions.com.au/me_and_charlotte.jpeg",
     serviceType: "Security camera installation",
     category: "Security System Installation",
     offerDescription:
@@ -43,5 +44,10 @@ export const servicePageMetadataContent = {
     title: "Data Cabling | Blake Smart Solutions",
     description:
       "Cat6 data cabling and hard-wired network upgrades for Perth homes and small businesses.",
+  },
+  starlinkInstallationRural: {
+    title: "Starlink Installation | Dish, Cable & Wi-Fi Setup",
+    description:
+      "Professional Starlink installation. Dish mounting, clean cable routing, router setup, Wi-Fi upgrades, outdoor coverage and shed internet solutions.",
   },
 };
