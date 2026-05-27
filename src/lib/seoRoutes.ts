@@ -35,12 +35,17 @@ const EXCLUDED_FILENAMES = new Set([
   "default.ts",
 ]);
 
+type AppRouteEntry = {
+  route: string;
+  filePath: string;
+};
+
 async function collectPageRoutes(
   directory: string,
   segments: string[] = [],
-): Promise<string[]> {
+): Promise<AppRouteEntry[]> {
   const entries = await fs.readdir(directory, { withFileTypes: true });
-  const routes = new Set<string>();
+  const routes = new Map<string, AppRouteEntry>();
 
   for (const entry of entries) {
     if (entry.isDirectory()) {
@@ -51,7 +56,7 @@ async function collectPageRoutes(
           path.join(directory, segment),
           segments,
         );
-        nestedRoutes.forEach((route) => routes.add(route));
+        nestedRoutes.forEach((entry) => routes.set(entry.route, entry));
         continue;
       }
 
@@ -71,7 +76,7 @@ async function collectPageRoutes(
         path.join(directory, segment),
         [...segments, segment],
       );
-      nestedRoutes.forEach((route) => routes.add(route));
+      nestedRoutes.forEach((entry) => routes.set(entry.route, entry));
       continue;
     }
 
@@ -88,13 +93,18 @@ async function collectPageRoutes(
     }
 
     const routePath = segments.length === 0 ? "/" : `/${segments.join("/")}`;
-    routes.add(routePath);
+    routes.set(routePath, {
+      route: routePath,
+      filePath: path.join(directory, entry.name),
+    });
   }
 
-  return Array.from(routes).sort((left, right) => left.localeCompare(right));
+  return Array.from(routes.values()).sort((left, right) =>
+    left.route.localeCompare(right.route),
+  );
 }
 
-export async function getPublicAppRoutes(): Promise<string[]> {
+export async function getPublicAppRouteEntries(): Promise<AppRouteEntry[]> {
   const routes = await collectPageRoutes(APP_DIRECTORY);
 
   if (routes.length > MAX_SITEMAP_URLS) {
@@ -104,6 +114,11 @@ export async function getPublicAppRoutes(): Promise<string[]> {
   }
 
   return routes;
+}
+
+export async function getPublicAppRoutes(): Promise<string[]> {
+  const entries = await getPublicAppRouteEntries();
+  return entries.map((entry) => entry.route);
 }
 
 export function getAbsoluteCanonicalUrl(route: string): string {
@@ -130,6 +145,7 @@ export function getRoutePriority(route: string): number {
     "/security-cameras-perth",
     "/ajax-security-perth",
     "/starlink-installation-perth",
+    "/rural-starlink-installation-wa",
     "/data-cabling",
     "/tv-antennas-perth",
   ]);

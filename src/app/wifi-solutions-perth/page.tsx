@@ -5,11 +5,17 @@ import { wifiSolutionsPerthPageContent } from "@/content/page-contents/wifiSolut
 import { wifiSolutionContent } from "@/content/wifiSolutionContent";
 import { wifiSolutionTrustItems } from "@/content/wifiSolutionContent";
 import { whyChooseUsWiFi } from "@/content/page-contents/whyUsContent";
+import { buildSeoMetadata } from "@/lib/seoMetadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildSeoMetadata({
   title: wifiSolutionsPerthPageContent.metadata.title,
   description: wifiSolutionsPerthPageContent.metadata.description,
-};
+  path: "/wifi-solutions-perth",
+  image: {
+    url: "/images/solutions/wifi/WiFi_hero.png",
+    alt: "WiFi coverage testing and installation in Perth",
+  },
+});
 
 export default function WifiSolutionsPerthPage() {
   return (

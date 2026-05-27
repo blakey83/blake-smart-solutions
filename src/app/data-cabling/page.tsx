@@ -3,11 +3,17 @@ import { ProductPageTemplate } from "@/components/products/ProductPageTemplate";
 import { servicePageMetadataContent } from "@/content/pageMetadata";
 import { dataCablingProducts, dataIntro } from "@/content/data_products";
 import { whyChooseUsHome } from "@/content/page-contents/whyUsContent";
+import { buildSeoMetadata } from "@/lib/seoMetadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildSeoMetadata({
   title: servicePageMetadataContent.dataCabling.title,
   description: servicePageMetadataContent.dataCabling.description,
-};
+  path: "/data-cabling",
+  image: {
+    url: "/images/products/wifi/managed_wifi.png",
+    alt: "Professional data cabling and network equipment",
+  },
+});
 
 export default function DataCablingPage() {
   return (

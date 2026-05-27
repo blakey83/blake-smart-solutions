@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { wifiLandingPageContent } from "@/content/landing-page-contents/wifiLandingPage";
+import { buildSeoMetadata } from "@/lib/seoMetadata";
 import { WifiArticleInlineCta } from "./WifiArticleInlineCta";
 import { WifiLandingPageCtas } from "./WifiLandingPageCtas";
 
@@ -10,13 +11,16 @@ type Fix = (typeof wifiLandingPageContent.fixes)[number];
 
 const pagePath = "/7-ways-to-fix-wifi";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildSeoMetadata({
   title: wifiLandingPageContent.metadata.title,
   description: wifiLandingPageContent.metadata.description,
-  alternates: {
-    canonical: `https://www.blakesmartsolutions.com.au${pagePath}`,
+  path: pagePath,
+  type: "article",
+  image: {
+    url: "/images/router-bad-location.jpeg",
+    alt: "Wi-Fi router in a poor location inside a home",
   },
-};
+});
 
 function renderParagraphs(paragraphs: string[], className: string) {
   return paragraphs.map((paragraph) => (

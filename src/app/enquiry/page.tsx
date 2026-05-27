@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { enquiryPageContent } from "@/content/page-contents/enquiryPage";
+import { buildSeoMetadata } from "@/lib/seoMetadata";
 import { EnquiryPageClient } from "./EnquiryPageClient";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildSeoMetadata({
   title: enquiryPageContent.metadata.title,
   description: enquiryPageContent.metadata.description,
-  alternates: {
-    canonical: enquiryPageContent.metadata.canonical,
-  },
-};
+  path: "/enquiry",
+});
 
 export default function EnquiryPage() {
   return (

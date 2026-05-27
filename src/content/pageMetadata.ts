@@ -20,9 +20,9 @@ export const servicePageMetadataContent = {
   },
   securityCamerasPerth: {
     title:
-      "Securty Camera Solutions | Business and Home Security Camera Solutions",
+      "Security Cameras Perth | Home & Business CCTV Installation",
     description:
-      "Professional security camera solutions in Perth. Fix dead zones, dropouts and poor coverage with properly designed systems for homes, businesses, sheds and outdoor areas.",
+      "Professional security camera installation in Perth for homes and businesses. CCTV design, active deterrence cameras, night vision, remote viewing and clean installation.",
   },
   ajaxSecurityPerth: {
     title:

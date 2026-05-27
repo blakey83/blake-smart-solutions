@@ -7,6 +7,7 @@ import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { EnquiryModalProvider } from "@/components/EnquiryModalProvider";
 import { siteMetadataContent } from "@/content/siteContent";
+import { SITE_URL } from "@/lib/seoRoutes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,8 +20,44 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: siteMetadataContent.title,
   description: siteMetadataContent.description,
+  applicationName: siteMetadataContent.businessName,
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    title: siteMetadataContent.title,
+    description: siteMetadataContent.description,
+    url: SITE_URL,
+    siteName: siteMetadataContent.businessName,
+    images: [
+      {
+        url: "/images/branding/BSS_logo.png",
+        alt: "Blake Smart Solutions logo",
+      },
+    ],
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteMetadataContent.title,
+    description: siteMetadataContent.description,
+    images: ["/images/branding/BSS_logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 const isProduction = process.env.NODE_ENV === "production";

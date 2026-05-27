@@ -6,37 +6,17 @@ import {
   starlinkSolutionTrustItems,
 } from "@/content/starlink_product";
 import { whyChooseUsStarlink } from "@/content/page-contents/whyUsContent";
+import { buildSeoMetadata } from "@/lib/seoMetadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildSeoMetadata({
   title: servicePageMetadataContent.starlinkInstallationPerth.title,
   description: servicePageMetadataContent.starlinkInstallationPerth.description,
-  alternates: {
-    canonical:
-      "https://www.blakesmartsolutions.com.au/starlink-installation-perth",
+  path: "/starlink-installation-perth",
+  image: {
+    url: "/images/products/starlink/Starlink.jpg",
+    alt: "Starlink dish installed on a Perth roof",
   },
-  openGraph: {
-    title: servicePageMetadataContent.starlinkInstallationPerth.title,
-    description: servicePageMetadataContent.starlinkInstallationPerth.description,
-    url: "https://www.blakesmartsolutions.com.au/starlink-installation-perth",
-    siteName: "Blake Smart Solutions",
-    images: [
-      {
-        url: "https://www.blakesmartsolutions.com.au/images/products/starlink/Starlink.jpg",
-        alt: "Starlink dish installed on a Perth roof",
-      },
-    ],
-    locale: "en_AU",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: servicePageMetadataContent.starlinkInstallationPerth.title,
-    description: servicePageMetadataContent.starlinkInstallationPerth.description,
-    images: [
-      "https://www.blakesmartsolutions.com.au/images/products/starlink/Starlink.jpg",
-    ],
-  },
-};
+});
 
 export default function StarlinkPage() {
   return (
