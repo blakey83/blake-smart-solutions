@@ -2,15 +2,29 @@ import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 import { securityProducts } from "./security_products";
 
 export const alarmsSolutionContent: SolutionPageTemplateProps = {
-  title: "Ajax alarm systems professionally installed — Perth homes and businesses",
+  headline: "Finally, A Security System You'll Actually Use",
+  subHeadline:
+    "No confusing keypads. No outdated alarm panels. No expensive monitoring contracts. Just smart protection, instant alerts and complete control from your phone.",
+  bulletPoints: [
+    "Know what's happening at home, even when you're not there",
+    "Receive instant alerts the moment something isn't right",
+    "Control everything from a simple app that's easy for the whole family to use",
+    "Reduce nuisance alarms caused by poor sensor placement and outdated systems",
+    "Protect your home with earlier warning and smarter detection",
+    "Avoid expensive ongoing monitoring contracts and monthly fees",
+  ],
 
-  intro:
-    "Looking for a smarter way to protect your home or business? Blake Smart Solutions installs Ajax wireless alarm systems across Perth, designed to give you real confidence — not frustration. No messy cabling, no clunky keypads, and no complicated setups. Just clean, reliable security with instant alerts and full control from your phone.",
-
-  heroEyebrow: "Smart alarm solutions",
+  heroEyebrow: "Attention Perth homeowners",
 
   heroImage: "/images/solutions/ajaxSecurity/ajax_hero.png",
   heroImageAlt: "Ajax alarm installation by Blake Smart Solutions",
+
+  heroSocialProof: {
+    eyebrow: "Google review",
+    ratingLabel: "Five star Google review",
+    quote: "Good communication and clean workmanship. Highly recommended.",
+    author: "Mark Lumacang",
+  },
 
   primaryCta: {
     label: "Book a Free Security Assessment",
@@ -132,8 +146,8 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const alarmsSolutionTrustItems = [
-"Certified Ajax partner",
-"WA Police Licensed",
-"Fully Insured",
-"Perth-Based Professional Installers",
+  "Certified Ajax Expert",
+  "Average 5/5 star Google reviews",
+  "Fully Insured and Police Licensed",
+  "Perth-Based Professional Installers",
 ];

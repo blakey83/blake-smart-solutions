@@ -80,9 +80,9 @@ export const starlinkProducts: Product[] = [
 ];
 
 export const RuralStarlinkSolutionContent: SolutionPageTemplateProps = {
-  title: "Starlink Installation",
-  intro:
-    "Roof-mounted Starlink installations with careful cable management throughout the home. Dish alignment, router setup and system configuration are all handled as part of the installation.",
+  headline: "Starlink Installation",
+  subHeadline:
+    "Roof-mounted Starlink installations for WA homes and rural properties, with dish alignment, clean cabling, router setup and final testing.",
   bulletPoints: [
     "Roof mounting options",
     "Clean cable entry into the home",

@@ -24,7 +24,9 @@ export const metadata: Metadata = {
   description: pageDescription,
   keywords: [
     "Starlink setup Perth",
+    "Starlink setup WA",
     "Starlink installation Perth",
+    "Starlink installation WA",
     "how to set up Starlink",
     "Starlink dish mounting",
     "Starlink cable routing",
@@ -189,7 +191,7 @@ function BulletList({ items }: { items: string[] }) {
   );
 }
 
-export default function StarlinkSetupPerthPage() {
+export default function StarlinkSetupWaPage() {
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
       <script

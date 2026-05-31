@@ -2,13 +2,27 @@ import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 import { cctvProducts } from "@/content/cctv_products";
 
 export const cctvSolutionContent: SolutionPageTemplateProps = {
-  title:
+  headline:
     "Keep your home safe and secure, night and day, with professional security camera installation in Perth",
-  intro:
-    "Blake Smart Solutions installs professional security camera systems across Perth for homes, businesses and commercial sites. We don’t just install cameras — we design systems that give you clear visibility, reliable evidence and real protection when it matters. From entry points and blind spots to full property coverage, every system is built to suit how your property is actually used.",
+  subHeadline:
+    "Professional CCTV systems for Perth homes, businesses and commercial sites, designed around the way your property is actually used.",
+  bulletPoints: [
+    "Clear coverage around entry points, driveways, yards and key business areas",
+    "Smarter camera placement to reduce blind spots and unusable footage",
+    "Active deterrence, night vision and remote viewing options",
+    "Clean installation with practical advice before hardware is chosen",
+  ],
   heroEyebrow: "Professional CCTV solutions",
   heroImage: "/images/products/security/tioc_burgler.png",
   heroImageAlt: "Security camera installation by Blake Smart Solutions",
+
+  heroSocialProof: {
+    eyebrow: "Google review",
+    ratingLabel: "Five star Google review",
+    quote:
+      "Fantastic service and can sleep at night knowing I have a full CCTV camera system installed at my house.",
+    author: "Juan B",
+  },
 
   primaryCta: {
     label: "Get a Security Camera Quote",

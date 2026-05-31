@@ -38,16 +38,13 @@ export type HeroSocialProof = {
 
 export type SolutionPageTemplateProps = {
   currentPath?: string;
-  title: string;
-  intro: string;
+  headline: string;
+  subHeadline: string;
   heroEyebrow?: string;
   heroImage?: string;
   heroImageAlt?: string;
-  bulletPoints?: string[];
-  heroBullets?: string[];
-  heroBulletPoints?: string[];
-  heroPoints?: string[];
-  heroSocialProof?: HeroSocialProof;
+  bulletPoints: string[];
+  heroSocialProof: HeroSocialProof;
   primaryCta: CtaButton;
   secondaryCta?: CtaButton;
   problemsEyebrow?: string;

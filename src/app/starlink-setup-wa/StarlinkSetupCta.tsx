@@ -21,7 +21,7 @@ export function StarlinkSetupCta({
         openEnquiryModal("Starlink Installation", {
           defaultMessage: DEFAULT_MESSAGE,
           tracking: {
-            source: "starlink_setup_perth",
+            source: "starlink_setup_wa",
             default_message: DEFAULT_MESSAGE,
           },
         })

@@ -80,9 +80,9 @@ export const starlinkProducts: Product[] = [
 ];
 
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
-  title: "Starlink Installation Perth",
-  intro:
-    "Roof-mounted Starlink installations with careful cable management throughout the home. Dish alignment, router setup and system configuration are all handled as part of the installation.",
+  headline: "Starlink Installation Perth",
+  subHeadline:
+    "Roof-mounted Starlink installations with careful cable management, dish alignment, router setup and final testing.",
   bulletPoints: [
     "Roof mounting options",
     "Clean cable entry into the home",

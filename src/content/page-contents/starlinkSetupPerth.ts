@@ -1,21 +1,21 @@
 export const starlinkSetupGuideContent = {
-  pagePath: "/starlink-setup-perth",
+  pagePath: "/starlink-setup-wa",
   pageTitle:
-    "How To Set Up Starlink In A Perth Home | Starlink Installation Guide",
+    "How To Set Up Starlink In WA | Starlink Installation Guide",
   pageDescription:
-    "Learn how to set up Starlink in a Perth home, including dish placement, mounting, cable routing, WiFi setup and common installation mistakes.",
+    "Learn how to set up Starlink in WA, including dish placement, mounting, cable routing, WiFi setup and common installation mistakes.",
 
   siteName: "Blake Smart Solutions",
   hero: {
     eyebrow: "STARLINK SETUP GUIDE",
-    title: "How To Set Up Starlink In A Perth Home",
+    title: "How To Set Up Starlink In WA",
     intro:
       "Starlink can be a brilliant option for homes with poor internet options, but the quality of the installation matters. Dish location, roof mounting, cable entry and WiFi setup can all affect the final result.",
     cta: "Need Starlink Installed?",
     secondaryCta: "View Starlink Installation Options",
     image: {
       src: "/images/how_to/Starlink/martin_install.jpg",
-      alt: "Starlink dish installed on a Perth home",
+      alt: "Starlink dish installed on a WA home",
     },
   },
 
@@ -39,7 +39,7 @@ export const starlinkSetupGuideContent = {
       eyebrow: "STEP 1",
       title: "What You Need For A Proper Starlink Setup",
       intro:
-        "The kit gives you the core Starlink hardware, but most Perth homes still need proper mounting hardware, cable protection and suitable tools for a clean installation.",
+        "The kit gives you the core Starlink hardware, but many WA homes still need proper mounting hardware, cable protection and suitable tools for a clean installation.",
       bullets: [
         "Starlink kit, including dish, router and Starlink cable",
         "Suitable Starlink mount",
@@ -111,7 +111,7 @@ export const starlinkSetupGuideContent = {
         "The Starlink cable should be protected, hidden where possible, and routed in a way that avoids damage.",
       paragraphs: [
         "Where possible, run the cable through the roof space. This gives the cleanest result and avoids unnecessary external conduit.",
-        "For double brick Perth homes, an external wall cavity can sometimes be used to bring the cable down neatly. If there is no usable cavity, solid 25mm conduit can be used externally for a clean and protected cable run.",
+        "For double brick WA homes, an external wall cavity can sometimes be used to bring the cable down neatly. If there is no usable cavity, solid 25mm conduit can be used externally for a clean and protected cable run.",
         "The aim is simple: protect the cable, keep the installation neat, and avoid ugly or vulnerable cable runs.",
       ],
       bullets: [
@@ -217,7 +217,7 @@ export const starlinkSetupGuideContent = {
     title: "Starlink Is Only Half The Job — The Home WiFi Still Matters",
     paragraphs: [
       "A good Starlink installation is more than just putting a dish on the roof. The dish needs a clear view of the sky, the cable needs to be run cleanly, and the router or WiFi system needs to be set up properly for the home.",
-      "In many Perth homes, especially double brick homes or larger properties, the Starlink router alone may not provide strong WiFi everywhere. That is where mesh WiFi, access points, outdoor WiFi or shed links can make a big difference.",
+      "In many WA homes, especially double brick homes or larger properties, the Starlink router alone may not provide strong WiFi everywhere. That is where mesh WiFi, access points, outdoor WiFi or shed links can make a big difference.",
       "Blake Smart Solutions installs Starlink systems and can also help extend WiFi coverage through the home, to outdoor areas, or to sheds and workshops.",
     ],
     cta: {
@@ -228,7 +228,7 @@ export const starlinkSetupGuideContent = {
     },
     image: {
       src: "/Blake_shop_front.jpeg",
-      alt: "Completed Starlink installation on a Perth home",
+      alt: "Completed Starlink installation on a WA home",
     },
   },
 
@@ -236,7 +236,7 @@ export const starlinkSetupGuideContent = {
     {
       title: "Starlink Installation",
       description:
-        "Professional Starlink dish mounting, cable routing and router setup for Perth homes.",
+        "Professional Starlink dish mounting, cable routing and router setup for WA homes.",
       href: "/starlink-installation-perth",
     },
     {

@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/starlink-setup-perth",
+        destination: "/starlink-setup-wa",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

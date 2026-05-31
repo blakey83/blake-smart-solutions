@@ -46,7 +46,7 @@ export const footerContent = {
   phoneHref: "tel:0477948079",
   email: "info@blakesmartsolutions.com.au",
   emailHref: "mailto:info@blakesmartsolutions.com.au",
-  location: "Perth, Western Australia",
+  location: " Western Australia",
   abn: "ABN 66 695 399 761",
   securityLicence: "SA 84208",
   copyright: "Blake Smart Solutions pty ltd. All rights reserved.",

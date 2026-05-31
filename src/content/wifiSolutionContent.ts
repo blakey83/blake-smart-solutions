@@ -2,14 +2,28 @@ import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 import { wifiProducts } from "@/content/WiFi_products";
 
 export const wifiSolutionContent: SolutionPageTemplateProps = {
-  title:
+  headline:
     "WiFi solutions Perth — reliable coverage for homes, businesses & large properties",
-  intro:
-    "Blake Smart Solutions designs and installs reliable Wi-Fi systems for homes, workshops, businesses and large properties across Perth and the surrounding suburbs, including outdoor areas and multi-building setups. Whether you're dealing with dead zones, unstable connections or poor coverage between buildings, we design systems that actually solve the problem — not just patch it.",
+  subHeadline:
+    "Reliable Wi-Fi systems for homes, workshops, businesses and large properties across Perth and surrounding suburbs.",
+  bulletPoints: [
+    "Fix dead zones, dropouts and weak coverage in the rooms you actually use",
+    "Mesh, access point, outdoor Wi-Fi and shed link options",
+    "Wi-Fi testing to find the real cause before buying hardware",
+    "Home and business-grade systems designed for stable day-to-day use",
+  ],
 
   heroEyebrow: "Professional Wi-Fi solutions",
   heroImage: "/images/solutions/wifi/WiFi_hero.png",
   heroImageAlt: "Blake Smart Solutions WiFi",
+
+  heroSocialProof: {
+    eyebrow: "Google review",
+    ratingLabel: "Five star Google review",
+    quote:
+      "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
+    author: "Alan Star",
+  },
 
   primaryCta: {
     label: "Book a WiFi Health Check",

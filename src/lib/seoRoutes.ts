@@ -8,7 +8,7 @@ const MAX_SITEMAP_URLS = 50_000;
 
 const ARTICLE_ROUTES = new Set([
   "/7-ways-to-fix-wifi",
-  "/starlink-setup-perth",
+  "/starlink-setup-wa",
   "/why-nbn-feels-slow",
 ]);
 

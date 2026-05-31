@@ -64,15 +64,12 @@ type SolutionPageTemplateViewProps = SolutionPageTemplateProps &
 
 export function SolutionPageTemplate({
   currentPath = "/",
-  title,
-  intro,
+  headline,
+  subHeadline,
   heroEyebrow = solutionPageTemplateContent.heroEyebrow,
   heroImage,
   heroImageAlt,
   bulletPoints,
-  heroBullets,
-  heroBulletPoints,
-  heroPoints,
   heroSocialProof,
   primaryCta,
   secondaryCta,
@@ -95,9 +92,6 @@ export function SolutionPageTemplate({
   trustItems,
   content,
 }: SolutionPageTemplateViewProps) {
-  const heroBulletItems =
-    bulletPoints ?? heroBullets ?? heroBulletPoints ?? heroPoints;
-
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
       <section className="border-b border-[var(--color-border)] bg-white">
@@ -112,15 +106,15 @@ export function SolutionPageTemplate({
                 {heroEyebrow}
               </p>
               <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
-                {title}
+                {headline}
               </h1>
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                {intro}
+                {subHeadline}
               </p>
 
-              {heroBulletItems?.length ? (
+              {bulletPoints.length ? (
                 <ul className="mt-6 space-y-2">
-                  {heroBulletItems.map((item) => (
+                  {bulletPoints.map((item) => (
                     <li
                       key={item}
                       className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
@@ -132,27 +126,25 @@ export function SolutionPageTemplate({
                 </ul>
               ) : null}
 
-              {heroSocialProof ? (
-                <div className="mt-6 max-w-2xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-5">
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                    <span
-                      className="text-sm font-semibold tracking-[0.12em] text-amber-500"
-                      aria-label={heroSocialProof.ratingLabel}
-                    >
-                      ★★★★★
-                    </span>
-                    <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]">
-                      {heroSocialProof.eyebrow}
-                    </span>
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-[var(--color-ink)] sm:text-base">
-                    “{heroSocialProof.quote}”
-                  </p>
-                  <p className="mt-3 text-sm font-semibold text-[var(--color-muted)]">
-                    {heroSocialProof.author}
-                  </p>
+              <div className="mt-6 max-w-2xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-5">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <span
+                    className="text-sm font-semibold tracking-[0.12em] text-amber-500"
+                    aria-label={heroSocialProof.ratingLabel}
+                  >
+                    ★★★★★
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]">
+                    {heroSocialProof.eyebrow}
+                  </span>
                 </div>
-              ) : null}
+                <p className="mt-3 text-sm leading-6 text-[var(--color-ink)] sm:text-base">
+                  &quot;{heroSocialProof.quote}&quot;
+                </p>
+                <p className="mt-3 text-sm font-semibold text-[var(--color-muted)]">
+                  {heroSocialProof.author}
+                </p>
+              </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <SolutionCta button={primaryCta} />
@@ -167,7 +159,7 @@ export function SolutionPageTemplate({
                 <div className="relative aspect-[4/3] w-full">
                   <Image
                     src={heroImage}
-                    alt={heroImageAlt ?? title}
+                    alt={heroImageAlt ?? headline}
                     fill
                     sizes="(min-width: 1024px) 40rem, 100vw"
                     className="object-cover"
