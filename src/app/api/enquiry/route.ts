@@ -20,6 +20,48 @@ type EnquiryPayload = {
   formStartedAt?: number;
 };
 
+function splitName(name: string) {
+  const parts = name.split(/\s+/).filter(Boolean);
+
+  if (parts.length <= 1) {
+    return {
+      firstName: "",
+      lastName: parts[0] ?? name,
+    };
+  }
+
+  return {
+    firstName: parts.slice(0, -1).join(" "),
+    lastName: parts.at(-1) ?? "",
+  };
+}
+
+function normaliseAustralianPhoneForEspo(
+  phone: string | undefined,
+): string | undefined {
+  if (!phone) return undefined;
+
+  const cleaned = phone.replace(/[^\d+]/g, "");
+
+  if (cleaned.startsWith("+")) {
+    return cleaned;
+  }
+
+  if (cleaned.startsWith("04") && cleaned.length === 10) {
+    return `+61${cleaned.slice(1)}`;
+  }
+
+  if (cleaned.startsWith("4") && cleaned.length === 9) {
+    return `+61${cleaned}`;
+  }
+
+  if (cleaned.startsWith("61")) {
+    return `+${cleaned}`;
+  }
+
+  return undefined;
+}
+
 function escapeHtml(value: string) {
   return value
     .replaceAll("&", "&amp;")
@@ -113,6 +155,51 @@ function validatePayload(payload: EnquiryPayload) {
   }
 
   return null;
+}
+
+async function createEspoCrmLead(payload: EnquiryPayload) {
+  const baseUrl = process.env.ESPOCRM_BASE_URL?.replace(/\/+$/, "");
+  const apiKey = process.env.ESPOCRM_API_KEY;
+
+  if (!baseUrl || !apiKey) {
+    console.warn(
+      "EspoCRM lead creation skipped: ESPOCRM_BASE_URL or ESPOCRM_API_KEY is not configured.",
+    );
+    return;
+  }
+
+  const { firstName, lastName } = splitName(payload.name);
+  const phoneNumber = normaliseAustralianPhoneForEspo(payload.phone);
+  const description = [
+    `Service requested: ${payload.productName}`,
+    "",
+    payload.message,
+  ].join("\n");
+  const leadPayload = {
+    firstName,
+    lastName,
+    emailAddress: payload.email || undefined,
+    ...(phoneNumber ? { phoneNumber } : {}),
+    addressCity: payload.suburb || undefined,
+    source: "Website",
+    description,
+  };
+
+  const response = await fetch(`${baseUrl}/api/v1/Lead`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Api-Key": apiKey,
+    },
+    body: JSON.stringify(leadPayload),
+  });
+
+  if (!response.ok) {
+    const responseBody = await response.text().catch(() => "");
+    throw new Error(
+      `EspoCRM Lead creation failed with ${response.status} ${response.statusText}: ${responseBody}`,
+    );
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -214,6 +301,12 @@ export async function POST(request: NextRequest) {
       html,
       replyTo,
     });
+
+    try {
+      await createEspoCrmLead(payload);
+    } catch (error) {
+      console.error("Failed to create EspoCRM lead", error);
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
