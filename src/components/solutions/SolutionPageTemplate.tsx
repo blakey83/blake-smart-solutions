@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ProductCardGrid } from "@/components/products/ProductCardGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { solutionPageTemplateContent } from "@/content/siteContent";
 import type { WhyChooseUsContent } from "@/content/page-contents/whyUsContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type {
+  ApproachStep,
   CtaButton,
   SolutionPageTemplateProps,
 } from "@/components/solutions/types";
@@ -88,6 +88,74 @@ function SolutionReviewsSection({ content }: { content: WhyChooseUsContent }) {
   );
 }
 
+const approachSteps: ApproachStep[] = [
+  {
+    title: "Understand Your Requirements",
+    icon: "requirements",
+  },
+  {
+    title: "Recommend The Right Solution",
+    icon: "recommend",
+  },
+  {
+    title: "Professional Installation & Setup",
+    icon: "install",
+  },
+  {
+    title: "Ongoing Local Support",
+    icon: "support",
+  },
+];
+
+function ApproachIcon({ icon }: { icon: ApproachStep["icon"] }) {
+  const sharedProps = {
+    className: "h-7 w-7",
+    fill: "none",
+    stroke: "currentColor",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    strokeWidth: 2,
+    viewBox: "0 0 24 24",
+  };
+
+  if (icon === "requirements") {
+    return (
+      <svg {...sharedProps} aria-hidden="true">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m16 16 4 4" />
+      </svg>
+    );
+  }
+
+  if (icon === "recommend") {
+    return (
+      <svg {...sharedProps} aria-hidden="true">
+        <path d="M4 7h10" />
+        <path d="M4 12h8" />
+        <path d="M4 17h6" />
+        <path d="m15 16 2 2 4-5" />
+      </svg>
+    );
+  }
+
+  if (icon === "install") {
+    return (
+      <svg {...sharedProps} aria-hidden="true">
+        <path d="M14 7 9 2 5 6l5 5" />
+        <path d="m14 7 7 7-4 4-7-7" />
+        <path d="M5 22 2 19l8-8 3 3-8 8Z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg {...sharedProps} aria-hidden="true">
+      <path d="M12 22s8-4 8-10V6l-8-4-8 4v6c0 6 8 10 8 10Z" />
+      <path d="m9 12 2 2 4-5" />
+    </svg>
+  );
+}
+
 interface TrustItems {
   trustItems: string[];
 }
@@ -98,6 +166,7 @@ type SolutionPageTemplateViewProps = SolutionPageTemplateProps &
   };
 
 export function SolutionPageTemplate({
+  specialOffer,
   headline,
   subHeadline,
   heroEyebrow = solutionPageTemplateContent.heroEyebrow,
@@ -111,11 +180,6 @@ export function SolutionPageTemplate({
   problemSolutionTitle,
   problemSolutionIntro = solutionPageTemplateContent.problemSolutionIntro,
   problemSolutionCards,
-  realInstallationsEyebrow = solutionPageTemplateContent.realInstallationsEyebrow,
-  realInstallationsTitle,
-  realInstallationsIntro,
-  realInstallationsFallbackIntro = solutionPageTemplateContent.realInstallationsFallbackIntro,
-  products,
   faqsEyebrow = solutionPageTemplateContent.faqsEyebrow,
   faqsTitle,
   faqsIntro,
@@ -129,6 +193,21 @@ export function SolutionPageTemplate({
 }: SolutionPageTemplateViewProps) {
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
+      {specialOffer ? (
+        <section className="border-b border-[var(--color-border)] bg-[var(--color-accent)] text-white">
+          <div className="mx-auto max-w-6xl px-5 py-3 sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-1 text-center sm:flex-row sm:items-center sm:justify-center sm:gap-3">
+              <p className="text-sm font-semibold sm:text-base">
+                {specialOffer.title}
+              </p>
+              <p className="text-lg font-semibold tracking-tight sm:text-xl">
+                {specialOffer.price}
+              </p>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="border-b border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div
@@ -238,9 +317,18 @@ export function SolutionPageTemplate({
                   <h3 className="text-xl font-semibold tracking-tight text-[var(--color-ink)]">
                     {problem.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-[var(--color-muted)] sm:text-base">
-                    {problem.description}
-                  </p>
+                  <div className="mt-4 space-y-5">
+                    <div>
+                      <p className="text-sm leading-6 text-[var(--color-muted)] sm:text-base">
+                        {problem.problem}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-sm leading-6 text-[var(--color-muted)] sm:text-base">
+                        {problem.solution}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </article>
             ))}
@@ -251,21 +339,35 @@ export function SolutionPageTemplate({
       <section className="border-y border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <SectionHeading
-            eyebrow={realInstallationsEyebrow}
-            title={realInstallationsTitle}
-            description={
-              realInstallationsIntro ?? realInstallationsFallbackIntro
-            }
+            eyebrow={solutionPageTemplateContent.approachEyebrow}
+            title={solutionPageTemplateContent.approachTitle}
+            description={solutionPageTemplateContent.approachIntro}
           />
 
-          <div className="mt-10">
-            <ProductCardGrid products={products} />
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {approachSteps.map((step, index) => (
+              <article
+                key={step.title}
+                className="flex min-h-28 items-center gap-5 rounded-[24px] border border-[var(--color-border)] bg-white p-5 shadow-[0_12px_28px_rgba(15,23,42,0.05)]"
+              >
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[var(--color-page)] text-[var(--color-accent)]">
+                  <ApproachIcon icon={step.icon} />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-muted)]">
+                    Step {index + 1}
+                  </p>
+                  <h3 className="mt-1 text-lg font-semibold tracking-tight text-[var(--color-ink)]">
+                    {step.title}
+                  </h3>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
       <WhyBSS content={content} showReviews={false} />
-      <SolutionReviewsSection content={content} />
 
       <section className="bg-white">
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
@@ -292,6 +394,8 @@ export function SolutionPageTemplate({
           </div>
         </div>
       </section>
+
+      <SolutionReviewsSection content={content} />
 
       <section
         id="final-cta"

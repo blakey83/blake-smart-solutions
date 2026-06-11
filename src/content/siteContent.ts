@@ -120,9 +120,10 @@ export const solutionPageTemplateContent = {
   problemSolutionEyebrow: "Problem / Solution",
   problemSolutionIntro:
     "Solutions are planned around the problem you actually need solved, not just the hardware being installed.",
-  realInstallationsEyebrow: "Real installations",
-  realInstallationsFallbackIntro:
-    "These are common real-world installation types. Final recommendations and pricing are tailored to the property, layout and performance requirements.",
+  approachEyebrow: "OUR APPROACH",
+  approachTitle: "What You Can Expect From Every Installation",
+  approachIntro:
+    "Every job starts with understanding what you need and ends with a system that is installed properly, tested and explained clearly. The goal is practical advice, tidy workmanship and support from a local team.",
   faqsEyebrow: "FAQ",
   finalCtaEyebrow: "Get in touch",
 };
