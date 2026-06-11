@@ -90,7 +90,7 @@ export const RuralStarlinkSolutionContent: SolutionPageTemplateProps = {
     "Router and app setup",
     "Final setup and alignment checks",
   ],
-  heroEyebrow: "Fast & Reliable Starlink Setup",
+  heroEyebrow: "ATTENTION STARLINK USERS",
   heroImage: "/images/how_to/Starlink/martin_install.jpg",
   heroImageAlt: "Company Director Daniel installing Starlink",
 
