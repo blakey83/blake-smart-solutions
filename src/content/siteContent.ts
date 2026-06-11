@@ -117,12 +117,12 @@ export const relatedServicesContent = {
 
 export const solutionPageTemplateContent = {
   heroEyebrow: "Solutions",
-  problemsEyebrow: "Common issues",
-  problemsIntro:
-    "Solutions are planned around the problems you actually need solved, not just the hardware being installed.",
-  productsEyebrow: "Solutions",
-  productsFallbackIntro:
-    "These are common package options. Final recommendations and pricing can be tailored to the property, layout, and performance requirements.",
-  imageSectionEyebrow: "On-site delivery",
+  problemSolutionEyebrow: "Problem / Solution",
+  problemSolutionIntro:
+    "Solutions are planned around the problem you actually need solved, not just the hardware being installed.",
+  realInstallationsEyebrow: "Real installations",
+  realInstallationsFallbackIntro:
+    "These are common real-world installation types. Final recommendations and pricing are tailored to the property, layout and performance requirements.",
+  faqsEyebrow: "FAQ",
   finalCtaEyebrow: "Get in touch",
 };

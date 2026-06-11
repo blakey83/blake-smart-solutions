@@ -4,9 +4,10 @@ import Image from "next/image";
 
 type WhyBSSProps = {
   content: WhyChooseUsContent;
+  showReviews?: boolean;
 };
 
-export const WhyBSS = ({ content }: WhyBSSProps) => {
+export const WhyBSS = ({ content, showReviews = true }: WhyBSSProps) => {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-6xl px-5 pb-14 sm:px-6 lg:px-8 lg:pb-20">
@@ -42,32 +43,34 @@ export const WhyBSS = ({ content }: WhyBSSProps) => {
             </div>
           </div>
 
-          <div className="mt-14">
-            <h3 className="text-2xl font-semibold tracking-tight text-[var(--color-ink)]">
-              {content.whySection.reviewsHeading}
-            </h3>
-            <div className="mt-6 grid gap-5 md:grid-cols-3">
-              {content.whySection.reviews.map((review) => (
-                <article
-                  key={review.name}
-                  className="rounded-2xl border border-[var(--color-border)] bg-white p-6 shadow-[0_12px_28px_rgba(15,23,42,0.05)]"
-                >
-                  <div
-                    className="text-sm font-semibold tracking-[0.12em] text-amber-500"
-                    aria-label="Five star review"
+          {showReviews ? (
+            <div className="mt-14">
+              <h3 className="text-2xl font-semibold tracking-tight text-[var(--color-ink)]">
+                {content.whySection.reviewsHeading}
+              </h3>
+              <div className="mt-6 grid gap-5 md:grid-cols-3">
+                {content.whySection.reviews.map((review) => (
+                  <article
+                    key={review.name}
+                    className="rounded-2xl border border-[var(--color-border)] bg-white p-6 shadow-[0_12px_28px_rgba(15,23,42,0.05)]"
                   >
-                    ★★★★★
-                  </div>
-                  <p className="mt-4 font-semibold text-[var(--color-ink)]">
-                    {review.name}
-                  </p>
-                  <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
-                    “{review.text}”
-                  </p>
-                </article>
-              ))}
+                    <div
+                      className="text-sm font-semibold tracking-[0.12em] text-amber-500"
+                      aria-label="Five star review"
+                    >
+                      ★★★★★
+                    </div>
+                    <p className="mt-4 font-semibold text-[var(--color-ink)]">
+                      {review.name}
+                    </p>
+                    <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
+                      “{review.text}”
+                    </p>
+                  </article>
+                ))}
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
       </div>
     </section>

@@ -34,13 +34,13 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     href: "tel:0477948079",
   },
 
-  problemsEyebrow: "Common issues",
-  problemsTitle:
+  problemSolutionEyebrow: "Problem / Solution",
+  problemSolutionTitle:
     "Why many security camera systems leave people with false confidence",
-  problemsIntro:
-    "A good security camera system should help you feel more aware, more in control and more confident about what’s happening around your property. Poor placement, the wrong cameras and generic setups often leave blind spots, weak night footage and systems that only record incidents after they happen — instead of helping deter them in the first place.",
+  problemSolutionIntro:
+    "A good security camera system should help you feel more aware, more in control and more confident about what’s happening around your property. Poor placement, the wrong cameras and generic setups often leave blind spots, weak night footage and systems that only record incidents after they happen instead of helping deter them in the first place.",
 
-  problems: [
+  problemSolutionCards: [
     {
       title: "Worried about break-ins or suspicious activity",
       description:
@@ -85,42 +85,40 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     },
   ],
 
-  brandBlock: {
-    eyebrow: "Smarter CCTV systems Perth",
-    title:
-      "Built around practical protection, with Dahua smart camera technology",
-    intro:
-      "Blake Smart Solutions has partnered with Dahua, using proven camera systems designed for real-world security. Rather than generic CCTV kits, Dahua platforms offer smarter detection, better image quality and features that actively help protect your property — not just record it.",
-    image: "/images/solutions/cctv/dahua.png",
-    imageAlt: "Dahua CCTV systems",
-    points: [
-      "Dahua DHCA-IPVSS certified installers",
-      "WizSense smart detection to reduce false alerts and improve detection accuracy",
-      "WizColor low-light technology for clear full-colour footage at night",
-      "TiOC active deterrence cameras with lights, sirens and warnings",
-      "Reliable remote viewing and monitoring from your phone",
-      "Commercial-grade systems designed to protect your property — not off-the-shelf kits",
-    ],
-  },
-
-  productsEyebrow: "Popular options",
-  productsTitle:
-    "Security camera solutions in Perth for homes, businesses and higher-risk sites",
-  productsIntro:
-    "These are some of the most common CCTV system types we install. Final recommendations depend on the property layout, number of entry points, lighting conditions and the level of coverage or deterrence required.",
+  realInstallationsEyebrow: "Real installations",
+  realInstallationsTitle:
+    "Security camera installations for homes, businesses and higher-risk sites",
+  realInstallationsIntro:
+    "These are common CCTV system types we install across Perth. Final recommendations depend on the property layout, number of entry points, lighting conditions and the level of coverage or deterrence required.",
 
   products: cctvProducts,
 
-  imageSectionEyebrow: "Installed properly",
-  imageSection: {
-    title:
-      "CCTV installation in Perth — planned properly for coverage, visibility and reliability",
-
-    intro:
-      "Every property is different, and a camera system only works if it’s planned properly. Blake Smart Solutions looks at access points, likely approach paths, lighting conditions and the areas that actually matter, then designs a setup that makes sense for the property. The result is better coverage, more useful footage and a system that actually improves security — not just records it.",
-    image: "/Blake_shop_front.jpeg",
-    imageAlt: "Professional CCTV installation in Perth",
-  },
+  faqsEyebrow: "FAQ",
+  faqsTitle: "Security camera installation Perth FAQs",
+  faqsIntro:
+    "Common questions about CCTV design, camera placement and smart security features.",
+  faqs: [
+    {
+      question: "How many security cameras do I need?",
+      answer:
+        "That depends on the property layout, entry points, lighting and what you need to see clearly. We look at driveways, side access, doors, yards and key business areas before recommending a camera count.",
+    },
+    {
+      question: "Can cameras actively deter intruders?",
+      answer:
+        "Yes. Some cameras can use lights, sirens and smart detection to warn people before they enter further into the property. This is useful when you want deterrence, not just recorded footage.",
+    },
+    {
+      question: "Will the cameras work well at night?",
+      answer:
+        "Night performance depends on camera choice and placement. We can recommend options such as Dahua WizColor, WizSense and TiOC cameras where better low-light footage or active deterrence is important.",
+    },
+    {
+      question: "Can you repair or upgrade an existing CCTV system?",
+      answer:
+        "Yes. If your existing system has poor footage, blind spots or unreliable remote viewing, we can fault find, reposition cameras or upgrade parts of the system where that makes sense.",
+    },
+  ],
 
   finalCtaEyebrow: "Talk to Blake Smart Solutions",
   finalCtaTitle:

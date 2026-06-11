@@ -36,6 +36,11 @@ export type HeroSocialProof = {
   author: string;
 };
 
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export type SolutionPageTemplateProps = {
   currentPath?: string;
   headline: string;
@@ -47,18 +52,19 @@ export type SolutionPageTemplateProps = {
   heroSocialProof: HeroSocialProof;
   primaryCta: CtaButton;
   secondaryCta?: CtaButton;
-  problemsEyebrow?: string;
-  problemsTitle: string;
-  problemsIntro?: string;
-  problems: InfoCard[];
-  brandBlock?: BrandBlock;
-  productsEyebrow?: string;
-  productsTitle: string;
-  productsIntro?: string;
-  productsFallbackIntro?: string;
+  problemSolutionEyebrow?: string;
+  problemSolutionTitle: string;
+  problemSolutionIntro?: string;
+  problemSolutionCards: InfoCard[];
+  realInstallationsEyebrow?: string;
+  realInstallationsTitle: string;
+  realInstallationsIntro?: string;
+  realInstallationsFallbackIntro?: string;
   products: Product[];
-  imageSectionEyebrow?: string;
-  imageSection?: ImageTextSection;
+  faqsEyebrow?: string;
+  faqsTitle: string;
+  faqsIntro?: string;
+  faqs: FaqItem[];
   finalCtaEyebrow?: string;
   finalCtaTitle: string;
   finalCtaIntro: string;
