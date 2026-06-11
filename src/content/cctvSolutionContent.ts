@@ -1,26 +1,31 @@
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
-import { cctvProducts } from "@/content/cctv_products";
 
 export const cctvSolutionContent: SolutionPageTemplateProps = {
+  specialOffer: {
+    title: "Two Camera HiLook CCTV System Fully Installed",
+    price: "$1,399",
+  },
   headline:
-    "Keep your home safe and secure, night and day, with professional security camera installation in Perth",
+    "Security Cameras Installed Properly. Explained Clearly. Supported Locally.",
   subHeadline:
-    "Professional CCTV systems for Perth homes, businesses and commercial sites, designed around the way your property is actually used.",
+    "Get the confidence of knowing your security system has been installed properly, with transparent pricing, honest advice and no hidden surprises along the way. From your first quote through to installation, phone setup and ongoing support, you'll know exactly what to expect at every stage.",
   bulletPoints: [
-    "Clear coverage around entry points, driveways, yards and key business areas",
-    "Smarter camera placement to reduce blind spots and unusable footage",
-    "Active deterrence, night vision and remote viewing options",
-    "Clean installation with practical advice before hardware is chosen",
+    "Clear quotes with no hidden fees or surprise charges",
+    "Advice on camera placement for the best coverage around your property",
+    "Full phone setup and step-by-step handover before we leave",
+    "Easy access to live footage and recordings from your mobile phone",
+    "Clean, professional installation with tidy workmanship throughout",
+    "Ongoing local support if you need help after installation",
   ],
-  heroEyebrow: "Professional CCTV solutions",
-  heroImage: "/images/products/security/tioc_burgler.png",
+  heroEyebrow: "ATTENTION PERTH HOMEOWNERS",
+  heroImage: "/images/solutions/cctv/blake_installation.jpg",
   heroImageAlt: "Security camera installation by Blake Smart Solutions",
 
   heroSocialProof: {
     eyebrow: "Google review",
     ratingLabel: "Five star Google review",
     quote:
-      "Fantastic service and can sleep at night knowing I have a full CCTV camera system installed at my house.",
+      "I wanted a camera system that I didn’t have to pay for subscription and Blake had come up with a commercial grade option for me.",
     author: "Juan B",
   },
 
@@ -34,64 +39,45 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     href: "tel:0477948079",
   },
 
-  problemSolutionEyebrow: "Problem / Solution",
+  problemSolutionEyebrow: "COMMON ISSUES",
+
   problemSolutionTitle:
     "Why many security camera systems leave people with false confidence",
+
   problemSolutionIntro:
-    "A good security camera system should help you feel more aware, more in control and more confident about what’s happening around your property. Poor placement, the wrong cameras and generic setups often leave blind spots, weak night footage and systems that only record incidents after they happen instead of helping deter them in the first place.",
+    "A security camera system should help you feel safer, more aware and more confident about what's happening around your property. Unfortunately, many systems suffer from poor camera placement, blind spots, weak night footage or complicated setups that don't deliver when they're needed most.",
 
   problemSolutionCards: [
     {
-      title: "Worried about break-ins or suspicious activity",
-      description:
-        "Whether it’s a recent incident nearby or just a general concern, not knowing what’s happening around your property can be stressful. A properly designed camera system gives you visibility, awareness and peace of mind that the property is covered properly — not just after something happens, but day to day.",
-      image: "/images/solutions/cctv/crim.png",
-      imageAlt: "Security concern around home or business",
+      title: "The Wrong Cameras In The Wrong Places",
+      problem:
+        "Many security issues start before the first camera is installed. Generic packages and poor camera placement can leave blind spots, miss important activity and create a false sense of security. Every property is different, which is why coverage should be designed around the way the space is actually used.",
+      solution:
+        "We take the time to understand your property, identify the areas that matter most and recommend camera locations that provide practical coverage, not just cameras on walls.",
+      image: "/images/solutions/cctv/poorly_placed_cctv.jpg",
+      imageAlt: "Security camera placement and coverage planning",
     },
+
     {
-      title: "Poor footage - Especially at night",
-      description:
-        "Most incidents happen at night, but many systems struggle in low light. Cheap or poorly selected cameras often produce blurry or unusable footage, making it difficult to identify people when it actually counts.",
+      title: "Footage That Doesn't Help When It Matters Most",
+      problem:
+        "Most incidents happen after dark, yet many systems struggle in low light. Blurry footage, poor night performance and difficult-to-identify images can make it hard to understand what actually happened when you need answers.",
+      solution:
+        "We recommend cameras based on the environment, lighting conditions and what you're trying to achieve, helping you capture clearer footage and more useful evidence day and night.",
       image: "/images/solutions/cctv/poor-cctv.jpeg",
       imageAlt: "Poor CCTV footage at night",
     },
+
     {
-      title: "Cameras that record — but don't deter",
-      description:
-        "Traditional systems only capture footage after the fact. Smarter cameras can actively help protect your property with alerts, lighting and deterrence features that make intruders think twice before entering.",
-      image: "/images/solutions/cctv/ignore_cctv.jpg",
-      imageAlt: "Active deterrence security camera",
-    },
-    {
-      title: "Existing cameras that no longer perform properly",
-      description:
-        "Many properties already have cameras installed, but they may be unreliable, badly positioned or no longer fit for purpose. Fault finding, upgrades and system redesign can often improve performance without starting from scratch.",
-      image: "/images/solutions/cctv/poorly_placed_cctv.jpg",
-      imageAlt: "CCTV repair and upgrade",
-    },
-    {
-      title: "Security gaps in businesses and commercial sites",
-      description:
-        "Workshops, retail spaces and commercial properties often targeted by criminals. Blind spots, poor monitoring and outdated systems can leave stock, equipment and staff exposed without a clear view of what’s happening across the site.",
-      image: "/images/solutions/cctv/shop_cctv.jpg",
-      imageAlt: "Commercial CCTV security system",
-    },
-    {
-      title: "Off-the-shelf systems that don’t suit the property",
-      description:
-        "Every property is different. A small home, corner block or large commercial site all require different camera placement and coverage. Generic kits often miss key areas or overcomplicate others.",
+      title: "Systems That Are Difficult To Use",
+      problem:
+        "A security system shouldn't require a manual every time you want to check footage. Many buyers worry about complicated apps, confusing settings and being left to figure everything out themselves. That's why proper setup, clear explanations and support after installation matter just as much as the cameras themselves.",
+      solution:
+        "We set everything up on your phone, explain it step by step and make sure you're comfortable using the system before we leave. If you need help later, we're only a phone call away.",
       image: "/images/solutions/cctv/home_job_cctv.jpeg",
-      imageAlt: "Site specific CCTV planning",
+      imageAlt: "Easy to use security camera system with mobile access",
     },
   ],
-
-  realInstallationsEyebrow: "Real installations",
-  realInstallationsTitle:
-    "Security camera installations for homes, businesses and higher-risk sites",
-  realInstallationsIntro:
-    "These are common CCTV system types we install across Perth. Final recommendations depend on the property layout, number of entry points, lighting conditions and the level of coverage or deterrence required.",
-
-  products: cctvProducts,
 
   faqsEyebrow: "FAQ",
   faqsTitle: "Security camera installation Perth FAQs",
@@ -99,24 +85,35 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     "Common questions about CCTV design, camera placement and smart security features.",
   faqs: [
     {
-      question: "How many security cameras do I need?",
+      question: "Do I have to pay for a subscription?",
       answer:
-        "That depends on the property layout, entry points, lighting and what you need to see clearly. We look at driveways, side access, doors, yards and key business areas before recommending a camera count.",
+        "Not necessarily. Many systems can record footage locally without ongoing monthly fees. We'll explain the available recording and remote access options so you can choose what suits your property and budget.",
     },
     {
-      question: "Can cameras actively deter intruders?",
+      question: "Can I access the footage easily on my phone?",
       answer:
-        "Yes. Some cameras can use lights, sirens and smart detection to warn people before they enter further into the property. This is useful when you want deterrence, not just recorded footage.",
+        "Yes. Remote viewing is a standard feature on most modern systems. We set everything up on your phone and make sure you can view live footage, recordings and alerts before the installation is complete.",
     },
     {
-      question: "Will the cameras work well at night?",
+      question: "Will you show me how to use the app before you leave?",
       answer:
-        "Night performance depends on camera choice and placement. We can recommend options such as Dahua WizColor, WizSense and TiOC cameras where better low-light footage or active deterrence is important.",
+        "Absolutely. We don't just install the system and leave. We'll walk you through the app step by step, show you how to access footage and answer any questions so you're comfortable using it.",
+    },
+
+    {
+      question: "What's included in the quote?",
+      answer:
+        "Most quotes include system design, equipment, installation, app setup, handover and ongoing support after installation. We'll explain exactly what's included and discuss any site-specific factors upfront, so you know what to expect before work starts.",
     },
     {
-      question: "Can you repair or upgrade an existing CCTV system?",
+      question: "Where should the cameras go for the best coverage?",
       answer:
-        "Yes. If your existing system has poor footage, blind spots or unreliable remote viewing, we can fault find, reposition cameras or upgrade parts of the system where that makes sense.",
+        "Camera placement is one of the most important parts of the design process. We assess entry points, access routes, lighting conditions and the areas you want to monitor before recommending camera locations.",
+    },
+    {
+      question: "What support do I get after installation?",
+      answer:
+        "If you need help after installation, we're only a phone call away. Whether it's app assistance, system changes or general questions, we provide ongoing local support after the job is complete.",
     },
   ],
 
@@ -132,8 +129,8 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const cctvSolutionTrustItems = [
-  "Dahua Certified installers",
-  "WA Police Licensed",
-  "Fully Insured",
-  "Perth-Based Professionals",
+  "WA Police Licensed & Insured",
+  "Locally Owned & Operated",
+  "5-Star Google Reviews",
+  "Ongoing Local Support",
 ];

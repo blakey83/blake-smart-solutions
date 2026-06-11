@@ -1,5 +1,3 @@
-import type { Product } from "@/lib/types";
-
 export type CtaButton = {
   label: string;
   action: "link" | "enquiry";
@@ -8,7 +6,8 @@ export type CtaButton = {
 
 export type InfoCard = {
   title: string;
-  description: string;
+  problem: string;
+  solution: string;
   image?: string;
   imageAlt?: string;
 };
@@ -41,8 +40,19 @@ export type FaqItem = {
   answer: string;
 };
 
+export type ApproachStep = {
+  title: string;
+  icon: "requirements" | "recommend" | "install" | "support";
+};
+
+export type SpecialOffer = {
+  title: string;
+  price: string;
+};
+
 export type SolutionPageTemplateProps = {
   currentPath?: string;
+  specialOffer?: SpecialOffer;
   headline: string;
   subHeadline: string;
   heroEyebrow?: string;
@@ -56,11 +66,6 @@ export type SolutionPageTemplateProps = {
   problemSolutionTitle: string;
   problemSolutionIntro?: string;
   problemSolutionCards: InfoCard[];
-  realInstallationsEyebrow?: string;
-  realInstallationsTitle: string;
-  realInstallationsIntro?: string;
-  realInstallationsFallbackIntro?: string;
-  products: Product[];
   faqsEyebrow?: string;
   faqsTitle: string;
   faqsIntro?: string;

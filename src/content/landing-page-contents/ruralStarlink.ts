@@ -122,55 +122,59 @@ export const RuralStarlinkSolutionContent: SolutionPageTemplateProps = {
   problemSolutionCards: [
     {
       title: "Poor dish location",
-      description:
+      problem:
         "Trees, roof lines, antennas and neighbouring buildings can create obstruction warnings, dropouts or inconsistent speeds.",
+      solution:
+        "We check for clear sky view, practical mounting options and cable routing before fixing the dish in a position that gives Starlink the best chance of stable service.",
       image: "/images/products/starlink/mis-alined-starlink2.jpg",
       imageAlt: "Starlink equipment ready for installation",
     },
     {
       title: "Messy or exposed cable runs",
-      description:
+      problem:
         "Loose cable across a roof or wall can look rough and may not hold up well in WA sun and weather without proper protection.",
+      solution:
+        "We route the cable neatly, protect exposed sections with suitable conduit and bring it inside using a clean, practical entry point.",
       image: "/images/products/starlink/mis-aligned_starlink.jpg",
       imageAlt: "Starlink dish mounted on a roof",
     },
     {
       title: "Weak Wi-Fi inside the home",
-      description:
+      problem:
         "The Starlink router can work well in smaller homes, but larger layouts, double brick and home offices often need better Wi-Fi design.",
+      solution:
+        "We test the coverage after setup and can add mesh Wi-Fi, wired access points or better router placement where the standard router is not enough.",
       image: "/images/work_gallery/wifi_survey.jpeg",
       imageAlt: "WiFi equipment for improving Starlink coverage",
     },
     {
       title: "No coverage outdoors or in sheds",
-      description:
+      problem:
         "Patios, workshops, granny flats and sheds often need outdoor access points or dedicated wireless links rather than hoping the router reaches.",
+      solution:
+        "We can extend Starlink with outdoor access points, wireless links or cabling where suitable so internet reaches the spaces beyond the house.",
       image: "/images/products/wifi/wifi_to_shed.png",
       imageAlt: "Wireless link used to extend Starlink internet to a shed",
     },
     {
       title: "Difficult roof or wall access",
-      description:
+      problem:
         "Tile roofs, Colorbond roofs and double brick homes need different mounting and cable-entry approaches to keep the install clean.",
+      solution:
+        "We choose a mounting and cable-entry method suited to the roof and wall construction, aiming for a secure install that still looks tidy.",
       image: "/images/products/wifi/outdoor_ap.png",
       imageAlt: "Outdoor network equipment for extended property coverage",
     },
     {
       title: "Setup without testing",
-      description:
+      problem:
         "A connection showing online is not the same as a finished job. Dish alignment, app warnings and Wi-Fi coverage should be checked before handover.",
+      solution:
+        "We complete app checks, alignment checks, router setup and basic coverage testing so you know what is working before the job is finished.",
       image: "/images/solutions/wifi/wifi_testing.jpg",
       imageAlt: "Testing WiFi coverage after a Starlink installation",
     },
   ],
-
-  realInstallationsEyebrow: "Real installations",
-  realInstallationsTitle:
-    "Starlink installations for homes, sheds and larger rural properties",
-  realInstallationsIntro:
-    "These are common Starlink installations we complete across WA. The right option depends on roof type, property layout, where you need Wi-Fi and whether you need coverage beyond the main house.",
-
-  products: starlinkProducts,
 
   faqsEyebrow: "FAQ",
   faqsTitle: "Rural Starlink installation FAQs",

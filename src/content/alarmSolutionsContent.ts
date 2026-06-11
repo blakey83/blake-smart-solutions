@@ -1,5 +1,4 @@
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
-import { securityProducts } from "./security_products";
 
 export const alarmsSolutionContent: SolutionPageTemplateProps = {
   headline: "Finally, A Security System You'll Actually Use",
@@ -47,40 +46,50 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
   problemSolutionCards: [
     {
       title: "Worried about break-ins or vulnerable entry points",
-      description:
+      problem:
         "Doors, windows, garages, side access and rear areas are often the first places intruders look for easy access. If these areas are not properly considered, the system may leave obvious weak spots that reduce the whole point of having security.",
+      solution:
+        "We design sensor coverage around the real entry points and vulnerable areas, then configure the system so it gives earlier warning where it matters.",
       image: "/images/solutions/ajaxSecurity/break_in.jpg",
       imageAlt: "Concern about break-ins and vulnerable entry points",
     },
 
     {
       title: "False alarms that become frustrating",
-      description:
+      problem:
         "Poor sensor placement and outdated detectors can lead to nuisance alarms, interruptions and stress. Over time, many people start ignoring alerts or stop using the system properly altogether.",
+      solution:
+        "We choose and position detectors carefully, then test the system so it suits the way people and pets move through the property.",
       image: "/images/solutions/ajaxSecurity/false_alarms.jpg",
       imageAlt: "False alarms causing frustration",
     },
 
     {
       title: "Alarm systems that are confusing or hard to manage",
-      description:
+      problem:
         "If arming, disarming or checking your alarm feels clunky or unreliable, it quickly becomes something you avoid using. A system should feel simple and work properly when you need it.",
+      solution:
+        "We install and configure Ajax app control, keypads and user access so arming, disarming and checking the system is simple for the people using it.",
       image: "/images/solutions/ajaxSecurity/old-keypad.jpg",
       imageAlt: "Outdated and confusing alarm system",
     },
 
     {
       title: "No visibility when you're away",
-      description:
+      problem:
         "Whether you're at work, travelling or just out for the day, not knowing what is happening at home or at your business can be stressful. Modern alarms should give you instant alerts and clear control wherever you are.",
+      solution:
+        "We set up instant app alerts, remote control and optional photo verification so you can respond quickly and understand what is happening.",
       image: "/images/solutions/ajaxSecurity/fifo_2.jpg",
       imageAlt: "Outdated and confusing alarm system",
     },
 
     {
       title: "After-hours risks for workshops and businesses",
-      description:
+      problem:
         "Commercial sites often have vulnerable access points, storage areas or internal spaces that need proper after-hours protection. Weak alarm coverage can leave valuable equipment and stock exposed.",
+      solution:
+        "We plan after-hours coverage for doors, internal zones, storage areas and high-value equipment so the system protects the site after staff leave.",
       image: "/images/solutions/ajaxSecurity/afterhours.jpg",
       imageAlt:
         "After-hours security risks for businesses and commercial properties",
@@ -88,20 +97,14 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
 
     {
       title: "Generic alarm kits that don't suit the property",
-      description:
+      problem:
         "Every property is different. A proper system should suit the layout, lifestyle and level of risk. Cheap off-the-shelf kits often create more hassle than confidence.",
+      solution:
+        "We build the alarm around the property layout, risk level and how you want to use it, with room to expand the system later if needed.",
       image: "/images/solutions/ajaxSecurity/alarm_essential2.png",
       imageAlt: "Generic alarm kits that don't suit the property",
     },
   ],
-
-  realInstallationsEyebrow: "Real installations",
-  realInstallationsTitle:
-    "Ajax alarm installations for homes, businesses and higher-risk sites",
-  realInstallationsIntro:
-    "These are common alarm system types we install across Perth. Final recommendations depend on the property layout, number of entry points, how the site is used and the level of protection, control and verification required.",
-
-  products: securityProducts,
 
   faqsEyebrow: "FAQ",
   faqsTitle: "Ajax alarm installation Perth FAQs",

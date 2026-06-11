@@ -1,5 +1,4 @@
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
-import { wifiProducts } from "@/content/WiFi_products";
 
 export const wifiSolutionContent: SolutionPageTemplateProps = {
   headline:
@@ -44,55 +43,59 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   problemSolutionCards: [
     {
       title: "Dead zones indoors",
-      description:
+      problem:
         "Weak signal in bedrooms, back rooms, upstairs areas or home offices can make streaming, work and general day-to-day use frustrating.",
+      solution:
+        "We assess where the signal drops away, then recommend the right mix of mesh nodes, access points or cabling so the rooms you use every day get reliable coverage.",
       image: "/images/solutions/wifi/bedroom_wifi.webp",
       imageAlt: "Bedroom wifi",
     },
     {
       title: "Dropouts in busy environments",
-      description:
+      problem:
         "Retail, office and workshop environments can struggle when too many devices are competing on a network that was never designed for business use.",
+      solution:
+        "We design business-ready Wi-Fi with suitable access points, placement and capacity so staff, customers and connected devices can stay online more consistently.",
       image: "/images/solutions/wifi/busy_office.png",
       imageAlt: "Busy Office",
     },
     {
       title: "Poor outdoor coverage",
-      description:
+      problem:
         "Patios, yards, entertaining areas and external workspaces often fall outside the usable range of a standard indoor router.",
+      solution:
+        "We can install outdoor-rated Wi-Fi equipment positioned for the spaces you actually use, giving patios, yards and work areas practical coverage.",
       image: "/images/solutions/wifi/outdoor_solution.png",
       imageAlt: "Outdoor Solution",
     },
     {
       title: "Shed, granny flat or workshop not connected",
-      description:
+      problem:
         "Separate buildings often need more than a mesh add-on. A properly aligned wireless bridge and dedicated access point can deliver far better performance and reliability.",
+      solution:
+        "We use wireless links, cabling where suitable and dedicated access points to extend the network properly into sheds, workshops or granny flats.",
       image: "/images/solutions/wifi/shed_wifi_solution.png",
       imageAlt: "Shed Wifi Solution",
     },
     {
       title: "WiFi not keeping up with demand",
-      description:
+      problem:
         "Off-the-shelf kits can work in some homes, but larger properties and more demanding environments often need a more considered approach.",
+      solution:
+        "We match the hardware and layout to the number of users, devices and building conditions so the system has enough coverage and capacity for daily use.",
       image: "/images/solutions/wifi/crowded_area_wifi.png",
       imageAlt: "Crowded area WiFi",
     },
     {
       title: "No clear plan for improvement",
-      description:
+      problem:
         "A lot of people know their Wi-Fi is bad, but not why. A proper assessment helps identify the real issue before money gets wasted on the wrong hardware.",
+      solution:
+        "We test the property first, identify the real cause and give you a practical upgrade path instead of guessing or adding random extenders.",
       image: "/images/solutions/wifi/wifi_testing.jpg",
       imageAlt: "WiFi Testing",
     },
   ],
-
-  realInstallationsEyebrow: "Real installations",
-  realInstallationsTitle:
-    "WiFi installations for homes, businesses, sheds and outdoor areas",
-  realInstallationsIntro:
-    "These are common Wi-Fi and coverage upgrades we install across Perth. Final recommendations depend on your layout, building materials, outdoor areas and how the network is actually being used.",
-
-  products: wifiProducts,
 
   faqsEyebrow: "FAQ",
   faqsTitle: "WiFi solutions Perth FAQs",
