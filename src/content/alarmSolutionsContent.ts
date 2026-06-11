@@ -37,14 +37,14 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     href: "tel:0477948079",
   },
 
-  problemsEyebrow: "Common issues",
+  problemSolutionEyebrow: "Problem / Solution",
 
-  problemsTitle: "Why many alarm systems leave people feeling exposed",
+  problemSolutionTitle: "Why many alarm systems leave people feeling exposed",
 
-  problemsIntro:
+  problemSolutionIntro:
     "A good alarm system should help you feel safer, not create more stress. Poorly planned systems often leave gaps around entry points, trigger false alarms, feel frustrating to use or fail to give you confidence when you're away from the property.",
 
-  problems: [
+  problemSolutionCards: [
     {
       title: "Worried about break-ins or vulnerable entry points",
       description:
@@ -95,44 +95,40 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     },
   ],
 
-  brandBlock: {
-    eyebrow: "Ajax alarm systems Perth",
-
-    title: "Modern security that feels simple to use and easy to trust",
-
-    intro:
-      " Blake Smart Solutions have partnered with Ajax systems, as they genuinely stand out. Ajax combines reliable wireless protection, beautifully designed devices and one of the best smart security apps available. The result is a system that looks clean, works properly day to day and gives you confidence that your property is protected.",
-
-    image: "/images/solutions/ajaxSecurity/Ajax-partner.png",
-    imageAlt: "Ajax alarm systems",
-
-    points: [
-      "Certified Ajax installation with professional setup, testing and app configuration",
-      "Reliable encrypted wireless devices built for fast response and stable performance",
-      "Instant alerts and full system control from a polished, easy-to-use phone app",
-      "Photo verification options that help confirm what is happening before you respond",
-      "Clean modern devices that look better and suit the space",
-      "Expandable ecosystem including intrusion, fire, flood and smart automation devices",
-    ],
-  },
-
-  productsEyebrow: "Popular options",
-  productsTitle:
-    "Ajax alarm solutions in Perth for homes, businesses and higher-risk sites",
-  productsIntro:
-    "These are some of the most common alarm system types we install. Final recommendations depend on the property layout, number of entry points, how the site is used and the level of protection, control and verification required.",
+  realInstallationsEyebrow: "Real installations",
+  realInstallationsTitle:
+    "Ajax alarm installations for homes, businesses and higher-risk sites",
+  realInstallationsIntro:
+    "These are common alarm system types we install across Perth. Final recommendations depend on the property layout, number of entry points, how the site is used and the level of protection, control and verification required.",
 
   products: securityProducts,
 
-  imageSectionEyebrow: "Installed properly",
-  imageSection: {
-    title:
-      "Alarm installation in Perth — planned properly for coverage, usability and peace of mind",
-    intro:
-      "An alarm system only works properly when it is designed around the property and the people using it. Blake Smart Solutions looks at access points, internal movement, likely risk areas and how you want the system to operate day to day, then builds a setup that makes sense. The result is a smarter, cleaner and more practical security system that is easy to use and ready when it matters.",
-    image: "/Blake_shop_front.jpeg",
-    imageAlt: "Professional Ajax alarm installation in Perth",
-  },
+  faqsEyebrow: "FAQ",
+  faqsTitle: "Ajax alarm installation Perth FAQs",
+  faqsIntro:
+    "Common questions about smart alarms, false alarms, app control and professional setup.",
+  faqs: [
+    {
+      question: "Why do you install Ajax alarm systems?",
+      answer:
+        "Ajax combines reliable encrypted wireless devices, clean modern hardware and a polished app that is easy to use. It suits homes and businesses that want strong protection without clunky keypads or expensive monitoring contracts.",
+    },
+    {
+      question: "Can an Ajax alarm reduce false alarms?",
+      answer:
+        "Good sensor choice and placement makes a big difference. We design the system around doors, windows, internal movement and everyday use so it is practical to arm and less likely to become annoying.",
+    },
+    {
+      question: "Do I need a monitoring contract?",
+      answer:
+        "Not necessarily. Ajax can send instant alerts to your phone and give you control through the app. Some customers still want monitoring, but many prefer direct control without ongoing monthly fees.",
+    },
+    {
+      question: "Can the system expand later?",
+      answer:
+        "Yes. Ajax systems can expand with extra intrusion sensors, sirens, keypads, remotes, fire detection, flood detection and automation devices as your needs change.",
+    },
+  ],
 
   finalCtaEyebrow: "Talk to Blake Smart Solutions",
   finalCtaTitle:

@@ -113,13 +113,13 @@ export const RuralStarlinkSolutionContent: SolutionPageTemplateProps = {
     href: "tel:0477948079",
   },
 
-  problemsEyebrow: "Common Starlink problems",
-  problemsTitle:
+  problemSolutionEyebrow: "Problem / Solution",
+  problemSolutionTitle:
     "Starlink performance depends on more than just plugging in the kit",
-  problemsIntro:
+  problemSolutionIntro:
     "The Starlink kit is designed to be approachable, but Rural homes still create practical installation issues. Roof type, cable entry, double brick walls, router location and Wi-Fi coverage all affect the end result.",
 
-  problems: [
+  problemSolutionCards: [
     {
       title: "Poor dish location",
       description:
@@ -164,38 +164,40 @@ export const RuralStarlinkSolutionContent: SolutionPageTemplateProps = {
     },
   ],
 
-  brandBlock: {
-    eyebrow: "How we approach Starlink installs",
-    title: "Dish, cable, router and Wi-Fi planned as one system",
-    intro:
-      "A good Starlink installation is not just putting the dish somewhere high. We check the app for obstructions, choose a sensible mount, protect exposed cable, bring the cable inside cleanly and make sure the router location gives the best chance of reliable coverage.",
-    image: "/images/products/starlink/Starlink_on_roof.jpg",
-    imageAlt: "Clean Starlink roof installation",
-    points: [
-      "Dish placement checked for clear sky view and practical cable routing",
-      "Mounting approach matched to tile, Colorbond or wall locations",
-      "Cable protected with conduit where exposed to sun or weather",
-      "Neat internal cable exit using a suitable plate where practical",
-      "Wi-Fi coverage checked after setup, with upgrade options if needed",
-    ],
-  },
-
-  productsEyebrow: "Starlink solutions",
-  productsTitle:
-    "Starlink installation options for homes, sheds and larger properties",
-  productsIntro:
-    "These are common Starlink solutions we install. The right option depends on roof type, property layout, where you need Wi-Fi and whether you need coverage beyond the main house.",
+  realInstallationsEyebrow: "Real installations",
+  realInstallationsTitle:
+    "Starlink installations for homes, sheds and larger rural properties",
+  realInstallationsIntro:
+    "These are common Starlink installations we complete across WA. The right option depends on roof type, property layout, where you need Wi-Fi and whether you need coverage beyond the main house.",
 
   products: starlinkProducts,
 
-  imageSectionEyebrow: "Superior Starlink installations",
-  imageSection: {
-    title: "Starlink setup that still looks tidy after the installer leaves",
-    intro:
-      "We aim for practical, clean installations: secure mounting, protected cable, sensible router placement and clear advice about Wi-Fi coverage. If the Starlink router alone will not cover the property properly, we can recommend mesh Wi-Fi, wired access points, outdoor Wi-Fi or shed links.",
-    image: "/images/how_to/Starlink/martin_install.jpg",
-    imageAlt: "Starlink kit ready for professional setup",
-  },
+  faqsEyebrow: "FAQ",
+  faqsTitle: "Rural Starlink installation FAQs",
+  faqsIntro:
+    "Common questions about rural dish placement, protected cable routes and extending Wi-Fi around the property.",
+  faqs: [
+    {
+      question: "Can you install Starlink on rural properties?",
+      answer:
+        "Yes. We install Starlink for WA homes and rural properties, with attention to clear dish placement, secure mounting, clean cable entry, router setup and final testing.",
+    },
+    {
+      question: "Can Starlink reach a shed, workshop or granny flat?",
+      answer:
+        "Yes, but the standard router often will not reach reliably on its own. We can recommend outdoor Wi-Fi, mesh, wired access points or wireless links depending on distance and site layout.",
+    },
+    {
+      question: "Do you protect exposed cable from weather?",
+      answer:
+        "Yes. Exposed cable should be protected properly, especially in WA sun and weather. We use suitable conduit and practical routing where cable is exposed.",
+    },
+    {
+      question: "What do you check before finishing the job?",
+      answer:
+        "We check dish setup, app warnings, router operation and basic coverage. If the Starlink router alone will not cover the property properly, we explain the upgrade options clearly.",
+    },
+  ],
 
   finalCtaEyebrow: "Talk to Blake Smart Solutions",
   finalCtaTitle: "Need Starlink installed properly at your property",

@@ -111,13 +111,13 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     href: "tel:0477948079",
   },
 
-  problemsEyebrow: "Common Starlink problems",
-  problemsTitle:
+  problemSolutionEyebrow: "Problem / Solution",
+  problemSolutionTitle:
     "Starlink performance depends on more than just plugging in the kit",
-  problemsIntro:
+  problemSolutionIntro:
     "The Starlink kit is designed to be approachable, but Perth homes still create practical installation issues. Roof type, cable entry, double brick walls, router location and Wi-Fi coverage all affect the end result.",
 
-  problems: [
+  problemSolutionCards: [
     {
       title: "Poor dish location",
       description:
@@ -162,38 +162,40 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     },
   ],
 
-  brandBlock: {
-    eyebrow: "How we approach Starlink installs",
-    title: "Dish, cable, router and Wi-Fi planned as one system",
-    intro:
-      "A good Starlink installation is not just putting the dish somewhere high. We check the app for obstructions, choose a sensible mount, protect exposed cable, bring the cable inside cleanly and make sure the router location gives the best chance of reliable coverage.",
-    image: "/images/products/starlink/Starlink_on_roof.jpg",
-    imageAlt: "Clean Starlink roof installation",
-    points: [
-      "Dish placement checked for clear sky view and practical cable routing",
-      "Mounting approach matched to tile, Colorbond or wall locations",
-      "Cable protected with conduit where exposed to sun or weather",
-      "Neat internal cable exit using a suitable plate where practical",
-      "Wi-Fi coverage checked after setup, with upgrade options if needed",
-    ],
-  },
-
-  productsEyebrow: "Starlink solutions",
-  productsTitle:
-    "Starlink installation options for homes, sheds and larger properties",
-  productsIntro:
-    "These are common Starlink solutions we install. The right option depends on roof type, property layout, where you need Wi-Fi and whether you need coverage beyond the main house.",
+  realInstallationsEyebrow: "Real installations",
+  realInstallationsTitle:
+    "Starlink installations for homes, sheds and larger properties",
+  realInstallationsIntro:
+    "These are common Starlink installations we complete around Perth. The right option depends on roof type, property layout, where you need Wi-Fi and whether you need coverage beyond the main house.",
 
   products: starlinkProducts,
 
-  imageSectionEyebrow: "Superior Starlink installations in Perth",
-  imageSection: {
-    title: "Starlink setup that still looks tidy after the installer leaves",
-    intro:
-      "We aim for practical, clean installations: secure mounting, protected cable, sensible router placement and clear advice about Wi-Fi coverage. If the Starlink router alone will not cover the property properly, we can recommend mesh Wi-Fi, wired access points, outdoor Wi-Fi or shed links.",
-    image: "/images/how_to/Starlink/martin_install.jpg",
-    imageAlt: "Starlink kit ready for professional setup",
-  },
+  faqsEyebrow: "FAQ",
+  faqsTitle: "Starlink installation Perth FAQs",
+  faqsIntro:
+    "Common questions about dish placement, cabling, router setup and Wi-Fi coverage after install.",
+  faqs: [
+    {
+      question: "Where should the Starlink dish be installed?",
+      answer:
+        "The dish needs a clear sky view with minimal obstructions, but the mount and cable route also matter. We check for practical placement, roof type, cable entry and long-term durability before installing.",
+    },
+    {
+      question: "Do you protect the Starlink cable?",
+      answer:
+        "Yes. Where cable is exposed to sun or weather, we use suitable conduit and route it neatly so the installation is cleaner and better protected over time.",
+    },
+    {
+      question: "Will the standard Starlink router cover the whole house?",
+      answer:
+        "Sometimes, but not always. Larger homes, double brick construction, outdoor areas and sheds often need mesh Wi-Fi, access points or a dedicated wireless link for reliable coverage.",
+    },
+    {
+      question: "Do you set up and test everything before leaving?",
+      answer:
+        "Yes. We complete the dish setup, app checks, router setup and basic testing so you know the system is online and any Wi-Fi coverage limitations are clear.",
+    },
+  ],
 
   finalCtaEyebrow: "Talk to Blake Smart Solutions",
   finalCtaTitle: "Need Starlink installed properly in Perth?",
