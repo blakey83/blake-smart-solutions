@@ -39,7 +39,7 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     href: "tel:0477948079",
   },
 
-  problemSolutionEyebrow: "COMMON ISSUES",
+  problemSolutionEyebrow: "",
 
   problemSolutionTitle:
     "Why many security camera systems leave people with false confidence",

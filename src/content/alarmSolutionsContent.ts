@@ -1,18 +1,16 @@
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const alarmsSolutionContent: SolutionPageTemplateProps = {
-  headline: "Finally, A Security System You'll Actually Use",
+  headline: "Know What's Happening At Home. The Moment It Happens.",
   subHeadline:
-    "No confusing keypads. No outdated alarm panels. No expensive monitoring contracts. Just smart protection, instant alerts and complete control from your phone.",
+    "Know who came in, what triggered the alert and whether you need to act with instant notifications, photo verification and complete control from your phone. No ongoing app fees. No mandatory monitoring contracts.",
   bulletPoints: [
-    "Know what's happening at home, even when you're not there",
-    "Receive instant alerts the moment something isn't right",
-    "Control everything from a simple app that's easy for the whole family to use",
-    "Reduce nuisance alarms caused by poor sensor placement and outdated systems",
-    "Protect your home with earlier warning and smarter detection",
-    "Avoid expensive ongoing monitoring contracts and monthly fees",
+    "Control your entire security system from one simple, reliable app",
+    "Know immediately when a door, window or sensor is triggered",
+    "Arm, disarm and check your system from anywhere using a simple mobile app",
+    "Easily expand your system in the future to protect new rooms, sheds, garages and outdoor areas",
+    "No mandatory subscriptions or ongoing monitoring fees",
   ],
-
   heroEyebrow: "Attention Perth homeowners",
 
   heroImage: "/images/solutions/ajaxSecurity/ajax_hero.png",
@@ -26,7 +24,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
   },
 
   primaryCta: {
-    label: "Book a Free Security Assessment",
+    label: "Get A Free Security Assessment",
     action: "enquiry",
   },
 
@@ -36,73 +34,42 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     href: "tel:0477948079",
   },
 
-  problemSolutionEyebrow: "Problem / Solution",
+  problemSolutionEyebrow: "",
 
-  problemSolutionTitle: "Why many alarm systems leave people feeling exposed",
+  problemSolutionTitle: "Security Starts With Knowing What's Happening",
 
   problemSolutionIntro:
     "A good alarm system should help you feel safer, not create more stress. Poorly planned systems often leave gaps around entry points, trigger false alarms, feel frustrating to use or fail to give you confidence when you're away from the property.",
 
   problemSolutionCards: [
     {
-      title: "Worried about break-ins or vulnerable entry points",
+      title: "No visibility when you're away",
       problem:
-        "Doors, windows, garages, side access and rear areas are often the first places intruders look for easy access. If these areas are not properly considered, the system may leave obvious weak spots that reduce the whole point of having security.",
+        "Whether you're at work, travelling or just out for the day, not knowing what is happening at home can be stressful. Most people don't just want an alarm — they want to know whether something happened, what triggered it and whether they need to act.",
       solution:
-        "We design sensor coverage around the real entry points and vulnerable areas, then configure the system so it gives earlier warning where it matters.",
-      image: "/images/solutions/ajaxSecurity/break_in.jpg",
-      imageAlt: "Concern about break-ins and vulnerable entry points",
+        "We set up instant app alerts, remote control and optional photo verification so you can respond quickly and stay connected wherever you are.",
+      image: "/images/solutions/ajaxSecurity/fifo_2.jpg",
+      imageAlt: "Checking home security remotely",
     },
 
     {
-      title: "False alarms that become frustrating",
+      title: "Security That's Easy To Live With",
       problem:
-        "Poor sensor placement and outdated detectors can lead to nuisance alarms, interruptions and stress. Over time, many people start ignoring alerts or stop using the system properly altogether.",
+        "Many alarm systems end up being ignored because they're clunky, unreliable or difficult to use. If using your alarm feels like a chore, it won't become part of your everyday routine.",
       solution:
-        "We choose and position detectors carefully, then test the system so it suits the way people and pets move through the property.",
-      image: "/images/solutions/ajaxSecurity/false_alarms.jpg",
-      imageAlt: "False alarms causing frustration",
-    },
-
-    {
-      title: "Alarm systems that are confusing or hard to manage",
-      problem:
-        "If arming, disarming or checking your alarm feels clunky or unreliable, it quickly becomes something you avoid using. A system should feel simple and work properly when you need it.",
-      solution:
-        "We install and configure Ajax app control, keypads and user access so arming, disarming and checking the system is simple for the people using it.",
+        "We configure Ajax so arming, disarming, checking alerts and managing users is simple from one reliable mobile app.",
       image: "/images/solutions/ajaxSecurity/old-keypad.jpg",
       imageAlt: "Outdated and confusing alarm system",
     },
 
     {
-      title: "No visibility when you're away",
-      problem:
-        "Whether you're at work, travelling or just out for the day, not knowing what is happening at home or at your business can be stressful. Modern alarms should give you instant alerts and clear control wherever you are.",
-      solution:
-        "We set up instant app alerts, remote control and optional photo verification so you can respond quickly and understand what is happening.",
-      image: "/images/solutions/ajaxSecurity/fifo_2.jpg",
-      imageAlt: "Outdated and confusing alarm system",
-    },
-
-    {
-      title: "After-hours risks for workshops and businesses",
-      problem:
-        "Commercial sites often have vulnerable access points, storage areas or internal spaces that need proper after-hours protection. Weak alarm coverage can leave valuable equipment and stock exposed.",
-      solution:
-        "We plan after-hours coverage for doors, internal zones, storage areas and high-value equipment so the system protects the site after staff leave.",
-      image: "/images/solutions/ajaxSecurity/afterhours.jpg",
-      imageAlt:
-        "After-hours security risks for businesses and commercial properties",
-    },
-
-    {
       title: "Generic alarm kits that don't suit the property",
       problem:
-        "Every property is different. A proper system should suit the layout, lifestyle and level of risk. Cheap off-the-shelf kits often create more hassle than confidence.",
+        "Every home is different. Off-the-shelf alarm kits often leave gaps in coverage, include unnecessary devices or fail to consider how the property is actually used.",
       solution:
-        "We build the alarm around the property layout, risk level and how you want to use it, with room to expand the system later if needed.",
+        "We design completesystems around your property, lifestyle and budget, with room to expand later as your needs change.",
       image: "/images/solutions/ajaxSecurity/alarm_essential2.png",
-      imageAlt: "Generic alarm kits that don't suit the property",
+      imageAlt: "Security system designed around the property",
     },
   ],
 
@@ -112,41 +79,55 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     "Common questions about smart alarms, false alarms, app control and professional setup.",
   faqs: [
     {
-      question: "Why do you install Ajax alarm systems?",
-      answer:
-        "Ajax combines reliable encrypted wireless devices, clean modern hardware and a polished app that is easy to use. It suits homes and businesses that want strong protection without clunky keypads or expensive monitoring contracts.",
-    },
-    {
-      question: "Can an Ajax alarm reduce false alarms?",
-      answer:
-        "Good sensor choice and placement makes a big difference. We design the system around doors, windows, internal movement and everyday use so it is practical to arm and less likely to become annoying.",
-    },
-    {
       question: "Do I need a monitoring contract?",
       answer:
-        "Not necessarily. Ajax can send instant alerts to your phone and give you control through the app. Some customers still want monitoring, but many prefer direct control without ongoing monthly fees.",
+        "No. Ajax can send instant alerts directly to your phone, allowing you to monitor and control the system yourself without ongoing monitoring fees. Professional monitoring can be added if you want it, but it is not required.",
     },
+
     {
-      question: "Can the system expand later?",
+      question: "Are there any ongoing fees to use the app?",
       answer:
-        "Yes. Ajax systems can expand with extra intrusion sensors, sirens, keypads, remotes, fire detection, flood detection and automation devices as your needs change.",
+        "No. Once your Ajax system is installed, you can use the Ajax app to arm and disarm the system, receive alerts, check device status and manage users without any ongoing app subscription fees. Professional monitoring is available if you want it, but it is completely optional.",
+    },
+
+    {
+      question: "How will I know if an alarm is real?",
+      answer:
+        "Ajax can provide instant notifications and optional photo verification when an alarm is triggered. Instead of simply knowing that an alarm went off, you can quickly understand what happened and decide whether you need to act.",
+    },
+
+    {
+      question: "Will pets trigger the alarm?",
+      answer:
+        "Ajax Motion Sensors are pet-friendly, but proper system design is just as important. We position and configure sensors to suit your property, pets and daily routine to help reduce nuisance alarms.",
+    },
+
+    {
+      question: "Is the Ajax app easy to use?",
+      answer:
+        "Yes. The Ajax app is one of the main reasons people choose the system. You can arm and disarm the alarm, receive notifications, check system status and manage users from your phone. Many owners describe it as simple, reliable and easy to use every day.",
+    },
+
+    {
+      question: "How do I know what equipment I actually need?",
+      answer:
+        "Every property is different. We assess your entry points, layout, lifestyle and security goals, then recommend a system that suits your needs without adding unnecessary devices or complexity.",
     },
   ],
-
   finalCtaEyebrow: "Talk to Blake Smart Solutions",
   finalCtaTitle:
     "Need an alarm system in Perth? Let’s design one that actually suits the property",
   finalCtaIntro:
     "Whether you need a simple smart alarm for a home, better protection for a business, or a more modern alternative to an outdated system, Blake Smart Solutions can help you work out the right Ajax solution for the site.",
   finalCtaButton: {
-    label: "Book a Free Security Assessment",
+    label: "Get A Free Security Assessment",
     action: "enquiry",
   },
 };
 
 export const alarmsSolutionTrustItems = [
-  "Certified Ajax Expert",
-  "Average 5/5 star Google reviews",
-  "Fully Insured and Police Licensed",
-  "Perth-Based Professional Installers",
+  "WA Police Licensed & Insured",
+  "Locally Owned & Operated",
+  "5-Star Google Reviews",
+  "Ongoing Local Support",
 ];
