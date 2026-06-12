@@ -82,7 +82,7 @@ export const starlinkProducts: Product[] = [
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
   headline: "Starlink Installation Perth",
   subHeadline:
-    "Roof-mounted Starlink installations with careful cable management, dish alignment, router setup and final testing.",
+    "Sick of slow, unreliable internet? We install customer-supplied Starlink systems with practical roof mounting, neat cable routing and Wi-Fi setup so you can get online faster without the guesswork.",
   bulletPoints: [
     "Roof mounting options",
     "Clean cable entry into the home",
@@ -91,7 +91,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "Final setup and alignment checks",
   ],
   heroEyebrow: "Fast & Reliable Starlink Setup",
-  heroImage: "/images/how_to/Starlink/martin_install.jpg",
+  heroImage: "/images/solutions/starLink/PXL_20260604_040053330.MP.jpg",
   heroImageAlt: "Starlink dish installed on a Perth roof",
 
   heroSocialProof: {
@@ -111,7 +111,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     href: "tel:0477948079",
   },
 
-  problemSolutionEyebrow: "Problem / Solution",
+  problemSolutionEyebrow: "",
   problemSolutionTitle:
     "Starlink performance depends on more than just plugging in the kit",
   problemSolutionIntro:
@@ -136,15 +136,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
       image: "/images/products/starlink/mis-aligned_starlink.jpg",
       imageAlt: "Starlink dish mounted on a roof",
     },
-    {
-      title: "Weak Wi-Fi inside the home",
-      problem:
-        "The Starlink router can work well in smaller homes, but larger layouts, double brick and home offices often need better Wi-Fi design.",
-      solution:
-        "We test the coverage after setup and can add mesh Wi-Fi, wired access points or better router placement where the standard router is not enough.",
-      image: "/images/work_gallery/wifi_survey.jpeg",
-      imageAlt: "WiFi equipment for improving Starlink coverage",
-    },
+
     {
       title: "No coverage outdoors or in sheds",
       problem:
@@ -154,23 +146,24 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
       image: "/images/products/wifi/wifi_to_shed.png",
       imageAlt: "Wireless link used to extend Starlink internet to a shed",
     },
+  ],
+
+  approachSteps: [
     {
-      title: "Difficult roof or wall access",
-      problem:
-        "Tile roofs, Colorbond roofs and double brick homes need different mounting and cable-entry approaches to keep the install clean.",
-      solution:
-        "We choose a mounting and cable-entry method suited to the roof and wall construction, aiming for a secure install that still looks tidy.",
-      image: "/images/products/wifi/outdoor_ap.png",
-      imageAlt: "Outdoor network equipment for extended property coverage",
+      title: "Check Dish Location And Cable Route",
+      icon: "requirements",
     },
     {
-      title: "Setup without testing",
-      problem:
-        "A connection showing online is not the same as a finished job. Dish alignment, app warnings and Wi-Fi coverage should be checked before handover.",
-      solution:
-        "We complete app checks, alignment checks, router setup and basic coverage testing so you know what is working before the job is finished.",
-      image: "/images/solutions/wifi/wifi_testing.jpg",
-      imageAlt: "Testing WiFi coverage after a Starlink installation",
+      title: "Recommend The Right Mounting Option",
+      icon: "recommend",
+    },
+    {
+      title: "Install, Align And Set Up Starlink",
+      icon: "install",
+    },
+    {
+      title: "Test Connection And Hand Over To You",
+      icon: "support",
     },
   ],
 
@@ -198,6 +191,11 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
       question: "Do you set up and test everything before leaving?",
       answer:
         "Yes. We complete the dish setup, app checks, router setup and basic testing so you know the system is online and any Wi-Fi coverage limitations are clear.",
+    },
+    {
+      question: "Do I need to buy Starlink before booking?",
+      answer:
+        "Yes. Blake Smart Solutions installs customer-supplied Starlink systems. Once your Starlink kit has arrived, we can install, configure and test the service for you.",
     },
   ],
 

@@ -97,6 +97,25 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     },
   ],
 
+  approachSteps: [
+    {
+      title: "Assess Your Wi-Fi Coverage",
+      icon: "requirements",
+    },
+    {
+      title: "Recommend The Right Network Design",
+      icon: "recommend",
+    },
+    {
+      title: "Install And Configure The Equipment",
+      icon: "install",
+    },
+    {
+      title: "Test Coverage And Provide Local Support",
+      icon: "support",
+    },
+  ],
+
   faqsEyebrow: "FAQ",
   faqsTitle: "WiFi solutions Perth FAQs",
   faqsIntro:

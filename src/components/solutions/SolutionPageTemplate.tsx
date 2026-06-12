@@ -88,25 +88,6 @@ function SolutionReviewsSection({ content }: { content: WhyChooseUsContent }) {
   );
 }
 
-const approachSteps: ApproachStep[] = [
-  {
-    title: "Understand Your Requirements",
-    icon: "requirements",
-  },
-  {
-    title: "Recommend The Right Solution",
-    icon: "recommend",
-  },
-  {
-    title: "Professional Installation & Setup",
-    icon: "install",
-  },
-  {
-    title: "Ongoing Local Support",
-    icon: "support",
-  },
-];
-
 function ApproachIcon({ icon }: { icon: ApproachStep["icon"] }) {
   const sharedProps = {
     className: "h-7 w-7",
@@ -180,6 +161,7 @@ export function SolutionPageTemplate({
   problemSolutionTitle,
   problemSolutionIntro = solutionPageTemplateContent.problemSolutionIntro,
   problemSolutionCards,
+  approachSteps,
   faqsEyebrow = solutionPageTemplateContent.faqsEyebrow,
   faqsTitle,
   faqsIntro,

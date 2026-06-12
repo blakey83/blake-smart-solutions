@@ -66,6 +66,7 @@ export type SolutionPageTemplateProps = {
   problemSolutionTitle: string;
   problemSolutionIntro?: string;
   problemSolutionCards: InfoCard[];
+  approachSteps: ApproachStep[];
   faqsEyebrow?: string;
   faqsTitle: string;
   faqsIntro?: string;

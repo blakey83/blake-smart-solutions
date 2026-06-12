@@ -79,6 +79,25 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     },
   ],
 
+  approachSteps: [
+    {
+      title: "Review The Property And Coverage Goals",
+      icon: "requirements",
+    },
+    {
+      title: "Recommend Camera Locations And System Options",
+      icon: "recommend",
+    },
+    {
+      title: "Install Cameras, Recorder And Phone Access",
+      icon: "install",
+    },
+    {
+      title: "Walk You Through Footage And Support",
+      icon: "support",
+    },
+  ],
+
   faqsEyebrow: "FAQ",
   faqsTitle: "Security camera installation Perth FAQs",
   faqsIntro:

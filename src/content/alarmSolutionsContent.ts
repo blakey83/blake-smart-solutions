@@ -1,9 +1,13 @@
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const alarmsSolutionContent: SolutionPageTemplateProps = {
+  specialOffer: {
+    title: "24 Months Free Technical Support With Every Alarm Installation",
+    price: "",
+  },
   headline: "Know What's Happening At Home. The Moment It Happens.",
   subHeadline:
-    "Know who came in, what triggered the alert and whether you need to act with instant notifications, photo verification and complete control from your phone. No ongoing app fees. No mandatory monitoring contracts.",
+    "Professionally installed Ajax alarm systems that help you know who came in, what triggered the alert and whether you need to act. Get instant notifications, photo verification and complete control from your phone, with no ongoing app fees.",
   bulletPoints: [
     "Control your entire security system from one simple, reliable app",
     "Know immediately when a door, window or sensor is triggered",
@@ -11,7 +15,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     "Easily expand your system in the future to protect new rooms, sheds, garages and outdoor areas",
     "No mandatory subscriptions or ongoing monitoring fees",
   ],
-  heroEyebrow: "Attention Perth homeowners",
+  heroEyebrow: "AJAX INSTALLATION PERTH",
 
   heroImage: "/images/solutions/ajaxSecurity/ajax_hero.png",
   heroImageAlt: "Ajax alarm installation by Blake Smart Solutions",
@@ -67,9 +71,28 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
       problem:
         "Every home is different. Off-the-shelf alarm kits often leave gaps in coverage, include unnecessary devices or fail to consider how the property is actually used.",
       solution:
-        "We design completesystems around your property, lifestyle and budget, with room to expand later as your needs change.",
+        "We design complete systems around your property, lifestyle and budget, with room to expand later as your needs change.",
       image: "/images/solutions/ajaxSecurity/alarm_essential2.png",
       imageAlt: "Security system designed around the property",
+    },
+  ],
+
+  approachSteps: [
+    {
+      title: "Assess Entry Points And Daily Routines",
+      icon: "requirements",
+    },
+    {
+      title: "Recommend The Right Ajax Devices",
+      icon: "recommend",
+    },
+    {
+      title: "Install, Configure And Test The System",
+      icon: "install",
+    },
+    {
+      title: "Explain The App And Provide Local Support",
+      icon: "support",
     },
   ],
 
