@@ -176,6 +176,25 @@ export const RuralStarlinkSolutionContent: SolutionPageTemplateProps = {
     },
   ],
 
+  approachSteps: [
+    {
+      title: "Check Clear Sky View And Property Layout",
+      icon: "requirements",
+    },
+    {
+      title: "Recommend The Mount, Cable Route And Wi-Fi Plan",
+      icon: "recommend",
+    },
+    {
+      title: "Install Starlink And Protect Exposed Cabling",
+      icon: "install",
+    },
+    {
+      title: "Test The Connection And Explain Expansion Options",
+      icon: "support",
+    },
+  ],
+
   faqsEyebrow: "FAQ",
   faqsTitle: "Rural Starlink installation FAQs",
   faqsIntro:
