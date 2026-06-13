@@ -3,7 +3,7 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { servicePageMetadataContent } from "@/content/pageMetadata";
 import { cctvSolutionContent } from "@/content/cctvSolutionContent";
 import { cctvSolutionTrustItems } from "@/content/cctvSolutionContent";
-import { whyChooseUsSecurity } from "@/content/page-contents/whyUsContent";
+import { whyChooseUsSecurity } from "@/content/cctvSolutionContent";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

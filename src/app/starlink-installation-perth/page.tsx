@@ -4,8 +4,8 @@ import { servicePageMetadataContent } from "@/content/pageMetadata";
 import {
   starlinkSolutionContent,
   starlinkSolutionTrustItems,
+  whyChooseUsStarlink,
 } from "@/content/starlink_product";
-import { whyChooseUsStarlink } from "@/content/page-contents/whyUsContent";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

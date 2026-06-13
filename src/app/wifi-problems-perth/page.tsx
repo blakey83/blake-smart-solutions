@@ -5,10 +5,10 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   wifiProblemsPerthPageContent,
   wifiInlineReview,
+  whyChooseUsWifiProblems,
 } from "@/content/page-contents/wifiProblemsPerth";
 import { siteMetadataContent } from "@/content/siteContent";
 import { WifiProblemsCallLink, WifiProblemsCta } from "./WifiProblemsCta";
-import { whyChooseUsWiFi } from "@/content/page-contents/whyUsContent";
 import { WhyBSS } from "@/components/landingPages/WhyBSS";
 import ReviewInsert from "@/components/ReviewInsert";
 
@@ -253,7 +253,7 @@ export default function WifiProblemsPerthPage() {
         </div>
       </section>
 
-      <WhyBSS content={whyChooseUsWiFi} />
+      <WhyBSS content={whyChooseUsWifiProblems} />
 
       <section className="bg-[var(--color-page)]">
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">

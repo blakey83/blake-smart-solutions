@@ -238,3 +238,37 @@ export const starlinkSolutionTrustItems = [
   "Local WA Business",
   "Wi-Fi Upgrades Available",
 ];
+
+export const whyChooseUsRuralStarlink = {
+  whySection: {
+    eyebrow: "WHY BLAKE SMART SOLUTIONS",
+    image: {
+      src: "/images/me_and_charlotte.png",
+      alt: "Daniel from Blake Smart Solutions with Charlotte",
+    },
+    title: "Practical installation backed by real communications experience",
+    paragraphs: [
+      "Blake Smart Solutions is a Perth-based business focused on reliable connectivity, security and smart technology for homes and small businesses.",
+      "I’ve spent 20 years working with communications and technology systems across defence, industrial and commercial environments, where reliability, planning and attention to detail matter.",
+      "That experience carries into Starlink and Wi-Fi installations today — from dish placement and cable routing through to network layout and coverage around the property.",
+      "We focus on practical advice, clean installation work and systems that are designed to be stable, usable and easy to live with long after the install is finished.",
+    ],
+    credibility:
+      "Perth-based • Communications background • Fully insured • Clean, professional installs",
+    reviewsHeading: "Recent customer feedback",
+    reviews: [
+      {
+        name: "Alan Star",
+        text: "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
+      },
+      {
+        name: "Lesley Middleton",
+        text: "Came over at the appointed time and fixed my security camera system efficiently. Really went above and beyond.",
+      },
+      {
+        name: "Juan B",
+        text: "Fantastic service and can sleep at night knowing I have a full CCTV camera system installed at my house.",
+      },
+    ],
+  },
+};

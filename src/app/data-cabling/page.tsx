@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { ProductPageTemplate } from "@/components/products/ProductPageTemplate";
 import { servicePageMetadataContent } from "@/content/pageMetadata";
-import { dataCablingProducts, dataIntro } from "@/content/data_products";
-import { whyChooseUsHome } from "@/content/page-contents/whyUsContent";
+import {
+  dataCablingProducts,
+  dataIntro,
+  whyChooseUsDataCabling,
+} from "@/content/data_products";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({
@@ -22,7 +25,7 @@ export default function DataCablingPage() {
       title={dataIntro.title}
       intro={dataIntro.intro}
       products={dataCablingProducts}
-      content={whyChooseUsHome}
+      content={whyChooseUsDataCabling}
     />
   );
 }
