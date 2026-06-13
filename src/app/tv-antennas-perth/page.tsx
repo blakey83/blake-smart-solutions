@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { ProductPageTemplate } from "@/components/products/ProductPageTemplate";
 import { servicePageMetadataContent } from "@/content/pageMetadata";
-import { antennaProducts, antennasIntro } from "@/content/antenna_products";
-import { whyChooseUsHome } from "@/content/page-contents/whyUsContent";
+import {
+  antennaProducts,
+  antennasIntro,
+  whyChooseUsAntennas,
+} from "@/content/antenna_products";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({
@@ -22,7 +25,7 @@ export default function AntennasPage() {
       title={antennasIntro.title}
       intro={antennasIntro.intro}
       products={antennaProducts}
-      content={whyChooseUsHome}
+      content={whyChooseUsAntennas}
     />
   );
 }

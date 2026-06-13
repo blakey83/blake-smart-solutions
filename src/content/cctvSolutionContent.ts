@@ -153,3 +153,37 @@ export const cctvSolutionTrustItems = [
   "5-Star Google Reviews",
   "Ongoing Local Support",
 ];
+
+export const whyChooseUsSecurity = {
+  whySection: {
+    eyebrow: "WHY BLAKE SMART SOLUTIONS",
+    image: {
+      src: "/images/me_and_charlotte.png",
+      alt: "Daniel from Blake Smart Solutions with Charlotte",
+    },
+    title: "Security systems installed with a practical, professional approach",
+    paragraphs: [
+      "Blake Smart Solutions is a Perth-based business focused on reliable security, connectivity and smart technology for homes and small businesses.",
+      "I’ve spent 20 years working with technology systems across defence, industrial and commercial environments, where reliability, planning and attention to detail are critical.",
+      "That experience shapes how we approach CCTV and security installations today — with careful camera placement, clean installation work and systems designed to be practical and easy to use day to day.",
+      "We focus on straightforward advice, professional workmanship and security systems that help people feel more aware, more secure and more confident in their property.",
+    ],
+    credibility:
+      "Perth-based • Fully insured • Security-focused • Clean, professional installs",
+    reviewsHeading: "Recent customer feedback",
+    reviews: [
+      {
+        name: "Juan B",
+        text: "Fantastic service and can sleep at night knowing I have a full CCTV camera system installed at my house.",
+      },
+      {
+        name: "Lesley Middleton",
+        text: "Came over at the appointed time and fixed my security camera system efficiently. Really went above and beyond.",
+      },
+      {
+        name: "Alan Star",
+        text: "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
+      },
+    ],
+  },
+};

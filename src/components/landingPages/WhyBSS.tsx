@@ -1,15 +1,23 @@
 import React from "react";
-import { WhyChooseUsContent } from "@/content/page-contents/whyUsContent";
+import type { WhyChooseUsContent } from "@/components/landingPages/types";
 import Image from "next/image";
 
 type WhyBSSProps = {
   content: WhyChooseUsContent;
   showReviews?: boolean;
+  background?: "white" | "section";
 };
 
-export const WhyBSS = ({ content, showReviews = true }: WhyBSSProps) => {
+export const WhyBSS = ({
+  content,
+  showReviews = true,
+  background = "white",
+}: WhyBSSProps) => {
+  const backgroundClass =
+    background === "section" ? "bg-[var(--color-section)]" : "bg-white";
+
   return (
-    <section className="bg-white">
+    <section className={backgroundClass}>
       <div className="mx-auto max-w-6xl px-5 pb-14 sm:px-6 lg:px-8 lg:pb-20">
         <div className="border-t border-[var(--color-border)] pt-14 lg:pt-16">
           <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-14">

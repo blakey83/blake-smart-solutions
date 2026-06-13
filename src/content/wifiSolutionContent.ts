@@ -1,99 +1,73 @@
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const wifiSolutionContent: SolutionPageTemplateProps = {
-  headline:
-    "WiFi solutions Perth — reliable coverage for homes, businesses & large properties",
+  headline: "Get WiFi Where It Doesn't Reach Today",
   subHeadline:
-    "Reliable Wi-Fi systems for homes, workshops, businesses and large properties across Perth and surrounding suburbs.",
+    "From sheds and workshops to offices, outdoor areas and large homes, we install access points and wireless links that deliver reliable coverage where standard routers fall short.",
   bulletPoints: [
-    "Fix dead zones, dropouts and weak coverage in the rooms you actually use",
-    "Mesh, access point, outdoor Wi-Fi and shed link options",
-    "Wi-Fi testing to find the real cause before buying hardware",
-    "Home and business-grade systems designed for stable day-to-day use",
+    "Eliminate dead spots, weak signal and frustrating WiFi dropouts",
+    "Get internet to sheds, workshops, granny flats and outdoor areas",
+    "Extend Starlink and NBN connections beyond the room with the router",
+    "Keep security cameras, smart devices and workstations reliably connected",
+    "Local support after installation",
   ],
-
-  heroEyebrow: "Professional Wi-Fi solutions",
-  heroImage: "/images/solutions/wifi/WiFi_hero.png",
+  heroEyebrow: "ATTENTION PERTH INTERNET USERS",
+  heroImage: "/images/work_gallery/wifi_survey.jpeg",
   heroImageAlt: "Blake Smart Solutions WiFi",
 
   heroSocialProof: {
     eyebrow: "Google review",
     ratingLabel: "Five star Google review",
-    quote:
-      "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
-    author: "Alan Star",
+    quote: "Good communication and clean work. Highly recommended.",
+    author: "Mark Lumacang",
   },
 
   primaryCta: {
-    label: "Book a WiFi Health Check",
+    label: "Book a free consultation",
     action: "enquiry",
   },
   secondaryCta: {
-    label: "Call now for a quote",
+    label: "Call now for a free quote",
     action: "link",
     href: "tel:0477948079",
   },
 
-  problemSolutionEyebrow: "Problem / Solution",
+  problemSolutionEyebrow: "",
   problemSolutionTitle:
-    "Most WiFi problems aren’t your internet connection - they’re coverage issues",
+    "Your Internet Is Probably Fine. The Problem Is Getting It Where You Need It.",
+
   problemSolutionIntro:
-    "If your WiFi drops out, struggles in certain rooms, or doesn’t reach outside, the issue usually isn’t your provider. It’s poor placement, the wrong equipment, or a network that was never designed properly in the first place. That’s where a properly designed WiFi system makes the difference.",
+    "Most WiFi issues aren't caused by your internet provider. They're caused by poor coverage, difficult building layouts, detached areas of the property, or networks that were never designed for how you actually use them. We identify the cause and install the right solution to deliver reliable connectivity where it matters most.",
 
   problemSolutionCards: [
     {
-      title: "Dead zones indoors",
+      title: "Dead Spots & Weak Coverage",
       problem:
-        "Weak signal in bedrooms, back rooms, upstairs areas or home offices can make streaming, work and general day-to-day use frustrating.",
+        "Bedrooms, home offices, theatre rooms and other areas often suffer from poor WiFi because the router simply can't reach where you need it.",
       solution:
-        "We assess where the signal drops away, then recommend the right mix of mesh nodes, access points or cabling so the rooms you use every day get reliable coverage.",
+        "We identify why coverage is failing and install the right combination of access points, cabling and network equipment to deliver reliable connectivity throughout the areas you actually use.",
       image: "/images/solutions/wifi/bedroom_wifi.webp",
-      imageAlt: "Bedroom wifi",
+      imageAlt: "Dead WiFi zone in home",
     },
+
     {
-      title: "Dropouts in busy environments",
+      title: "Internet To Sheds, Workshops & Granny Flats",
       problem:
-        "Retail, office and workshop environments can struggle when too many devices are competing on a network that was never designed for business use.",
+        "Separate buildings are often too far away for reliable WiFi, leaving sheds, workshops and granny flats with slow speeds or no usable connection at all.",
       solution:
-        "We design business-ready Wi-Fi with suitable access points, placement and capacity so staff, customers and connected devices can stay online more consistently.",
-      image: "/images/solutions/wifi/busy_office.png",
-      imageAlt: "Busy Office",
-    },
-    {
-      title: "Poor outdoor coverage",
-      problem:
-        "Patios, yards, entertaining areas and external workspaces often fall outside the usable range of a standard indoor router.",
-      solution:
-        "We can install outdoor-rated Wi-Fi equipment positioned for the spaces you actually use, giving patios, yards and work areas practical coverage.",
-      image: "/images/solutions/wifi/outdoor_solution.png",
-      imageAlt: "Outdoor Solution",
-    },
-    {
-      title: "Shed, granny flat or workshop not connected",
-      problem:
-        "Separate buildings often need more than a mesh add-on. A properly aligned wireless bridge and dedicated access point can deliver far better performance and reliability.",
-      solution:
-        "We use wireless links, cabling where suitable and dedicated access points to extend the network properly into sheds, workshops or granny flats.",
+        "Using wireless bridges, outdoor access points and structured cabling, we can extend reliable internet to detached buildings without relying on unreliable extenders.",
       image: "/images/solutions/wifi/shed_wifi_solution.png",
-      imageAlt: "Shed Wifi Solution",
+      imageAlt: "Internet connection to shed or workshop",
     },
+
     {
-      title: "WiFi not keeping up with demand",
+      title: "Starlink & Camera Connectivity Problems",
       problem:
-        "Off-the-shelf kits can work in some homes, but larger properties and more demanding environments often need a more considered approach.",
+        "If Starlink doesn't reach the whole property or your cameras keep dropping out, the issue is often the network behind them rather than the devices themselves.",
       solution:
-        "We match the hardware and layout to the number of users, devices and building conditions so the system has enough coverage and capacity for daily use.",
-      image: "/images/solutions/wifi/crowded_area_wifi.png",
-      imageAlt: "Crowded area WiFi",
-    },
-    {
-      title: "No clear plan for improvement",
-      problem:
-        "A lot of people know their Wi-Fi is bad, but not why. A proper assessment helps identify the real issue before money gets wasted on the wrong hardware.",
-      solution:
-        "We test the property first, identify the real cause and give you a practical upgrade path instead of guessing or adding random extenders.",
-      image: "/images/solutions/wifi/wifi_testing.jpg",
-      imageAlt: "WiFi Testing",
+        "We improve the infrastructure supporting your Starlink and security systems, helping deliver reliable coverage, stable connections and fewer frustrating dropouts.",
+      image: "/images/products/wifi/wifi_frustration.jpg",
+      imageAlt: "Reliable network for Starlink and security cameras",
     },
   ],
 
@@ -122,27 +96,32 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     "A few common questions before booking a WiFi health check or coverage upgrade.",
   faqs: [
     {
-      question: "Do I need mesh WiFi or business-grade access points?",
+      question: "Do I need mesh WiFi, access points or a wireless bridge?",
       answer:
-        "It depends on the property. Some homes only need a well-placed mesh system, while larger homes, workshops and offices often perform better with dedicated access points, switching and proper placement.",
+        "Every property is different. Some homes can be improved with a mesh system, while others benefit more from access points, data cabling or wireless bridges. We assess the property and recommend the solution that best suits your layout, coverage requirements and budget.",
     },
     {
-      question: "Can you improve WiFi to a shed, patio or granny flat?",
+      question: "Can you get internet to a shed, workshop or granny flat?",
       answer:
-        "Yes. Separate buildings and outdoor areas usually need more than a stronger router. We can use outdoor access points, wireless links or cabling where appropriate to create reliable coverage where you actually need it.",
+        "Yes. We regularly install wireless bridges, outdoor access points and data cabling to extend reliable internet to detached buildings and outdoor areas across Perth.",
     },
     {
-      question: "Do you test the WiFi before recommending hardware?",
+      question:
+        "My Starlink works near the router but not throughout the property. Can you help?",
       answer:
-        "Yes. A proper assessment helps identify dead zones, interference, poor router placement and building materials that affect signal. That prevents money being wasted on the wrong equipment.",
+        "Absolutely. We can extend Starlink coverage using access points, wireless links and structured cabling so your connection reaches the rooms, outdoor areas and buildings where you actually need it.",
     },
     {
-      question: "What brands do you install?",
+      question: "Will I know the cost before work starts?",
       answer:
-        "We use practical systems matched to the job, including Ruijie and Reyee options for stable, scalable WiFi in offices, workshops, retail spaces and more demanding home setups.",
+        "Yes. We provide a clear written scope and quote before proceeding. If additional work is required, we'll explain the options and obtain approval before any extra costs are incurred.",
+    },
+    {
+      question: "What happens if I need help after the installation?",
+      answer:
+        "We'll make sure everything is working before we leave and provide a proper handover. If you need assistance afterwards, you're dealing with a local Perth business that you can contact directly for support.",
     },
   ],
-
   finalCtaEyebrow: "Talk to Blake Smart Solutions",
   finalCtaTitle: "Need better WiFi in Perth? Let’s fix your coverage properly",
   finalCtaIntro:
@@ -154,8 +133,41 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const wifiSolutionTrustItems = [
-  "Perth-Based Local Service",
-  "Advanced WiFi Testing",
-  "Ruijie Partner Systems",
-  "Reliable Coverage Solutions",
+  "5-Star Google Reviews",
+  "ACMA Registered and Fully Insured",
+  "Starlink, CCTV & Network Specialist",
+  "Local Perth Support",
 ];
+
+export const whyChooseUsWiFi = {
+  whySection: {
+    eyebrow: "WHY BLAKE SMART SOLUTIONS",
+    image: {
+      src: "/images/me_and_charlotte.png",
+      alt: "Daniel from Blake Smart Solutions with Charlotte",
+    },
+    title: "WiFi help from someone who understands communications",
+    paragraphs: [
+      "Blake Smart Solutions is a Perth-based business built around practical, reliable technology for real homes and small businesses.",
+      "I’ve spent 20 years working with communications systems across military and commercial environments, where reliability matters and guesswork is not good enough.",
+      "That experience shapes how we approach home WiFi problems. We don’t just tell you to restart the router or buy another random extender. We look at how your home is actually built, where the signal is weak, what is interfering with it, and what will make the biggest difference for the rooms you use every day.",
+      "We’re fully insured, legally compliant, and focused on clear advice, clean work and practical fixes that make your home technology easier to live with.",
+    ],
+    credibility: "Perth-based • Fully insured • 20 years experience",
+    reviewsHeading: "Recent customer feedback",
+    reviews: [
+      {
+        name: "Alan Star",
+        text: "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
+      },
+      {
+        name: "Lesley Middleton",
+        text: "Came over at the appointed time and fixed my security camera system efficiently. Really went above and beyond.",
+      },
+      {
+        name: "Juan B",
+        text: "Fantastic service and can sleep at night knowing I have a full CCTV camera system installed at my house.",
+      },
+    ],
+  },
+};

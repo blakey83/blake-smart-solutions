@@ -4,7 +4,7 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { wifiSolutionsPerthPageContent } from "@/content/page-contents/wifiSolutionsPerth";
 import { wifiSolutionContent } from "@/content/wifiSolutionContent";
 import { wifiSolutionTrustItems } from "@/content/wifiSolutionContent";
-import { whyChooseUsWiFi } from "@/content/page-contents/whyUsContent";
+import { whyChooseUsWiFi } from "@/content/wifiSolutionContent";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

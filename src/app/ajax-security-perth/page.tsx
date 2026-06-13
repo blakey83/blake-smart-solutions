@@ -3,7 +3,7 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { servicePageMetadataContent } from "@/content/pageMetadata";
 import { alarmsSolutionContent } from "@/content/alarmSolutionsContent";
 import { alarmsSolutionTrustItems } from "@/content/alarmSolutionsContent";
-import { whyChooseUsHome } from "@/content/page-contents/whyUsContent";
+import { whyChooseUsAlarms } from "@/content/alarmSolutionsContent";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({
@@ -22,7 +22,7 @@ export default function AjaxSecurityPerthPage() {
       {...alarmsSolutionContent}
       currentPath="/ajax-security-perth"
       trustItems={alarmsSolutionTrustItems}
-      content={whyChooseUsHome}
+      content={whyChooseUsAlarms}
     />
   );
 }

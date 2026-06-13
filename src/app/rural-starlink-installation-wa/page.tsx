@@ -3,7 +3,7 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { servicePageMetadataContent } from "@/content/pageMetadata";
 import { starlinkSolutionTrustItems } from "@/content/landing-page-contents/ruralStarlink";
 import { RuralStarlinkSolutionContent } from "@/content/landing-page-contents/ruralStarlink";
-import { whyChooseUsStarlink } from "@/content/page-contents/whyUsContent";
+import { whyChooseUsRuralStarlink } from "@/content/landing-page-contents/ruralStarlink";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({
@@ -22,7 +22,7 @@ export default function StarlinkPage() {
       {...RuralStarlinkSolutionContent}
       currentPath="/rural-starlink-installation-wa"
       trustItems={starlinkSolutionTrustItems}
-      content={whyChooseUsStarlink}
+      content={whyChooseUsRuralStarlink}
     />
   );
 }
