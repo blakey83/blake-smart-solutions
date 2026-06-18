@@ -29,10 +29,6 @@ export const finalCtaSectionContent = {
   quoteCta: "Request a Quote",
 };
 
-export const heroSectionExtraContent = {
-  problemLink: "↓ See how we can help",
-};
-
 export const whyChooseUsHome = {
   whySection: {
     eyebrow: "WHY BLAKE SMART SOLUTIONS",
@@ -47,7 +43,7 @@ export const whyChooseUsHome = {
       "That experience shapes how we approach security and technology today — with practical advice, clean installation and systems designed around how people actually live and work.",
       "We’re fully insured, legally compliant, and focused on helping Perth homes and businesses feel connected, secure and supported with technology they can rely on.",
     ],
-    credibility: "Perth-based • Fully insured • 20 years experience",
+    credibility: "",
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {

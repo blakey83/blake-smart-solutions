@@ -12,9 +12,9 @@ export default function Home() {
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
       <HeroSection />
       <TrustStrip trustItems={trustItems} />
+      <WhyBSS content={whyChooseUsHome} background="section" />
       <ProblemPathsSelection />
       <ServicesSection />
-      <WhyBSS content={whyChooseUsHome} background="section" />
       <FinalCtaSection />
     </div>
   );
