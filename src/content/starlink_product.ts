@@ -91,7 +91,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "Final setup and alignment checks",
   ],
   heroEyebrow: "Fast & Reliable Starlink Setup",
-  heroImage: "/images/solutions/starLink/PXL_20260604_040053330.MP.jpg",
+  heroImage: "/images/solutions/starLink/PXL_20260618_071151096.jpg",
   heroImageAlt: "Starlink dish installed on a Perth roof",
 
   heroSocialProof: {
