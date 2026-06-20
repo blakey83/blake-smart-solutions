@@ -44,7 +44,7 @@ export const recentStarlinkInstallationsContent: WorkShowcaseContent = {
       title: "Business back online after equipment failure",
       location: "Yangebup, WA",
       description:
-        "After the customer's existing Gen 2 Starlink system failed, the business was left without reliable internet access. We supplied and installed an upgraded Starlink system, restoring connectivity quickly and helping minimise disruption to daily operations.",
+        "After the customer's existing Gen 2 Starlink system failed, the business was left without reliable internet access. We installed an upgraded Starlink system, restoring connectivity quickly and helping minimise disruption to daily operations.",
       image: {
         src: "/images/work-photos/Starlink/yangebub.jpg",
         alt: "Upgraded Starlink installation for a business in Yangebup",
