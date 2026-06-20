@@ -100,7 +100,7 @@ function FixSection({ fix, index }: { fix: Fix; index: number }) {
   );
 }
 
-export default function WifiProblemsPerthPage() {
+export default function SevenWaysToFixWifiPage() {
   const { hero, intro, fixes, offer, guideSection, diagnostic, finalCta } =
     wifiLandingPageContent;
 

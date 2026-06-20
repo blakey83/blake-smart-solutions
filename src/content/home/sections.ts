@@ -36,6 +36,7 @@ export const whyChooseUsHome = {
       src: "/images/me_and_charlotte.png",
       alt: "Daniel from Blake Smart Solutions with Charlotte",
     },
+    title: "Reliable technology starts with experience",
     paragraph:
       "Blake Smart Solutions is built on more than 20 years of experience working with communications and technology systems across military, industrial and commercial environments. In those industries, systems are expected to perform reliably, planning matters, and attention to detail is essential. That same approach is applied to every installation, delivering practical solutions that are designed to work reliably in the real world.",
     bullets: [
