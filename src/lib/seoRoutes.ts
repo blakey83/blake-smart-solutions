@@ -12,6 +12,10 @@ const ARTICLE_ROUTES = new Set([
   "/why-nbn-feels-slow",
 ]);
 
+const RECENT_INSTALLATION_ROUTES = new Set([
+  "/recent-installations/starlink",
+]);
+
 const EXCLUDED_SEGMENTS = new Set([
   "api",
   "admin",
@@ -157,6 +161,10 @@ export function getRoutePriority(route: string): number {
     return 0.9;
   }
 
+  if (RECENT_INSTALLATION_ROUTES.has(route)) {
+    return 0.8;
+  }
+
   if (
     ARTICLE_ROUTES.has(route) ||
     route.includes("/blog/") ||
@@ -186,6 +194,10 @@ export function getRouteChangeFrequency(
   }
 
   if (route === "/enquiry") {
+    return "monthly";
+  }
+
+  if (RECENT_INSTALLATION_ROUTES.has(route)) {
     return "monthly";
   }
 
