@@ -162,14 +162,16 @@ export const whyChooseUsSecurity = {
       alt: "Daniel from Blake Smart Solutions with Charlotte",
     },
     title: "Security systems installed with a practical, professional approach",
-    paragraphs: [
-      "Blake Smart Solutions is a Perth-based business focused on reliable security, connectivity and smart technology for homes and small businesses.",
-      "I’ve spent 20 years working with technology systems across defence, industrial and commercial environments, where reliability, planning and attention to detail are critical.",
-      "That experience shapes how we approach CCTV and security installations today — with careful camera placement, clean installation work and systems designed to be practical and easy to use day to day.",
-      "We focus on straightforward advice, professional workmanship and security systems that help people feel more aware, more secure and more confident in their property.",
+    paragraph:
+      "Blake Smart Solutions is built on more than 20 years of experience working with communications and technology systems across military, industrial and commercial environments. In those industries, systems are expected to perform reliably, planning matters, and attention to detail is essential. That same approach is applied to every installation, delivering practical solutions that are designed to work reliably in the real world.",
+    bullets: [
+      "Clear recommendations based on your needs, not sales targets.",
+      "Clean, professional installations with attention to detail.",
+      "Reliable systems designed for long-term performance.",
+      "Local Perth support before, during and after installation.",
+      "Straightforward communication and honest advice.",
+      "One trusted provider for security, connectivity and smart technology.",
     ],
-    credibility:
-      "Perth-based • Fully insured • Security-focused • Clean, professional installs",
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {

@@ -68,13 +68,9 @@ export const whyChooseUsDataCabling = {
       alt: "Daniel from Blake Smart Solutions with Charlotte",
     },
     title: "Reliable technology starts with experience",
-    paragraphs: [
-      "Blake Smart Solutions is a Perth-based business focused on reliable security, Wi-Fi and smart technology for homes and small businesses.",
-      "I’ve spent 20 years working with technology systems across defence, industrial and commercial environments, where reliability, planning and attention to detail matter.",
-      "That experience shapes how we approach security and technology today — with practical advice, clean installation and systems designed around how people actually live and work.",
-      "We’re fully insured, legally compliant, and focused on helping Perth homes and businesses feel connected, secure and supported with technology they can rely on.",
-    ],
-    credibility: "Perth-based • Fully insured • 20 years experience",
+    paragraph:
+      "Clean, tested cabling work backed by practical technology experience.",
+    bullets: ["Perth-based", "Fully insured", "20 years experience"],
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {

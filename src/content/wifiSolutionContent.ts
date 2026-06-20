@@ -147,13 +147,16 @@ export const whyChooseUsWiFi = {
       alt: "Daniel from Blake Smart Solutions with Charlotte",
     },
     title: "WiFi help from someone who understands communications",
-    paragraphs: [
-      "Blake Smart Solutions is a Perth-based business built around practical, reliable technology for real homes and small businesses.",
-      "I’ve spent 20 years working with communications systems across military and commercial environments, where reliability matters and guesswork is not good enough.",
-      "That experience shapes how we approach home WiFi problems. We don’t just tell you to restart the router or buy another random extender. We look at how your home is actually built, where the signal is weak, what is interfering with it, and what will make the biggest difference for the rooms you use every day.",
-      "We’re fully insured, legally compliant, and focused on clear advice, clean work and practical fixes that make your home technology easier to live with.",
+    paragraph:
+      "Blake Smart Solutions is built on more than 20 years of experience working with communications and technology systems across military, industrial and commercial environments. In those industries, systems are expected to perform reliably, planning matters, and attention to detail is essential. That same approach is applied to every installation, delivering practical solutions that are designed to work reliably in the real world.",
+    bullets: [
+      "Clear recommendations based on your needs, not sales targets.",
+      "Clean, professional installations with attention to detail.",
+      "Reliable systems designed for long-term performance.",
+      "Local Perth support before, during and after installation.",
+      "Straightforward communication and honest advice.",
+      "One trusted provider for security, connectivity and smart technology.",
     ],
-    credibility: "Perth-based • Fully insured • 20 years experience",
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {

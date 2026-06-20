@@ -36,14 +36,16 @@ export const whyChooseUsHome = {
       src: "/images/me_and_charlotte.png",
       alt: "Daniel from Blake Smart Solutions with Charlotte",
     },
-    title: "Reliable technology starts with experience",
-    paragraphs: [
-      "Blake Smart Solutions is a Perth-based business focused on reliable security, Wi-Fi and smart technology for homes and small businesses.",
-      "I’ve spent 20 years working with technology systems across defence, industrial and commercial environments, where reliability, planning and attention to detail matter.",
-      "That experience shapes how we approach security and technology today — with practical advice, clean installation and systems designed around how people actually live and work.",
-      "We’re fully insured, legally compliant, and focused on helping Perth homes and businesses feel connected, secure and supported with technology they can rely on.",
+    paragraph:
+      "Blake Smart Solutions is built on more than 20 years of experience working with communications and technology systems across military, industrial and commercial environments. In those industries, systems are expected to perform reliably, planning matters, and attention to detail is essential. That same approach is applied to every installation, delivering practical solutions that are designed to work reliably in the real world.",
+    bullets: [
+      "Clear recommendations based on your needs, not sales targets.",
+      "Clean, professional installations with attention to detail.",
+      "Reliable systems designed for long-term performance.",
+      "Local Perth support before, during and after installation.",
+      "Straightforward communication and honest advice.",
+      "One trusted provider for security, connectivity and smart technology.",
     ],
-    credibility: "",
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {
