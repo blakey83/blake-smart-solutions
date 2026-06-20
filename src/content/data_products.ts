@@ -69,8 +69,15 @@ export const whyChooseUsDataCabling = {
     },
     title: "Reliable technology starts with experience",
     paragraph:
-      "Clean, tested cabling work backed by practical technology experience.",
-    bullets: ["Perth-based", "Fully insured", "20 years experience"],
+      "Blake Smart Solutions is built on more than 20 years of experience working with communications and technology systems across military, industrial and commercial environments. In those industries, systems are expected to perform reliably, planning matters, and attention to detail is essential. That same approach is applied to every installation, delivering practical solutions that are designed to work reliably in the real world.",
+    bullets: [
+      "Clear recommendations based on your needs, not sales targets.",
+      "Clean, professional installations with attention to detail.",
+      "Reliable systems designed for long-term performance.",
+      "Local Perth support before, during and after installation.",
+      "Straightforward communication and honest advice.",
+      "One trusted provider for security, connectivity and smart technology.",
+    ],
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {
