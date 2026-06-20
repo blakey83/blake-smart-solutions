@@ -247,14 +247,14 @@ export const whyChooseUsRuralStarlink = {
       alt: "Daniel from Blake Smart Solutions with Charlotte",
     },
     title: "Practical installation backed by real communications experience",
-    paragraphs: [
-      "Blake Smart Solutions is a Perth-based business focused on reliable connectivity, security and smart technology for homes and small businesses.",
-      "I’ve spent 20 years working with communications and technology systems across defence, industrial and commercial environments, where reliability, planning and attention to detail matter.",
-      "That experience carries into Starlink and Wi-Fi installations today — from dish placement and cable routing through to network layout and coverage around the property.",
-      "We focus on practical advice, clean installation work and systems that are designed to be stable, usable and easy to live with long after the install is finished.",
+    paragraph:
+      "Rural Starlink installs planned around reliable service, tidy cabling and practical coverage.",
+    bullets: [
+      "Perth-based",
+      "Communications background",
+      "Fully insured",
+      "Clean, professional installs",
     ],
-    credibility:
-      "Perth-based • Communications background • Fully insured • Clean, professional installs",
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {

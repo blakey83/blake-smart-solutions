@@ -9,3 +9,21 @@ export type Product = {
   ctaLabel?: string;
   href?: string;
 };
+
+export type WhyChooseUsContent = {
+  whySection: {
+    eyebrow: string;
+    image: {
+      src: string;
+      alt: string;
+    };
+    title: string;
+    paragraph: string;
+    bullets: string[];
+    reviewsHeading: string;
+    reviews: {
+      name: string;
+      text: string;
+    }[];
+  };
+};

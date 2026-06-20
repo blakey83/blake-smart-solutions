@@ -4,7 +4,7 @@ import type { Product } from "@/lib/types";
 import { ProductCardGrid } from "@/components/products/ProductCardGrid";
 import { RelatedServicesSection } from "@/components/services/RelatedServicesSection";
 import { WhyBSS } from "../landingPages/WhyBSS";
-import type { WhyChooseUsContent } from "@/components/landingPages/types";
+import type { WhyChooseUsContent } from "@/lib/types";
 
 type ProductPageTemplateProps = {
   currentPath: string;

@@ -1,5 +1,5 @@
 import React from "react";
-import type { WhyChooseUsContent } from "@/components/landingPages/types";
+import type { WhyChooseUsContent } from "@/lib/types";
 import Image from "next/image";
 
 type WhyBSSProps = {
@@ -40,14 +40,20 @@ export const WhyBSS = ({
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
                 {content.whySection.title}
               </h2>
-              <div className="mt-5 space-y-4 text-base leading-7 text-[var(--color-muted)]">
-                {content.whySection.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-              <p className="mt-6 border-l-4 border-[var(--color-accent)] bg-[var(--color-page)] px-4 py-3 text-sm font-semibold leading-6 text-[var(--color-ink)]">
-                {content.whySection.credibility}
+              <p className="mt-5 text-base leading-7 text-[var(--color-muted)]">
+                {content.whySection.paragraph}
               </p>
+              <ul className="mt-4 space-y-2 text-base leading-7 text-[var(--color-muted)]">
+                {content.whySection.bullets.map((bullet) => (
+                  <li
+                    key={bullet}
+                    className="flex items-start gap-3"
+                  >
+                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 

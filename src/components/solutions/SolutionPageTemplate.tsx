@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { solutionPageTemplateContent } from "@/content/siteContent";
-import type { WhyChooseUsContent } from "@/components/landingPages/types";
+import type { WhyChooseUsContent } from "@/lib/types";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type {
   ApproachStep,
