@@ -174,7 +174,7 @@ export function SolutionPageTemplate({
   content,
 }: SolutionPageTemplateViewProps) {
   return (
-    <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
+    <div className="pb-20 bg-[var(--color-page)] text-[var(--color-ink)] sm:pb-0">
       {specialOffer ? (
         <section className="border-b border-[var(--color-border)] bg-[var(--color-accent)] text-white">
           <div className="mx-auto max-w-6xl px-5 py-3 sm:px-6 lg:px-8">
@@ -192,12 +192,8 @@ export function SolutionPageTemplate({
 
       <section className="border-b border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div
-            className={`items-center gap-10 lg:gap-14 ${
-              heroImage ? "grid lg:grid-cols-[1.05fr_0.95fr]" : "max-w-3xl"
-            }`}
-          >
-            <div className={heroImage ? "" : "max-w-3xl"}>
+          <div className="max-w-3xl">
+            <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
                 {heroEyebrow}
               </p>
@@ -207,19 +203,18 @@ export function SolutionPageTemplate({
               <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
                 {subHeadline}
               </p>
-
-              {bulletPoints.length ? (
-                <ul className="mt-6 space-y-2">
-                  {bulletPoints.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
-                    >
-                      <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              {heroImage ? (
+                <div className="relative mt-6 overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image
+                      src={heroImage}
+                      alt={heroImageAlt ?? headline}
+                      fill
+                      sizes="(min-width: 1024px) 40rem, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
               ) : null}
 
               <div className="mt-6 max-w-2xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-5">
@@ -234,40 +229,43 @@ export function SolutionPageTemplate({
                     {heroSocialProof.eyebrow}
                   </span>
                 </div>
-                <p className="mt-3 text-sm leading-6 text-[var(--color-ink)] sm:text-base">
+                <p className="mt-3 text-xs leading-5 text-[var(--color-ink)] sm:text-sm">
                   &quot;{heroSocialProof.quote}&quot;
                 </p>
                 <p className="mt-3 text-sm font-semibold text-[var(--color-muted)]">
                   {heroSocialProof.author}
                 </p>
               </div>
+              {bulletPoints.length ? (
+                <ul className="mt-6 space-y-2">
+                  {bulletPoints.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
+                    >
+                      <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <SolutionCta button={primaryCta} />
+                <SolutionCta
+                  button={primaryCta}
+                  className="hidden sm:inline-flex"
+                />
                 {secondaryCta ? (
                   <SolutionCta button={secondaryCta} variant="secondary" />
                 ) : null}
               </div>
             </div>
-
-            {heroImage ? (
-              <div className="relative overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
-                <div className="relative aspect-[4/3] w-full">
-                  <Image
-                    src={heroImage}
-                    alt={heroImageAlt ?? headline}
-                    fill
-                    sizes="(min-width: 1024px) 40rem, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            ) : null}
           </div>
         </div>
       </section>
 
       <TrustStrip trustItems={trustItems} />
+      <WhyBSS content={content} showReviews={false} />
 
       <section className="bg-[var(--color-section)]">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
@@ -349,8 +347,6 @@ export function SolutionPageTemplate({
         </div>
       </section>
 
-      <WhyBSS content={content} showReviews={false} />
-
       <section className="bg-white">
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <SectionHeading
@@ -399,6 +395,10 @@ export function SolutionPageTemplate({
           </div>
         </div>
       </section>
+
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--color-border)] bg-white/95 px-5 py-3 shadow-[0_-8px_24px_rgba(15,23,42,0.1)] backdrop-blur sm:hidden">
+        <SolutionCta button={primaryCta} className="w-full" />
+      </div>
     </div>
   );
 }

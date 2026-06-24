@@ -82,23 +82,27 @@ export const starlinkProducts: Product[] = [
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
   headline: "Starlink Installation Perth",
   subHeadline:
-    "Sick of slow, unreliable internet? We install customer-supplied Starlink systems with practical roof mounting, neat cable routing and Wi-Fi setup so you can get online faster without the guesswork.",
+    "Enjoy the performance Starlink is capable of with a professionally installed system that's tested, configured and ready to use. Clean workmanship, practical mounting solutions and local support mean no guesswork and no shortcuts.",
   bulletPoints: [
-    "Roof mounting options",
-    "Clean cable entry into the home",
-    "Conduit protection for exposed cabling",
-    "Router and app setup",
-    "Final setup and alignment checks",
+    "Installed, tested and working before we leave",
+    "Roof penetrations sealed correctly for peace of mind",
+    "Clean, professional installation you'll be proud to have on your home",
+    "5-Year Warranty on all Parts and Labour",
+    "Local support if you need help afterwards",
   ],
-  heroEyebrow: "Fast & Reliable Starlink Setup",
-  heroImage: "/images/solutions/starLink/PXL_20260618_071151096.jpg",
+
+  heroEyebrow: "FAST & RELIABLE STARLINK INSTALLATION",
+
+  heroImage: "/images/solutions/starLink/PXL_20260618_070344256.png",
+
   heroImageAlt: "Starlink dish installed on a Perth roof",
 
   heroSocialProof: {
-    eyebrow: "Google review",
+    eyebrow: "Recent Customer Feedback",
     ratingLabel: "Five star Google review",
-    quote: "Good communication and clean work.",
-    author: "Mark Lumacang",
+    quote:
+      "Daniel came and installed our Starlink on the roof, great experience, he replied to my initial email very quickly. Friendly and prompt service. Will get him back for future projects.",
+    author: " - Paris Rose",
   },
 
   primaryCta: {
@@ -210,10 +214,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const starlinkSolutionTrustItems = [
-  "Starlink Certified Installations",
-  "ACMA Compliant Cabling",
-  "Local Perth Business",
-  "Wi-Fi Upgrades Available",
+  "Starlink Certified Installers",
+  "5 Year Warranty",
+  "Perth Business offering local support",
+  "Fully Insured and Licensed",
 ];
 
 export const whyChooseUsStarlink = {
