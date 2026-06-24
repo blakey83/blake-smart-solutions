@@ -15,7 +15,7 @@ export default function NavBar() {
         <div className="flex min-h-20 items-center justify-between gap-4">
           <Link
             href="/"
-            className="flex min-h-12 items-center"
+            className="hidden min-h-12 items-center lg:flex"
             onClick={() => setIsMenuOpen(false)}
           >
             <Image
@@ -27,6 +27,25 @@ export default function NavBar() {
               className="h-auto w-[240px] sm:w-[330px]"
             />
           </Link>
+
+          <a
+            href="tel:0477948079"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-4 text-xs font-semibold !text-black transition hover:bg-white/85 lg:hidden"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-4 w-4"
+            >
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8.01 9.74a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92Z" />
+            </svg>
+            0477 948 079 for a Free Quote
+          </a>
 
           <nav className="hidden items-center gap-6 xl:flex">
             {navContent.links.map((link) => (
