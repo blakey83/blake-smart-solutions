@@ -106,8 +106,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   },
 
   primaryCta: {
-    label: "Request a Starlink Quote",
+    label: "Request an Installation Quote",
     action: "enquiry",
+    enquiryProductName: "Request a Starlink Quote",
+    enquiryDefaultMessage: "I'm interested in getting my Starlink installed",
   },
   secondaryCta: {
     label: "Call 0477 948 079",

@@ -14,7 +14,7 @@ export function HeroSection() {
         alt={heroSectionContent.imageAlt}
         fill
         sizes="100vw"
-        priority
+        loading="eager"
         className="absolute inset-0 -z-20 object-cover object-[58%_top] sm:object-center"
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(31,41,55,0.80)_0%,rgba(31,41,55,0.66)_46%,rgba(31,41,55,0.88)_100%)] lg:bg-[linear-gradient(90deg,rgba(31,41,55,0.92)_0%,rgba(31,41,55,0.78)_40%,rgba(13,160,245,0.18)_72%,rgba(31,41,55,0.38)_100%)]" />

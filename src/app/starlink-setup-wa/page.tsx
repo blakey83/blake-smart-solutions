@@ -155,10 +155,10 @@ const structuredData = {
 
 type StarlinkImageProps = {
   image: { src: string; alt: string };
-  priority?: boolean;
+  loading?: "eager" | "lazy";
 };
 
-function StarlinkImage({ image, priority = false }: StarlinkImageProps) {
+function StarlinkImage({ image, loading = "lazy" }: StarlinkImageProps) {
   return (
     <div className="overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
       <div className="relative aspect-[4/3] w-full">
@@ -167,8 +167,8 @@ function StarlinkImage({ image, priority = false }: StarlinkImageProps) {
           alt={image.alt}
           fill
           sizes="(min-width: 1024px) 34rem, 100vw"
+          loading={loading}
           className="object-cover"
-          priority={priority}
         />
       </div>
     </div>
@@ -226,7 +226,10 @@ export default function StarlinkSetupWaPage() {
             </div>
           </div>
 
-          <StarlinkImage image={starlinkSetupGuideContent.hero.image} priority />
+          <StarlinkImage
+            image={starlinkSetupGuideContent.hero.image}
+            loading="eager"
+          />
         </div>
       </section>
 

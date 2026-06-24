@@ -37,7 +37,11 @@ function SolutionCta({
     return (
       <button
         type="button"
-        onClick={() => openEnquiryModal()}
+        onClick={() =>
+          openEnquiryModal(button.enquiryProductName, {
+            defaultMessage: button.enquiryDefaultMessage,
+          })
+        }
         className={classes}
       >
         {button.label}
@@ -211,6 +215,7 @@ export function SolutionPageTemplate({
                       alt={heroImageAlt ?? headline}
                       fill
                       sizes="(min-width: 1024px) 40rem, 100vw"
+                      loading="eager"
                       className="object-cover"
                     />
                   </div>

@@ -128,10 +128,8 @@ function parseArticle(body: string): ArticleBlock[] {
 
 function ArticleImage({
   image,
-  priority = false,
 }: {
   image: (typeof whyNbnFeelsSlowImages)[number];
-  priority?: boolean;
 }) {
   return (
     <figure className="my-10 overflow-hidden rounded-[24px] border border-[var(--color-border)] bg-white shadow-[0_14px_30px_rgba(15,23,42,0.05)]">
@@ -142,7 +140,6 @@ function ArticleImage({
           fill
           sizes="(min-width: 768px) 48rem, 100vw"
           className="object-cover"
-          priority={priority}
         />
       </div>
     </figure>
@@ -225,8 +222,8 @@ export default function WhyNbnFeelsSlowPage() {
                 alt={whyNbnFeelsSlowImages[0].alt}
                 fill
                 sizes="(min-width: 1024px) 32rem, 100vw"
+                loading="eager"
                 className="object-cover"
-                priority
               />
             </div>
           </figure>

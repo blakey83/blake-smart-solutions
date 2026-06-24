@@ -2,6 +2,8 @@ export type CtaButton = {
   label: string;
   action: "link" | "enquiry";
   href?: string;
+  enquiryProductName?: string;
+  enquiryDefaultMessage?: string;
 };
 
 export type InfoCard = {
