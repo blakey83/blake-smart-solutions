@@ -88,7 +88,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "10-Year Warranty on all Parts and Labour",
     "Roof penetrations sealed correctly for peace of mind",
     "We take care of your home, as if it were our own",
-    "Installed, tested and working before we leave",
+    "Starlink installed, tested and working before we leave",
     "Local support after the job is complete",
   ],
 
