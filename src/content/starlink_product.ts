@@ -82,7 +82,7 @@ export const starlinkProducts: Product[] = [
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
   headline: "Starlink Installation Perth",
   subHeadline:
-    "Get your Starlink installed with clean cabling, secure mounting and everything tested before we leave.",
+    "Don’t trust your roof to a rushed Starlink install. Get clean cabling, careful mounting and local support after the job.",
   bulletPoints: [
     "Clean, professional installation you'll be proud to have on your home",
     "10-Year Warranty on all Parts and Labour",
