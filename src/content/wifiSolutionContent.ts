@@ -12,8 +12,9 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     "Local support after installation",
   ],
   heroEyebrow: "ATTENTION PERTH INTERNET USERS",
-  heroImage: "/images/work_gallery/wifi_survey.jpeg",
-  heroImageAlt: "Blake Smart Solutions WiFi",
+  heroBackgroundImage: "/Blake_shop_front.jpeg",
+  // heroImage: "/images/work_gallery/wifi_survey.jpeg",
+  // heroImageAlt: "Blake Smart Solutions WiFi",
 
   heroSocialProof: {
     eyebrow: "Google review",
@@ -85,7 +86,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
       icon: "install",
     },
     {
-      title: "Test Coverage And Provide Local Support",
+      title: "Test Coverage And Provide a complete report",
       icon: "support",
     },
   ],

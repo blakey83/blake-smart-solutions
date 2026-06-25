@@ -16,9 +16,10 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     "No mandatory subscriptions or ongoing monitoring fees",
   ],
   heroEyebrow: "AJAX INSTALLATION PERTH",
+  heroBackgroundImage: "/Blake_shop_front.jpeg",
 
-  heroImage: "/images/solutions/ajaxSecurity/ajax_hero.png",
-  heroImageAlt: "Ajax alarm installation by Blake Smart Solutions",
+  // heroImage: "/images/solutions/ajaxSecurity/ajax_hero.png",
+  // heroImageAlt: "Ajax alarm installation by Blake Smart Solutions",
 
   heroSocialProof: {
     eyebrow: "Google review",
@@ -91,7 +92,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
       icon: "install",
     },
     {
-      title: "Explain The App And Provide Local Support",
+      title: "Explain The How Your New System Works",
       icon: "support",
     },
   ],

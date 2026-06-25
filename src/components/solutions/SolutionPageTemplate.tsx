@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { heroSectionContent } from "@/content/home/heroSection";
 import { solutionPageTemplateContent } from "@/content/siteContent";
 import type { WhyChooseUsContent } from "@/lib/types";
 import { openEnquiryModal } from "@/lib/enquiryModal";
@@ -30,7 +31,7 @@ function SolutionCta({
   const variantClasses =
     variant === "primary"
       ? "bg-[var(--color-accent)] text-white shadow-[0_10px_24px_rgba(0,110,184,0.16)] hover:bg-[var(--color-accent-strong)]"
-      : "border border-[var(--color-border-strong)] bg-white text-[var(--color-ink)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]";
+      : "border border-[var(--color-border-strong)] bg-white !text-black hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]";
   const classes = `${baseClasses} ${variantClasses} ${className}`.trim();
 
   if (button.action === "enquiry") {
@@ -155,12 +156,14 @@ export function SolutionPageTemplate({
   headline,
   subHeadline,
   heroEyebrow = solutionPageTemplateContent.heroEyebrow,
+  heroBackgroundImage = heroSectionContent.imageSrc,
   heroImage,
   heroImageAlt,
   bulletPoints,
   heroSocialProof,
   primaryCta,
   secondaryCta,
+  recentWork,
   problemSolutionEyebrow = solutionPageTemplateContent.problemSolutionEyebrow,
   problemSolutionTitle,
   problemSolutionIntro = solutionPageTemplateContent.problemSolutionIntro,
@@ -194,75 +197,86 @@ export function SolutionPageTemplate({
         </section>
       ) : null}
 
-      <section className="border-b border-[var(--color-border)] bg-white">
-        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <section className="relative isolate overflow-hidden border-b border-white/15 bg-[var(--color-ink)] text-white">
+        <Image
+          src={heroBackgroundImage}
+          alt=""
+          fill
+          sizes="100vw"
+          loading="eager"
+          className="absolute inset-0 -z-20 scale-[0.96] object-cover object-[58%_top] sm:scale-100 sm:object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(31,41,55,0.88)_0%,rgba(31,41,55,0.78)_46%,rgba(31,41,55,0.92)_100%)] lg:bg-[linear-gradient(90deg,rgba(31,41,55,0.92)_0%,rgba(31,41,55,0.78)_56%,rgba(13,160,245,0.18)_100%)]" />
+        <div className="mx-auto max-w-6xl px-5 pb-14 pt-4 sm:px-6 sm:pb-16 sm:pt-6 lg:px-8 lg:pb-20 lg:pt-8">
           <div className="max-w-3xl">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-                {heroEyebrow}
-              </p>
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
-                {headline}
-              </h1>
-              <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-                {subHeadline}
-              </p>
-              {heroImage ? (
-                <div className="relative mt-6 overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
-                  <div className="relative aspect-[4/3] w-full">
-                    <Image
-                      src={heroImage}
-                      alt={heroImageAlt ?? headline}
-                      fill
-                      sizes="(min-width: 1024px) 40rem, 100vw"
-                      loading="eager"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              ) : null}
-
-              <div className="mt-6 max-w-2xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-5">
+              <div className="max-w-2xl rounded-2xl border border-white/20 bg-[var(--color-ink)]/75 p-5 shadow-[0_18px_44px_rgba(15,23,42,0.26)] backdrop-blur-sm">
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent-soft)]">
+                    {heroSocialProof.eyebrow}
+                  </span>
                   <span
                     className="text-sm font-semibold tracking-[0.12em] text-amber-500"
                     aria-label={heroSocialProof.ratingLabel}
                   >
                     ★★★★★
                   </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]">
-                    {heroSocialProof.eyebrow}
-                  </span>
                 </div>
-                <p className="mt-3 text-xs leading-5 text-[var(--color-ink)] sm:text-sm">
+                <p className="mt-3 text-xs leading-5 text-white/90 sm:text-sm">
                   &quot;{heroSocialProof.quote}&quot;
                 </p>
-                <p className="mt-3 text-sm font-semibold text-[var(--color-muted)]">
+                <p className="mt-3 text-sm font-semibold text-white/70">
                   {heroSocialProof.author}
                 </p>
               </div>
-              {bulletPoints.length ? (
-                <ul className="mt-6 space-y-2">
-                  {bulletPoints.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
-                    >
-                      <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <SolutionCta
-                  button={primaryCta}
-                  className="hidden sm:inline-flex"
-                />
-                {secondaryCta ? (
-                  <SolutionCta button={secondaryCta} variant="secondary" />
+              <div className="mt-6">
+                <p className="hidden text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-soft)] lg:block">
+                  {heroEyebrow}
+                </p>
+                <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                  {headline}
+                </h1>
+                <p className="mt-5 text-base leading-7 text-white/85 sm:text-lg">
+                  {subHeadline}
+                </p>
+                {heroImage ? (
+                  <div className="relative mt-6 overflow-hidden rounded-[28px] border border-white/20 bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.22)]">
+                    <div className="relative aspect-[4/3] w-full">
+                      <Image
+                        src={heroImage}
+                        alt={heroImageAlt ?? headline}
+                        fill
+                        sizes="(min-width: 1024px) 40rem, 100vw"
+                        loading="eager"
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
                 ) : null}
+
+                {bulletPoints.length ? (
+                  <ul className="mt-6 space-y-2">
+                    {bulletPoints.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-base leading-7 text-white"
+                      >
+                        <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <SolutionCta
+                    button={primaryCta}
+                    className="hidden sm:inline-flex"
+                  />
+                  {secondaryCta ? (
+                    <SolutionCta button={secondaryCta} variant="secondary" />
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>
@@ -270,6 +284,45 @@ export function SolutionPageTemplate({
       </section>
 
       <TrustStrip trustItems={trustItems} />
+
+      {recentWork ? (
+        <section className="bg-white">
+          <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+            <Link
+              href={recentWork.href}
+              className="group grid overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-white shadow-[0_16px_34px_rgba(15,23,42,0.06)] transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-[0_20px_42px_rgba(15,23,42,0.1)] md:grid-cols-[1.05fr_0.95fr]"
+            >
+              <div className="relative min-h-72 bg-[var(--color-card)] md:min-h-[24rem]">
+                <Image
+                  src={recentWork.image}
+                  alt={recentWork.imageAlt ?? recentWork.title}
+                  fill
+                  sizes="(min-width: 1024px) 34rem, 100vw"
+                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-12">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+                  {recentWork.eyebrow}
+                </p>
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+                  {recentWork.title}
+                </h2>
+                <span className="mt-7 inline-flex items-center text-sm font-semibold text-[var(--color-accent)]">
+                  {recentWork.linkLabel ?? "View recent work"}
+                  <span
+                    aria-hidden="true"
+                    className="ml-2 transition group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
+      ) : null}
+
       <WhyBSS content={content} showReviews={false} />
 
       <section className="bg-[var(--color-section)]">

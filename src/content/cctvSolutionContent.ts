@@ -18,8 +18,9 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     "Ongoing local support if you need help after installation",
   ],
   heroEyebrow: "ATTENTION PERTH HOMEOWNERS",
-  heroImage: "/images/solutions/cctv/blake_installation.jpg",
-  heroImageAlt: "Security camera installation by Blake Smart Solutions",
+  heroBackgroundImage: "/Blake_shop_front.jpeg",
+  // heroImage: "/images/solutions/cctv/blake_installation.jpg",
+  // heroImageAlt: "Security camera installation by Blake Smart Solutions",
 
   heroSocialProof: {
     eyebrow: "Google review",
@@ -93,7 +94,7 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
       icon: "install",
     },
     {
-      title: "Walk You Through Footage And Support",
+      title: "Walk You Through How to Use Your System",
       icon: "support",
     },
   ],

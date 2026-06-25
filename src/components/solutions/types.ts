@@ -37,6 +37,15 @@ export type HeroSocialProof = {
   author: string;
 };
 
+export type RecentWorkSection = {
+  image: string;
+  imageAlt?: string;
+  eyebrow: string;
+  title: string;
+  href: string;
+  linkLabel?: string;
+};
+
 export type FaqItem = {
   question: string;
   answer: string;
@@ -58,12 +67,14 @@ export type SolutionPageTemplateProps = {
   headline: string;
   subHeadline: string;
   heroEyebrow?: string;
+  heroBackgroundImage?: string;
   heroImage?: string;
   heroImageAlt?: string;
   bulletPoints: string[];
   heroSocialProof: HeroSocialProof;
   primaryCta: CtaButton;
   secondaryCta?: CtaButton;
+  recentWork?: RecentWorkSection;
   problemSolutionEyebrow?: string;
   problemSolutionTitle: string;
   problemSolutionIntro?: string;

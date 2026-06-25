@@ -82,26 +82,27 @@ export const starlinkProducts: Product[] = [
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
   headline: "Starlink Installation Perth",
   subHeadline:
-    "Enjoy the performance Starlink is capable of with a professionally installed system that's tested, configured and ready to use. Clean workmanship, practical mounting solutions and local support mean no guesswork and no shortcuts.",
+    "Get your Starlink installed with clean cabling, secure mounting and everything tested before we leave.",
   bulletPoints: [
-    "Installed, tested and working before we leave",
-    "Roof penetrations sealed correctly for peace of mind",
     "Clean, professional installation you'll be proud to have on your home",
     "5-Year Warranty on all Parts and Labour",
+    "Roof penetrations sealed correctly for peace of mind",
+    "Installed, tested and working before we leave",
     "Local support if you need help afterwards",
   ],
 
   heroEyebrow: "FAST & RELIABLE STARLINK INSTALLATION",
+  heroBackgroundImage: "/Blake_shop_front.jpeg",
 
-  heroImage: "/images/solutions/starLink/PXL_20260618_070344256.png",
+  // heroImage: "/images/solutions/starLink/PXL_20260618_070344256.png",
 
-  heroImageAlt: "Starlink dish installed on a Perth roof",
+  // heroImageAlt: "Starlink dish installed on a Perth roof",
 
   heroSocialProof: {
     eyebrow: "Recent Customer Feedback",
     ratingLabel: "Five star Google review",
     quote:
-      "Daniel came and installed our Starlink on the roof, great experience, he replied to my initial email very quickly. Friendly and prompt service. Will get him back for future projects.",
+      "Daniel came and installed our Starlink on the roof, great experience, he replied to my initial email very quickly. Friendly and prompt service.",
     author: " - Paris Rose",
   },
 
@@ -115,6 +116,14 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     label: "Call 0477 948 079",
     action: "link",
     href: "tel:0477948079",
+  },
+
+  recentWork: {
+    image: "/images/solutions/starLink/PXL_20260618_070344256.png",
+    imageAlt: "Starlink dish installed on a Perth roof",
+    eyebrow: "RECENT INSTALLATIONS",
+    title: "Check out some of our recent installations",
+    href: "/recent-installations/starlink",
   },
 
   problemSolutionEyebrow: "",
@@ -169,6 +178,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     },
     {
       title: "Test Connection And Hand Over To You",
+      icon: "support",
+    },
+    {
+      title: "Ongoing Support And Maintenance If Needed",
       icon: "support",
     },
   ],
