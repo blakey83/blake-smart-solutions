@@ -85,7 +85,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "Get your Starlink installed with clean cabling, secure mounting and everything tested before we leave.",
   bulletPoints: [
     "Clean, professional installation you'll be proud to have on your home",
-    "5-Year Warranty on all Parts and Labour",
+    "10-Year Warranty on all Parts and Labour",
     "Roof penetrations sealed correctly for peace of mind",
     "Installed, tested and working before we leave",
     "Local support if you need help afterwards",
