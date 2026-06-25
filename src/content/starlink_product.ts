@@ -195,27 +195,82 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     {
       question: "Where should the Starlink dish be installed?",
       answer:
-        "The dish needs a clear sky view with minimal obstructions, but the mount and cable route also matter. We check for practical placement, roof type, cable entry and long-term durability before installing.",
+        "The dish needs a clear view of the sky, but the best position also depends on your roof, trees, cable route and where the router will go inside. We check the practical options before drilling so the dish is mounted in a sensible, durable location.",
     },
     {
-      question: "Do you protect the Starlink cable?",
+      question: "Will you check for obstructions before installing?",
       answer:
-        "Yes. Where cable is exposed to sun or weather, we use suitable conduit and route it neatly so the installation is cleaner and better protected over time.",
+        "Yes. We check the sky view, surrounding trees, rooflines and practical mounting options before the dish is fixed in place. The goal is to avoid guesswork and choose a location that gives your Starlink the best practical chance of performing well.",
     },
     {
-      question: "Will the standard Starlink router cover the whole house?",
+      question: "Will the install damage my roof or walls?",
       answer:
-        "Sometimes, but not always. Larger homes, double brick construction, outdoor areas and sheds often need mesh Wi-Fi, access points or a dedicated wireless link for reliable coverage.",
+        "We take roof entry, sealing, fixing points and cable routing seriously. Every home is different, so we assess the roof type and cable path before starting, then install with care to avoid unnecessary holes, messy penetrations or rough workmanship.",
+    },
+    {
+      question: "Will the cable be neat and protected?",
+      answer:
+        "Yes. Where cable is exposed to sun, weather or possible damage, we use suitable conduit and route it neatly. The aim is a clean, protected cable run that looks intentional, not like an afterthought.",
+    },
+    {
+      question: "Will the Starlink look good on my roof?",
+      answer:
+        "A well-installed Starlink can look clean and modern on the roof. We take care with placement, mounting and cable routing so the finished job looks neat, professional and suited to your home.",
+    },
+    {
+      question: "Do you use quality materials?",
+      answer:
+        "Yes. We use proper mounting hardware, suitable fixings, weather-conscious cable protection and materials chosen for the job. We do not aim for the quickest shortcut; we aim for a Starlink install that holds up over time.",
+    },
+    {
+      question: "Is your workmanship guaranteed?",
+      answer:
+        "Yes. Our Starlink installation workmanship is backed by a 5-year guarantee, with a 10-year guarantee planned soon. If there is an issue with our workmanship, we stand behind the job.",
+    },
+    {
+      question: "Will you leave a mess?",
+      answer:
+        "No. We treat your home with respect, clean up after ourselves and leave the work area tidy. The goal is a neat Starlink installation without cable scraps, packaging or drilling mess left behind.",
     },
     {
       question: "Do you set up and test everything before leaving?",
       answer:
-        "Yes. We complete the dish setup, app checks, router setup and basic testing so you know the system is online and any Wi-Fi coverage limitations are clear.",
+        "Yes. We complete the dish setup, app checks, router setup and basic testing before we leave. We also explain what has been done so you know the system is online and understand any Wi-Fi coverage limitations.",
+    },
+    {
+      question: "Will the standard Starlink router cover the whole house?",
+      answer:
+        "Sometimes, but not always. Larger homes, double brick construction, outdoor areas and sheds may need mesh Wi-Fi, ceiling access points or a dedicated wireless link for reliable coverage beyond the main router.",
+    },
+    {
+      question: "Can you help with sheds or outdoor coverage?",
+      answer:
+        "Yes. If you need internet to a shed, workshop, granny flat, patio or other part of the property, we can advise on suitable Wi-Fi, access point or wireless bridge options after the Starlink service is working.",
+    },
+    {
+      question: "Do you help if I am unsure what mount I need?",
+      answer:
+        "Yes. You do not need to know the perfect mount before contacting us. We can assess your roof, the dish position and the cable route, then recommend a practical mounting option for your property.",
     },
     {
       question: "Do I need to buy Starlink before booking?",
       answer:
-        "Yes. Blake Smart Solutions installs customer-supplied Starlink systems. Once your Starlink kit has arrived, we can install, configure and test the service for you.",
+        "Yes. Blake Smart Solutions installs customer-supplied Starlink systems. Once your Starlink kit has arrived, we can mount it, route the cable, configure the system and test the service for you.",
+    },
+    {
+      question: "Can you help if I already started the setup?",
+      answer:
+        "Yes. If the kit is already opened, partly set up or you have run into confusion with the app, router, cable or placement, we can help complete the installation and get the system properly tested.",
+    },
+    {
+      question: "What happens if something is confusing after the install?",
+      answer:
+        "We provide advice before, during and after the installation. If you have a question after we leave, you can contact us for local support instead of feeling like you have been left to work it out alone.",
+    },
+    {
+      question: "Will you actually turn up?",
+      answer:
+        "We know customers hate being left waiting or chasing tradies. Once your booking is confirmed, we communicate clearly, arrive as arranged, and let you know if anything genuinely needs to change.",
     },
   ],
 
