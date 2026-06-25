@@ -88,7 +88,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "10-Year Warranty on all Parts and Labour",
     "Roof penetrations sealed correctly for peace of mind",
     "Installed, tested and working before we leave",
-    "Local support if you need help afterwards",
+    "Local support after the job is complete",
   ],
 
   heroEyebrow: "FAST & RELIABLE STARLINK INSTALLATION",
@@ -181,7 +181,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
       icon: "support",
     },
     {
-      title: "Ongoing Support And Maintenance If Needed",
+      title: "Ongoing Support After We Leave",
       icon: "support",
     },
   ],
@@ -230,7 +230,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
 
 export const starlinkSolutionTrustItems = [
   "Starlink Certified Installers",
-  "5 Year Warranty",
+  "10 Year Warranty",
   "Perth Business offering local support",
   "Fully Insured and Licensed",
 ];
