@@ -225,7 +225,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     {
       question: "Is your workmanship guaranteed?",
       answer:
-        "Yes. Our Starlink installation workmanship is backed by a 5-year guarantee, with a 10-year guarantee planned soon. If there is an issue with our workmanship, we stand behind the job.",
+        "Yes. Our Starlink installation workmanship is backed by a 10-year guarantee. If there is an issue with our workmanship, we stand behind the job.",
     },
     {
       question: "Will you leave a mess?",
