@@ -25,3 +25,14 @@ export function trackEnquirySubmit() {
     event_label: "Enquiry form submitted",
   });
 }
+
+export function trackPhoneClick() {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "phone_click", {
+    event_category: "lead",
+    event_label: "Phone call CTA clicked",
+  });
+}

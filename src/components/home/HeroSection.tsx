@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import { heroSectionContent } from "@/content/home/heroSection";
 
@@ -67,6 +68,7 @@ export function HeroSection() {
             <div className="mt-4 flex flex-col gap-2.5 sm:mt-7 sm:flex-row sm:gap-3">
               <Link
                 href="tel:0477948079"
+                onClick={trackPhoneClick}
                 className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-[var(--color-accent)] px-5 py-2 text-base font-semibold text-white shadow-[0_14px_28px_rgba(13,160,245,0.22)] transition hover:bg-white hover:text-[var(--color-ink)] sm:w-auto sm:py-3"
               >
                 {heroSectionContent.callCTA}

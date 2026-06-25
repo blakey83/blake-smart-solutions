@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PhoneLink } from "@/components/PhoneLink";
 import { footerContent } from "@/content/siteContent";
 
 export function Footer() {
@@ -62,12 +63,12 @@ export function Footer() {
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-white/70">
               <li>
-                <a
+                <PhoneLink
                   href={footerContent.phoneHref}
                   className="transition hover:text-white"
                 >
                   {footerContent.phone}
-                </a>
+                </PhoneLink>
               </li>
               <li>
                 <a

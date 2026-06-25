@@ -5,6 +5,7 @@ import {
   enquiryProductContent,
   wifiArticleCtaContent,
 } from "@/content/siteContent";
+import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 type WifiLandingPageCtasProps = {
@@ -36,7 +37,11 @@ export function WifiLandingPageCtas({
       </button>
 
       {showSecondary ? (
-        <Link href="tel:0477948079" className={secondaryClasses}>
+        <Link
+          href="tel:0477948079"
+          onClick={trackPhoneClick}
+          className={secondaryClasses}
+        >
           {secondaryLabel}
         </Link>
       ) : null}

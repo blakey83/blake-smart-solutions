@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { enquiryModalContent } from "@/content/siteContent";
 import type { Product } from "@/lib/types";
 import {
+  trackPhoneClick,
   trackEnquiryOpen,
   trackEnquirySubmit,
   type EnquiryOpenTrackingParams,
@@ -205,6 +206,7 @@ export default function EnquiryModal({
             <div className="mt-3 flex flex-col gap-2 sm:flex-row">
               <a
                 href="tel:0477948079"
+                onClick={trackPhoneClick}
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:border-sky-500 hover:text-sky-600"
               >
                 {enquiryModalContent.callCta}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PhoneLink } from "@/components/PhoneLink";
 import { productPageTemplateContent } from "@/content/siteContent";
 import type { Product } from "@/lib/types";
 import { ProductCardGrid } from "@/components/products/ProductCardGrid";
@@ -65,12 +66,12 @@ export function ProductPageTemplate({
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <a
+            <PhoneLink
               href="tel:0477948079"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
             >
               {productPageTemplateContent.callCta}
-            </a>
+            </PhoneLink>
             <Link
               href="/#final-cta"
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"

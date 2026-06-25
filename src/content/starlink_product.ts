@@ -260,12 +260,16 @@ export const whyChooseUsStarlink = {
         text: "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
       },
       {
-        name: "Lesley Middleton",
-        text: "Came over at the appointed time and fixed my security camera system efficiently. Really went above and beyond.",
+        name: "Sid Chahal",
+        text: "recently had Blake install my Starlink system at my property, and I couldn’t be happier with the service. From the first call to the final cleanup, Blake was professional, knowledgeable, and incredibly efficient.",
       },
       {
-        name: "Juan B",
-        text: "Fantastic service and can sleep at night knowing I have a full CCTV camera system installed at my house.",
+        name: "Mark Lumacang",
+        text: "Good communication and clean work.",
+      },
+      {
+        name: "Lesley Middleton",
+        text: "Came over at the appointed time and fixed my security camera system efficiently. Really went above and beyond.",
       },
     ],
   },

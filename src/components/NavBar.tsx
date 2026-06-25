@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { navContent } from "@/content/siteContent";
+import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 export default function NavBar() {
@@ -30,6 +31,7 @@ export default function NavBar() {
 
           <a
             href="tel:0477948079"
+            onClick={trackPhoneClick}
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-4 text-xs font-semibold !text-black transition hover:bg-white/85 lg:hidden"
           >
             <svg

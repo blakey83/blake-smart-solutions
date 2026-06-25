@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { PhoneLink } from "@/components/PhoneLink";
 import { starlinkSetupGuideContent } from "@/content/page-contents/starlinkSetupPerth";
 import { siteMetadataContent } from "@/content/siteContent";
 import { StarlinkSetupCta } from "./StarlinkSetupCta";
@@ -323,7 +324,7 @@ export default function StarlinkSetupWaPage() {
                 <StarlinkSetupCta>
                   {starlinkSetupGuideContent.conclusion.cta.buttonLabel}
                 </StarlinkSetupCta>
-                <a
+                <PhoneLink
                   href="tel:0477948079"
                   className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
                 >
@@ -331,7 +332,7 @@ export default function StarlinkSetupWaPage() {
                     starlinkSetupGuideContent.conclusion.cta
                       .secondaryButtonLabel
                   }
-                </a>
+                </PhoneLink>
               </div>
             </div>
           </div>

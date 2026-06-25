@@ -1,6 +1,7 @@
 "use client";
 
 import { securityLandingPageContent } from "@/content/landing-page-contents/securityLandingPage";
+import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 export function MiniCTA() {
@@ -33,6 +34,7 @@ export function MiniCTA() {
           </button>
           <a
             href="tel:0477948079"
+            onClick={trackPhoneClick}
             className="inline-flex min-h-14 items-center justify-center gap-3 rounded-md border border-white/40 bg-black/35 px-5 text-sm font-black uppercase text-white transition hover:border-white hover:bg-white/10 sm:px-6"
           >
             <PhoneIcon />

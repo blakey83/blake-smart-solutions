@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { heroSectionContent } from "@/content/home/heroSection";
 import { solutionPageTemplateContent } from "@/content/siteContent";
 import type { WhyChooseUsContent } from "@/lib/types";
+import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type {
   ApproachStep,
@@ -51,7 +52,11 @@ function SolutionCta({
   }
 
   return (
-    <Link href={button.href ?? "/"} className={classes}>
+    <Link
+      href={button.href ?? "/"}
+      onClick={button.href?.startsWith("tel:") ? trackPhoneClick : undefined}
+      className={classes}
+    >
       {button.label}
     </Link>
   );

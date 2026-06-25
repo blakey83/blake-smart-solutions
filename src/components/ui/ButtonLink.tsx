@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { navContent } from "@/content/siteContent";
+import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 type ButtonLinkProps = {
@@ -45,7 +46,11 @@ export function ButtonLink({
   }
 
   return (
-    <a href={href} className={classes}>
+    <a
+      href={href}
+      onClick={href.startsWith("tel:") ? trackPhoneClick : undefined}
+      className={classes}
+    >
       {children}
     </a>
   );
