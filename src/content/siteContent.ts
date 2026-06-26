@@ -31,6 +31,7 @@ export const footerContent = {
     { label: "Popular", href: "/#specials" },
     { label: "Services", href: "/#services" },
     { label: "Contact", href: "/#final-cta" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
   ],
   serviceLinksTitle: "Services",
   serviceLinks: [
@@ -69,11 +70,16 @@ export const enquiryModalContent = {
   okCta: "OK",
   placeholders: {
     name: "Your name",
-    phone: "Phone number",
-    email: "Email address",
+    contact: "Phone Number or Email",
     suburb: "Suburb",
     message: "Tell me what you need",
   },
+  contactInvalidError: "Please enter a valid phone number or email address.",
+  privacyDisclaimerBeforeLink:
+    "We'll use your contact details only to respond to this enquiry and provide the service you've asked about. View our",
+  privacyDisclaimerAfterLink: ".",
+  privacyPolicyLabel: "Privacy Policy",
+  privacyPolicyHref: "/privacy-policy",
   sendingCta: "Sending...",
   submitCta: "Send Enquiry",
 };

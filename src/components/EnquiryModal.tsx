@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { enquiryModalContent } from "@/content/siteContent";
 import type { Product } from "@/lib/types";
 import {
@@ -12,8 +13,7 @@ import {
 
 const INITIAL_FORM_DATA = {
   name: "",
-  phone: "",
-  email: "",
+  contact: "",
   suburb: "",
   message: "",
   website: "",
@@ -34,6 +34,33 @@ function getInitialMessage(product: Product) {
   }
 
   return `${enquiryModalContent.productMessagePrefix}${product.name}${enquiryModalContent.productMessageSuffix}`;
+}
+
+function getContactPayload(contact: string) {
+  const trimmedContact = contact.trim();
+
+  if (!trimmedContact) {
+    return null;
+  }
+
+  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedContact)) {
+    return {
+      email: trimmedContact,
+      phone: "",
+    };
+  }
+
+  const phoneDigits = trimmedContact.replace(/\D/g, "");
+  const hasPhoneCharactersOnly = /^[\d\s()+.-]+$/.test(trimmedContact);
+
+  if (hasPhoneCharactersOnly && phoneDigits.length >= 8) {
+    return {
+      email: "",
+      phone: trimmedContact,
+    };
+  }
+
+  return null;
 }
 
 export default function EnquiryModal({
@@ -137,6 +164,17 @@ export default function EnquiryModal({
       message: "",
     });
 
+    const contactPayload = getContactPayload(formData.contact);
+
+    if (!contactPayload) {
+      setIsSubmitting(false);
+      setStatus({
+        type: "error",
+        message: enquiryModalContent.contactInvalidError,
+      });
+      return;
+    }
+
     try {
       const response = await fetch("/api/enquiry", {
         method: "POST",
@@ -145,6 +183,7 @@ export default function EnquiryModal({
         },
         body: JSON.stringify({
           ...formData,
+          ...contactPayload,
           productName: product.name,
           formStartedAt,
         }),
@@ -261,20 +300,14 @@ export default function EnquiryModal({
             />
 
             <input
-              name="phone"
-              type="tel"
-              placeholder={enquiryModalContent.placeholders.phone}
-              value={formData.phone}
+              name="contact"
+              type="text"
+              placeholder={enquiryModalContent.placeholders.contact}
+              value={formData.contact}
               onChange={handleChange}
-              className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
-            />
-
-            <input
-              name="email"
-              type="email"
-              placeholder={enquiryModalContent.placeholders.email}
-              value={formData.email}
-              onChange={handleChange}
+              required
+              inputMode="email"
+              autoComplete="email tel"
               className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
             />
 
@@ -296,6 +329,17 @@ export default function EnquiryModal({
               required
               className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
             />
+
+            <p className="text-sm leading-6 text-slate-600">
+              {enquiryModalContent.privacyDisclaimerBeforeLink}{" "}
+              <Link
+                href={enquiryModalContent.privacyPolicyHref}
+                className="font-semibold text-sky-600 transition hover:text-sky-700"
+              >
+                {enquiryModalContent.privacyPolicyLabel}
+              </Link>
+              {enquiryModalContent.privacyDisclaimerAfterLink}
+            </p>
 
             <button
               type="submit"
