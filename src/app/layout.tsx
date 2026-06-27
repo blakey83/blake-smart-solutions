@@ -88,6 +88,13 @@ export default function RootLayout({
                 gtag('config', 'AW-18035265737');
               `}
             </Script>
+            <Script id="google-ads-phone-conversion" strategy="afterInteractive">
+              {`
+                gtag('config', 'AW-18035265737/ia68COyZw8YcEMmh8ZdD', {
+                  'phone_conversion_number': '0477 948 079'
+                });
+              `}
+            </Script>
             <GoogleAnalytics gaId="G-ZFPD80HG5B" />
           </>
         )}
