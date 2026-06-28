@@ -16,6 +16,7 @@ export const navContent = {
     { label: "Wi-Fi & Network Solutions", href: "/wifi-solutions-perth" },
     { label: "Security Camera Solutions", href: "/security-cameras-perth" },
     { label: "Alarm & Access Control", href: "/ajax-security-perth" },
+    { label: "Starlink Installation", href: "/starlink-installation-perth" },
   ],
   quoteCta: "Request a Quote",
   mobileToggleLabel: "Toggle navigation menu",
