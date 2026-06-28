@@ -84,12 +84,11 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   subHeadline:
     "Don’t trust your roof to a rushed Starlink install. Get clean cabling, careful mounting and local support after the job.",
   bulletPoints: [
-    "Clean, professional installation you'll be proud to have on your home",
+    "From $549 including a quality Australian-made mount and a clean, professional finish on your roof",
     "10-Year Warranty on all Parts and Labour",
-    "Roof penetrations sealed correctly for peace of mind",
-    "We take care of your home, as if it were our own",
-    "Starlink installed, tested and working before we leave",
-    "Local support after the job is complete",
+    "Everything installed, tested and clean working before we leave",
+    "Local support before and after the job is complete",
+    "Roof penetrations sealed correctly for peace of mind. We take care of your home, as if it were our own",
   ],
 
   heroEyebrow: "FAST & RELIABLE STARLINK INSTALLATION",
