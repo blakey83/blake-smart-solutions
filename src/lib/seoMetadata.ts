@@ -6,6 +6,7 @@ type SeoMetadataOptions = {
   title: string;
   description: string;
   path: string;
+  keywords?: string[];
   image?: {
     url: string;
     width?: number;
@@ -28,6 +29,7 @@ export function buildSeoMetadata({
   title,
   description,
   path,
+  keywords,
   image = defaultImage,
   type = "website",
 }: SeoMetadataOptions): Metadata {
@@ -37,6 +39,7 @@ export function buildSeoMetadata({
   return {
     title,
     description,
+    keywords,
     alternates: {
       canonical: url,
     },

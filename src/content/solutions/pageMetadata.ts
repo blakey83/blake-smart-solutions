@@ -33,7 +33,7 @@ export const servicePageMetadataContent = {
   starlinkInstallationPerth: {
     title: "Starlink Installation Perth | Dish, Cable & Wi-Fi Setup",
     description:
-      "Professional Starlink installation in Perth. Dish mounting, clean cable routing, router setup, Wi-Fi upgrades, outdoor coverage and shed internet solutions.",
+      "Starlink installation Perth service for clean dish mounting, protected cable routing, router setup, Wi-Fi upgrades, outdoor coverage and shed internet solutions.",
   },
   tvAntennasPerth: {
     title: "TV Antennas | Blake Smart Solutions",

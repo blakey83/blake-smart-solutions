@@ -8,6 +8,7 @@ const MAX_SITEMAP_URLS = 50_000;
 
 const ARTICLE_ROUTES = new Set([
   "/articles/7-ways-to-fix-wifi",
+  "/articles/is-starlink-worth-it",
   "/articles/starlink-setup-wa",
   "/articles/why-nbn-feels-slow",
 ]);
@@ -168,7 +169,7 @@ export function getRoutePriority(route: string): number {
   if (
     ARTICLE_ROUTES.has(route) ||
     route.includes("/blog/") ||
-    route.includes("/articles/") ||
+    route.startsWith("/articles/") ||
     route.includes("/guides/")
   ) {
     return 0.7;
@@ -204,7 +205,7 @@ export function getRouteChangeFrequency(
   if (
     ARTICLE_ROUTES.has(route) ||
     route.includes("/blog/") ||
-    route.includes("/articles/") ||
+    route.startsWith("/articles/") ||
     route.includes("/guides/")
   ) {
     return "monthly";
