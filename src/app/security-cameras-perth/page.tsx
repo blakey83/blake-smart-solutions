@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
-import { servicePageMetadataContent } from "@/content/pageMetadata";
-import { cctvSolutionContent } from "@/content/cctvSolutionContent";
-import { cctvSolutionTrustItems } from "@/content/cctvSolutionContent";
-import { whyChooseUsSecurity } from "@/content/cctvSolutionContent";
+import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
+import { cctvSolutionContent } from "@/content/solutions/cctvSolutionContent";
+import { cctvSolutionTrustItems } from "@/content/solutions/cctvSolutionContent";
+import { whyChooseUsSecurity } from "@/content/solutions/cctvSolutionContent";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

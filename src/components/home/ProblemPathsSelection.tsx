@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { problemPathsSectionContent } from "@/content/home/sections";
-import { problemPaths } from "@/content/products";
+import { problemPathsSectionContent } from "@/content/components/home/sections";
+import { problemPaths } from "@/content/components/products";
 import { SectionHeading } from "../ui/SectionHeading";
 
 export function ProblemPathsSelection() {

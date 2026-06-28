@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneLink } from "@/components/PhoneLink";
-import { footerContent } from "@/content/siteContent";
+import { footerContent } from "@/content/components/siteContent";
 
 export function Footer() {
   return (

@@ -3,7 +3,7 @@
 import {
   enquiryProductContent,
   wifiArticleCtaContent,
-} from "@/content/siteContent";
+} from "@/content/components/siteContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 const DEFAULT_MESSAGE = wifiArticleCtaContent.defaultMessage;

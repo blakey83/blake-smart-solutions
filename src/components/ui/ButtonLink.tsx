@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { navContent } from "@/content/siteContent";
+import { navContent } from "@/content/components/siteContent";
 import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 

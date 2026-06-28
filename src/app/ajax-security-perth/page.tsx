@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
-import { servicePageMetadataContent } from "@/content/pageMetadata";
-import { alarmsSolutionContent } from "@/content/alarmSolutionsContent";
-import { alarmsSolutionTrustItems } from "@/content/alarmSolutionsContent";
-import { whyChooseUsAlarms } from "@/content/alarmSolutionsContent";
+import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
+import { alarmsSolutionContent } from "@/content/solutions/alarmSolutionsContent";
+import { alarmsSolutionTrustItems } from "@/content/solutions/alarmSolutionsContent";
+import { whyChooseUsAlarms } from "@/content/solutions/alarmSolutionsContent";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

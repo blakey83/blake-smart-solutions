@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { enquiryPageContent } from "@/content/page-contents/enquiryPage";
-import { enquiryProductContent } from "@/content/siteContent";
+import { enquiryPageContent } from "@/content/pages/enquiryPage";
+import { enquiryProductContent } from "@/content/components/siteContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 function openEnquiryPageModal() {

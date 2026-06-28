@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { enquiryModalContent } from "@/content/siteContent";
+import { enquiryModalContent } from "@/content/components/siteContent";
 import type { Product } from "@/lib/types";
 import {
   trackPhoneClick,

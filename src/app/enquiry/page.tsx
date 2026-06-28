@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { enquiryPageContent } from "@/content/page-contents/enquiryPage";
+import { enquiryPageContent } from "@/content/pages/enquiryPage";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 import { EnquiryPageClient } from "./EnquiryPageClient";
 

@@ -6,7 +6,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { EnquiryModalProvider } from "@/components/EnquiryModalProvider";
-import { siteMetadataContent } from "@/content/siteContent";
+import { siteMetadataContent } from "@/content/components/siteContent";
 import { SITE_URL } from "@/lib/seoRoutes";
 
 const geistSans = Geist({

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { enquiryProductContent } from "@/content/siteContent";
+import { enquiryProductContent } from "@/content/components/siteContent";
 import type { Product } from "@/lib/types";
 import EnquiryModal from "@/components/EnquiryModal";
 import type { EnquiryOpenTrackingParams } from "@/lib/analytics";

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { ProductPageTemplate } from "@/components/products/ProductPageTemplate";
-import { servicePageMetadataContent } from "@/content/pageMetadata";
+import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
 import {
   dataCablingProducts,
   dataIntro,
   whyChooseUsDataCabling,
-} from "@/content/data_products";
+} from "@/content/solutions/data_products";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

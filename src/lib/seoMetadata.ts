@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL, getAbsoluteCanonicalUrl } from "@/lib/seoRoutes";
-import { siteMetadataContent } from "@/content/siteContent";
+import { siteMetadataContent } from "@/content/components/siteContent";
 
 type SeoMetadataOptions = {
   title: string;

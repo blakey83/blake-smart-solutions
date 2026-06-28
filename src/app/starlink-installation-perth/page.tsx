@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
-import { servicePageMetadataContent } from "@/content/pageMetadata";
-import { starlinkSetupGuideContent } from "@/content/page-contents/starlinkSetupPerth";
+import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
+import { starlinkSetupGuideContent } from "@/content/articles/starlinkSetupPerth";
 import {
   starlinkSolutionContent,
   starlinkSolutionTrustItems,
   whyChooseUsStarlink,
-} from "@/content/starlink_product";
+} from "@/content/solutions/starlink_product";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

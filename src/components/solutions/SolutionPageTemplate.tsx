@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { heroSectionContent } from "@/content/home/heroSection";
-import { solutionPageTemplateContent } from "@/content/siteContent";
+import { heroSectionContent } from "@/content/components/home/heroSection";
+import { solutionPageTemplateContent } from "@/content/components/siteContent";
 import type { WhyChooseUsContent } from "@/lib/types";
 import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";

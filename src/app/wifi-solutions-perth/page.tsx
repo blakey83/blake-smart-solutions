@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
-import { whyNbnFeelsSlowContent } from "@/content/article-content/content";
-import { wifiLandingPageContent } from "@/content/landing-page-contents/wifiLandingPage";
-import { wifiSolutionsPerthPageContent } from "@/content/page-contents/wifiSolutionsPerth";
-import { wifiSolutionContent } from "@/content/wifiSolutionContent";
-import { wifiSolutionTrustItems } from "@/content/wifiSolutionContent";
-import { whyChooseUsWiFi } from "@/content/wifiSolutionContent";
+import { whyNbnFeelsSlowContent } from "@/content/articles/whyNbnFeelsSlow";
+import { wifiLandingPageContent } from "@/content/articles/wifiLandingPage";
+import { wifiSolutionsPerthPageContent } from "@/content/solutions/wifiSolutionsPerth";
+import { wifiSolutionContent } from "@/content/solutions/wifiSolutionContent";
+import { wifiSolutionTrustItems } from "@/content/solutions/wifiSolutionContent";
+import { whyChooseUsWiFi } from "@/content/solutions/wifiSolutionContent";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

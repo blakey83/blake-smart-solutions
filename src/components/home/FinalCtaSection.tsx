@@ -1,4 +1,4 @@
-import { finalCtaSectionContent } from "@/content/home/sections";
+import { finalCtaSectionContent } from "@/content/components/home/sections";
 import { ButtonLink } from "../ui/ButtonLink";
 
 export function FinalCtaSection() {

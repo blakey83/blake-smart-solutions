@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { relatedServicesContent } from "@/content/siteContent";
-import { services } from "@/content/products";
+import { relatedServicesContent } from "@/content/components/siteContent";
+import { services } from "@/content/components/products";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 type RelatedServicesSectionProps = {

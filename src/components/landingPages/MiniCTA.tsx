@@ -1,6 +1,6 @@
 "use client";
 
-import { securityLandingPageContent } from "@/content/landing-page-contents/securityLandingPage";
+import { securityLandingPageContent } from "@/content/components/securityLandingPage";
 import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 

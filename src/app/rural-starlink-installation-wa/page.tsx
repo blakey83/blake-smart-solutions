@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
-import { servicePageMetadataContent } from "@/content/pageMetadata";
-import { starlinkSolutionTrustItems } from "@/content/landing-page-contents/ruralStarlink";
-import { RuralStarlinkSolutionContent } from "@/content/landing-page-contents/ruralStarlink";
-import { whyChooseUsRuralStarlink } from "@/content/landing-page-contents/ruralStarlink";
+import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
+import { starlinkSolutionTrustItems } from "@/content/solutions/ruralStarlink";
+import { RuralStarlinkSolutionContent } from "@/content/solutions/ruralStarlink";
+import { whyChooseUsRuralStarlink } from "@/content/solutions/ruralStarlink";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

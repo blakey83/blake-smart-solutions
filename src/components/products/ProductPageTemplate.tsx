@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PhoneLink } from "@/components/PhoneLink";
-import { productPageTemplateContent } from "@/content/siteContent";
+import { productPageTemplateContent } from "@/content/components/siteContent";
 import type { Product } from "@/lib/types";
 import { ProductCardGrid } from "@/components/products/ProductCardGrid";
 import { RelatedServicesSection } from "@/components/services/RelatedServicesSection";

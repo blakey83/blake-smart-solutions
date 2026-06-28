@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneLink } from "@/components/PhoneLink";
-import { starlinkSetupGuideContent } from "@/content/page-contents/starlinkSetupPerth";
-import { siteMetadataContent } from "@/content/siteContent";
+import { starlinkSetupGuideContent } from "@/content/articles/starlinkSetupPerth";
+import { siteMetadataContent } from "@/content/components/siteContent";
 import { StarlinkSetupCta } from "./StarlinkSetupCta";
 
 const pagePath = starlinkSetupGuideContent.pagePath;

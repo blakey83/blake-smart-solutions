@@ -4,8 +4,8 @@ import { ProblemPathsSelection } from "@/components/home/ProblemPathsSelection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { WhyBSS } from "@/components/landingPages/WhyBSS";
-import { whyChooseUsHome } from "@/content/home/sections";
-import { trustItems } from "@/content/products";
+import { whyChooseUsHome } from "@/content/components/home/sections";
+import { trustItems } from "@/content/components/products";
 
 export default function Home() {
   return (

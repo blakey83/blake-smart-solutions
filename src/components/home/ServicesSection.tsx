@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { servicesSectionContent } from "@/content/home/sections";
-import { services } from "@/content/products";
+import { servicesSectionContent } from "@/content/components/home/sections";
+import { services } from "@/content/components/products";
 import { SectionHeading } from "../ui/SectionHeading";
 
 export function ServicesSection() {

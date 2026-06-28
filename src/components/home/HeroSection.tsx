@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
-import { heroSectionContent } from "@/content/home/heroSection";
+import { heroSectionContent } from "@/content/components/home/heroSection";
 
 export function HeroSection() {
   return (

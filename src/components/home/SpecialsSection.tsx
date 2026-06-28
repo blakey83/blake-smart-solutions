@@ -1,5 +1,5 @@
-import { specialsSectionContent } from "@/content/home/sections";
-import { specials } from "@/content/products";
+import { specialsSectionContent } from "@/content/components/home/sections";
+import { specials } from "@/content/components/products";
 import { SectionHeading } from "../ui/SectionHeading";
 import { ProductCardGrid } from "../products/ProductCardGrid";
 

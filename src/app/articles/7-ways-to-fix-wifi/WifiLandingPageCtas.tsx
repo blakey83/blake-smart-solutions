@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
   enquiryProductContent,
   wifiArticleCtaContent,
-} from "@/content/siteContent";
+} from "@/content/components/siteContent";
 import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 

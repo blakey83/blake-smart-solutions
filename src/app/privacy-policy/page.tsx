@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { privacyPolicyContent } from "@/content/page-contents/privacyPolicy";
+import { privacyPolicyContent } from "@/content/pages/privacyPolicy";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
 export const metadata: Metadata = buildSeoMetadata({

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
-import { siteMetadataContent } from "@/content/siteContent";
+import { siteMetadataContent } from "@/content/components/siteContent";
 import { WifiArticleInlineCta } from "../7-ways-to-fix-wifi/WifiArticleInlineCta";
 import { WifiLandingPageCtas } from "../7-ways-to-fix-wifi/WifiLandingPageCtas";
 import {
   whyNbnFeelsSlowContent,
   whyNbnFeelsSlowImages,
-} from "@/content/article-content/content";
+} from "@/content/articles/whyNbnFeelsSlow";
 
 const pagePath = whyNbnFeelsSlowContent.pagePath;
 const pageUrl = `${siteMetadataContent.website}${pagePath}`;

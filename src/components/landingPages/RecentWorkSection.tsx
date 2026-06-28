@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { securityLandingPageContent } from "@/content/landing-page-contents/securityLandingPage";
+import { securityLandingPageContent } from "@/content/components/securityLandingPage";
 
 export function RecentWorkSection() {
   const { recentWork } = securityLandingPageContent;
