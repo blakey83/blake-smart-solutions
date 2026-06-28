@@ -1,5 +1,5 @@
 export const starlinkSetupGuideContent = {
-  pagePath: "/starlink-setup-wa",
+  pagePath: "/articles/starlink-setup-wa",
   pageTitle:
     "How To Set Up Starlink In WA | Starlink Installation Guide",
   pageDescription:

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Fragment } from "react";
 import { siteMetadataContent } from "@/content/siteContent";
 import { WifiArticleInlineCta } from "../7-ways-to-fix-wifi/WifiArticleInlineCta";
@@ -270,6 +271,12 @@ export default function WhyNbnFeelsSlowPage() {
             primaryLabel={whyNbnFeelsSlowContent.finalCta.cta}
             showSecondary={false}
           />
+          <Link
+            href="/wifi-solutions-perth"
+            className="mt-5 inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+          >
+            View Wi-Fi solutions Perth
+          </Link>
         </div>
       </section>
     </div>

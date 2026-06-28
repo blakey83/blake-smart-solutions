@@ -1,5 +1,5 @@
 export const whyNbnFeelsSlowContent = {
-  pagePath: "/why-nbn-feels-slow",
+  pagePath: "/articles/why-nbn-feels-slow",
   metadata: {
     title: "Why Fast NBN (or Starlink) Still Feels Slow (And How To Fix It)",
     description:

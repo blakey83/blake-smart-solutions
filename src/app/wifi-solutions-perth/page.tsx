@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
+import { whyNbnFeelsSlowContent } from "@/content/article-content/content";
+import { wifiLandingPageContent } from "@/content/landing-page-contents/wifiLandingPage";
 import { wifiSolutionsPerthPageContent } from "@/content/page-contents/wifiSolutionsPerth";
 import { wifiSolutionContent } from "@/content/wifiSolutionContent";
 import { wifiSolutionTrustItems } from "@/content/wifiSolutionContent";
@@ -16,6 +18,21 @@ export const metadata: Metadata = buildSeoMetadata({
     alt: "WiFi coverage testing and installation in Perth",
   },
 });
+
+const relatedWifiArticles = [
+  {
+    title: wifiLandingPageContent.metadata.title,
+    description: wifiLandingPageContent.metadata.description,
+    href: "/articles/7-ways-to-fix-wifi",
+    cta: wifiSolutionsPerthPageContent.guide.cta,
+  },
+  {
+    title: whyNbnFeelsSlowContent.metadata.title,
+    description: whyNbnFeelsSlowContent.metadata.description,
+    href: whyNbnFeelsSlowContent.pagePath,
+    cta: "Read why fast internet still feels slow",
+  },
+];
 
 export default function WifiSolutionsPerthPage() {
   return (
@@ -38,12 +55,25 @@ export default function WifiSolutionsPerthPage() {
             <p className="mt-4 text-base leading-7 text-[var(--color-muted)]">
               {wifiSolutionsPerthPageContent.guide.description}
             </p>
-            <Link
-              href="/7-ways-to-fix-wifi"
-              className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
-            >
-              {wifiSolutionsPerthPageContent.guide.cta}
-            </Link>
+            <div className="mt-7 grid gap-4 sm:grid-cols-2">
+              {relatedWifiArticles.map((article) => (
+                <Link
+                  key={article.href}
+                  href={article.href}
+                  className="group flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-5 transition hover:border-[var(--color-accent)] hover:bg-white"
+                >
+                  <h3 className="text-lg font-semibold tracking-tight text-[var(--color-ink)]">
+                    {article.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-6 text-[var(--color-muted)]">
+                    {article.description}
+                  </p>
+                  <span className="mt-5 text-sm font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
+                    {article.cta}
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

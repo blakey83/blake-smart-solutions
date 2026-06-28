@@ -7,9 +7,9 @@ const APP_DIRECTORY = path.join(process.cwd(), "src", "app");
 const MAX_SITEMAP_URLS = 50_000;
 
 const ARTICLE_ROUTES = new Set([
-  "/7-ways-to-fix-wifi",
-  "/starlink-setup-wa",
-  "/why-nbn-feels-slow",
+  "/articles/7-ways-to-fix-wifi",
+  "/articles/starlink-setup-wa",
+  "/articles/why-nbn-feels-slow",
 ]);
 
 const RECENT_INSTALLATION_ROUTES = new Set([

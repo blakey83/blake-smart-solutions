@@ -9,7 +9,7 @@ import { WifiLandingPageCtas } from "./WifiLandingPageCtas";
 
 type Fix = (typeof wifiLandingPageContent.fixes)[number];
 
-const pagePath = "/7-ways-to-fix-wifi";
+const pagePath = "/articles/7-ways-to-fix-wifi";
 
 export const metadata: Metadata = buildSeoMetadata({
   title: wifiLandingPageContent.metadata.title,
