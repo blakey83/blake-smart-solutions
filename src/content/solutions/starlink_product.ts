@@ -86,7 +86,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   bulletPoints: [
     "From $549 including a quality Australian-made mount and a clean, professional finish on your roof",
     "10-Year Warranty on all Parts and Labour",
-    "Everything installed, tested and clean working before we leave",
+    "Everything installed, tested and clean before we leave",
     "Local support before and after the job is complete",
     "Roof penetrations sealed correctly for peace of mind. We take care of your home, as if it were our own",
   ],
