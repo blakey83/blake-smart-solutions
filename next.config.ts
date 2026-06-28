@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
         destination: "/articles/why-nbn-feels-slow",
         permanent: true,
       },
+      {
+        source: "/wifi-problems-perth",
+        destination: "/wifi-solutions-perth",
+        permanent: true,
+      },
+      {
+        source: "/wifi-solutions-perth/shed-wifi",
+        destination: "/wifi-solutions-perth",
+        permanent: true,
+      },
     ];
   },
 };
