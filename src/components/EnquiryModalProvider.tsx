@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { enquiryProductContent } from "@/content/components/siteContent";
 import type { Product } from "@/lib/types";
 import EnquiryModal from "@/components/EnquiryModal";
@@ -10,6 +10,39 @@ import {
   ENQUIRY_MODAL_EVENT,
   type EnquiryModalEventDetail,
 } from "@/lib/enquiryModal";
+
+const PAGE_ENQUIRY_PRODUCT_NAMES = [
+  {
+    path: "/starlink-installation-perth",
+    productName: "Starlink Installation",
+  },
+  {
+    path: "/rural-starlink-installation-wa",
+    productName: "Starlink Installation",
+  },
+  {
+    path: "/security-cameras-perth",
+    productName: "Security Cameras",
+  },
+  {
+    path: "/ajax-security-perth",
+    productName: "Ajax Alarm Systems",
+  },
+  {
+    path: "/data-cabling",
+    productName: "Data Cabling",
+  },
+  {
+    path: "/tv-antennas-perth",
+    productName: "TV Antennas",
+  },
+] as const;
+
+function getPageEnquiryProductName(pathname: string | null) {
+  return PAGE_ENQUIRY_PRODUCT_NAMES.find(
+    ({ path }) => pathname === path || pathname?.startsWith(`${path}/`),
+  )?.productName;
+}
 
 function createEnquiryProduct(productName: string): Product {
   return {
@@ -22,6 +55,7 @@ function createEnquiryProduct(productName: string): Product {
 
 export function EnquiryModalProvider() {
   const router = useRouter();
+  const pathname = usePathname();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [defaultMessage, setDefaultMessage] = useState<string | null>(null);
   const [openTracking, setOpenTracking] =
@@ -42,7 +76,9 @@ export function EnquiryModalProvider() {
       setSuccessRedirectTo(redirectTo || null);
       setSelectedProduct(
         createEnquiryProduct(
-          productName || enquiryProductContent.generalQuoteRequest,
+          productName ||
+            getPageEnquiryProductName(pathname) ||
+            enquiryProductContent.generalQuoteRequest,
         ),
       );
     };
@@ -52,7 +88,7 @@ export function EnquiryModalProvider() {
     return () => {
       window.removeEventListener(ENQUIRY_MODAL_EVENT, handleOpenModal);
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <EnquiryModal

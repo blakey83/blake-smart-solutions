@@ -109,7 +109,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   primaryCta: {
     label: "Request an Installation Quote",
     action: "enquiry",
-    enquiryProductName: "Request a Starlink Quote",
+    enquiryProductName: "Starlink Installation",
     enquiryDefaultMessage: "I'm interested in getting my Starlink installed",
   },
   secondaryCta: {

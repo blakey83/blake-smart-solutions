@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { enquiryModalContent } from "@/content/components/siteContent";
 import type { Product } from "@/lib/types";
 import {
@@ -27,6 +28,41 @@ type EnquiryModalProps = {
   onClose: () => void;
   onSuccess?: () => void;
 };
+
+const ENQUIRY_INTRO_ENDINGS = [
+  {
+    path: "/starlink-installation-perth",
+    ending: "about your Starlink Installation.",
+  },
+  {
+    path: "/rural-starlink-installation-wa",
+    ending: "about your Starlink Installation.",
+  },
+  {
+    path: "/security-cameras-perth",
+    ending: "about Security Camera options",
+  },
+  {
+    path: "/ajax-security-perth",
+    ending: "about Alarm Systems",
+  },
+  {
+    path: "/data-cabling",
+    ending: "with a quote for data cabling",
+  },
+  {
+    path: "/tv-antennas-perth",
+    ending: "about your TV reception",
+  },
+] as const;
+
+function getEnquiryIntro(pathname: string | null) {
+  const matchingEnding = ENQUIRY_INTRO_ENDINGS.find(
+    ({ path }) => pathname === path || pathname?.startsWith(`${path}/`),
+  )?.ending;
+
+  return `${enquiryModalContent.introPrefix}${matchingEnding ?? enquiryModalContent.homeIntroEnding}`;
+}
 
 function getInitialMessage(product: Product) {
   if (product.name === enquiryModalContent.generalQuoteProductName) {
@@ -71,6 +107,7 @@ export default function EnquiryModal({
   onClose,
   onSuccess,
 }: EnquiryModalProps) {
+  const pathname = usePathname();
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [formStartedAt, setFormStartedAt] = useState<number>(Date.now());
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -236,7 +273,7 @@ export default function EnquiryModal({
             {product.name}
           </h2>
           <p className="mt-3 text-base leading-7 text-slate-600">
-            {enquiryModalContent.intro}
+            {getEnquiryIntro(pathname)}
           </p>
           <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">

@@ -20,7 +20,7 @@ export type EnquiryModalEventDetail = {
 };
 
 export function openEnquiryModal(
-  productName = "General Quote Request",
+  productName?: string,
   options: EnquiryModalOptions = {},
 ) {
   if (typeof window === "undefined") {

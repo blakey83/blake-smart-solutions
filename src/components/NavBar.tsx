@@ -3,12 +3,60 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navContent } from "@/content/components/siteContent";
+import { alarmsSolutionContent } from "@/content/solutions/alarmSolutionsContent";
+import { cctvSolutionContent } from "@/content/solutions/cctvSolutionContent";
+import { RuralStarlinkSolutionContent } from "@/content/solutions/ruralStarlink";
+import { starlinkSolutionContent } from "@/content/solutions/starlink_product";
+import { wifiSolutionContent } from "@/content/solutions/wifiSolutionContent";
 import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
+const NAV_ENQUIRY_CTAS = [
+  {
+    path: "/wifi-solutions-perth",
+    cta: wifiSolutionContent.primaryCta,
+  },
+  {
+    path: "/security-cameras-perth",
+    cta: cctvSolutionContent.primaryCta,
+  },
+  {
+    path: "/ajax-security-perth",
+    cta: alarmsSolutionContent.primaryCta,
+  },
+  {
+    path: "/starlink-installation-perth",
+    cta: starlinkSolutionContent.primaryCta,
+  },
+  {
+    path: "/rural-starlink-installation-wa",
+    cta: RuralStarlinkSolutionContent.primaryCta,
+  },
+] as const;
+
+function getNavEnquiryCta(pathname: string | null) {
+  return NAV_ENQUIRY_CTAS.find(
+    ({ path }) => pathname === path || pathname?.startsWith(`${path}/`),
+  )?.cta;
+}
+
 export default function NavBar() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const enquiryCta = getNavEnquiryCta(pathname);
+
+  const handleEnquiryClick = () => {
+    if (enquiryCta?.action === "enquiry") {
+      openEnquiryModal(enquiryCta.enquiryProductName, {
+        defaultMessage: enquiryCta.enquiryDefaultMessage,
+      });
+      return;
+    }
+
+    openEnquiryModal();
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/95 text-white backdrop-blur">
@@ -64,7 +112,7 @@ export default function NavBar() {
           <div className="hidden xl:flex">
             <button
               type="button"
-              onClick={() => openEnquiryModal()}
+              onClick={handleEnquiryClick}
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-strong)]"
             >
               {navContent.quoteCta}

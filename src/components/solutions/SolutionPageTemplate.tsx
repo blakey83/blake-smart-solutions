@@ -62,6 +62,20 @@ function SolutionCta({
   );
 }
 
+function mergeEnquiryDefaults(button: CtaButton, defaults: CtaButton) {
+  if (button.action !== "enquiry") {
+    return button;
+  }
+
+  return {
+    ...button,
+    enquiryProductName:
+      button.enquiryProductName ?? defaults.enquiryProductName,
+    enquiryDefaultMessage:
+      button.enquiryDefaultMessage ?? defaults.enquiryDefaultMessage,
+  };
+}
+
 function SolutionReviewsSection({ content }: { content: WhyChooseUsContent }) {
   return (
     <section className="bg-[var(--color-section)]">
@@ -185,6 +199,11 @@ export function SolutionPageTemplate({
   trustItems,
   content,
 }: SolutionPageTemplateViewProps) {
+  const finalCtaWithDefaults = mergeEnquiryDefaults(
+    finalCtaButton,
+    primaryCta,
+  );
+
   return (
     <div className="pb-20 bg-[var(--color-page)] text-[var(--color-ink)] sm:pb-0">
       {specialOffer ? (
@@ -454,7 +473,7 @@ export function SolutionPageTemplate({
           </p>
 
           <div className="mt-8 flex justify-center">
-            <SolutionCta button={finalCtaButton} />
+            <SolutionCta button={finalCtaWithDefaults} />
           </div>
         </div>
       </section>

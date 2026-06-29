@@ -63,7 +63,8 @@ export const enquiryModalContent = {
   successMessage: "We’ve received your message and will be in touch shortly.",
   closeLabel: "Close enquiry form",
   eyebrow: "Send an enquiry",
-  intro: "Fill this out and We'll get back to you about this service.",
+  introPrefix: "Fill this out and we’ll get back to you ",
+  homeIntroEnding: "shortly",
   preferPrompt: "Prefer to speak to someone?",
   callCta: "Call 0477 948 079",
   smsCta: "SMS anytime",
@@ -82,7 +83,7 @@ export const enquiryModalContent = {
   privacyPolicyLabel: "Privacy Policy",
   privacyPolicyHref: "/privacy-policy",
   sendingCta: "Sending...",
-  submitCta: "Send Enquiry",
+  submitCta: "Send Message",
 };
 
 export const enquiryProductContent = {
