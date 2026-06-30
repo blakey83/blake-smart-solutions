@@ -126,6 +126,22 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     href: "/recent-installations/starlink",
   },
 
+  featureSection: {
+    eyebrow: "HOW WE APPROACH STARLINK INSTALLS",
+    title: "Dish, cable, router and Wi-Fi planned as one system",
+    intro:
+      "A good Starlink installation is not just putting the dish somewhere high. We check the app for obstructions, choose a sensible mount, protect exposed cable, bring the cable inside cleanly and make sure the router location gives the best chance of reliable coverage.",
+    points: [
+      "Dish placement checked for clear sky view and practical cable routing",
+      "Mounting approach matched to tile, Colorbond or wall locations",
+      "Cable protected with conduit where exposed to sun or weather",
+      "Neat internal cable exit using a suitable plate where practical",
+      "Wi-Fi coverage checked after setup, with upgrade options if needed",
+    ],
+    image: "/images/solutions/starLink/starlink_feature.MP.jpg",
+    imageAlt: "Starlink dish installed on a roof with clear blue sky",
+  },
+
   problemSolutionEyebrow: "",
   problemSolutionTitle:
     "Starlink performance depends on more than just plugging in the kit",

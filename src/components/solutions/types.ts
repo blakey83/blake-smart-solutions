@@ -46,6 +46,15 @@ export type RecentWorkSection = {
   linkLabel?: string;
 };
 
+export type FeatureSection = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  points: string[];
+  image: string;
+  imageAlt: string;
+};
+
 export type FaqItem = {
   question: string;
   answer: string;
@@ -75,6 +84,7 @@ export type SolutionPageTemplateProps = {
   primaryCta: CtaButton;
   secondaryCta?: CtaButton;
   recentWork?: RecentWorkSection;
+  featureSection?: FeatureSection;
   problemSolutionEyebrow?: string;
   problemSolutionTitle: string;
   problemSolutionIntro?: string;

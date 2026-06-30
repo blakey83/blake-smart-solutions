@@ -11,6 +11,7 @@ import { openEnquiryModal } from "@/lib/enquiryModal";
 import type {
   ApproachStep,
   CtaButton,
+  FeatureSection,
   SolutionPageTemplateProps,
 } from "@/components/solutions/types";
 import { TrustStrip } from "../home/TrustStrip";
@@ -161,6 +162,50 @@ function ApproachIcon({ icon }: { icon: ApproachStep["icon"] }) {
   );
 }
 
+function SolutionFeatureSection({ content }: { content: FeatureSection }) {
+  return (
+    <section className="border-y border-[var(--color-border)] bg-white">
+      <div className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-14 sm:px-6 lg:grid-cols-[0.95fr_1fr] lg:gap-14 lg:px-8 lg:py-20">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
+            {content.eyebrow}
+          </p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+            {content.title}
+          </h2>
+          <p className="mt-5 text-base leading-7 text-[var(--color-muted)]">
+            {content.intro}
+          </p>
+
+          <ul className="mt-7 space-y-4">
+            {content.points.map((point) => (
+              <li
+                key={point}
+                className="flex items-start gap-3 text-sm leading-6 text-[var(--color-ink)] sm:text-base"
+              >
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="relative overflow-hidden rounded-[24px] bg-[var(--color-card)] shadow-[0_18px_42px_rgba(15,23,42,0.1)]">
+          <div className="relative aspect-[4/3] w-full">
+            <Image
+              src={content.image}
+              alt={content.imageAlt}
+              fill
+              sizes="(min-width: 1024px) 28rem, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 interface TrustItems {
   trustItems: string[];
 }
@@ -183,6 +228,7 @@ export function SolutionPageTemplate({
   primaryCta,
   secondaryCta,
   recentWork,
+  featureSection,
   problemSolutionEyebrow = solutionPageTemplateContent.problemSolutionEyebrow,
   problemSolutionTitle,
   problemSolutionIntro = solutionPageTemplateContent.problemSolutionIntro,
@@ -345,6 +391,10 @@ export function SolutionPageTemplate({
             </Link>
           </div>
         </section>
+      ) : null}
+
+      {featureSection ? (
+        <SolutionFeatureSection content={featureSection} />
       ) : null}
 
       <WhyBSS content={content} showReviews={false} />
