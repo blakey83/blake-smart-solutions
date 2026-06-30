@@ -10,6 +10,7 @@ const ARTICLE_ROUTES = new Set([
   "/articles/7-ways-to-fix-wifi",
   "/articles/is-starlink-worth-it",
   "/articles/starlink-setup-wa",
+  "/articles/starlink-vs-nbn-perth",
   "/articles/why-nbn-feels-slow",
 ]);
 
