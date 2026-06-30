@@ -212,7 +212,7 @@ export default function IsStarlinkWorthItPage() {
               Keep researching your connection
             </h2>
           </div>
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
             {isStarlinkWorthItContent.relatedArticles.map((article) => (
               <Link
                 key={article.href}

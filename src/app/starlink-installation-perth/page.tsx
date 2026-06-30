@@ -4,6 +4,7 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
 import { isStarlinkWorthItContent } from "@/content/articles/isStarlinkWorthIt";
 import { starlinkSetupGuideContent } from "@/content/articles/starlinkSetupPerth";
+import { starlinkVsNbnPerthContent } from "@/content/articles/starlinkVsNbnPerth";
 import { siteMetadataContent } from "@/content/components/siteContent";
 import {
   starlinkSolutionContent,
@@ -124,6 +125,12 @@ const relatedStarlinkArticles = [
     href: isStarlinkWorthItContent.pagePath,
     cta: "Read the honest Starlink opinion",
   },
+  {
+    title: starlinkVsNbnPerthContent.pageTitle,
+    description: starlinkVsNbnPerthContent.pageDescription,
+    href: starlinkVsNbnPerthContent.pagePath,
+    cta: "Compare Starlink and NBN",
+  },
 ];
 
 export default function StarlinkPage() {
@@ -155,7 +162,7 @@ export default function StarlinkPage() {
               Wi-Fi setup and the common mistakes that affect Starlink
               performance in WA homes.
             </p>
-            <div className="mt-7 grid gap-4 sm:grid-cols-2">
+            <div className="mt-7 grid gap-4 md:grid-cols-3">
               {relatedStarlinkArticles.map((article) => (
                 <Link
                   key={article.href}

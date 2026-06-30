@@ -397,6 +397,12 @@ export const isStarlinkWorthItContent: {
       href: "/articles/starlink-setup-wa",
     },
     {
+      title: "Starlink vs NBN: Which Is Better in Perth?",
+      description:
+        "Compare Starlink and NBN across speed, reliability, latency, cost, installation and real-world use cases.",
+      href: "/articles/starlink-vs-nbn-perth",
+    },
+    {
       title: "Why Fast NBN (or Starlink) Still Feels Slow",
       description:
         "Fast internet can still feel slow when the home Wi-Fi network is the weak point. Here's how to tell the difference.",

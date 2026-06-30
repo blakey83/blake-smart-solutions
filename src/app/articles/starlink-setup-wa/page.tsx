@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneLink } from "@/components/PhoneLink";
+import { isStarlinkWorthItContent } from "@/content/articles/isStarlinkWorthIt";
 import { starlinkSetupGuideContent } from "@/content/articles/starlinkSetupPerth";
+import { starlinkVsNbnPerthContent } from "@/content/articles/starlinkVsNbnPerth";
 import { siteMetadataContent } from "@/content/components/siteContent";
 import { StarlinkSetupCta } from "./StarlinkSetupCta";
 
@@ -18,6 +20,19 @@ const allImageUrls = [
     (section) => `${siteMetadataContent.website}${section.image.src}`,
   ),
   `${siteMetadataContent.website}${starlinkSetupGuideContent.conclusion.image.src}`,
+];
+
+const relatedStarlinkArticles = [
+  {
+    title: isStarlinkWorthItContent.pageTitle,
+    description: isStarlinkWorthItContent.pageDescription,
+    href: isStarlinkWorthItContent.pagePath,
+  },
+  {
+    title: starlinkVsNbnPerthContent.pageTitle,
+    description: starlinkVsNbnPerthContent.pageDescription,
+    href: starlinkVsNbnPerthContent.pagePath,
+  },
 ];
 
 export const metadata: Metadata = {
@@ -366,6 +381,38 @@ export default function StarlinkSetupWaPage() {
                 </p>
                 <span className="mt-5 inline-flex text-sm font-semibold text-[var(--color-accent)]">
                   View service
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[var(--color-border)] bg-white">
+        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+              Related articles
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+              More Starlink advice for Perth homes
+            </h2>
+          </div>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {relatedStarlinkArticles.map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-6 transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:bg-white"
+              >
+                <h3 className="text-xl font-semibold tracking-tight text-[var(--color-ink)]">
+                  {article.title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
+                  {article.description}
+                </p>
+                <span className="mt-5 inline-flex text-sm font-semibold text-[var(--color-accent)]">
+                  Read article
                 </span>
               </Link>
             ))}
