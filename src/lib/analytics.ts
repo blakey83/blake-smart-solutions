@@ -26,6 +26,28 @@ export function trackEnquirySubmit() {
   });
 }
 
+export function trackHandshakeTrigger() {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "handshake_trig", {
+    event_category: "lead",
+    event_label: "Handshake popup triggered",
+  });
+}
+
+export function trackHandshakeDecline() {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "handshake_dec", {
+    event_category: "lead",
+    event_label: "Handshake popup declined",
+  });
+}
+
 export function trackPhoneClick() {
   if (typeof window === "undefined" || typeof window.gtag !== "function") {
     return;

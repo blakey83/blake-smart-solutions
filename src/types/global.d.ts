@@ -4,7 +4,12 @@ declare global {
   interface Window {
     gtag?: (
       command: "event",
-      eventName: "enquiry_open" | "enquiry_submit" | "phone_click",
+      eventName:
+        | "enquiry_open"
+        | "enquiry_submit"
+        | "handshake_trig"
+        | "handshake_dec"
+        | "phone_click",
       params: {
         event_category: "engagement" | "lead";
         event_label: string;

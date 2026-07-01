@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { enquiryModalContent } from "@/content/components/siteContent";
-import { trackEnquirySubmit } from "@/lib/analytics";
+import {
+  trackEnquirySubmit,
+  trackHandshakeDecline,
+  trackHandshakeTrigger,
+} from "@/lib/analytics";
 import type { TimedAvailabilityPopup as TimedAvailabilityPopupContent } from "@/components/solutions/types";
 
 const INITIAL_FORM_DATA = {
@@ -50,6 +54,7 @@ export function TimedAvailabilityPopup({
     message: string;
   }>({ type: "idle", message: "" });
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hasTrackedOpenRef = useRef(false);
 
   useEffect(() => {
     if (!content.enabled || hasDismissed) return;
@@ -57,6 +62,10 @@ export function TimedAvailabilityPopup({
     timeoutRef.current = setTimeout(() => {
       setFormStartedAt(Date.now());
       setIsOpen(true);
+      if (!hasTrackedOpenRef.current) {
+        hasTrackedOpenRef.current = true;
+        trackHandshakeTrigger();
+      }
     }, content.delayAfterLoadMs ?? 20_000);
 
     return () => {
@@ -86,6 +95,11 @@ export function TimedAvailabilityPopup({
   const handleClose = () => {
     setIsOpen(false);
     setHasDismissed(true);
+  };
+
+  const handleKeepBrowsing = () => {
+    trackHandshakeDecline();
+    handleClose();
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -266,7 +280,7 @@ export function TimedAvailabilityPopup({
               </button>
               <button
                 type="button"
-                onClick={handleClose}
+                onClick={handleKeepBrowsing}
                 className="inline-flex min-h-12 flex-1 items-center justify-center rounded-full border border-slate-200 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:border-sky-500 hover:text-sky-600"
               >
                 Keep Browsing
