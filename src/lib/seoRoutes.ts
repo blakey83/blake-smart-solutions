@@ -11,6 +11,7 @@ const ARTICLE_ROUTES = new Set([
   "/articles/is-starlink-worth-it",
   "/articles/starlink-setup-wa",
   "/articles/starlink-vs-nbn-perth",
+  "/articles/what-makes-a-great-starlink-installer",
   "/articles/why-nbn-feels-slow",
 ]);
 

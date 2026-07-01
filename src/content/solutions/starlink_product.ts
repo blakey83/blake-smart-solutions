@@ -134,6 +134,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     points: [
       "Dish placement checked for clear sky view and practical cable routing",
       "Mounting approach matched to tile, Colorbond or wall locations",
+      "Dish professionally aligned for best signal and speed",
       "Cable protected with conduit where exposed to sun or weather",
       "Neat internal cable exit using a suitable plate where practical",
       "Wi-Fi coverage checked after setup, with upgrade options if needed",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
 import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
+import { greatStarlinkInstallerContent } from "@/content/articles/greatStarlinkInstaller";
 import { isStarlinkWorthItContent } from "@/content/articles/isStarlinkWorthIt";
 import { starlinkSetupGuideContent } from "@/content/articles/starlinkSetupPerth";
 import { starlinkVsNbnPerthContent } from "@/content/articles/starlinkVsNbnPerth";
@@ -131,6 +132,12 @@ const relatedStarlinkArticles = [
     href: starlinkVsNbnPerthContent.pagePath,
     cta: "Compare Starlink and NBN",
   },
+  {
+    title: greatStarlinkInstallerContent.pageTitle,
+    description: greatStarlinkInstallerContent.pageDescription,
+    href: greatStarlinkInstallerContent.pagePath,
+    cta: "Choose a Starlink installer",
+  },
 ];
 
 export default function StarlinkPage() {
@@ -149,7 +156,7 @@ export default function StarlinkPage() {
         content={whyChooseUsStarlink}
       />
       <section className="border-t border-[var(--color-border)] bg-[var(--color-page)]">
-        <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="rounded-[28px] border border-[var(--color-border)] bg-white p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
               Starlink guide
@@ -162,7 +169,7 @@ export default function StarlinkPage() {
               Wi-Fi setup and the common mistakes that affect Starlink
               performance in WA homes.
             </p>
-            <div className="mt-7 grid gap-4 md:grid-cols-3">
+            <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {relatedStarlinkArticles.map((article) => (
                 <Link
                   key={article.href}
