@@ -105,6 +105,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
       "Daniel came and installed our Starlink on the roof, great experience, he replied to my initial email very quickly. Friendly and prompt service.",
     author: " - Paris Rose",
   },
+  heroReviewStrip: {
+    heading: "Trusted by Perth Starlink customers",
+    reviewCount: 3,
+  },
 
   primaryCta: {
     label: "Request an Installation Quote",
@@ -328,6 +332,10 @@ export const whyChooseUsStarlink = {
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {
+        name: "Sue Haynes",
+        text: "Daniel arrived on time and installed our replacement system without problems. Neat and tidy install. No hesitation to recommend Daniel for your Starlink installations.",
+      },
+      {
         name: "Alan Star",
         text: "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
       },
@@ -342,6 +350,10 @@ export const whyChooseUsStarlink = {
       {
         name: "Lesley Middleton",
         text: "Came over at the appointed time and fixed my security camera system efficiently. Really went above and beyond.",
+      },
+      {
+        name: "Paris Rose",
+        text: "Daniel came and installed our Starlink on the roof, great experience, he replied to my initial email very quickly. Friendly and prompt service.",
       },
     ],
   },

@@ -12,6 +12,7 @@ import type {
   ApproachStep,
   CtaButton,
   FeatureSection,
+  HeroReviewStrip,
   SolutionPageTemplateProps,
 } from "@/components/solutions/types";
 import { TrustStrip } from "../home/TrustStrip";
@@ -108,6 +109,57 @@ function SolutionReviewsSection({ content }: { content: WhyChooseUsContent }) {
             </article>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function HeroReviewStripView({
+  strip,
+  reviews,
+}: {
+  strip: HeroReviewStrip;
+  reviews: WhyChooseUsContent["whySection"]["reviews"];
+}) {
+  const visibleReviews = reviews.slice(0, strip.reviewCount ?? 3);
+
+  if (!visibleReviews.length) {
+    return null;
+  }
+
+  return (
+    <section className="border-b border-[var(--color-border)] bg-white">
+      <div className="mx-auto max-w-6xl px-5 pb-14 sm:px-6 lg:px-8">
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+        {strip.heading}
+      </p>
+      <div className="mt-3 grid gap-3 lg:grid-cols-2 xl:grid-cols-3">
+        {visibleReviews.map((review, index) => (
+          <article
+            key={review.name}
+            className={[
+              "rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-4 text-left shadow-[0_10px_24px_rgba(15,23,42,0.04)]",
+              index === 1 ? "hidden lg:block" : "",
+              index > 1 ? "hidden xl:block" : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+          >
+            <div
+              className="text-xs font-semibold tracking-[0.12em] text-amber-500"
+              aria-label="Five star review"
+            >
+              ★★★★★
+            </div>
+            <p className="mt-2 max-h-[3.75rem] overflow-hidden text-xs leading-5 text-[var(--color-muted)]">
+              &quot;{review.text}&quot;
+            </p>
+            <p className="mt-2 text-xs font-semibold text-[var(--color-ink)]">
+              {review.name}
+            </p>
+          </article>
+        ))}
+      </div>
       </div>
     </section>
   );
@@ -225,6 +277,7 @@ export function SolutionPageTemplate({
   heroImageAlt,
   bulletPoints,
   heroSocialProof,
+  heroReviewStrip,
   primaryCta,
   secondaryCta,
   recentWork,
@@ -391,6 +444,13 @@ export function SolutionPageTemplate({
             </Link>
           </div>
         </section>
+      ) : null}
+
+      {heroReviewStrip ? (
+        <HeroReviewStripView
+          strip={heroReviewStrip}
+          reviews={content.whySection.reviews}
+        />
       ) : null}
 
       {featureSection ? (

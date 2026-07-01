@@ -37,6 +37,11 @@ export type HeroSocialProof = {
   author: string;
 };
 
+export type HeroReviewStrip = {
+  heading: string;
+  reviewCount?: number;
+};
+
 export type RecentWorkSection = {
   image: string;
   imageAlt?: string;
@@ -81,6 +86,7 @@ export type SolutionPageTemplateProps = {
   heroImageAlt?: string;
   bulletPoints: string[];
   heroSocialProof: HeroSocialProof;
+  heroReviewStrip?: HeroReviewStrip;
   primaryCta: CtaButton;
   secondaryCta?: CtaButton;
   recentWork?: RecentWorkSection;
