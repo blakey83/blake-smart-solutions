@@ -234,7 +234,7 @@ function SolutionFeatureSection({ content }: { content: FeatureSection }) {
             {content.points.map((point) => (
               <li
                 key={point}
-                className="flex items-start gap-3 text-sm leading-6 text-[var(--color-ink)] sm:text-base"
+                className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
               >
                 <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
                 <span>{point}</span>
