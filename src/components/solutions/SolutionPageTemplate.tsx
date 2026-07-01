@@ -15,6 +15,7 @@ import type {
   HeroReviewStrip,
   SolutionPageTemplateProps,
 } from "@/components/solutions/types";
+import { TimedAvailabilityPopup } from "@/components/solutions/TimedAvailabilityPopup";
 import { TrustStrip } from "../home/TrustStrip";
 import { WhyBSS } from "../landingPages/WhyBSS";
 
@@ -295,6 +296,7 @@ export function SolutionPageTemplate({
   finalCtaTitle,
   finalCtaIntro,
   finalCtaButton,
+  timedAvailabilityPopup,
   trustItems,
   content,
 }: SolutionPageTemplateViewProps) {
@@ -305,6 +307,10 @@ export function SolutionPageTemplate({
 
   return (
     <div className="pb-20 bg-[var(--color-page)] text-[var(--color-ink)] sm:pb-0">
+      {timedAvailabilityPopup?.enabled ? (
+        <TimedAvailabilityPopup content={timedAvailabilityPopup} />
+      ) : null}
+
       {specialOffer ? (
         <section className="border-b border-[var(--color-border)] bg-[var(--color-accent)] text-white">
           <div className="mx-auto max-w-6xl px-5 py-3 sm:px-6 lg:px-8">

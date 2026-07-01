@@ -75,6 +75,14 @@ export type SpecialOffer = {
   price: string;
 };
 
+export type TimedAvailabilityPopup = {
+  enabled: boolean;
+  title: string;
+  subtitle: string;
+  delayAfterLoadMs?: number;
+  productName?: string;
+};
+
 export type SolutionPageTemplateProps = {
   currentPath?: string;
   specialOffer?: SpecialOffer;
@@ -104,4 +112,5 @@ export type SolutionPageTemplateProps = {
   finalCtaTitle: string;
   finalCtaIntro: string;
   finalCtaButton: CtaButton;
+  timedAvailabilityPopup?: TimedAvailabilityPopup;
 };

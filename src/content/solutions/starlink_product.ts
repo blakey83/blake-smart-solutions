@@ -109,6 +109,14 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     heading: "Trusted by Perth Starlink customers",
     reviewCount: 3,
   },
+  timedAvailabilityPopup: {
+    enabled: true,
+    title: "Looking for an installation date?",
+    subtitle:
+      "Tell us your suburb and preferred install date. We’ll check availability and get back to you.",
+    productName: "Starlink Installation",
+    delayAfterLoadMs: 20_000,
+  },
 
   primaryCta: {
     label: "Request an Installation Quote",
