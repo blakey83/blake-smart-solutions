@@ -231,15 +231,19 @@ export function TimedAvailabilityPopup({
               required
               className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
             />
-            <input
-              name="preferredDate"
-              type="date"
-              aria-label="Preferred installation date"
-              value={formData.preferredDate}
-              onChange={handleChange}
-              required
-              className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base text-slate-700 outline-none transition focus:border-sky-500"
-            />
+            <label className="block">
+              <span className="mb-1.5 block text-sm font-semibold text-slate-700 sm:sr-only">
+                Preferred installation date
+              </span>
+              <input
+                name="preferredDate"
+                type="date"
+                value={formData.preferredDate}
+                onChange={handleChange}
+                required
+                className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base text-slate-700 outline-none transition focus:border-sky-500"
+              />
+            </label>
 
             <p className="text-xs leading-5 text-slate-600">
               {enquiryModalContent.privacyDisclaimerBeforeLink}{" "}
