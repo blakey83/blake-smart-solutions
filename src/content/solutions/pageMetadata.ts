@@ -1,3 +1,5 @@
+import { SITE_URL } from "@/lib/seoConfig";
+
 export const servicePageMetadataContent = {
   security: {
     pagePath: "/security",
@@ -5,14 +7,14 @@ export const servicePageMetadataContent = {
     pageDescription:
       "Deter intruders with active deterrence CCTV systems for Perth homes and businesses. TiOC cameras, full-colour night vision, smart alerts and professional installation.",
     image: {
-      url: "https://www.blakesmartsolutions.com.au/images/products/security/tioc_burgler.png",
+      url: `${SITE_URL}/images/products/security/tioc_burgler.png`,
       width: 1448,
       height: 1086,
       alt: "Active deterrence security camera system for Perth homes and businesses",
     },
     serviceName: "Security Camera Installation Perth",
     providerImage:
-      "https://www.blakesmartsolutions.com.au/me_and_charlotte.jpeg",
+      `${SITE_URL}/images/me_and_charlotte.jpeg`,
     serviceType: "Security camera installation",
     category: "Security System Installation",
     offerDescription:

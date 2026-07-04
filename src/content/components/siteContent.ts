@@ -1,10 +1,12 @@
+import { SITE_URL } from "@/lib/seoConfig";
+
 export const siteMetadataContent = {
   businessName: "Blake Smart Solutions",
   city: "Perth",
   region: "WA",
   country: "AU",
   telephone: "+61477948079",
-  website: "https://www.blakesmartsolutions.com.au",
+  website: SITE_URL,
   title: "Blake Smart Solutions | Security Cameras, Wi-Fi & Starlink Perth",
   description:
     "Perth smart technology specialists for CCTV, smart alarms, Wi-Fi, Starlink distribution and data solutions. Licensed, insured, and experienced in CCTV and smart security systems.",

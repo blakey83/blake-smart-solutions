@@ -7,7 +7,7 @@ import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { EnquiryModalProvider } from "@/components/EnquiryModalProvider";
 import { siteMetadataContent } from "@/content/components/siteContent";
-import { SITE_URL } from "@/lib/seoRoutes";
+import { SITE_URL } from "@/lib/seoConfig";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

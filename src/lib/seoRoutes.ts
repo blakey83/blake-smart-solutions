@@ -1,7 +1,6 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
-
-export const SITE_URL = "https://www.blakesmartsolutions.com.au";
+import { SITE_URL } from "@/lib/seoConfig";
 
 const APP_DIRECTORY = path.join(process.cwd(), "src", "app");
 const MAX_SITEMAP_URLS = 50_000;
