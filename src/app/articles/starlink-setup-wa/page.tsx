@@ -142,30 +142,6 @@ const structuredData = {
         ].join(" "),
       })),
     },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${pageUrl}#breadcrumb`,
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: siteMetadataContent.website,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Starlink Installation Perth",
-          item: `${siteMetadataContent.website}/starlink-installation-perth`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: starlinkSetupGuideContent.hero.title,
-          item: pageUrl,
-        },
-      ],
-    },
   ],
 };
 

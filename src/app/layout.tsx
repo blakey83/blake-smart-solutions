@@ -6,6 +6,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { EnquiryModalProvider } from "@/components/EnquiryModalProvider";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { siteMetadataContent } from "@/content/components/siteContent";
 import { SITE_URL } from "@/lib/seoConfig";
 
@@ -71,6 +72,7 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NavBar />
+        <BreadcrumbJsonLd />
         <main>{children}</main>
         <Footer />
         <EnquiryModalProvider />

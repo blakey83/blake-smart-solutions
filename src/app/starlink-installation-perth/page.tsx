@@ -92,24 +92,6 @@ const structuredData = {
         },
       })),
     },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${pageUrl}#breadcrumb`,
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: siteMetadataContent.website,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Starlink Installation Perth",
-          item: pageUrl,
-        },
-      ],
-    },
   ],
 };
 
