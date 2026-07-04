@@ -7,17 +7,38 @@ import { wifiSolutionsPerthPageContent } from "@/content/solutions/wifiSolutions
 import { wifiSolutionContent } from "@/content/solutions/wifiSolutionContent";
 import { wifiSolutionTrustItems } from "@/content/solutions/wifiSolutionContent";
 import { whyChooseUsWiFi } from "@/content/solutions/wifiSolutionContent";
+import {
+  buildFaqPageNode,
+  buildSchemaGraph,
+  buildServiceNode,
+} from "@/lib/jsonLd";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
+
+const pagePath = "/wifi-solutions-perth";
 
 export const metadata: Metadata = buildSeoMetadata({
   title: wifiSolutionsPerthPageContent.metadata.title,
   description: wifiSolutionsPerthPageContent.metadata.description,
-  path: "/wifi-solutions-perth",
+  path: pagePath,
   image: {
     url: "/images/solutions/wifi/WiFi_hero.png",
     alt: "WiFi coverage testing and installation in Perth",
   },
 });
+
+const structuredData = buildSchemaGraph([
+  buildServiceNode({
+    name: "WiFi Solutions Perth",
+    description: wifiSolutionsPerthPageContent.metadata.description,
+    path: pagePath,
+    serviceType: "WiFi installation and network design",
+    image: {
+      url: "/images/solutions/wifi/WiFi_hero.png",
+      alt: "WiFi coverage testing and installation in Perth",
+    },
+  }),
+  buildFaqPageNode(pagePath, wifiSolutionContent.faqs),
+]);
 
 const relatedWifiArticles = [
   {
@@ -37,9 +58,15 @@ const relatedWifiArticles = [
 export default function WifiSolutionsPerthPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       <SolutionPageTemplate
         {...wifiSolutionContent}
-        currentPath="/wifi-solutions-perth"
+        currentPath={pagePath}
         trustItems={wifiSolutionTrustItems}
         content={whyChooseUsWiFi}
       />

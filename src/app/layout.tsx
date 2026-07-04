@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { EnquiryModalProvider } from "@/components/EnquiryModalProvider";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { siteMetadataContent } from "@/content/components/siteContent";
+import { buildLocalBusinessJsonLd } from "@/lib/jsonLd";
 import { SITE_URL } from "@/lib/seoConfig";
 
 const geistSans = Geist({
@@ -62,6 +63,7 @@ export const metadata: Metadata = {
 };
 
 const isProduction = process.env.NODE_ENV === "production";
+const localBusinessJsonLd = buildLocalBusinessJsonLd();
 
 export default function RootLayout({
   children,
@@ -72,6 +74,12 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NavBar />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd),
+          }}
+        />
         <BreadcrumbJsonLd />
         <main>{children}</main>
         <Footer />

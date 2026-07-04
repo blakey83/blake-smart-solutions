@@ -4,20 +4,27 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
 import { greatStarlinkInstallerContent } from "@/content/articles/greatStarlinkInstaller";
 import { isStarlinkWorthItContent } from "@/content/articles/isStarlinkWorthIt";
+import { starlinkInstallationCostPerthContent } from "@/content/articles/starlinkInstallationCostPerth";
 import { starlinkSetupGuideContent } from "@/content/articles/starlinkSetupPerth";
 import { starlinkVsNbnPerthContent } from "@/content/articles/starlinkVsNbnPerth";
-import { siteMetadataContent } from "@/content/components/siteContent";
 import {
   starlinkSolutionContent,
   starlinkSolutionTrustItems,
   whyChooseUsStarlink,
 } from "@/content/solutions/starlink_product";
+import {
+  buildFaqPageNode,
+  buildSchemaGraph,
+  buildServiceNode,
+} from "@/lib/jsonLd";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
+
+const pagePath = "/starlink-installation-perth";
 
 export const metadata: Metadata = buildSeoMetadata({
   title: servicePageMetadataContent.starlinkInstallationPerth.title,
   description: servicePageMetadataContent.starlinkInstallationPerth.description,
-  path: "/starlink-installation-perth",
+  path: pagePath,
   keywords: [
     "starlink installation perth",
     "starlink installer perth",
@@ -32,70 +39,29 @@ export const metadata: Metadata = buildSeoMetadata({
   },
 });
 
-const pageUrl = `${siteMetadataContent.website}/starlink-installation-perth`;
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "@id": `${pageUrl}#service`,
-      name: "Starlink Installation Perth",
-      serviceType: "Starlink installation",
-      description: servicePageMetadataContent.starlinkInstallationPerth.description,
-      url: pageUrl,
-      provider: {
-        "@id": `${siteMetadataContent.website}#localbusiness`,
-      },
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Perth",
-        },
-        {
-          "@type": "State",
-          name: "Western Australia",
-        },
-      ],
-      offers: {
-        "@type": "Offer",
-        priceCurrency: "AUD",
-        availability: "https://schema.org/InStock",
-        url: pageUrl,
-        description:
-          "Professional Starlink dish mounting, cable routing, router setup and Wi-Fi coverage options for Perth homes and properties.",
-      },
+const structuredData = buildSchemaGraph([
+  buildServiceNode({
+    name: "Starlink Installation Perth",
+    description: servicePageMetadataContent.starlinkInstallationPerth.description,
+    path: pagePath,
+    serviceType: "Starlink installation",
+    image: {
+      url: "/images/products/starlink/Starlink.jpg",
+      alt: "Starlink installation Perth dish mounted on a roof",
     },
-    {
-      "@type": "LocalBusiness",
-      "@id": `${siteMetadataContent.website}#localbusiness`,
-      name: siteMetadataContent.businessName,
-      url: siteMetadataContent.website,
-      telephone: siteMetadataContent.telephone,
-      image: `${siteMetadataContent.website}/images/products/starlink/Starlink.jpg`,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: siteMetadataContent.city,
-        addressRegion: siteMetadataContent.region,
-        addressCountry: siteMetadataContent.country,
-      },
-    },
-    {
-      "@type": "FAQPage",
-      "@id": `${pageUrl}#faq`,
-      mainEntity: starlinkSolutionContent.faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    },
-  ],
-};
+    offerDescription:
+      "Professional Starlink dish mounting, cable routing, router setup and Wi-Fi coverage options for Perth homes and properties.",
+  }),
+  buildFaqPageNode(pagePath, starlinkSolutionContent.faqs),
+]);
 
 const relatedStarlinkArticles = [
+  {
+    title: starlinkInstallationCostPerthContent.pageTitle,
+    description: starlinkInstallationCostPerthContent.pageDescription,
+    href: starlinkInstallationCostPerthContent.pagePath,
+    cta: "View Starlink install costs",
+  },
   {
     title: starlinkSetupGuideContent.pageTitle,
     description: starlinkSetupGuideContent.pageDescription,
@@ -133,7 +99,7 @@ export default function StarlinkPage() {
       />
       <SolutionPageTemplate
         {...starlinkSolutionContent}
-        currentPath="/starlink-installation-perth"
+        currentPath={pagePath}
         trustItems={starlinkSolutionTrustItems}
         content={whyChooseUsStarlink}
       />
@@ -151,7 +117,7 @@ export default function StarlinkPage() {
               Wi-Fi setup and the common mistakes that affect Starlink
               performance in WA homes.
             </p>
-            <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
               {relatedStarlinkArticles.map((article) => (
                 <Link
                   key={article.href}

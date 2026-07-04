@@ -8,6 +8,7 @@ const MAX_SITEMAP_URLS = 50_000;
 const ARTICLE_ROUTES = new Set([
   "/articles/7-ways-to-fix-wifi",
   "/articles/is-starlink-worth-it",
+  "/articles/starlink-installation-cost-perth",
   "/articles/starlink-setup-wa",
   "/articles/starlink-vs-nbn-perth",
   "/articles/what-makes-a-great-starlink-installer",

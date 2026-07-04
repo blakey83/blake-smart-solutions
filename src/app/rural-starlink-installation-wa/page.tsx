@@ -4,25 +4,40 @@ import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
 import { starlinkSolutionTrustItems } from "@/content/solutions/ruralStarlink";
 import { RuralStarlinkSolutionContent } from "@/content/solutions/ruralStarlink";
 import { whyChooseUsRuralStarlink } from "@/content/solutions/ruralStarlink";
+import { buildFaqPageNode, buildSchemaGraph } from "@/lib/jsonLd";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
+
+const pagePath = "/rural-starlink-installation-wa";
 
 export const metadata: Metadata = buildSeoMetadata({
   title: servicePageMetadataContent.starlinkInstallationRural.title,
   description: servicePageMetadataContent.starlinkInstallationRural.description,
-  path: "/rural-starlink-installation-wa",
+  path: pagePath,
   image: {
     url: "/images/products/rural-starlink/blake_rural.png",
     alt: "Rural Starlink installation in Western Australia",
   },
 });
 
+const structuredData = buildSchemaGraph([
+  buildFaqPageNode(pagePath, RuralStarlinkSolutionContent.faqs),
+]);
+
 export default function StarlinkPage() {
   return (
-    <SolutionPageTemplate
-      {...RuralStarlinkSolutionContent}
-      currentPath="/rural-starlink-installation-wa"
-      trustItems={starlinkSolutionTrustItems}
-      content={whyChooseUsRuralStarlink}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+      <SolutionPageTemplate
+        {...RuralStarlinkSolutionContent}
+        currentPath={pagePath}
+        trustItems={starlinkSolutionTrustItems}
+        content={whyChooseUsRuralStarlink}
+      />
+    </>
   );
 }

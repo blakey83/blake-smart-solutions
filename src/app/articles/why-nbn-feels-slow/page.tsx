@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { siteMetadataContent } from "@/content/components/siteContent";
+import { buildArticleJsonLd } from "@/lib/jsonLd";
 import { WifiArticleInlineCta } from "../7-ways-to-fix-wifi/WifiArticleInlineCta";
 import { WifiLandingPageCtas } from "../7-ways-to-fix-wifi/WifiLandingPageCtas";
 import {
@@ -43,31 +44,14 @@ export const metadata: Metadata = {
   },
 };
 
-const articleStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Article",
+const articleStructuredData = buildArticleJsonLd({
   headline: whyNbnFeelsSlowContent.metadata.title,
   description: whyNbnFeelsSlowContent.metadata.description,
-  image: whyNbnFeelsSlowImages.map(
-    (image) => `${siteMetadataContent.website}${image.src}`,
-  ),
+  pageUrl,
+  images: whyNbnFeelsSlowImages,
   datePublished: whyNbnFeelsSlowContent.metadata.publishedTime,
   dateModified: whyNbnFeelsSlowContent.metadata.modifiedTime,
-  mainEntityOfPage: pageUrl,
-  author: {
-    "@type": "Organization",
-    name: siteMetadataContent.businessName,
-    url: siteMetadataContent.website,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: siteMetadataContent.businessName,
-    logo: {
-      "@type": "ImageObject",
-      url: `${siteMetadataContent.website}/images/branding/BSS_logo.png`,
-    },
-  },
-};
+});
 
 const majorHeadings = new Set([
   "Internet vs WiFi",

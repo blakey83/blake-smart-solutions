@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { starlinkVsNbnPerthContent } from "@/content/articles/starlinkVsNbnPerth";
 import { siteMetadataContent } from "@/content/components/siteContent";
+import { buildArticleJsonLd } from "@/lib/jsonLd";
 import { StarlinkSetupCta } from "../starlink-setup-wa/StarlinkSetupCta";
 
 const pagePath = starlinkVsNbnPerthContent.pagePath;
@@ -40,34 +41,17 @@ export const metadata: Metadata = {
   },
 };
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Article",
+const structuredData = buildArticleJsonLd({
   headline: starlinkVsNbnPerthContent.pageTitle,
   description: starlinkVsNbnPerthContent.pageDescription,
-  image: [
-    heroImageUrl,
-    ...starlinkVsNbnPerthContent.images.map(
-      (image) => `${siteMetadataContent.website}${image.src}`,
-    ),
+  pageUrl,
+  images: [
+    starlinkVsNbnPerthContent.hero.image,
+    ...starlinkVsNbnPerthContent.images,
   ],
   datePublished: starlinkVsNbnPerthContent.publishedTime,
   dateModified: starlinkVsNbnPerthContent.modifiedTime,
-  mainEntityOfPage: pageUrl,
-  author: {
-    "@type": "Organization",
-    name: siteMetadataContent.businessName,
-    url: siteMetadataContent.website,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: siteMetadataContent.businessName,
-    logo: {
-      "@type": "ImageObject",
-      url: `${siteMetadataContent.website}/images/branding/BSS_logo.png`,
-    },
-  },
-};
+});
 
 type ArticleImageProps = {
   image: (typeof starlinkVsNbnPerthContent.images)[number];

@@ -6,26 +6,50 @@ import {
   dataIntro,
   whyChooseUsDataCabling,
 } from "@/content/solutions/data_products";
+import { buildSchemaGraph, buildServiceNode } from "@/lib/jsonLd";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
+
+const pagePath = "/data-cabling";
 
 export const metadata: Metadata = buildSeoMetadata({
   title: servicePageMetadataContent.dataCabling.title,
   description: servicePageMetadataContent.dataCabling.description,
-  path: "/data-cabling",
+  path: pagePath,
   image: {
     url: "/images/products/wifi/managed_wifi.png",
     alt: "Professional data cabling and network equipment",
   },
 });
 
+const structuredData = buildSchemaGraph([
+  buildServiceNode({
+    name: "Data Cabling",
+    description: servicePageMetadataContent.dataCabling.description,
+    path: pagePath,
+    serviceType: "Data cabling installation",
+    image: {
+      url: "/images/products/wifi/managed_wifi.png",
+      alt: "Professional data cabling and network equipment",
+    },
+  }),
+]);
+
 export default function DataCablingPage() {
   return (
-    <ProductPageTemplate
-      currentPath="/data-cabling"
-      title={dataIntro.title}
-      intro={dataIntro.intro}
-      products={dataCablingProducts}
-      content={whyChooseUsDataCabling}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+      <ProductPageTemplate
+        currentPath={pagePath}
+        title={dataIntro.title}
+        intro={dataIntro.intro}
+        products={dataCablingProducts}
+        content={whyChooseUsDataCabling}
+      />
+    </>
   );
 }

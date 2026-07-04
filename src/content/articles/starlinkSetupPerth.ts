@@ -4,6 +4,8 @@ export const starlinkSetupGuideContent = {
     "How To Set Up Starlink In WA | Starlink Installation Guide",
   pageDescription:
     "Learn how to set up Starlink in WA, including dish placement, mounting, cable routing, WiFi setup and common installation mistakes.",
+  publishedTime: "2026-06-24",
+  modifiedTime: "2026-06-24",
 
   siteName: "Blake Smart Solutions",
   hero: {

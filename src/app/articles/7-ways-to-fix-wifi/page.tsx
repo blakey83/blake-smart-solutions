@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { wifiLandingPageContent } from "@/content/articles/wifiLandingPage";
+import { absoluteUrl, buildArticleJsonLd } from "@/lib/jsonLd";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 import { WifiArticleInlineCta } from "./WifiArticleInlineCta";
 import { WifiLandingPageCtas } from "./WifiLandingPageCtas";
@@ -10,6 +11,7 @@ import { WifiLandingPageCtas } from "./WifiLandingPageCtas";
 type Fix = (typeof wifiLandingPageContent.fixes)[number];
 
 const pagePath = "/articles/7-ways-to-fix-wifi";
+const pageUrl = absoluteUrl(pagePath);
 
 export const metadata: Metadata = buildSeoMetadata({
   title: wifiLandingPageContent.metadata.title,
@@ -20,6 +22,20 @@ export const metadata: Metadata = buildSeoMetadata({
     url: "/images/router-bad-location.jpeg",
     alt: "Wi-Fi router in a poor location inside a home",
   },
+});
+
+const articleStructuredData = buildArticleJsonLd({
+  headline: wifiLandingPageContent.metadata.title,
+  description: wifiLandingPageContent.metadata.description,
+  pageUrl,
+  images: [
+    {
+      url: "/images/router-bad-location.jpeg",
+      alt: "Wi-Fi router in a poor location inside a home",
+    },
+  ],
+  datePublished: wifiLandingPageContent.metadata.publishedTime,
+  dateModified: wifiLandingPageContent.metadata.modifiedTime,
 });
 
 function renderParagraphs(paragraphs: string[], className: string) {
@@ -106,6 +122,12 @@ export default function SevenWaysToFixWifiPage() {
 
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleStructuredData),
+        }}
+      />
       <section className="border-b border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-4xl px-5 pt-14 pb-10 sm:px-6 lg:px-8 lg:pt-20 lg:pb-12">
           <div className="max-w-3xl">

@@ -2,80 +2,92 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
-import { isStarlinkWorthItContent } from "@/content/articles/isStarlinkWorthIt";
+import { starlinkInstallationCostPerthContent } from "@/content/articles/starlinkInstallationCostPerth";
 import { siteMetadataContent } from "@/content/components/siteContent";
 import {
+  absoluteUrl,
   buildArticleNode,
-  buildFaqPageNode,
   buildSchemaGraph,
 } from "@/lib/jsonLd";
 import { StarlinkSetupCta } from "../starlink-setup-wa/StarlinkSetupCta";
 
-const pagePath = isStarlinkWorthItContent.pagePath;
+const pagePath = starlinkInstallationCostPerthContent.pagePath;
 const pageUrl = `${siteMetadataContent.website}${pagePath}`;
-const heroImageUrl = `${siteMetadataContent.website}${isStarlinkWorthItContent.hero.image.src}`;
+const heroImageUrl = `${siteMetadataContent.website}${starlinkInstallationCostPerthContent.hero.image.src}`;
 
 export const metadata: Metadata = {
-  title: isStarlinkWorthItContent.pageTitle,
-  description: isStarlinkWorthItContent.pageDescription,
+  title: starlinkInstallationCostPerthContent.pageTitle,
+  description: starlinkInstallationCostPerthContent.pageDescription,
+  keywords: starlinkInstallationCostPerthContent.keywords,
   alternates: {
     canonical: pageUrl,
   },
   openGraph: {
-    title: isStarlinkWorthItContent.pageTitle,
-    description: isStarlinkWorthItContent.pageDescription,
+    title: starlinkInstallationCostPerthContent.pageTitle,
+    description: starlinkInstallationCostPerthContent.pageDescription,
     url: pageUrl,
     siteName: siteMetadataContent.businessName,
     images: [
       {
         url: heroImageUrl,
-        alt: isStarlinkWorthItContent.hero.image.alt,
+        alt: starlinkInstallationCostPerthContent.hero.image.alt,
       },
     ],
     locale: "en_AU",
     type: "article",
-    publishedTime: isStarlinkWorthItContent.publishedTime,
-    modifiedTime: isStarlinkWorthItContent.modifiedTime,
+    publishedTime: starlinkInstallationCostPerthContent.publishedTime,
+    modifiedTime: starlinkInstallationCostPerthContent.modifiedTime,
   },
   twitter: {
     card: "summary_large_image",
-    title: isStarlinkWorthItContent.pageTitle,
-    description: isStarlinkWorthItContent.pageDescription,
+    title: starlinkInstallationCostPerthContent.pageTitle,
+    description: starlinkInstallationCostPerthContent.pageDescription,
     images: [heroImageUrl],
   },
 };
 
-const faqSection = isStarlinkWorthItContent.sections.find(
-  (section) => section.title === "Frequently Asked Questions",
-);
-
 const structuredData = buildSchemaGraph([
   buildArticleNode({
-    headline: isStarlinkWorthItContent.pageTitle,
-    description: isStarlinkWorthItContent.pageDescription,
+    headline: starlinkInstallationCostPerthContent.pageTitle,
+    description: starlinkInstallationCostPerthContent.pageDescription,
     pageUrl,
     images: [
-      isStarlinkWorthItContent.hero.image,
-      ...isStarlinkWorthItContent.images,
+      starlinkInstallationCostPerthContent.hero.image,
+      ...starlinkInstallationCostPerthContent.images,
     ],
-    datePublished: isStarlinkWorthItContent.publishedTime,
-    dateModified: isStarlinkWorthItContent.modifiedTime,
+    datePublished: starlinkInstallationCostPerthContent.publishedTime,
+    dateModified: starlinkInstallationCostPerthContent.modifiedTime,
   }),
-  ...(faqSection?.subsections
-    ? [
-        buildFaqPageNode(
-          pagePath,
-          faqSection.subsections.map((faq) => ({
-            question: faq.title,
-            answer: faq.paragraphs?.join(" ") ?? "",
-          })),
-        ),
-      ]
-    : []),
+  {
+    "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteMetadataContent.website,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Starlink Installation Perth",
+        item: absoluteUrl("/starlink-installation-perth"),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: starlinkInstallationCostPerthContent.pageTitle,
+        item: pageUrl,
+      },
+    ],
+  },
 ]);
 
 type ArticleImageProps = {
-  image: (typeof isStarlinkWorthItContent.images)[number];
+  image: NonNullable<
+    (typeof starlinkInstallationCostPerthContent.sections)[number]["image"]
+  >;
 };
 
 function ArticleImage({ image }: ArticleImageProps) {
@@ -133,9 +145,7 @@ function BulletList({ items }: { items?: string[] }) {
   );
 }
 
-export default function IsStarlinkWorthItPage() {
-  const images = isStarlinkWorthItContent.images;
-
+export default function StarlinkInstallationCostPerthPage() {
   return (
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
       <script
@@ -149,21 +159,21 @@ export default function IsStarlinkWorthItPage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:px-8 lg:py-20">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-              {isStarlinkWorthItContent.hero.eyebrow}
+              {starlinkInstallationCostPerthContent.hero.eyebrow}
             </p>
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
-              {isStarlinkWorthItContent.pageTitle}
+              {starlinkInstallationCostPerthContent.pageTitle}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
-              {isStarlinkWorthItContent.hero.intro}
+              {starlinkInstallationCostPerthContent.hero.intro}
             </p>
           </div>
 
           <figure className="overflow-hidden rounded-[24px] border border-[var(--color-border)] bg-white shadow-[0_16px_36px_rgba(15,23,42,0.08)]">
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src={isStarlinkWorthItContent.hero.image.src}
-                alt={isStarlinkWorthItContent.hero.image.alt}
+                src={starlinkInstallationCostPerthContent.hero.image.src}
+                alt={starlinkInstallationCostPerthContent.hero.image.alt}
                 fill
                 sizes="(min-width: 1024px) 32rem, 100vw"
                 loading="eager"
@@ -178,11 +188,11 @@ export default function IsStarlinkWorthItPage() {
         <article className="max-w-3xl space-y-5">
           <div className="rounded-2xl border-l-4 border-[var(--color-accent)] bg-white p-5 shadow-[0_12px_28px_rgba(15,23,42,0.04)]">
             <p className="text-base leading-7 text-[var(--color-ink)] sm:text-lg">
-              {isStarlinkWorthItContent.summary}
+              {starlinkInstallationCostPerthContent.summary}
             </p>
           </div>
 
-          {isStarlinkWorthItContent.sections.map((section, index) => (
+          {starlinkInstallationCostPerthContent.sections.map((section) => (
             <Fragment key={section.title}>
               <section className="pt-8 first:pt-0">
                 <h2 className="mt-8 border-t border-[var(--color-border)] pt-10 text-3xl font-semibold tracking-tight text-[var(--color-ink)] first:mt-0 first:border-t-0 first:pt-0">
@@ -190,18 +200,10 @@ export default function IsStarlinkWorthItPage() {
                 </h2>
                 <div className="mt-5 space-y-5">
                   <Paragraphs paragraphs={section.paragraphs} />
-                  {section.subsections?.map((subsection) => (
-                    <div key={subsection.title} className="space-y-3">
-                      <h3 className="pt-3 text-2xl font-semibold tracking-tight text-[var(--color-ink)]">
-                        {subsection.title}
-                      </h3>
-                      <Paragraphs paragraphs={subsection.paragraphs} />
-                      <BulletList items={subsection.bullets} />
-                    </div>
-                  ))}
+                  <BulletList items={section.bullets} />
                 </div>
               </section>
-              {images[index] ? <ArticleImage image={images[index]} /> : null}
+              {section.image ? <ArticleImage image={section.image} /> : null}
             </Fragment>
           ))}
         </article>
@@ -214,27 +216,29 @@ export default function IsStarlinkWorthItPage() {
               Related articles
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-              Keep researching your connection
+              Keep researching Starlink
             </h2>
           </div>
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {isStarlinkWorthItContent.relatedArticles.map((article) => (
-              <Link
-                key={article.href}
-                href={article.href}
-                className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-6 transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:bg-white"
-              >
-                <h3 className="text-xl font-semibold tracking-tight text-[var(--color-ink)]">
-                  {article.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
-                  {article.description}
-                </p>
-                <span className="mt-5 inline-flex text-sm font-semibold text-[var(--color-accent)]">
-                  Read article
-                </span>
-              </Link>
-            ))}
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {starlinkInstallationCostPerthContent.relatedArticles.map(
+              (article) => (
+                <Link
+                  key={article.href}
+                  href={article.href}
+                  className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-6 transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:bg-white"
+                >
+                  <h3 className="text-xl font-semibold tracking-tight text-[var(--color-ink)]">
+                    {article.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
+                    {article.description}
+                  </p>
+                  <span className="mt-5 inline-flex text-sm font-semibold text-[var(--color-accent)]">
+                    Read article
+                  </span>
+                </Link>
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -242,17 +246,17 @@ export default function IsStarlinkWorthItPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-4xl px-5 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-            {isStarlinkWorthItContent.finalCta.eyebrow}
+            {starlinkInstallationCostPerthContent.finalCta.eyebrow}
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-            {isStarlinkWorthItContent.finalCta.title}
+            {starlinkInstallationCostPerthContent.finalCta.title}
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
-            {isStarlinkWorthItContent.finalCta.description}
+            {starlinkInstallationCostPerthContent.finalCta.description}
           </p>
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3">
             <StarlinkSetupCta className="w-full">
-              {isStarlinkWorthItContent.finalCta.buttonLabel}
+              {starlinkInstallationCostPerthContent.finalCta.buttonLabel}
             </StarlinkSetupCta>
             <Link
               href="/starlink-installation-perth"

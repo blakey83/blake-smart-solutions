@@ -5,6 +5,8 @@ export const wifiLandingPageContent = {
       "Why Your Internet Still Sucks (Even With Fast NBN) — 7 Ways to Fix It at Home",
     description:
       "Learn why your internet still feels slow even with fast NBN, Starlink or fixed wireless, and how Blake Smart Solutions can diagnose Wi-Fi issues with a Wi-Fi Health Check.",
+    publishedTime: "2026-06-20",
+    modifiedTime: "2026-06-20",
   },
 
   hero: {

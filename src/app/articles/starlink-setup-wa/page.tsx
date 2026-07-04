@@ -6,6 +6,7 @@ import { isStarlinkWorthItContent } from "@/content/articles/isStarlinkWorthIt";
 import { starlinkSetupGuideContent } from "@/content/articles/starlinkSetupPerth";
 import { starlinkVsNbnPerthContent } from "@/content/articles/starlinkVsNbnPerth";
 import { siteMetadataContent } from "@/content/components/siteContent";
+import { AUTHOR_NAME, buildArticleNode } from "@/lib/jsonLd";
 import { StarlinkSetupCta } from "./StarlinkSetupCta";
 
 const pagePath = starlinkSetupGuideContent.pagePath;
@@ -13,14 +14,6 @@ const pageUrl = `${siteMetadataContent.website}${pagePath}`;
 const pageTitle = starlinkSetupGuideContent.pageTitle;
 const pageDescription = starlinkSetupGuideContent.pageDescription;
 const heroImageUrl = `${siteMetadataContent.website}${starlinkSetupGuideContent.hero.image.src}`;
-const allImageUrls = [
-  heroImageUrl,
-  `${siteMetadataContent.website}${starlinkSetupGuideContent.intro.image.src}`,
-  ...starlinkSetupGuideContent.sections.map(
-    (section) => `${siteMetadataContent.website}${section.image.src}`,
-  ),
-  `${siteMetadataContent.website}${starlinkSetupGuideContent.conclusion.image.src}`,
-];
 
 const relatedStarlinkArticles = [
   {
@@ -51,7 +44,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
   },
-  authors: [{ name: siteMetadataContent.businessName }],
+  authors: [{ name: AUTHOR_NAME }],
   category: "Starlink installation guide",
   robots: {
     index: true,
@@ -77,6 +70,8 @@ export const metadata: Metadata = {
     ],
     locale: "en_AU",
     type: "article",
+    publishedTime: starlinkSetupGuideContent.publishedTime,
+    modifiedTime: starlinkSetupGuideContent.modifiedTime,
   },
   twitter: {
     card: "summary_large_image",
@@ -90,27 +85,22 @@ const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Article",
+      ...buildArticleNode({
+        headline: pageTitle,
+        description: pageDescription,
+        pageUrl,
+        images: [
+          starlinkSetupGuideContent.hero.image,
+          starlinkSetupGuideContent.intro.image,
+          ...starlinkSetupGuideContent.sections.map((section) => section.image),
+          starlinkSetupGuideContent.conclusion.image,
+        ],
+        datePublished: starlinkSetupGuideContent.publishedTime,
+        dateModified: starlinkSetupGuideContent.modifiedTime,
+      }),
       "@id": `${pageUrl}#article`,
-      headline: pageTitle,
-      description: pageDescription,
-      image: allImageUrls,
       articleSection: "Starlink setup guide",
       inLanguage: "en-AU",
-      mainEntityOfPage: pageUrl,
-      author: {
-        "@type": "Organization",
-        name: siteMetadataContent.businessName,
-        url: siteMetadataContent.website,
-      },
-      publisher: {
-        "@type": "Organization",
-        name: siteMetadataContent.businessName,
-        logo: {
-          "@type": "ImageObject",
-          url: `${siteMetadataContent.website}/images/branding/BSS_logo.png`,
-        },
-      },
     },
     {
       "@type": "HowTo",
