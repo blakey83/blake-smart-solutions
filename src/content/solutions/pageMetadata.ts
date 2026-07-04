@@ -33,9 +33,9 @@ export const servicePageMetadataContent = {
       "Professional Ajax alarm installation in Perth for homes and businesses. Smart intrusion detection, instant alerts, photo verification and clean wireless security systems designed properly.",
   },
   starlinkInstallationPerth: {
-    title: "Starlink Installation Perth | Dish, Cable & Wi-Fi Setup",
+    title: "Starlink Installation Perth | Professional Starlink Installers",
     description:
-      "Starlink installation Perth service for clean dish mounting, protected cable routing, router setup, Wi-Fi upgrades, outdoor coverage and shed internet solutions.",
+      "Professional Starlink installation Perth service for clean dish mounting, protected cable routing, router setup, Wi-Fi upgrades and local support.",
   },
   tvAntennasPerth: {
     title: "TV Antennas | Blake Smart Solutions",

@@ -82,7 +82,7 @@ export const starlinkProducts: Product[] = [
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
   headline: "Starlink Installation Perth",
   subHeadline:
-    "Don’t trust your roof to a rushed Starlink install. Get clean cabling, careful mounting and local support after the job.",
+    "Don’t trust your roof to a rushed Starlink installation. Get clean cabling, careful mounting and local support after the job.",
   bulletPoints: [
     "From $499 including quality Australian-made mount and a clean, professional finish on your roof",
     "10-Year Warranty on all Parts and Labour",
@@ -139,10 +139,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   },
 
   featureSection: {
-    eyebrow: "HOW WE APPROACH STARLINK INSTALLS",
-    title: "Dish, cable, router and Wi-Fi planned as one system",
+    eyebrow: "HOW WE APPROACH STARLINK INSTALLATION",
+    title: "Starlink installation planned around dish, cable, router and Wi-Fi",
     intro:
-      "A good Starlink installation is not just putting the dish somewhere high. We check the app for obstructions, choose a sensible mount, protect exposed cable, bring the cable inside cleanly and make sure the router location gives the best chance of reliable coverage.",
+      "A good Starlink installation service is not just putting the dish somewhere high. We check the app for obstructions, choose a sensible mount, protect exposed cable, bring the cable inside cleanly and make sure the router location gives the best chance of reliable coverage.",
     points: [
       "Dish placement checked for clear sky view and practical cable routing",
       "Mounting approach matched to tile, Colorbond or wall locations",
@@ -157,7 +157,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
 
   problemSolutionEyebrow: "",
   problemSolutionTitle:
-    "Starlink performance depends on more than just plugging in the kit",
+    "Starlink performance depends on more than plugging in the kit",
   problemSolutionIntro:
     "The Starlink kit is designed to be approachable, but Perth homes still create practical installation issues. Roof type, cable entry, double brick walls, router location and Wi-Fi coverage all affect the end result.",
 

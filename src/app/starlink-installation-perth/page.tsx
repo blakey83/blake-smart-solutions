@@ -26,8 +26,12 @@ export const metadata: Metadata = buildSeoMetadata({
   description: servicePageMetadataContent.starlinkInstallationPerth.description,
   path: pagePath,
   keywords: [
+    "Starlink Installation",
+    "Starlink Installation Perth",
     "starlink installation perth",
+    "professional starlink installation perth",
     "starlink installer perth",
+    "starlink installers perth",
     "starlink dish installation perth",
     "starlink setup perth",
     "starlink cable installation perth",
@@ -50,7 +54,7 @@ const structuredData = buildSchemaGraph([
       alt: "Starlink installation Perth dish mounted on a roof",
     },
     offerDescription:
-      "Professional Starlink dish mounting, cable routing, router setup and Wi-Fi coverage options for Perth homes and properties.",
+      "Professional Starlink Installation Perth service for dish mounting, cable routing, router setup and Wi-Fi coverage options for Perth homes and properties.",
   }),
   buildFaqPageNode(pagePath, starlinkSolutionContent.faqs),
 ]);
@@ -107,15 +111,15 @@ export default function StarlinkPage() {
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="rounded-[28px] border border-[var(--color-border)] bg-white p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-              Starlink guide
+              Starlink Installation Perth guides
             </p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-3xl">
-              Planning a Starlink setup?
+              Planning a Starlink installation?
             </h2>
             <p className="mt-4 text-base leading-7 text-[var(--color-muted)]">
-              Read the setup guide for dish placement, mounting, cable routing,
-              Wi-Fi setup and the common mistakes that affect Starlink
-              performance in WA homes.
+              Read our Starlink installation guides for dish placement,
+              mounting, cable routing, Wi-Fi setup and the common mistakes that
+              affect Starlink performance in Perth and WA homes.
             </p>
             <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
               {relatedStarlinkArticles.map((article) => (
