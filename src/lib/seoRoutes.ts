@@ -1,11 +1,18 @@
-import { promises as fs } from "node:fs";
-import path from "node:path";
 import { SITE_URL } from "@/lib/seoConfig";
 
-const APP_DIRECTORY = path.join(process.cwd(), "src", "app");
-const MAX_SITEMAP_URLS = 50_000;
+export const CORE_SERVICE_ROUTES = [
+  "/",
+  "/security-cameras-perth",
+  "/ajax-security-perth",
+  "/wifi-solutions-perth",
+  "/starlink-installation-perth",
+  "/rural-starlink-installation-wa",
+  "/data-cabling",
+  "/tv-antennas-perth",
+  "/enquiry",
+] as const;
 
-const ARTICLE_ROUTES = new Set([
+export const ARTICLE_RESOURCE_ROUTES = [
   "/articles/7-ways-to-fix-wifi",
   "/articles/is-starlink-worth-it",
   "/articles/starlink-installation-cost-perth",
@@ -13,120 +20,21 @@ const ARTICLE_ROUTES = new Set([
   "/articles/starlink-vs-nbn-perth",
   "/articles/what-makes-a-great-starlink-installer",
   "/articles/why-nbn-feels-slow",
-]);
+  "/recent-installations/starlink",
+] as const;
 
-const RECENT_INSTALLATION_ROUTES = new Set([
+export const UTILITY_ROUTES = ["/privacy-policy"] as const;
+
+export const INDEXABLE_ROUTES = [
+  ...CORE_SERVICE_ROUTES,
+  ...ARTICLE_RESOURCE_ROUTES,
+  ...UTILITY_ROUTES,
+] as const;
+
+const ARTICLE_ROUTES = new Set<string>(ARTICLE_RESOURCE_ROUTES);
+const RECENT_INSTALLATION_ROUTES = new Set<string>([
   "/recent-installations/starlink",
 ]);
-
-const EXCLUDED_SEGMENTS = new Set([
-  "api",
-  "admin",
-  "private",
-  "_private",
-  "_internal",
-]);
-
-const EXCLUDED_FILENAMES = new Set([
-  "error.tsx",
-  "error.ts",
-  "not-found.tsx",
-  "not-found.ts",
-  "loading.tsx",
-  "loading.ts",
-  "route.ts",
-  "route.tsx",
-  "template.tsx",
-  "template.ts",
-  "default.tsx",
-  "default.ts",
-]);
-
-type AppRouteEntry = {
-  route: string;
-  filePath: string;
-};
-
-async function collectPageRoutes(
-  directory: string,
-  segments: string[] = [],
-): Promise<AppRouteEntry[]> {
-  const entries = await fs.readdir(directory, { withFileTypes: true });
-  const routes = new Map<string, AppRouteEntry>();
-
-  for (const entry of entries) {
-    if (entry.isDirectory()) {
-      const segment = entry.name;
-
-      if (segment.startsWith("(") && segment.endsWith(")")) {
-        const nestedRoutes = await collectPageRoutes(
-          path.join(directory, segment),
-          segments,
-        );
-        nestedRoutes.forEach((entry) => routes.set(entry.route, entry));
-        continue;
-      }
-
-      if (
-        segment.startsWith("@") ||
-        segment.startsWith(".") ||
-        segment.includes("[")
-      ) {
-        continue;
-      }
-
-      if (EXCLUDED_SEGMENTS.has(segment)) {
-        continue;
-      }
-
-      const nestedRoutes = await collectPageRoutes(
-        path.join(directory, segment),
-        [...segments, segment],
-      );
-      nestedRoutes.forEach((entry) => routes.set(entry.route, entry));
-      continue;
-    }
-
-    if (!entry.isFile()) {
-      continue;
-    }
-
-    if (EXCLUDED_FILENAMES.has(entry.name)) {
-      continue;
-    }
-
-    if (entry.name !== "page.tsx" && entry.name !== "page.ts") {
-      continue;
-    }
-
-    const routePath = segments.length === 0 ? "/" : `/${segments.join("/")}`;
-    routes.set(routePath, {
-      route: routePath,
-      filePath: path.join(directory, entry.name),
-    });
-  }
-
-  return Array.from(routes.values()).sort((left, right) =>
-    left.route.localeCompare(right.route),
-  );
-}
-
-export async function getPublicAppRouteEntries(): Promise<AppRouteEntry[]> {
-  const routes = await collectPageRoutes(APP_DIRECTORY);
-
-  if (routes.length > MAX_SITEMAP_URLS) {
-    throw new Error(
-      `Sitemap contains ${routes.length} URLs, which exceeds Google's ${MAX_SITEMAP_URLS} URL limit.`,
-    );
-  }
-
-  return routes;
-}
-
-export async function getPublicAppRoutes(): Promise<string[]> {
-  const entries = await getPublicAppRouteEntries();
-  return entries.map((entry) => entry.route);
-}
 
 export function getAbsoluteCanonicalUrl(route: string): string {
   if (!route.startsWith("/")) {
@@ -146,7 +54,6 @@ export function getRoutePriority(route: string): number {
   }
 
   const serviceRoutes = new Set([
-    "/security",
     "/wifi-solutions-perth",
     "/security-cameras-perth",
     "/ajax-security-perth",

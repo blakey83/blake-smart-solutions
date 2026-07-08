@@ -29,6 +29,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/starlink-avon-valley",
+        destination: "/rural-starlink-installation-wa",
+        permanent: true,
+      },
+      {
         source: "/wifi-solutions-perth/shed-wifi",
         destination: "/wifi-solutions-perth",
         permanent: true,
