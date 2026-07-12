@@ -20,6 +20,8 @@ export const ARTICLE_RESOURCE_ROUTES = [
   "/articles/starlink-vs-nbn-perth",
   "/articles/what-makes-a-great-starlink-installer",
   "/articles/why-nbn-feels-slow",
+  "/case-studies",
+  "/case-studies/starlink-installation-city-beach-gen-3-router-bracket",
   "/recent-installations/starlink",
 ] as const;
 
@@ -79,6 +81,7 @@ export function getRoutePriority(route: string): number {
     ARTICLE_ROUTES.has(route) ||
     route.includes("/blog/") ||
     route.startsWith("/articles/") ||
+    route.startsWith("/case-studies") ||
     route.includes("/guides/")
   ) {
     return 0.7;
@@ -115,6 +118,7 @@ export function getRouteChangeFrequency(
     ARTICLE_ROUTES.has(route) ||
     route.includes("/blog/") ||
     route.startsWith("/articles/") ||
+    route.startsWith("/case-studies") ||
     route.includes("/guides/")
   ) {
     return "monthly";

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
 import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
@@ -7,6 +8,7 @@ import { isStarlinkWorthItContent } from "@/content/articles/isStarlinkWorthIt";
 import { starlinkInstallationCostPerthContent } from "@/content/articles/starlinkInstallationCostPerth";
 import { starlinkSetupGuideContent } from "@/content/articles/starlinkSetupPerth";
 import { starlinkVsNbnPerthContent } from "@/content/articles/starlinkVsNbnPerth";
+import { starlinkCityBeachCaseStudy } from "@/content/case-studies/starlinkCityBeach";
 import {
   starlinkSolutionContent,
   starlinkSolutionTrustItems,
@@ -108,7 +110,46 @@ export default function StarlinkPage() {
         content={whyChooseUsStarlink}
       />
       <section className="border-t border-[var(--color-border)] bg-[var(--color-page)]">
-        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-6xl space-y-6 px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div className="rounded-[28px] border border-[var(--color-border)] bg-white p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+              In-depth installation review
+            </p>
+            <div className="mt-5 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div className="overflow-hidden rounded-[8px] border border-[var(--color-border)] bg-[var(--color-section)]">
+                <Image
+                  src={starlinkCityBeachCaseStudy.hero.image.src}
+                  alt={starlinkCityBeachCaseStudy.hero.image.alt}
+                  width={768}
+                  height={576}
+                  sizes="(min-width: 1024px) 32rem, 100vw"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-muted)]">
+                  {starlinkCityBeachCaseStudy.location}
+                </p>
+                <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-3xl">
+                  See a real Starlink Gen 3 install with a neat router bracket
+                  finish
+                </h2>
+                <p className="mt-4 text-base leading-7 text-[var(--color-muted)]">
+                  This City Beach case study shows how we handled a two-storey
+                  Starlink installation, from roof mounting and cable routing
+                  through to a cleaner internal finish for the router, power
+                  supply and cable entry.
+                </p>
+                <Link
+                  href={starlinkCityBeachCaseStudy.pagePath}
+                  className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,110,184,0.16)] transition hover:bg-[var(--color-accent-strong)]"
+                >
+                  Read the City Beach case study
+                </Link>
+              </div>
+            </div>
+          </div>
+
           <div className="rounded-[28px] border border-[var(--color-border)] bg-white p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
               Starlink Installation Perth guides
