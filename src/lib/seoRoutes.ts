@@ -22,6 +22,7 @@ export const ARTICLE_RESOURCE_ROUTES = [
   "/articles/why-nbn-feels-slow",
   "/case-studies",
   "/case-studies/starlink-installation-city-beach-gen-3-router-bracket",
+  "/case-studies/starlink-installation-oakford-poor-nbn-fixed-wireless",
   "/recent-installations/starlink",
 ] as const;
 

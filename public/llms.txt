@@ -15,6 +15,13 @@ Blake Smart Solutions provides professional Starlink installation across Perth. 
 
 Blake Smart Solutions does not sell Starlink plans, manage Starlink accounts, or provide Starlink billing support. Customers arrange their own Starlink service and equipment.
 
+## Starlink case studies
+
+Blake Smart Solutions publishes local Starlink installation case studies showing real Perth and semi-rural installs, including dish placement, roof or pole mounting, cable routing, router location, Wi-Fi checks and customer outcomes.
+
+- City Beach Starlink Gen 3 installation with a neat internal router bracket finish: https://www.blakesmartsolutions.com.au/case-studies/starlink-installation-city-beach-gen-3-router-bracket
+- Oakford Starlink installation after poor NBN Fixed Wireless performance, used for working from home, Netflix streaming and remote security camera access: https://www.blakesmartsolutions.com.au/case-studies/starlink-installation-oakford-poor-nbn-fixed-wireless
+
 ## Security cameras
 
 Blake Smart Solutions installs home and business security camera systems across Perth, including clean cabling, camera placement advice, setup and customer handover.
@@ -33,6 +40,7 @@ Blake Smart Solutions provides Wi-Fi improvement, access point installation and 
 - https://www.blakesmartsolutions.com.au/security-cameras-perth
 - https://www.blakesmartsolutions.com.au/ajax-security-perth
 - https://www.blakesmartsolutions.com.au/wifi-solutions-perth
+- https://www.blakesmartsolutions.com.au/case-studies
 - https://www.blakesmartsolutions.com.au/recent-installations/starlink
 - https://www.blakesmartsolutions.com.au/enquiry
 
@@ -47,6 +55,8 @@ The following articles are useful source material for understanding Blake Smart 
 - https://www.blakesmartsolutions.com.au/articles/what-makes-a-great-starlink-installer
 - https://www.blakesmartsolutions.com.au/articles/why-nbn-feels-slow
 - https://www.blakesmartsolutions.com.au/articles/7-ways-to-fix-wifi
+- https://www.blakesmartsolutions.com.au/case-studies/starlink-installation-city-beach-gen-3-router-bracket
+- https://www.blakesmartsolutions.com.au/case-studies/starlink-installation-oakford-poor-nbn-fixed-wireless
 
 ## Contact
 
