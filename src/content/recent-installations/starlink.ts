@@ -8,6 +8,28 @@ export const recentStarlinkInstallationsContent: WorkShowcaseContent = {
 
   completedJobs: [
     {
+      title: "Reliable internet for working from home",
+      location: "Baldivis, WA",
+      description:
+        "This Baldivis customer needed a reliable internet connection for working from home and wanted the Starlink installation completed before wet weather arrived. We installed the Gen 3 Starlink dish on the roof, routed the cable neatly through conduit, sealed the roof entry properly and completed the system setup and Wi-Fi check before handover. Inside the home, we also fitted a Gen 3 router bracket to keep the router, power supply and cable entry tidy, instead of leaving the equipment loose on a bench or floor. This install is a good example of how Starlink can help customers who need dependable internet for remote work, video calls and everyday household use.",
+      image: {
+        src: "/images/work-photos/Starlink/baldivis-starlink-work-from-home-card.jpg",
+        alt: "Gen 3 Starlink dish roof installation with conduit in Baldivis",
+      },
+    },
+
+    {
+      title: "Upgrading from Gen 2 to Gen 3 Starlink",
+      location: "Pickering Brook, WA",
+      description:
+        "This Pickering Brook customer already had Starlink, but wanted to upgrade from a Gen 2 system to the newer Gen 3 hardware. The existing dish location had a strong view of the sky, so the focus was on replacing the older equipment with a cleaner, more future-ready setup. We installed the Gen 3 Starlink dish in a suitable roof position, tidied the cable route, completed the system setup and checked the connection before handover. This type of upgrade is a good option for customers who already rely on Starlink but want newer hardware, improved router performance and a more permanent installation finish.",
+      image: {
+        src: "/images/work-photos/Starlink/pickering-brook-gen-3-upgrade-card.jpg",
+        alt: "Gen 3 Starlink dish installed on a roof in Pickering Brook",
+      },
+    },
+
+    {
       title: "Reliable internet where NBN wasn't available",
       location: "Camillo, WA",
       description:

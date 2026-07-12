@@ -5,6 +5,7 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
 import { greatStarlinkInstallerContent } from "@/content/articles/greatStarlinkInstaller";
 import { isStarlinkWorthItContent } from "@/content/articles/isStarlinkWorthIt";
+import { bookStarlinkInstallerPerthContent } from "@/content/articles/bookStarlinkInstallerPerth";
 import { starlinkInstallationCostPerthContent } from "@/content/articles/starlinkInstallationCostPerth";
 import { starlinkSetupGuideContent } from "@/content/articles/starlinkSetupPerth";
 import { starlinkVsNbnPerthContent } from "@/content/articles/starlinkVsNbnPerth";
@@ -74,6 +75,12 @@ const structuredData = buildSchemaGraph([
 ]);
 
 const relatedStarlinkArticles = [
+  {
+    title: bookStarlinkInstallerPerthContent.pageTitle,
+    description: bookStarlinkInstallerPerthContent.pageDescription,
+    href: bookStarlinkInstallerPerthContent.pagePath,
+    cta: "Book a Starlink installer",
+  },
   {
     title: starlinkInstallationCostPerthContent.pageTitle,
     description: starlinkInstallationCostPerthContent.pageDescription,
@@ -189,7 +196,7 @@ export default function StarlinkPage() {
               mounting, cable routing, Wi-Fi setup and the common mistakes that
               affect Starlink performance in Perth and WA homes.
             </p>
-            <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+            <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {relatedStarlinkArticles.map((article) => (
                 <Link
                   key={article.href}
