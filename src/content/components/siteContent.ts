@@ -7,9 +7,10 @@ export const siteMetadataContent = {
   country: "AU",
   telephone: "+61477948079",
   website: SITE_URL,
-  title: "Blake Smart Solutions | Security Cameras, Wi-Fi & Starlink Perth",
+  title:
+    "Blake Smart Solutions | Security Cameras, Wi-Fi & Starlink Installation Perth",
   description:
-    "Perth smart technology specialists for CCTV, smart alarms, Wi-Fi, Starlink distribution and data solutions. Licensed, insured, and experienced in CCTV and smart security systems.",
+    "Perth smart technology specialists for CCTV, smart alarms, Wi-Fi, Starlink installation and data solutions. Licensed, insured, and experienced in CCTV and smart security systems.",
 };
 
 export const navContent = {

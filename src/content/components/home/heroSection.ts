@@ -13,7 +13,7 @@ export const heroSectionContent = {
   mobileDescription:
     "Clean CCTV, Wi-Fi, Starlink and smart security installs for Perth homes and businesses.",
   description:
-    "Perth homes and businesses trust Blake Smart Solutions for clean installations, practical advice and reliable technology. From security cameras and alarms to Wi-Fi and Starlink distribution, we help people stay connected, secure and supported.",
+    "Perth homes and businesses trust Blake Smart Solutions for clean installations, practical advice and reliable technology. From security cameras and alarms to Wi-Fi and Starlink installation, we help people stay connected, secure and supported.",
   callCTA: "Call 0477 948 079",
   quoteCTA: "Request a Quote",
 };
