@@ -49,8 +49,15 @@ const breadcrumbRoutes: Record<string, BreadcrumbConfig> = {
   "/articles/what-makes-a-great-starlink-installer": {
     title: "What Makes a Great Starlink Installer?",
     section: {
-      title: "Articles",
-      path: "/articles",
+      title: "Starlink Installation Perth",
+      path: "/starlink-installation-perth",
+    },
+  },
+  "/articles/where-to-book-starlink-installer-perth": {
+    title: "Where to Book a Starlink Installer in Perth",
+    section: {
+      title: "Starlink Installation Perth",
+      path: "/starlink-installation-perth",
     },
   },
   "/articles/why-nbn-feels-slow": {

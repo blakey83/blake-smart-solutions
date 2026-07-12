@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { bookStarlinkInstallerPerthContent } from "@/content/articles/bookStarlinkInstallerPerth";
 import { siteMetadataContent } from "@/content/components/siteContent";
 import {
+  absoluteUrl,
   buildArticleNode,
   buildFaqPageNode,
   buildSchemaGraph,
@@ -58,6 +59,30 @@ const structuredData = buildSchemaGraph([
     datePublished: bookStarlinkInstallerPerthContent.publishedTime,
     dateModified: bookStarlinkInstallerPerthContent.modifiedTime,
   }),
+  {
+    "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteMetadataContent.website,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Starlink Installation Perth",
+        item: absoluteUrl("/starlink-installation-perth"),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: bookStarlinkInstallerPerthContent.pageTitle,
+        item: pageUrl,
+      },
+    ],
+  },
   buildFaqPageNode(pagePath, bookStarlinkInstallerPerthContent.faqs),
 ]);
 
