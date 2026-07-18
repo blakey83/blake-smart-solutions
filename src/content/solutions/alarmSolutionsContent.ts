@@ -238,7 +238,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
 export const alarmsSolutionTrustItems = [
   "WA Police Licensed & Insured",
   "Locally Owned & Operated",
-  "5-Star Google Reviews",
+  "Ajax Certified Installers",
   "Ongoing Local Support",
 ];
 
