@@ -76,6 +76,13 @@ const breadcrumbRoutes: Record<string, BreadcrumbConfig> = {
   "/privacy-policy": {
     title: "Privacy Policy",
   },
+  "/recent-installations/ajax": {
+    title: "Recent Ajax Installations",
+    section: {
+      title: "Recent Installations",
+      path: "/recent-installations",
+    },
+  },
   "/recent-installations/starlink": {
     title: "Recent Starlink Installations",
     section: {

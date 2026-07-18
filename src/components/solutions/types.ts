@@ -56,8 +56,10 @@ export type FeatureSection = {
   title: string;
   intro: string;
   points: string[];
+  finePrint?: string;
   image: string;
   imageAlt: string;
+  imageEmphasis?: "standard" | "large";
 };
 
 export type FaqItem = {

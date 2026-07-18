@@ -24,6 +24,7 @@ export const ARTICLE_RESOURCE_ROUTES = [
   "/case-studies",
   "/case-studies/starlink-installation-city-beach-gen-3-router-bracket",
   "/case-studies/starlink-installation-oakford-poor-nbn-fixed-wireless",
+  "/recent-installations/ajax",
   "/recent-installations/starlink",
 ] as const;
 
@@ -37,6 +38,7 @@ export const INDEXABLE_ROUTES = [
 
 const ARTICLE_ROUTES = new Set<string>(ARTICLE_RESOURCE_ROUTES);
 const RECENT_INSTALLATION_ROUTES = new Set<string>([
+  "/recent-installations/ajax",
   "/recent-installations/starlink",
 ]);
 

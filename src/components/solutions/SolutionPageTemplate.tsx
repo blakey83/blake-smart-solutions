@@ -216,9 +216,16 @@ function ApproachIcon({ icon }: { icon: ApproachStep["icon"] }) {
 }
 
 function SolutionFeatureSection({ content }: { content: FeatureSection }) {
+  const layoutClasses =
+    content.imageEmphasis === "large"
+      ? "max-w-6xl lg:grid-cols-[0.8fr_1fr]"
+      : "max-w-5xl lg:grid-cols-[0.95fr_1fr]";
+
   return (
     <section className="border-y border-[var(--color-border)] bg-white">
-      <div className="mx-auto grid max-w-5xl items-center gap-10 px-5 py-14 sm:px-6 lg:grid-cols-[0.95fr_1fr] lg:gap-14 lg:px-8 lg:py-20">
+      <div
+        className={`mx-auto grid items-center gap-10 px-5 py-14 sm:px-6 lg:gap-14 lg:px-8 lg:py-20 ${layoutClasses}`}
+      >
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
             {content.eyebrow}
@@ -241,6 +248,12 @@ function SolutionFeatureSection({ content }: { content: FeatureSection }) {
               </li>
             ))}
           </ul>
+
+          {content.finePrint ? (
+            <p className="mt-6 text-xs leading-5 text-[var(--color-muted)]">
+              {content.finePrint}
+            </p>
+          ) : null}
         </div>
 
         <div className="relative overflow-hidden rounded-[24px] bg-[var(--color-card)] shadow-[0_18px_42px_rgba(15,23,42,0.1)]">
