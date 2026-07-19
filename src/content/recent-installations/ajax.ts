@@ -8,20 +8,20 @@ export const recentAjaxInstallationsContent: WorkShowcaseContent = {
 
   completedJobs: [
     {
-      title: "External Ajax StreetSiren installation",
+      title: "Ajax alarm installation for family home protection",
       location: "Kelmscott, WA",
       description:
-        "We installed an Ajax StreetSiren in a prominent position outside this Kelmscott home. The siren provides a strong audible and visual warning when the alarm is triggered, while the neat wireless installation keeps the exterior finish clean.",
+        "A Kelmscott family wanted a reliable alarm system that would help protect the home and provide greater peace of mind. We installed and configured an Ajax system with internal detection and a prominent StreetSiren to provide a strong audible and visual warning if the alarm is triggered. The system was set up for simple everyday use, with mobile alerts and app control allowing the family to monitor the property whether they are at home or away.",
       image: {
         src: "/images/work-photos/Ajax/kelmscott-street-siren.webp",
         alt: "Daniel from Blake Smart Solutions installing an Ajax StreetSiren outside a Kelmscott home",
       },
     },
     {
-      title: "Indoor Ajax MotionProtect installation",
+      title: "Ajax security for a couple who travel for work",
       location: "Innaloo, WA",
       description:
-        "This Ajax MotionProtect was fitted high in the corner of the room to provide practical indoor motion detection. Careful device placement helps the system monitor the intended area while keeping the sensor discreet and out of the way.",
+        "This Innaloo couple regularly travel for work and wanted a practical way to stay connected to their home while they were away. We installed an Ajax alarm system with carefully positioned MotionProtect detectors to monitor the main internal areas without making the equipment intrusive. The system provides instant mobile notifications and remote app control, giving them a clear view of the alarm status and greater confidence when the property is unattended.",
       image: {
         src: "/images/work-photos/Ajax/innaloo-motionprotect.webp",
         alt: "White Ajax MotionProtect sensor installed in the corner of a room in Innaloo",
