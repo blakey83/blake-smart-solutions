@@ -50,7 +50,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     image: "/images/work-photos/Ajax/recent-ajax-installations.jpg",
     imageAlt:
       "Daniel from Blake Smart Solutions drilling during an Ajax alarm installation",
-    title: "Real Ajax installations by Blake Smart Solutions",
+    title: "Check out our recent Ajax installations in Perth",
     href: "/recent-installations/ajax",
     linkLabel: "View recent Ajax installations",
   },
