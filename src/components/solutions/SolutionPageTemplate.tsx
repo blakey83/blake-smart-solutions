@@ -215,22 +215,38 @@ function ApproachIcon({ icon }: { icon: ApproachStep["icon"] }) {
   );
 }
 
-function SolutionFeatureSection({ content }: { content: FeatureSection }) {
+function SolutionFeatureSection({
+  content,
+  imageSide = "right",
+}: {
+  content: FeatureSection;
+  imageSide?: "left" | "right";
+}) {
   const layoutClasses =
     content.imageEmphasis === "large"
-      ? "max-w-6xl lg:grid-cols-[0.8fr_1fr]"
-      : "max-w-5xl lg:grid-cols-[0.95fr_1fr]";
+      ? imageSide === "left"
+        ? "max-w-6xl lg:grid-cols-[1fr_0.8fr]"
+        : "max-w-6xl lg:grid-cols-[0.8fr_1fr]"
+      : imageSide === "left"
+        ? "max-w-5xl lg:grid-cols-[1fr_0.95fr]"
+        : "max-w-5xl lg:grid-cols-[0.95fr_1fr]";
+  const imageClasses = imageSide === "left" ? "lg:order-first" : "";
+  const copyClasses = imageSide === "left" ? "lg:order-last" : "";
 
   return (
     <section className="border-y border-[var(--color-border)] bg-white">
       <div
         className={`mx-auto grid items-center gap-10 px-5 py-14 sm:px-6 lg:gap-14 lg:px-8 lg:py-20 ${layoutClasses}`}
       >
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
-            {content.eyebrow}
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+        <div className={copyClasses}>
+          {content.eyebrow ? (
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
+              {content.eyebrow}
+            </p>
+          ) : null}
+          <h2
+            className={`${content.eyebrow ? "mt-4" : ""} text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl`}
+          >
             {content.title}
           </h2>
           <p className="mt-5 text-base leading-7 text-[var(--color-muted)]">
@@ -256,7 +272,9 @@ function SolutionFeatureSection({ content }: { content: FeatureSection }) {
           ) : null}
         </div>
 
-        <div className="relative overflow-hidden rounded-[24px] bg-[var(--color-card)] shadow-[0_18px_42px_rgba(15,23,42,0.1)]">
+        <div
+          className={`relative overflow-hidden rounded-[24px] bg-[var(--color-card)] shadow-[0_18px_42px_rgba(15,23,42,0.1)] ${imageClasses}`}
+        >
           <div className="relative aspect-[4/3] w-full">
             <Image
               src={content.image}
@@ -295,6 +313,7 @@ export function SolutionPageTemplate({
   primaryCta,
   secondaryCta,
   recentWork,
+  featureSections,
   featureSection,
   problemSolutionEyebrow = solutionPageTemplateContent.problemSolutionEyebrow,
   problemSolutionTitle,
@@ -317,6 +336,8 @@ export function SolutionPageTemplate({
     finalCtaButton,
     primaryCta,
   );
+  const resolvedFeatureSections =
+    featureSections ?? (featureSection ? [featureSection] : []);
 
   return (
     <div className="pb-20 bg-[var(--color-page)] text-[var(--color-ink)] sm:pb-0">
@@ -472,9 +493,13 @@ export function SolutionPageTemplate({
         />
       ) : null}
 
-      {featureSection ? (
-        <SolutionFeatureSection content={featureSection} />
-      ) : null}
+      {resolvedFeatureSections.map((section, index) => (
+        <SolutionFeatureSection
+          key={section.title}
+          content={section}
+          imageSide={index % 2 === 0 ? "right" : "left"}
+        />
+      ))}
 
       <WhyBSS content={content} showReviews={false} />
 

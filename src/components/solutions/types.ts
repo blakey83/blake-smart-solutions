@@ -100,6 +100,7 @@ export type SolutionPageTemplateProps = {
   primaryCta: CtaButton;
   secondaryCta?: CtaButton;
   recentWork?: RecentWorkSection;
+  featureSections?: FeatureSection[];
   featureSection?: FeatureSection;
   problemSolutionEyebrow?: string;
   problemSolutionTitle: string;

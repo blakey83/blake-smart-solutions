@@ -55,27 +55,49 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     linkLabel: "View recent Ajax installations",
   },
 
-  featureSection: {
-    eyebrow: "",
-    title: "Professionally installed Ajax systems from $1,849*",
-    intro:
-      "Ajax delivers top-of-the-range, cutting-edge wireless security controlled through a smartphone app. The ultimate protection for your home.",
-    points: [
-      "Ajax Hub 2 with mobile app control",
-      "Ajax KeyPad",
-      "3 × Ajax MotionProtect detectors",
-      "Ajax StreetSiren",
-      "Ajax HomeSiren",
-      "2 × Ajax SpaceControl remotes",
-      "Professional installation, configuration and app setup",
-    ],
-    finePrint:
-      "*Price includes the 10% discount for installations booked before 31 August 2026.",
-    image: "/images/solutions/ajaxSecurity/basic_ajax_kit.webp",
-    imageAlt:
-      "Ajax basic alarm package with hub, three motion detectors, external siren, internal siren, two control fobs and phone app",
-    imageEmphasis: "large",
-  },
+  featureSections: [
+    {
+      eyebrow: "",
+      title: "Professionally installed Ajax apartment systems from $1,160*",
+      intro:
+        "A compact Ajax security package designed for apartments, units and smaller properties. Control the system from your phone, receive instant alerts and expand it later as your needs change.",
+      points: [
+        "Ajax Hub 2 with mobile app control",
+        "1 × Ajax MotionProtect detector",
+        "1 × Ajax DoorProtect entry detector",
+        "1 × Ajax SpaceControl remote",
+        "Professional installation, configuration and app setup",
+        "Full system testing and customer handover",
+      ],
+      finePrint:
+        "*Price includes the 10% discount for installations booked before 31 August 2026.",
+      image: "/images/solutions/ajaxSecurity/ajax_apartment_kit.png",
+      imageAlt:
+        "Ajax apartment alarm package with hub, motion detector, door detector, remote and mobile app",
+      imageEmphasis: "large",
+    },
+    {
+      eyebrow: "",
+      title: "Professionally installed Ajax systems from $1,849*",
+      intro:
+        "Ajax delivers top-of-the-range, cutting-edge wireless security controlled through a smartphone app. The ultimate protection for your home.",
+      points: [
+        "Ajax Hub 2 with mobile app control",
+        "Ajax KeyPad",
+        "3 × Ajax MotionProtect detectors",
+        "Ajax StreetSiren",
+        "Ajax HomeSiren",
+        "2 × Ajax SpaceControl remotes",
+        "Professional installation, configuration and app setup",
+      ],
+      finePrint:
+        "*Price includes the 10% discount for installations booked before 31 August 2026.",
+      image: "/images/solutions/ajaxSecurity/basic_ajax_kit.webp",
+      imageAlt:
+        "Ajax basic alarm package with hub, three motion detectors, external siren, internal siren, two control fobs and phone app",
+      imageEmphasis: "large",
+    },
+  ],
 
   problemSolutionEyebrow: "",
 
