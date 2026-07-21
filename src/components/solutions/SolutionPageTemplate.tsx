@@ -218,9 +218,11 @@ function ApproachIcon({ icon }: { icon: ApproachStep["icon"] }) {
 function SolutionFeatureSection({
   content,
   imageSide = "right",
+  id,
 }: {
   content: FeatureSection;
   imageSide?: "left" | "right";
+  id?: string;
 }) {
   const layoutClasses =
     content.imageEmphasis === "large"
@@ -234,7 +236,10 @@ function SolutionFeatureSection({
   const copyClasses = imageSide === "left" ? "lg:order-last" : "";
 
   return (
-    <section className="border-y border-[var(--color-border)] bg-white">
+    <section
+      id={id}
+      className="border-y border-[var(--color-border)] bg-white"
+    >
       <div
         className={`mx-auto grid items-center gap-10 px-5 py-14 sm:px-6 lg:gap-14 lg:px-8 lg:py-20 ${layoutClasses}`}
       >
@@ -300,6 +305,7 @@ type SolutionPageTemplateViewProps = SolutionPageTemplateProps &
   };
 
 export function SolutionPageTemplate({
+  sectionIds,
   specialOffer,
   headline,
   subHeadline,
@@ -449,7 +455,7 @@ export function SolutionPageTemplate({
       <TrustStrip trustItems={trustItems} />
 
       {recentWork ? (
-        <section className="bg-white">
+        <section id={sectionIds?.recentWork} className="bg-white">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
             <Link
               href={recentWork.href}
@@ -498,10 +504,15 @@ export function SolutionPageTemplate({
           key={section.title}
           content={section}
           imageSide={index % 2 === 0 ? "right" : "left"}
+          id={index === 0 ? sectionIds?.feature : undefined}
         />
       ))}
 
-      <WhyBSS content={content} showReviews={false} />
+      <WhyBSS
+        content={content}
+        showReviews={false}
+        id={sectionIds?.whyChooseUs}
+      />
 
       <section className="bg-[var(--color-section)]">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
@@ -583,7 +594,7 @@ export function SolutionPageTemplate({
         </div>
       </section>
 
-      <section className="bg-white">
+      <section id={sectionIds?.faqs} className="bg-white">
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <SectionHeading
             eyebrow={faqsEyebrow}

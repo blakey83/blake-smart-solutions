@@ -1,6 +1,12 @@
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const alarmsSolutionContent: SolutionPageTemplateProps = {
+  sectionIds: {
+    recentWork: "recent-installations",
+    feature: "ajax-packages",
+    whyChooseUs: "why-blake",
+    faqs: "ajax-faqs",
+  },
   specialOffer: {
     title:
       "10% off Ajax alarm installation for installations booked before 31st August 2026",
