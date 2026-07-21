@@ -85,8 +85,16 @@ export type TimedAvailabilityPopup = {
   productName?: string;
 };
 
+export type SolutionSectionIds = {
+  recentWork?: string;
+  feature?: string;
+  whyChooseUs?: string;
+  faqs?: string;
+};
+
 export type SolutionPageTemplateProps = {
   currentPath?: string;
+  sectionIds?: SolutionSectionIds;
   specialOffer?: SpecialOffer;
   headline: string;
   subHeadline: string;
