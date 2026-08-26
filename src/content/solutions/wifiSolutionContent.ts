@@ -3,15 +3,15 @@ import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 export const wifiSolutionContent: SolutionPageTemplateProps = {
   headline: "Get WiFi Where It Doesn't Reach Today",
   subHeadline:
-    "From sheds and workshops to offices, outdoor areas and large homes, we install access points and wireless links that deliver reliable coverage where standard routers fall short.",
+    "Reliable WiFi and connectivity across your home or business. From sheds and workshops to offices, outdoor areas and large homes where standard routers fall short.",
   bulletPoints: [
     "Eliminate dead spots, weak signal and frustrating WiFi dropouts",
     "Get internet to sheds, workshops, granny flats and outdoor areas",
     "Extend Starlink and NBN connections beyond the room with the router",
     "Keep security cameras, smart devices and workstations reliably connected",
-    "Local support after installation",
+    "Installed, configured and tested, with local support afterwards",
   ],
-  heroEyebrow: "ATTENTION PERTH INTERNET USERS",
+  heroEyebrow: "WIFI & CONNECTIVITY SOLUTIONS PERTH",
   heroBackgroundImage: "/Blake_shop_front.jpeg",
   // heroImage: "/images/work_gallery/wifi_survey.jpeg",
   // heroImageAlt: "Blake Smart Solutions WiFi",
@@ -19,19 +19,76 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   heroSocialProof: {
     eyebrow: "Google review",
     ratingLabel: "Five star Google review",
-    quote: "Good communication and clean work. Highly recommended.",
-    author: "Mark Lumacang",
+    quote:
+      "...very very helpful in helping you get the best solution for your home... (they) answer all your questions . Highly recommend!",
+
+    author: "Dhanushke Fernando",
+  },
+  heroReviewStrip: {
+    heading: "Trusted by Perth homeowners and businesses",
+    reviewCount: 3,
   },
 
   primaryCta: {
-    label: "Book a free consultation",
+    label: "Get a connectivity quote",
     action: "enquiry",
   },
   secondaryCta: {
-    label: "Call now for a free quote",
+    label: "Call for a free quote",
     action: "link",
     href: "tel:0477948079",
   },
+
+  featureSections: [
+    {
+      eyebrow: "RELIABLE WIFI THROUGHOUT THE BUILDING",
+      title: "Strong, consistent WiFi in the rooms where you actually need it",
+      intro:
+        "Stop putting up with weak rooms, dropouts and unreliable coverage. Properly placed ceiling-mounted access points give your home or business more consistent WiFi across the areas you actually use every day.",
+      points: [
+        "Reduce dead spots, weak signal and frustrating dropouts",
+        "Keep video calls, streaming, workstations and smart devices running reliably",
+        "Move through covered areas on one consistent WiFi network",
+        "Get a properly installed and tested system instead of guessing with repeaters and mesh nodes",
+      ],
+      image: "/images/solutions/wifi/ceiling-mounted-access-point.webp",
+      imageAlt:
+        "Ceiling-mounted WiFi access point installed by Blake Smart Solutions",
+    },
+
+    {
+      eyebrow: "RELIABLE WIFI BEYOND THE WALLS",
+      title:
+        "Stay connected across patios, pools, yards and outdoor work areas",
+      intro:
+        "Your WiFi should work in the places you actually use, not stop at the back door. Outdoor access points extend reliable coverage into entertaining areas, gardens, yards and commercial outdoor spaces where indoor routers struggle.",
+      points: [
+        "Use phones, tablets and laptops outdoors without weak or patchy signal",
+        "Keep outdoor cameras and smart devices reliably connected",
+        "Extend coverage across larger properties without relying on indoor routers to push through external walls",
+        "Get coverage planned and tested around the areas that matter most",
+      ],
+      image: "/images/products/wifi/outdoor_ap.png",
+      imageAlt:
+        "Outdoor WiFi access point mounted beside a covered entertaining area",
+    },
+
+    {
+      eyebrow: "INTERNET TO SHEDS, WORKSHOPS AND GRANNY FLATS",
+      title: "Get reliable internet to the buildings your router cannot reach",
+      intro:
+        "Stop trying to stretch weak WiFi across the yard. A dedicated wireless link can carry your network between buildings, giving your shed, workshop or granny flat its own strong, reliable connection without trenching where a wireless bridge is suitable.",
+      points: [
+        "Get dependable internet inside detached buildings instead of a weak signal at the doorway",
+        "Run workstations, streaming, cameras and smart equipment without constant dropouts",
+        "Avoid wasting money on range extenders or mesh units that cannot cover the distance properly",
+        "Get the link installed, aligned, configured and tested end to end",
+      ],
+      image: "/images/solutions/wifi/shed-wireless-bridge.webp",
+      imageAlt:
+        "Wireless bridge installed on a roof to carry WiFi to a detached shed",
+    },
+  ],
 
   problemSolutionEyebrow: "",
   problemSolutionTitle:
@@ -156,21 +213,32 @@ export const whyChooseUsWiFi = {
       "Reliable systems designed for long-term performance.",
       "Local Perth support before, during and after installation.",
       "Straightforward communication and honest advice.",
-      "One trusted provider for security, connectivity and smart technology.",
     ],
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {
+        name: "Sue Haynes",
+        text: "Daniel arrived on time and installed our replacement system without problems. Neat and tidy install. No hesitation to recommend Daniel.",
+      },
+      {
+        name: "Paris Rose",
+        text: "Great experience, he replied to my initial email very quickly. Friendly and prompt service.",
+      },
+      {
+        name: "Mark Lumacang",
+        text: "Good communication and clean work.",
+      },
+      {
         name: "Alan Star",
-        text: "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
+        text: "Daniel did a great job installing my setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
       },
       {
         name: "Lesley Middleton",
         text: "Came over at the appointed time and fixed my security camera system efficiently. Really went above and beyond.",
       },
       {
-        name: "Juan B",
-        text: "Fantastic service and can sleep at night knowing I have a full CCTV camera system installed at my house.",
+        name: "Sid Chahal",
+        text: "recently had Blake install my Starlink system at my property, and I couldn’t be happier with the service. From the first call to the final cleanup, Blake was professional, knowledgeable, and incredibly efficient.",
       },
     ],
   },
