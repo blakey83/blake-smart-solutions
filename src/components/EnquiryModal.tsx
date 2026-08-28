@@ -3,7 +3,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { enquiryModalContent } from "@/content/components/siteContent";
+import {
+  enquiryModalContent,
+  enquiryProductContent,
+} from "@/content/components/siteContent";
 import type { Product } from "@/lib/types";
 import {
   trackPhoneClick,
@@ -65,6 +68,10 @@ function getEnquiryIntro(pathname: string | null) {
 }
 
 function getInitialMessage(product: Product) {
+  if (product.name === enquiryProductContent.wifiSolutions) {
+    return "";
+  }
+
   if (product.name === enquiryModalContent.generalQuoteProductName) {
     return enquiryModalContent.generalQuoteMessage;
   }
@@ -182,6 +189,21 @@ export default function EnquiryModal({
 
   if (!isOpen || !product) return null;
 
+  const isWifiConnectivityQuote =
+    product.name === enquiryProductContent.wifiSolutions;
+  const modalTitle = isWifiConnectivityQuote
+    ? enquiryModalContent.wifiConnectivityQuote.title
+    : product.name;
+  const modalIntro = isWifiConnectivityQuote
+    ? enquiryModalContent.wifiConnectivityQuote.intro
+    : getEnquiryIntro(pathname);
+  const messagePlaceholder = isWifiConnectivityQuote
+    ? enquiryModalContent.wifiConnectivityQuote.messagePlaceholder
+    : enquiryModalContent.placeholders.message;
+  const submitCta = isWifiConnectivityQuote
+    ? enquiryModalContent.wifiConnectivityQuote.submitCta
+    : enquiryModalContent.submitCta;
+
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -270,10 +292,10 @@ export default function EnquiryModal({
             {enquiryModalContent.eyebrow}
           </p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-            {product.name}
+            {modalTitle}
           </h2>
           <p className="mt-3 text-base leading-7 text-slate-600">
-            {getEnquiryIntro(pathname)}
+            {modalIntro}
           </p>
           <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
             <p className="text-sm font-semibold text-slate-900">
@@ -359,7 +381,7 @@ export default function EnquiryModal({
 
             <textarea
               name="message"
-              placeholder={enquiryModalContent.placeholders.message}
+              placeholder={messagePlaceholder}
               value={formData.message}
               onChange={handleChange}
               rows={5}
@@ -385,7 +407,7 @@ export default function EnquiryModal({
             >
               {isSubmitting
                 ? enquiryModalContent.sendingCta
-                : enquiryModalContent.submitCta}
+                : submitCta}
             </button>
 
             {status.type === "error" ? (

@@ -87,10 +87,19 @@ export const enquiryModalContent = {
   privacyPolicyHref: "/privacy-policy",
   sendingCta: "Sending...",
   submitCta: "Send Message",
+  wifiConnectivityQuote: {
+    title: "Get a Connectivity Quote",
+    intro:
+      "Tell us where the network isn’t reaching and what you need to connect. We’ll come back with a clear quote for the right solution.",
+    messagePlaceholder:
+      "Tell us what you’re trying to connect and where the problem is.\ne.g. “WiFi is weak in the back bedrooms” or “I need internet to a shed about 30m from the house.”",
+    submitCta: "Request a Quote",
+  },
 };
 
 export const enquiryProductContent = {
   generalQuoteRequest: "General Quote Request",
+  wifiSolutions: "WiFi Solutions",
   wifiHelp: "Wi-Fi Help",
   wifiHealthCheck: "Wi-Fi Health Check",
 };

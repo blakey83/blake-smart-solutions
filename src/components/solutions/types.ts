@@ -105,6 +105,7 @@ export type SolutionPageTemplateProps = {
   bulletPoints: string[];
   heroSocialProof: HeroSocialProof;
   heroReviewStrip?: HeroReviewStrip;
+  heroCtaLines?: string[];
   primaryCta: CtaButton;
   secondaryCta?: CtaButton;
   recentWork?: RecentWorkSection;

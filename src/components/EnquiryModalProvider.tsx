@@ -36,6 +36,10 @@ const PAGE_ENQUIRY_PRODUCT_NAMES = [
     path: "/tv-antennas-perth",
     productName: "TV Antennas",
   },
+  {
+    path: "/wifi-solutions-perth",
+    productName: enquiryProductContent.wifiSolutions,
+  },
 ] as const;
 
 function getPageEnquiryProductName(pathname: string | null) {

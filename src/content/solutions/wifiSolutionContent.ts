@@ -20,7 +20,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     eyebrow: "Google review",
     ratingLabel: "Five star Google review",
     quote:
-      "...very very helpful in helping you get the best solution for your home... (they) answer all your questions . Highly recommend!",
+      "...very very helpful in helping you get the best solution for your home... (they) answer all your questions. Highly recommend!",
 
     author: "Dhanushke Fernando",
   },
@@ -28,10 +28,15 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     heading: "Trusted by Perth homeowners and businesses",
     reviewCount: 3,
   },
+  heroCtaLines: [
+    "Tell us where the network isn’t reaching and what you need connected.",
+    "We’ll come back with a clear quote for the right solution.",
+  ],
 
   primaryCta: {
     label: "Get a connectivity quote",
     action: "enquiry",
+    enquiryProductName: "WiFi Solutions",
   },
   secondaryCta: {
     label: "Call for a free quote",

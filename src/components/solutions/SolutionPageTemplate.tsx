@@ -13,6 +13,7 @@ import type {
   CtaButton,
   FeatureSection,
   HeroReviewStrip,
+  HeroSocialProof,
   SolutionPageTemplateProps,
 } from "@/components/solutions/types";
 import { TimedAvailabilityPopup } from "@/components/solutions/TimedAvailabilityPopup";
@@ -77,6 +78,36 @@ function mergeEnquiryDefaults(button: CtaButton, defaults: CtaButton) {
     enquiryDefaultMessage:
       button.enquiryDefaultMessage ?? defaults.enquiryDefaultMessage,
   };
+}
+
+function HeroSocialProofCard({
+  proof,
+  className = "",
+}: {
+  proof: HeroSocialProof;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`max-w-2xl rounded-2xl border border-white/20 bg-[var(--color-ink)]/75 p-5 shadow-[0_18px_44px_rgba(15,23,42,0.26)] backdrop-blur-sm ${className}`.trim()}
+    >
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent-soft)]">
+          {proof.eyebrow}
+        </span>
+        <span
+          className="text-sm font-semibold tracking-[0.12em] text-amber-500"
+          aria-label={proof.ratingLabel}
+        >
+          ★★★★★
+        </span>
+      </div>
+      <p className="mt-3 text-xs leading-5 text-white/90 sm:text-sm">
+        &quot;{proof.quote}&quot;
+      </p>
+      <p className="mt-3 text-sm font-semibold text-white/70">{proof.author}</p>
+    </div>
+  );
 }
 
 function SolutionReviewsSection({ content }: { content: WhyChooseUsContent }) {
@@ -240,10 +271,7 @@ function SolutionFeatureSection({
   const copyClasses = imageSide === "left" ? "lg:order-last" : "";
 
   return (
-    <section
-      id={id}
-      className="border-y border-[var(--color-border)] bg-white"
-    >
+    <section id={id} className="border-y border-[var(--color-border)] bg-white">
       <div
         className={`mx-auto grid items-center gap-10 px-5 py-14 sm:px-6 lg:gap-14 lg:px-8 lg:py-20 ${layoutClasses}`}
       >
@@ -320,6 +348,7 @@ export function SolutionPageTemplate({
   bulletPoints,
   heroSocialProof,
   heroReviewStrip,
+  heroCtaLines,
   primaryCta,
   secondaryCta,
   recentWork,
@@ -342,10 +371,7 @@ export function SolutionPageTemplate({
   trustItems,
   content,
 }: SolutionPageTemplateViewProps) {
-  const finalCtaWithDefaults = mergeEnquiryDefaults(
-    finalCtaButton,
-    primaryCta,
-  );
+  const finalCtaWithDefaults = mergeEnquiryDefaults(finalCtaButton, primaryCta);
   const resolvedFeatureSections =
     featureSections ?? (featureSection ? [featureSection] : []);
 
@@ -383,26 +409,11 @@ export function SolutionPageTemplate({
         <div className="mx-auto max-w-6xl px-5 pb-14 pt-4 sm:px-6 sm:pb-16 sm:pt-6 lg:px-8 lg:pb-20 lg:pt-8">
           <div className="max-w-3xl">
             <div>
-              <div className="max-w-2xl rounded-2xl border border-white/20 bg-[var(--color-ink)]/75 p-5 shadow-[0_18px_44px_rgba(15,23,42,0.26)] backdrop-blur-sm">
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent-soft)]">
-                    {heroSocialProof.eyebrow}
-                  </span>
-                  <span
-                    className="text-sm font-semibold tracking-[0.12em] text-amber-500"
-                    aria-label={heroSocialProof.ratingLabel}
-                  >
-                    ★★★★★
-                  </span>
-                </div>
-                <p className="mt-3 text-xs leading-5 text-white/90 sm:text-sm">
-                  &quot;{heroSocialProof.quote}&quot;
-                </p>
-                <p className="mt-3 text-sm font-semibold text-white/70">
-                  {heroSocialProof.author}
-                </p>
-              </div>
-              <div className="mt-6">
+              <HeroSocialProofCard
+                proof={heroSocialProof}
+                className="hidden lg:block"
+              />
+              <div className="lg:mt-6">
                 <p className="hidden text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-soft)] lg:block">
                   {heroEyebrow}
                 </p>
@@ -441,7 +452,17 @@ export function SolutionPageTemplate({
                   </ul>
                 ) : null}
 
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                {heroCtaLines?.length ? (
+                  <div className="mt-8 space-y-1 text-sm font-semibold leading-6 text-white sm:text-base">
+                    {heroCtaLines.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
+                  </div>
+                ) : null}
+
+                <div
+                  className={`${heroCtaLines?.length ? "mt-5" : "mt-8"} flex flex-col gap-3 sm:flex-row`}
+                >
                   <SolutionCta
                     button={primaryCta}
                     className="hidden sm:inline-flex"
@@ -450,6 +471,10 @@ export function SolutionPageTemplate({
                     <SolutionCta button={secondaryCta} variant="secondary" />
                   ) : null}
                 </div>
+                <HeroSocialProofCard
+                  proof={heroSocialProof}
+                  className="mt-6 lg:hidden"
+                />
               </div>
             </div>
           </div>
