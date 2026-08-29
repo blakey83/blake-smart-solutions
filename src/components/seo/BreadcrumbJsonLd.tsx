@@ -105,6 +105,26 @@ const breadcrumbRoutes: Record<string, BreadcrumbConfig> = {
   "/wifi-solutions-perth": {
     title: "WiFi Solutions Perth",
   },
+  "/wifi-solutions-perth/wifi-access-point-installation": {
+    title: "Wi-Fi Access Point Installation",
+    section: { title: "Wi-Fi Solutions Perth", path: "/wifi-solutions-perth" },
+  },
+  "/wifi-solutions-perth/internet-to-sheds-workshops": {
+    title: "Internet to Sheds & Workshops",
+    section: { title: "Wi-Fi Solutions Perth", path: "/wifi-solutions-perth" },
+  },
+  "/wifi-solutions-perth/outdoor-wifi-installation": {
+    title: "Outdoor Wi-Fi Installation",
+    section: { title: "Wi-Fi Solutions Perth", path: "/wifi-solutions-perth" },
+  },
+  "/wifi-solutions-perth/business-wifi-installation": {
+    title: "Business Wi-Fi Installation",
+    section: { title: "Wi-Fi Solutions Perth", path: "/wifi-solutions-perth" },
+  },
+  "/wifi-solutions-perth/data-cabling": {
+    title: "Data Cabling",
+    section: { title: "Wi-Fi Solutions Perth", path: "/wifi-solutions-perth" },
+  },
 };
 
 function normalizePath(pathname: string): string {
