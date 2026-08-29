@@ -36,6 +36,10 @@ export const footerContent = {
     { label: "Services", href: "/#services" },
     { label: "Contact", href: "/#final-cta" },
     { label: "Privacy Policy", href: "/privacy-policy" },
+    {
+      label: "Quote Terms & Conditions",
+      href: "/quote-terms-and-conditions",
+    },
   ],
   serviceLinksTitle: "Services",
   serviceLinks: [

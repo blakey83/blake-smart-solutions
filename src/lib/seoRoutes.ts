@@ -28,7 +28,10 @@ export const ARTICLE_RESOURCE_ROUTES = [
   "/recent-installations/starlink",
 ] as const;
 
-export const UTILITY_ROUTES = ["/privacy-policy"] as const;
+export const UTILITY_ROUTES = [
+  "/privacy-policy",
+  "/quote-terms-and-conditions",
+] as const;
 
 export const INDEXABLE_ROUTES = [
   ...CORE_SERVICE_ROUTES,
