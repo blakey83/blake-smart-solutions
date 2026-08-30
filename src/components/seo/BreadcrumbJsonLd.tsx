@@ -105,6 +105,10 @@ const breadcrumbRoutes: Record<string, BreadcrumbConfig> = {
   "/wifi-solutions-perth": {
     title: "WiFi Solutions Perth",
   },
+  "/wifi-enquiry": {
+    title: "Wi-Fi Connectivity Quote",
+    section: { title: "Wi-Fi Solutions Perth", path: "/wifi-solutions-perth" },
+  },
   "/wifi-solutions-perth/wifi-access-point-installation": {
     title: "Wi-Fi Access Point Installation",
     section: { title: "Wi-Fi Solutions Perth", path: "/wifi-solutions-perth" },

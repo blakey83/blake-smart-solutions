@@ -5,22 +5,28 @@ import { enquiryPageContent } from "@/content/pages/enquiryPage";
 import { enquiryProductContent } from "@/content/components/siteContent";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
-function openEnquiryPageModal() {
-  openEnquiryModal(enquiryProductContent.generalQuoteRequest, {
-    redirectTo: "/",
-  });
-}
+type EnquiryPageClientProps = {
+  productName?: string;
+  redirectTo?: string;
+};
 
-export function EnquiryPageClient() {
+export function EnquiryPageClient({
+  productName = enquiryProductContent.generalQuoteRequest,
+  redirectTo = "/",
+}: EnquiryPageClientProps) {
+  const openEnquiryPageModal = () => {
+    openEnquiryModal(productName, { redirectTo });
+  };
+
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
-      openEnquiryPageModal();
+      openEnquiryModal(productName, { redirectTo });
     }, 0);
 
     return () => {
       window.clearTimeout(timeoutId);
     };
-  }, []);
+  }, [productName, redirectTo]);
 
   return (
     <button

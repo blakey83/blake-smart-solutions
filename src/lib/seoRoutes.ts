@@ -10,6 +10,7 @@ export const CORE_SERVICE_ROUTES = [
   "/data-cabling",
   "/tv-antennas-perth",
   "/enquiry",
+  "/wifi-enquiry",
 ] as const;
 
 export const ARTICLE_RESOURCE_ROUTES = [
@@ -81,7 +82,7 @@ export function getRoutePriority(route: string): number {
     "/tv-antennas-perth",
   ]);
 
-  if (route === "/enquiry") {
+  if (route === "/enquiry" || route === "/wifi-enquiry") {
     return 0.9;
   }
 
@@ -122,7 +123,7 @@ export function getRouteChangeFrequency(
     return "weekly";
   }
 
-  if (route === "/enquiry") {
+  if (route === "/enquiry" || route === "/wifi-enquiry") {
     return "monthly";
   }
 
