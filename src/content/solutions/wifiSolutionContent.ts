@@ -164,35 +164,63 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   ],
 
   faqsEyebrow: "FAQ",
-  faqsTitle: "WiFi solutions Perth FAQs",
+
+  faqsTitle: "Wi-Fi & Connectivity Solutions Perth FAQs",
+
   faqsIntro:
-    "A few common questions before booking a WiFi health check or coverage upgrade.",
+    "Common questions about improving Wi-Fi coverage, connecting detached buildings and building a more reliable network.",
+
   faqs: [
     {
-      question: "Do I need mesh WiFi, access points or a wireless bridge?",
+      question: "How do I fix Wi-Fi dead spots in my home?",
       answer:
-        "Every property is different. Some homes can be improved with a mesh system, while others benefit more from access points, data cabling or wireless bridges. We assess the property and recommend the solution that best suits your layout, coverage requirements and budget.",
+        "Wi-Fi dead spots are usually caused by distance, building materials, poor router placement or trying to cover too much of the property from one location. Depending on the home, the best solution may be properly positioned wired access points, data cabling or another network design that puts the Wi-Fi signal closer to where it is actually needed.",
     },
     {
-      question: "Can you get internet to a shed, workshop or granny flat?",
+      question: "Do I need mesh Wi-Fi or wired access points?",
       answer:
-        "Yes. We regularly install wireless bridges, outdoor access points and data cabling to extend reliable internet to detached buildings and outdoor areas across Perth.",
+        "It depends on the property and how reliable the connection needs to be. Mesh can suit some homes, but wired access points avoid relying on wireless backhaul and are often a better option where consistent coverage and performance matter. We recommend the approach that best suits the building rather than forcing every property into the same solution.",
+    },
+    {
+      question: "Can you install Wi-Fi access points in my home or business?",
+      answer:
+        "Yes. We install ceiling and wall-mounted wireless access points for Perth homes and small businesses. Access point locations are planned around the building and how the spaces are used, then the network is configured and coverage tested before handover.",
+    },
+    {
+      question: "How can I get internet to a shed, workshop or granny flat?",
+      answer:
+        "A detached building can usually be connected using a point-to-point wireless bridge or data cabling, depending on the distance, property layout and available cable route. Once the network reaches the remote building, local Wi-Fi can be provided inside where required.",
+    },
+    {
+      question: "Can you install outdoor Wi-Fi for patios, pools and yards?",
+      answer:
+        "Yes. Outdoor-rated access points can provide reliable Wi-Fi across patios, pool areas, yards, gardens and outdoor workspaces where the indoor router does not provide enough coverage. The equipment and position are selected around the area you actually want to use.",
+    },
+    {
+      question: "Do you install Wi-Fi for Perth small businesses?",
+      answer:
+        "Yes. We design and install Wi-Fi and network solutions for Perth small businesses, including offices, retail spaces, workshops and warehouses. Networks can support staff devices, POS systems, cameras, guest Wi-Fi and other equipment that depends on stable connectivity.",
+    },
+    {
+      question: "Do you install data cabling and network points?",
+      answer:
+        "Yes. We install compliant data cabling and network points for homes and small businesses, including connections for access points, computers, TVs, cameras and network equipment. New links are terminated and tested before completion.",
     },
     {
       question:
-        "My Starlink works near the router but not throughout the property. Can you help?",
+        "Can you improve Wi-Fi around a property that uses NBN or Starlink?",
       answer:
-        "Absolutely. We can extend Starlink coverage using access points, wireless links and structured cabling so your connection reaches the rooms, outdoor areas and buildings where you actually need it.",
+        "Yes. If the NBN or Starlink internet connection itself is working, we can improve how that connection is distributed around the property using access points, data cabling or wireless links. We do not repair NBN network faults or Starlink service faults.",
     },
     {
       question: "Will I know the cost before work starts?",
       answer:
-        "Yes. We provide a clear written scope and quote before proceeding. If additional work is required, we'll explain the options and obtain approval before any extra costs are incurred.",
+        "Yes. You'll receive a clear scope and quote before work proceeds. If something is discovered that changes the scope, the options and any additional cost will be explained before extra work is carried out.",
     },
     {
       question: "What happens if I need help after the installation?",
       answer:
-        "We'll make sure everything is working before we leave and provide a proper handover. If you need assistance afterwards, you're dealing with a local Perth business that you can contact directly for support.",
+        "The network is configured and tested before handover, and we'll make sure you understand what has been installed. If you need assistance afterwards, you can contact a local Perth business directly for support.",
     },
   ],
   finalCtaEyebrow: "Talk to Blake Smart Solutions",
