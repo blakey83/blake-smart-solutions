@@ -90,6 +90,13 @@ const breadcrumbRoutes: Record<string, BreadcrumbConfig> = {
       path: "/recent-installations",
     },
   },
+  "/recent-installations/wifi": {
+    title: "Recent Wi-Fi Installations",
+    section: {
+      title: "Wi-Fi Solutions Perth",
+      path: "/wifi-solutions-perth",
+    },
+  },
   "/rural-starlink-installation-wa": {
     title: "Rural Starlink Installation WA",
   },

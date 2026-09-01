@@ -44,6 +44,16 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     href: "tel:0477948079",
   },
 
+  recentWork: {
+    image: "/images/work-photos/WiFi/recent-wifi-installations-card.webp",
+    imageAlt:
+      "Daniel from Blake Smart Solutions drilling for a neat Wi-Fi access point installation",
+    eyebrow: "RECENT INSTALLATIONS",
+    title: "See some of our recent successful Wi-Fi installations",
+    href: "/recent-installations/wifi",
+    linkLabel: "View recent Wi-Fi installations",
+  },
+
   featureSections: [
     {
       eyebrow: "RELIABLE WIFI THROUGHOUT THE BUILDING",

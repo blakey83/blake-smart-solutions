@@ -32,6 +32,7 @@ export type CompletedJob = {
   title: string;
   location: string;
   description: string;
+  outcome?: string;
   image: {
     src: string;
     alt: string;
@@ -42,5 +43,6 @@ export type WorkShowcaseContent = {
   eyebrow?: string;
   title: string;
   description: string;
+  finalCtaDescription?: string;
   completedJobs: CompletedJob[];
 };

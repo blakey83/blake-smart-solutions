@@ -95,6 +95,11 @@ export function WorkShowcasePageTemplate({
                     <p className="mt-4 text-base leading-7 text-[var(--color-muted)]">
                       {job.description}
                     </p>
+                    {job.outcome ? (
+                      <p className="mt-4 text-base font-semibold leading-7 text-[var(--color-ink)]">
+                        {job.outcome}
+                      </p>
+                    ) : null}
                   </div>
                 </article>
               );
@@ -112,8 +117,8 @@ export function WorkShowcasePageTemplate({
             Get practical advice for your home or business.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
-            Send a few details through or call directly, and we can talk through
-            the best way to approach your installation.
+            {content.finalCtaDescription ??
+              "Send a few details through or call directly, and we can talk through the best way to approach your installation."}
           </p>
           <div className="flex justify-center">
             <WorkShowcaseCtas />
