@@ -12,7 +12,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     "Installed, configured and tested, with local support afterwards",
   ],
   heroEyebrow: "WIFI & CONNECTIVITY SOLUTIONS PERTH",
-  heroBackgroundImage: "/Blake_shop_front.jpeg",
+  heroBackgroundImage: "/images/solutions/wifi/kings-park-perth-aerial.avif",
   // heroImage: "/images/work_gallery/wifi_survey.jpeg",
   // heroImageAlt: "Blake Smart Solutions WiFi",
 
