@@ -208,7 +208,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
 export const wifiSolutionTrustItems = [
   "5-Star Google Reviews",
   "ACMA Registered and Fully Insured",
-  "Starlink, CCTV & Network Specialist",
+  "Installed, Configured & Tested",
   "Local Perth Support",
 ];
 
