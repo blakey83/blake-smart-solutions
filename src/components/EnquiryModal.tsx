@@ -68,7 +68,10 @@ function getEnquiryIntro(pathname: string | null) {
 }
 
 function getInitialMessage(product: Product) {
-  if (product.name === enquiryProductContent.wifiSolutions) {
+  if (
+    product.name === enquiryProductContent.wifiSolutions ||
+    product.name === enquiryProductContent.starlinkInstallation
+  ) {
     return "";
   }
 
@@ -191,18 +194,20 @@ export default function EnquiryModal({
 
   const isWifiConnectivityQuote =
     product.name === enquiryProductContent.wifiSolutions;
-  const modalTitle = isWifiConnectivityQuote
-    ? enquiryModalContent.wifiConnectivityQuote.title
-    : product.name;
-  const modalIntro = isWifiConnectivityQuote
-    ? enquiryModalContent.wifiConnectivityQuote.intro
-    : getEnquiryIntro(pathname);
-  const messagePlaceholder = isWifiConnectivityQuote
-    ? enquiryModalContent.wifiConnectivityQuote.messagePlaceholder
-    : enquiryModalContent.placeholders.message;
-  const submitCta = isWifiConnectivityQuote
-    ? enquiryModalContent.wifiConnectivityQuote.submitCta
-    : enquiryModalContent.submitCta;
+  const isStarlinkInstallationQuote =
+    product.name === enquiryProductContent.starlinkInstallation;
+  const tailoredQuoteContent = isWifiConnectivityQuote
+    ? enquiryModalContent.wifiConnectivityQuote
+    : isStarlinkInstallationQuote
+      ? enquiryModalContent.starlinkInstallationQuote
+      : null;
+  const modalTitle = tailoredQuoteContent?.title ?? product.name;
+  const modalIntro = tailoredQuoteContent?.intro ?? getEnquiryIntro(pathname);
+  const messagePlaceholder =
+    tailoredQuoteContent?.messagePlaceholder ??
+    enquiryModalContent.placeholders.message;
+  const submitCta =
+    tailoredQuoteContent?.submitCta ?? enquiryModalContent.submitCta;
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,

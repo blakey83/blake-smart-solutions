@@ -99,10 +99,19 @@ export const enquiryModalContent = {
       "Tell us what you’re trying to connect and where the problem is.\ne.g. “WiFi is weak in the back bedrooms” or “I need internet to a shed about 30m from the house.”",
     submitCta: "Request a Quote",
   },
+  starlinkInstallationQuote: {
+    title: "Get a Starlink Installation Quote",
+    intro:
+      "Tell us when and where you need Starlink installed. Include whether your kit has arrived and anything useful about the property or roof. We’ll come back with a fixed price and a time to install.",
+    messagePlaceholder:
+      "Tell us about your installation.\ne.g. “My Starlink kit has arrived and I’d like it installed in Baldivis around 18 September. It’s a single-storey home with a Colorbond roof.”",
+    submitCta: "Request an Installation Quote",
+  },
 };
 
 export const enquiryProductContent = {
   generalQuoteRequest: "General Quote Request",
+  starlinkInstallation: "Starlink Installation",
   wifiSolutions: "WiFi Solutions",
   wifiHelp: "Wi-Fi Help",
   wifiHealthCheck: "Wi-Fi Health Check",

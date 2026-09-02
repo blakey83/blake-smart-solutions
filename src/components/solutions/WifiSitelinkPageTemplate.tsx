@@ -181,7 +181,7 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
               ))}
             </div>
 
-            <div className="mt-5">
+            <div className="mt-5 hidden sm:block">
               <WifiSitelinkCtas productName={page.enquiryName} />
             </div>
 

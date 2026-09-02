@@ -409,10 +409,7 @@ export function SolutionPageTemplate({
         <div className="mx-auto max-w-6xl px-5 pb-14 pt-4 sm:px-6 sm:pb-16 sm:pt-6 lg:px-8 lg:pb-20 lg:pt-8">
           <div className="max-w-3xl">
             <div>
-              <HeroSocialProofCard
-                proof={heroSocialProof}
-                className="hidden lg:block"
-              />
+              <HeroSocialProofCard proof={heroSocialProof} />
               <div className="lg:mt-6">
                 <p className="hidden text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-soft)] lg:block">
                   {heroEyebrow}
@@ -461,20 +458,13 @@ export function SolutionPageTemplate({
                 ) : null}
 
                 <div
-                  className={`${heroCtaLines?.length ? "mt-5" : "mt-8"} flex flex-col gap-3 sm:flex-row`}
+                  className={`${heroCtaLines?.length ? "mt-5" : "mt-8"} hidden flex-col gap-3 sm:flex sm:flex-row`}
                 >
-                  <SolutionCta
-                    button={primaryCta}
-                    className="hidden sm:inline-flex"
-                  />
+                  <SolutionCta button={primaryCta} />
                   {secondaryCta ? (
                     <SolutionCta button={secondaryCta} variant="secondary" />
                   ) : null}
                 </div>
-                <HeroSocialProofCard
-                  proof={heroSocialProof}
-                  className="mt-6 lg:hidden"
-                />
               </div>
             </div>
           </div>

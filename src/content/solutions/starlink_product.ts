@@ -82,7 +82,7 @@ export const starlinkProducts: Product[] = [
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
   headline: "Starlink Installation Perth",
   subHeadline:
-    "Don’t trust your roof to a rushed Starlink installation. Get clean cabling, careful mounting and local support after the job.",
+    "Get your Starlink securely mounted, neatly cabled, configured and tested by a local Perth installer; with an Australian-made roof mount and 10-year workmanship guarantee.",
   bulletPoints: [
     "Starlink installed, tested and working before we leave",
     "Quality Australian-made roof mounting included",
@@ -93,7 +93,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   ],
 
   heroEyebrow: "FAST & RELIABLE STARLINK INSTALLATION",
-  heroBackgroundImage: "/Blake_shop_front.jpeg",
+  heroBackgroundImage: "/images/solutions/wifi/kings-park-perth-aerial.avif",
 
   // heroImage: "/images/solutions/starLink/PXL_20260618_070344256.png",
 
@@ -110,6 +110,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     heading: "Trusted by Perth Starlink customers",
     reviewCount: 3,
   },
+  heroCtaLines: [
+    "Tell us when you need Starlink installation",
+    "We'll come back with a fixed price, and book a time to install",
+  ],
   timedAvailabilityPopup: {
     enabled: true,
     title: "Looking for an installation date?",
@@ -123,7 +127,6 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     label: "Request an Installation Quote",
     action: "enquiry",
     enquiryProductName: "Starlink Installation",
-    enquiryDefaultMessage: "I'm interested in getting my Starlink installed",
   },
   secondaryCta: {
     label: "Call 0477 948 079",
