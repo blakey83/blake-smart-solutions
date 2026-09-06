@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { WifiMetaPixel } from "@/components/analytics/WifiMetaPixel";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
 import { whyNbnFeelsSlowContent } from "@/content/articles/whyNbnFeelsSlow";
 import { wifiLandingPageContent } from "@/content/articles/wifiLandingPage";
@@ -59,6 +60,7 @@ const relatedWifiArticles = [
 export default function WifiSolutionsPerthPage() {
   return (
     <>
+      {process.env.NODE_ENV === "production" && <WifiMetaPixel />}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
