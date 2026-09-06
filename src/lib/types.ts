@@ -31,7 +31,7 @@ export type WhyChooseUsContent = {
 export type CompletedJob = {
   title: string;
   location: string;
-  description: string;
+  description: string | (string | { text: string; href: `/${string}` })[];
   outcome?: string;
   image: {
     src: string;

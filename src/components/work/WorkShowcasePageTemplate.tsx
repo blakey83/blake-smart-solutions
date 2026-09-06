@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type { WorkShowcaseContent } from "@/lib/types";
@@ -93,7 +94,19 @@ export function WorkShowcasePageTemplate({
                       {job.title}
                     </h2>
                     <p className="mt-4 text-base leading-7 text-[var(--color-muted)]">
-                      {job.description}
+                      {typeof job.description === "string"
+                        ? job.description
+                        : job.description.map((part, index) =>
+                            typeof part === "string" ? part : (
+                              <Link
+                                key={index}
+                                href={part.href}
+                                className="font-semibold underline! underline-offset-4 transition hover:text-[var(--color-ink)]! focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-ink)]"
+                              >
+                                {part.text}
+                              </Link>
+                            ),
+                          )}
                     </p>
                     {job.outcome ? (
                       <p className="mt-4 text-base font-semibold leading-7 text-[var(--color-ink)]">
