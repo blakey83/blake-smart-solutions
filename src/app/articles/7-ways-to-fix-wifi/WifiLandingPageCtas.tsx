@@ -30,7 +30,7 @@ export function WifiLandingPageCtas({
     <div className={`flex flex-col gap-3 sm:flex-row ${className}`.trim()}>
       <button
         type="button"
-        onClick={() => openEnquiryModal(enquiryProductContent.wifiHealthCheck)}
+        onClick={() => openEnquiryModal(enquiryProductContent.wifiSolutions)}
         className={primaryClasses}
       >
         {primaryLabel}

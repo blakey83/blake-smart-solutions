@@ -117,7 +117,7 @@ function FixSection({ fix, index }: { fix: Fix; index: number }) {
 }
 
 export default function SevenWaysToFixWifiPage() {
-  const { hero, intro, fixes, offer, guideSection, diagnostic, finalCta } =
+  const { hero, intro, fixes, offer, guideSection, installation, finalCta } =
     wifiLandingPageContent;
 
   return (
@@ -181,7 +181,7 @@ export default function SevenWaysToFixWifiPage() {
       </section>
 
       <section
-        id="wifi-diagnostic"
+        id="connectivity-upgrades"
         className="border-y border-[var(--color-border)] bg-white"
       >
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
@@ -196,18 +196,18 @@ export default function SevenWaysToFixWifiPage() {
               )}
             </div>
             <p className="mt-6 text-sm leading-6 text-[var(--color-muted)]">
-              {diagnostic.processNote}
+              {installation.processNote}
             </p>
           </div>
 
           <div className="mt-10 rounded-[24px] border border-[var(--color-border)] bg-[var(--color-page)] p-6 sm:p-8">
             <p className="text-base leading-7 text-[var(--color-muted)] sm:text-lg">
-              {diagnostic.priceDescription}
+              {installation.intro}
             </p>
 
             <div className="mt-8">
               <h3 className="text-xl font-semibold tracking-tight text-[var(--color-ink)]">
-                {diagnostic.includedTitle}
+                {installation.includedTitle}
               </h3>
               <ul className="mt-5 space-y-4">
                 {offer.includes.map((item) => (
@@ -225,35 +225,35 @@ export default function SevenWaysToFixWifiPage() {
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
               <div className="rounded-2xl border border-[var(--color-border)] bg-white p-5">
                 <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]">
-                  {diagnostic.creditTitle}
+                  {installation.designTitle}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[var(--color-muted)] sm:text-base">
-                  {offer.credit}
+                  {offer.designNote}
                 </p>
               </div>
 
               <div className="rounded-2xl border border-[var(--color-border)] bg-white p-5">
                 <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]">
-                  {diagnostic.noObligationTitle}
+                  {installation.quoteTitle}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[var(--color-muted)] sm:text-base">
-                  {offer.noObligation}
+                  {offer.quoteNote}
                 </p>
               </div>
             </div>
 
             <div className="mt-8 rounded-2xl border-l-4 border-[var(--color-accent)] bg-[var(--color-accent-soft)]/35 p-5">
               <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]">
-                {diagnostic.guaranteeTitle}
+                {installation.coverageTitle}
               </h3>
               <p className="mt-3 text-base leading-7 text-[var(--color-ink)]">
-                {offer.guarantee}
+                {offer.coverageNote}
               </p>
             </div>
 
             <div className="mt-8 space-y-4 text-base leading-7 text-[var(--color-muted)]">
-              <p>{offer.premium}</p>
-              <p>{offer.scarcity}</p>
+              <p>{offer.connectionNote}</p>
+              <p>{offer.enquiryNote}</p>
               <p>{offer.closing}</p>
             </div>
 
@@ -283,7 +283,7 @@ export default function SevenWaysToFixWifiPage() {
 
           <WifiLandingPageCtas
             className="mt-8 justify-center"
-              primaryLabel={finalCta.cta}
+            primaryLabel={finalCta.cta}
             showSecondary={false}
           />
         </div>

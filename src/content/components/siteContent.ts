@@ -114,15 +114,15 @@ export const enquiryProductContent = {
   starlinkInstallation: "Starlink Installation",
   wifiSolutions: "WiFi Solutions",
   wifiHelp: "Wi-Fi Help",
-  wifiHealthCheck: "Wi-Fi Health Check",
 };
 
 export const wifiArticleCtaContent = {
-  defaultMessage: "Come fix my Wi-Fi!",
+  defaultMessage:
+    "I’d like a connectivity quote. The areas or devices I need connected are: ",
   inlinePrompt: "Need help in Perth?",
   inlineCta:
-    "Book a commercial-grade Wi-Fi survey to tell you exactly how to fix your network.",
-  defaultPrimaryLabel: "Book your Wi-Fi Health Check",
+    "Get a quote for reliable Wi-Fi where you need it.",
+  defaultPrimaryLabel: "Get a connectivity quote",
   defaultSecondaryLabel: "Call Blake Smart Solutions",
 };
 

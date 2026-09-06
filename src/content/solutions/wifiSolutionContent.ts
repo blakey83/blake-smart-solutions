@@ -226,9 +226,9 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   finalCtaEyebrow: "Talk to Blake Smart Solutions",
   finalCtaTitle: "Need better WiFi in Perth? Let’s fix your coverage properly",
   finalCtaIntro:
-    "Whether you need a WiFi Health Check, wider coverage across the home, outdoor access, or a more commercial-grade network setup for your business, Blake Smart Solutions can help you work out the right next step.",
+    "Tell us where WiFi doesn’t reach and what you need connected, whether it’s rooms in your home, a shed, outdoor areas or a business workspace. We’ll come back with a clear quote for the right installation.",
   finalCtaButton: {
-    label: "Send an Enquiry",
+    label: "Get a connectivity quote",
     action: "enquiry",
   },
 };

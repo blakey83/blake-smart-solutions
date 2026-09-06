@@ -22,7 +22,7 @@ export function WifiArticleInlineCta({
         <button
           type="button"
           onClick={() =>
-            openEnquiryModal(enquiryProductContent.wifiHelp, {
+            openEnquiryModal(enquiryProductContent.wifiSolutions, {
               defaultMessage: DEFAULT_MESSAGE,
               tracking: {
                 source: "wifi_article_inline_cta",

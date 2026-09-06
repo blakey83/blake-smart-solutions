@@ -2,22 +2,6 @@ import type { Product } from "@/lib/types";
 
 export const specials: Product[] = [
   {
-    name: "WiFi Health Check",
-    description:
-      "A fixed-price on-site check to find weak coverage, poor placement, and common WiFi issues.",
-    image: "/images/products/wifi/wifi_survey.png",
-    imageAlt: "Wi-Fi survey heatmap across a home floor plan",
-    badge: "Popular",
-    features: [
-      "Professional Report with heatmaps and findings",
-      "Coverage and weak spot review",
-      "Router and access point recommendations",
-      "Straightforward next-step advice",
-    ],
-    ctaLabel: "Book a WiFi Check",
-    href: "/#final-cta",
-  },
-  {
     name: "CCTV Call-Out & Repair",
     description:
       "Cameras not working? No recording, poor image or constant dropouts? Book a call-out and we’ll diagnose and fix it on-site — no guesswork.",

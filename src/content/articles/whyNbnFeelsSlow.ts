@@ -5,7 +5,7 @@ export const whyNbnFeelsSlowContent = {
     description:
       "Fast NBN or Starlink can still feel slow when the Wi-Fi network inside the house is struggling. Learn the common causes and how to fix them.",
     publishedTime: "2026-05-18",
-    modifiedTime: "2026-05-18",
+    modifiedTime: "2026-09-06",
   },
   article: {
     title: "Why Fast NBN (or Starlink) Still Feels Slow (And How To Fix It)",
@@ -172,9 +172,9 @@ Because speed tests don’t measure:
 That’s why professional Wi-Fi diagnostics matter.
 
 What We Actually Do
-At Blake Smart Solutions, we don’t just replace routers and hope for the best.
-We diagnose what’s actually happening.
-That can include:
+At Blake Smart Solutions, we design and install Wi-Fi systems for Perth homes and small businesses.
+Tell us where your Wi-Fi doesn’t reach so we can recommend an installation to suit your property.
+As part of planning and commissioning your installation, we can include:
 · Wi-Fi coverage testing
 · interference analysis
 · mesh optimisation
@@ -209,7 +209,7 @@ Fast internet only matters if your home's Wi-Fi can actually deliver it properly
 That's why having the right Wi-Fi design makes a big difference.
 If your internet still feels slow even though you pay for fast NBN, the problem is likely with your home network, not the connection coming into your house.
 If you’re struggling with Wi-Fi in Perth, we’re here to help.
-Book a Wi‑Fi assessment with Blake Smart Solutions.
+Tell Blake Smart Solutions where your Wi-Fi doesn’t reach and request an installation quote.
 We help Perth homes and small businesses improve:
 · coverage
 · reliability
@@ -223,10 +223,10 @@ Clean installation. Practical advice. Real-world solutions.`,
   inlineCtaIndexes: [27, 77],
   finalCta: {
     eyebrow: "Need Better Wi-Fi?",
-    title: "Book a Wi‑Fi assessment with Blake Smart Solutions.",
+    title: "Tell us where your Wi-Fi doesn’t reach.",
     intro:
-      "We help Perth homes and small businesses improve coverage, reliability, roaming, outdoor Wi-Fi, shed connectivity, mesh performance, and overall network stability.",
-    cta: "Book your Wi-Fi assessment",
+      "Tell us which rooms, outdoor areas or outbuildings need coverage. We’ll recommend a Wi-Fi installation to suit your Perth home or business and provide a quote.",
+    cta: "Get a Wi-Fi installation quote",
   },
 };
 

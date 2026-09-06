@@ -2,23 +2,6 @@ import type { Product } from "@/lib/types";
 
 export const wifiProducts: Product[] = [
   {
-    name: "WiFi Health Check",
-    description:
-      "Not sure why your Wi-Fi is underperforming? Our on-site WiFi Health Check identifies the real cause of poor coverage, dropouts or weak performance, so you can make the right upgrade the first time",
-    image: "/images/products/wifi/wifi_survey.png",
-    imageAlt: "Wi-Fi survey heatmap across a home or office floor plan",
-    badge: "Start Here",
-    features: [
-      "On-site testing and coverage review",
-      "Identify weak signal areas and likely interference",
-      "Heat map report with clear findings",
-      "Practical recommendations taylored to your business or home",
-      "$99 credited towards any solution we install",
-    ],
-    ctaLabel: "Book a WiFi Check",
-    href: "/#final-cta",
-  },
-  {
     name: "Building-to-Building WiFi Link",
     description:
       "Get fast, reliable internet to your shed, workshop or granny flat without trenching cables.",

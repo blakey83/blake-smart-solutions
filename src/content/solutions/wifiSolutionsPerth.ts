@@ -8,7 +8,7 @@ export const wifiSolutionsPerthPageContent = {
     eyebrow: "Wi-Fi guide",
     title: "Not sure what is actually causing the problem?",
     description:
-      "Start with our long-form Perth Wi-Fi guide covering the most common reasons internet feels slow or unreliable at home, plus when a proper Wi-Fi Health Check makes sense.",
+      "Explore common reasons Wi-Fi feels slow or unreliable, practical steps you can try at home, and when a properly installed network can improve coverage.",
     cta: "Read the Wi-Fi troubleshooting guide",
   },
 };

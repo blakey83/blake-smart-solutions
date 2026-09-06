@@ -4,9 +4,9 @@ export const wifiLandingPageContent = {
     title:
       "Why Your Internet Still Sucks (Even With Fast NBN) — 7 Ways to Fix It at Home",
     description:
-      "Learn why your internet still feels slow even with fast NBN, Starlink or fixed wireless, and how Blake Smart Solutions can diagnose Wi-Fi issues with a Wi-Fi Health Check.",
+      "Learn why your internet still feels slow with fast NBN, Starlink or fixed wireless. Try seven practical Wi-Fi fixes, then get a quote for better coverage in your Perth home.",
     publishedTime: "2026-06-20",
-    modifiedTime: "2026-06-20",
+    modifiedTime: "2026-09-06",
   },
 
   hero: {
@@ -199,41 +199,37 @@ You’re dealing with layout, materials, interference, and how everything works 
 
 And that’s where trial-and-error starts to become frustrating — and expensive.
 
-If you’ve worked through the steps above and still have issues, it’s usually a sign that you need a clearer picture of what’s actually happening in your home.
+If you’ve worked through the steps above and still have coverage gaps, your home may need better-placed access points, data cabling, or a dedicated connection to a shed or outdoor area.
 `,
     },
   ],
 
   offer: {
-    title: "Still not working the way it should?",
+    title: "Tell us where your Wi-Fi doesn’t reach",
     intro: [
-      "By now, you’ve probably noticed something",
-      "Some changes help — but the problem never completely goes away.",
-      "That’s because most Wi-Fi issues aren’t caused by one simple thing.",
-      "It’s oftern a combination of layout, signal behaviour, interference, and how everything is set up to work together.",
-      "That’s why we offer a complete Wi-Fi diagnostic of your home.",
-      "We don’t guess — we test it properly, so you know exactly where your internet is strong, weak, or not working at all.",
+      "If the simple changes haven’t solved your coverage gaps, the next step may be a Wi-Fi upgrade suited to your property.",
+      "Tell us which rooms, workspaces or outdoor areas need a better connection and what you need to use there.",
+      "Blake Smart Solutions designs and installs Wi-Fi access points, data cabling and links to detached buildings across Perth. We’ll help you choose a practical setup and quote the installation work.",
     ],
     includes: [
-      "A full Wi-Fi site survey, including signal strength, channel usage and interference",
-      "Identification of exactly what’s causing the problem — not guesswork",
-      "A detailed, easy-to-understand report with diagnostics and coverage mapping",
-      "Practical recommendations tailored to your home — placement, setup and equipment if needed",
+      "Wi-Fi access points to improve coverage in bedrooms, home offices and living areas",
+      "Data cabling for wired access points, desks, TVs and other fixed devices",
+      "Outdoor Wi-Fi for patios, gardens and pool areas",
+      "Wireless bridge links and access points for sheds, workshops and granny flats",
     ],
-    price: "You can get a full, professional Wi-Fi survey",
-    credit:
-      "If you go ahead with any recommended upgrade, the cost of the survey is credited — so you’re not paying twice.",
-    premium:
-      "Most improvements are made on the spot where possible, so you can see immediate gains where it makes sense.",
-    guarantee:
-      "If we can’t clearly show you what’s causing your Wi-Fi issues — and what needs to be done to fix them — you don’t pay.",
-    noObligation:
-      "There’s no obligation to proceed. This is about giving you clarity first, so you can make the right call for your home.",
-    scarcity:
-      "We only take on a limited number of jobs each month to keep quality high.",
+    designNote:
+      "The layout, wall materials and distances between buildings help determine the right equipment, placement and cabling for your installation.",
+    connectionNote:
+      "Your existing NBN, Starlink or fixed wireless connection can supply the internet; the upgrade gets that connection to the places you need it.",
+    coverageNote:
+      "Start with the areas you want connected and what you use them for, whether that’s video calls in the office, streaming in a bedroom or working from the shed.",
+    quoteNote:
+      "We’ll quote the proposed installation so you can decide whether to proceed.",
+    enquiryNote:
+      "Include your suburb, a brief description of the property and where your router is now. Photos or a rough layout can help explain the coverage you need.",
     closing:
-      "If you’ve already tried fixing it and it’s still not working the way it should, this is the fastest way to get your home internet performing properly.",
-    cta: "Book your Wi-Fi Health Check",
+      "Tell us where it doesn’t reach, and we’ll help you plan a better connection.",
+    cta: "Get a connectivity quote",
   },
 
   guideSection: {
@@ -244,22 +240,22 @@ If you’ve worked through the steps above and still have issues, it’s usually
     solutionsLink: "View Wi-Fi solutions Perth",
   },
 
-  diagnostic: {
+  installation: {
     processNote:
-      "This is the same process we use in businesses across Perth dealing with dropouts, dead zones, and unreliable coverage.",
-    priceDescription:
-      "You can get a complete picture of what’s actually going on with your Wi-Fi. A professional WiFi survey for your home",
-    includedTitle: "What's included",
-    creditTitle: "Credit towards any upgrades",
-    noObligationTitle: "No obligation",
-    guaranteeTitle: "Guarantee",
+      "We install connectivity solutions for Perth homes and small businesses, including coverage beyond the main building.",
+    intro:
+      "The right upgrade depends on where you need coverage and how your property is built. Your installation could include:",
+    includedTitle: "Ways we can improve your coverage",
+    designTitle: "Designed for your property",
+    quoteTitle: "A quote before installation",
+    coverageTitle: "Connect the places that matter",
   },
 
   finalCta: {
     eyebrow: "Ready when you are",
-    title:
-      "Get professional Wi-Fi diagnosis that gives you clarity and practical next steps?",
-    intro: "Credited toward any recommended work.",
-    cta: "Book your WiFi Health check today",
+    title: "Where does your Wi-Fi need to reach?",
+    intro:
+      "Tell us about the rooms, shed or outdoor areas you want connected, and get a quote for the installation.",
+    cta: "Get a connectivity quote",
   },
 };
