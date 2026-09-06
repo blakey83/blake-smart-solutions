@@ -67,9 +67,6 @@ const breadcrumbRoutes: Record<string, BreadcrumbConfig> = {
       path: "/articles",
     },
   },
-  "/data-cabling": {
-    title: "Data Cabling",
-  },
   "/enquiry": {
     title: "Enquiry",
   },

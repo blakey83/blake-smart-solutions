@@ -42,11 +42,6 @@ export const servicePageMetadataContent = {
     description:
       "TV antenna repairs, extra points, and new antenna installations for Perth homes needing reliable free-to-air reception.",
   },
-  dataCabling: {
-    title: "Data Cabling | Blake Smart Solutions",
-    description:
-      "Cat6 data cabling and hard-wired network upgrades for Perth homes and small businesses.",
-  },
   starlinkInstallationRural: {
     title: "Starlink Installation | Dish, Cable & Wi-Fi Setup",
     description:

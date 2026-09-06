@@ -29,7 +29,7 @@ const PAGE_ENQUIRY_PRODUCT_NAMES = [
     productName: "Ajax Alarm Systems",
   },
   {
-    path: "/data-cabling",
+    path: "/wifi-solutions-perth/data-cabling",
     productName: "Data Cabling",
   },
   {

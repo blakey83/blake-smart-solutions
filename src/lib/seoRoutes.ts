@@ -7,7 +7,6 @@ export const CORE_SERVICE_ROUTES = [
   "/wifi-solutions-perth",
   "/starlink-installation-perth",
   "/rural-starlink-installation-wa",
-  "/data-cabling",
   "/tv-antennas-perth",
   "/enquiry",
   "/wifi-enquiry",
@@ -80,7 +79,7 @@ export function getRoutePriority(route: string): number {
     "/ajax-security-perth",
     "/starlink-installation-perth",
     "/rural-starlink-installation-wa",
-    "/data-cabling",
+    "/wifi-solutions-perth/data-cabling",
     "/tv-antennas-perth",
   ]);
 

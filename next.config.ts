@@ -4,6 +4,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/data-cabling",
+        destination: "/wifi-solutions-perth/data-cabling",
+        permanent: true,
+      },
+      {
         source: "/starlink-setup-perth",
         destination: "/articles/starlink-setup-wa",
         permanent: true,

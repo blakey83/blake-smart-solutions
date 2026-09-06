@@ -83,7 +83,7 @@ export const services = [
     description:
       "Neat, professional cabling for new data points, network upgrades, and hard-wired connections where Wi-Fi alone is not the best solution.",
     icon: "/icons/icon-data-cabling.svg",
-    href: "/data-cabling",
+    href: "/wifi-solutions-perth/data-cabling",
   },
   {
     title: "TV Antennas",

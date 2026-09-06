@@ -47,7 +47,7 @@ export const footerContent = {
     { label: "Wi-Fi & Wireless", href: "/wifi-solutions-perth" },
     { label: "Alarm & Access Control", href: "/ajax-security-perth" },
     { label: "Starlink", href: "/starlink-installation-perth" },
-    { label: "Data Cabling", href: "/data-cabling" },
+    { label: "Data Cabling", href: "/wifi-solutions-perth/data-cabling" },
     { label: "TV Antennas", href: "/tv-antennas-perth" },
   ],
   contactTitle: "Contact",

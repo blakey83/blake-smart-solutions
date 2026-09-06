@@ -50,7 +50,7 @@ const ENQUIRY_INTRO_ENDINGS = [
     ending: "about Alarm Systems",
   },
   {
-    path: "/data-cabling",
+    path: "/wifi-solutions-perth/data-cabling",
     ending: "with a quote for data cabling",
   },
   {
