@@ -42,14 +42,12 @@ type Review = (typeof whyChooseUsWiFi.whySection.reviews)[number];
 
 function FeaturedReview({
   review,
-  className = "",
 }: {
   review: WifiSitelinkPage["review"];
-  className?: string;
 }) {
   return (
     <figure
-      className={`max-w-2xl rounded-2xl border border-white/20 bg-[var(--color-ink)]/80 p-5 shadow-[0_18px_44px_rgba(15,23,42,0.26)] backdrop-blur-sm ${className}`.trim()}
+      className="max-w-2xl rounded-2xl border border-white/20 bg-[var(--color-ink)]/80 p-5 shadow-[0_18px_44px_rgba(15,23,42,0.26)] backdrop-blur-sm"
     >
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
         <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent-soft)]">
@@ -153,7 +151,7 @@ function ReviewsSection({ reviews }: { reviews: Review[] }) {
 
 export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
   return (
-    <main className="bg-[var(--color-page)] pb-20 text-[var(--color-ink)] sm:pb-0">
+    <main className="bg-[var(--color-page)] pb-[calc(5rem+env(safe-area-inset-bottom))] text-[var(--color-ink)] lg:pb-0">
       <section className="relative isolate overflow-hidden border-b border-white/15 bg-[var(--color-ink)] text-white">
         <Image
           src={page.heroImage}
@@ -175,36 +173,34 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
           </nav>
 
           <div className="mt-8 max-w-3xl">
-            <FeaturedReview review={page.review} className="hidden lg:block" />
-            <div className="lg:mt-6">
-            <SectionLabel>Perth Wi-Fi &amp; Connectivity</SectionLabel>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
-              {page.h1}
-            </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">
-              {page.subhead}
-            </p>
+            <FeaturedReview review={page.review} />
+            <div className="mt-6">
+              <SectionLabel>Perth Wi-Fi &amp; Connectivity</SectionLabel>
+              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
+                {page.h1}
+              </h1>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">
+                {page.subhead}
+              </p>
 
-            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
-              {page.bullets.map((bullet) => (
-                <li key={bullet} className="flex items-start gap-3 text-sm leading-6 text-white sm:text-base">
-                  <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
+              <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+                {page.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-start gap-3 text-sm leading-6 text-white sm:text-base">
+                    <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
 
-            <div className="mt-8 space-y-1 text-sm font-semibold leading-6 text-white sm:text-base">
-              {page.heroCtaLines.map((line) => (
-                <p key={line}>{line}</p>
-              ))}
-            </div>
+              <div className="mt-8 space-y-1 text-sm font-semibold leading-6 text-white sm:text-base">
+                {page.heroCtaLines.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
+              </div>
 
-            <div className="mt-5 hidden sm:block">
-              <WifiSitelinkCtas productName={page.enquiryName} />
-            </div>
-
-            <FeaturedReview review={page.review} className="mt-7 lg:hidden" />
+              <div className="mt-5 hidden sm:block">
+                <WifiSitelinkCtas productName={page.enquiryName} />
+              </div>
             </div>
           </div>
         </div>
@@ -414,7 +410,7 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
         </div>
       </section>
 
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--color-border)] bg-white/95 px-5 py-3 shadow-[0_-8px_24px_rgba(15,23,42,0.1)] backdrop-blur sm:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--color-border)] bg-white/95 px-5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-3 shadow-[0_-8px_24px_rgba(15,23,42,0.1)] backdrop-blur lg:hidden">
         <WifiSitelinkCtas productName={page.enquiryName} layout="mobile" />
       </div>
     </main>

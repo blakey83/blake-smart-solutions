@@ -21,14 +21,14 @@ export function WifiSitelinkCtas({
           defaultMessage: `I’d like a quote for ${productName.toLowerCase()}. The area or connection I need help with is: `,
         })
       }
-      className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-6 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,110,184,0.2)] transition hover:bg-[var(--color-accent-strong)]"
+      className={`inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-6 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,110,184,0.2)] transition hover:bg-[var(--color-accent-strong)] ${layout === "mobile" ? "w-full" : ""}`.trim()}
     >
       Get a Connectivity Quote
     </button>
   );
 
   if (layout === "mobile") {
-    return <div className="sm:hidden [&>button]:w-full">{quoteButton}</div>;
+    return quoteButton;
   }
 
   return (
