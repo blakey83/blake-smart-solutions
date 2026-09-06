@@ -1,3 +1,7 @@
+export type WifiSitelinkText =
+  | string
+  | (string | { text: string; href: `/${string}` })[];
+
 export type WifiSitelinkPage = {
   slug: string;
   metadata: { title: string; description: string };
@@ -10,7 +14,11 @@ export type WifiSitelinkPage = {
   heroImageAlt: string;
   review: { quote: string; author: string };
   problem: { title: string; paragraphs: string[] };
-  solution: { title: string; paragraphs: string[]; points: string[] };
+  solution: {
+    title: string;
+    paragraphs: WifiSitelinkText[];
+    points: WifiSitelinkText[];
+  };
   installationGallery?: {
     eyebrow: string;
     title: string;
@@ -23,7 +31,7 @@ export type WifiSitelinkPage = {
       fit?: "cover" | "top";
     }[];
   };
-  useCases: { title: string; description: string }[];
+  useCases: { title: string; description: WifiSitelinkText }[];
   whyProperly: { title: string; paragraphs: string[] };
   proof: {
     image: string;
@@ -88,10 +96,26 @@ export const wifiSitelinkPages: WifiSitelinkPage[] = [
       paragraphs: [
         "We assess the layout, identify the weak areas and install properly positioned access points. Where practical, each access point is connected by data cable, giving it a dependable path back to your router instead of asking it to repeat an already weak wireless signal.",
         "The result is wider, more predictable coverage and a network your devices can move across without juggling different Wi-Fi names.",
+        [
+          "We can also plan ",
+          {
+            text: "outdoor Wi-Fi",
+            href: "/wifi-solutions-perth/outdoor-wifi-installation",
+          },
+          " for patios and yards, or a ",
+          {
+            text: "dedicated link to a shed or workshop",
+            href: "/wifi-solutions-perth/internet-to-sheds-workshops",
+          },
+          " when coverage needs to extend beyond the main building.",
+        ],
       ],
       points: [
         "Coverage assessment and access point placement",
-        "Cat6 cabling and neat mounting where required",
+        [
+          { text: "Cat6 cabling", href: "/wifi-solutions-perth/data-cabling" },
+          " and neat mounting where required",
+        ],
         "Network name, security and roaming configuration",
         "Coverage and performance testing in the problem areas",
       ],
@@ -237,8 +261,22 @@ export const wifiSitelinkPages: WifiSitelinkPage[] = [
     solution: {
       title: "Create a dedicated link between the buildings",
       paragraphs: [
-        "Where there is a suitable line of sight, a pair of outdoor wireless bridge units can carry the network from the main building to the shed. Inside, we can add an access point or wired outlets so the connection is useful where you work.",
-        "Where trenching or an existing conduit makes more sense, we can recommend a suitable cabled approach. The goal is the same: a stable connection at the other end, not just signal at the doorway.",
+        [
+          "Where there is a suitable line of sight, a pair of outdoor wireless bridge units can carry the network from the main building to the shed. Inside, we can add an ",
+          {
+            text: "access point",
+            href: "/wifi-solutions-perth/wifi-access-point-installation",
+          },
+          " or wired outlets so the connection is useful where you work.",
+        ],
+        [
+          "Where trenching or an existing conduit makes more sense, we can recommend a ",
+          {
+            text: "suitable cabled approach",
+            href: "/wifi-solutions-perth/data-cabling",
+          },
+          ". The goal is the same: a stable connection at the other end, not just signal at the doorway.",
+        ],
       ],
       points: [
         "Site and line-of-sight assessment",
@@ -286,7 +324,14 @@ export const wifiSitelinkPages: WifiSitelinkPage[] = [
       },
       {
         title: "Separate offices",
-        description: "Bring the business network to a detached workspace.",
+        description: [
+          "Bring the ",
+          {
+            text: "business network",
+            href: "/wifi-solutions-perth/business-wifi-installation",
+          },
+          " to a detached workspace.",
+        ],
       },
     ],
     whyProperly: {
@@ -379,8 +424,30 @@ export const wifiSitelinkPages: WifiSitelinkPage[] = [
     solution: {
       title: "Broadcast from outside, toward the area that needs coverage",
       paragraphs: [
-        "We install an outdoor-rated access point in a position selected for the patio, pool, garden, yard or work zone you want connected. A wired connection back to the network gives the unit a stable foundation, while suitable mounting and cable protection help it cope with the environment.",
-        "You get practical coverage where people and devices are located—including compatible Wi-Fi cameras installed on sheds, gates, driveways or other positions away from the house—without leaving consumer mesh hardware outdoors or hoping the indoor router pushes through another wall.",
+        [
+          "We install an outdoor-rated access point in a position selected for the patio, pool, garden, yard or work zone you want connected. A ",
+          {
+            text: "wired connection back to the network",
+            href: "/wifi-solutions-perth/data-cabling",
+          },
+          " gives the unit a stable foundation, while suitable mounting and cable protection help it cope with the environment.",
+        ],
+        [
+          "You get practical coverage where people and devices are located—including compatible Wi-Fi cameras installed on sheds, gates, driveways or other positions away from the house—without leaving consumer mesh hardware outdoors or hoping the indoor router pushes through another wall. If you are also planning ",
+          {
+            text: "security camera installation",
+            href: "/security-cameras-perth",
+          },
+          ", we can account for camera positions and the most suitable network connections.",
+        ],
+        [
+          "For a detached building that needs its own connection, a ",
+          {
+            text: "dedicated wireless bridge to the shed or workshop",
+            href: "/wifi-solutions-perth/internet-to-sheds-workshops",
+          },
+          " may be more suitable than general yard coverage.",
+        ],
       ],
       points: [
         "Outdoor coverage and mounting assessment",
@@ -437,7 +504,14 @@ export const wifiSitelinkPages: WifiSitelinkPage[] = [
       },
       {
         title: "Commercial yards",
-        description: "Connectivity for tablets, scanners and staff work areas.",
+        description: [
+          "Extend your ",
+          {
+            text: "business Wi-Fi network",
+            href: "/wifi-solutions-perth/business-wifi-installation",
+          },
+          " to tablets, scanners and staff work areas.",
+        ],
       },
     ],
     whyProperly: {
@@ -530,7 +604,16 @@ export const wifiSitelinkPages: WifiSitelinkPage[] = [
     solution: {
       title: "Build the network around how the business operates",
       paragraphs: [
-        "We identify the areas and systems that rely on connectivity, then install access points and cabling in positions that support them. Where appropriate, we can separate staff, guest and operational device access to keep the setup organised and easier to manage.",
+        [
+          "We identify the areas and systems that rely on connectivity, then install ",
+          {
+            text: "access points",
+            href: "/wifi-solutions-perth/wifi-access-point-installation",
+          },
+          " and ",
+          { text: "cabling", href: "/wifi-solutions-perth/data-cabling" },
+          " in positions that support them. Where appropriate, we can separate staff, guest and operational device access to keep the setup organised and easier to manage.",
+        ],
         "What improves is continuity: staff can work where they need to, connected systems have a stronger foundation and you have a clearer network than a patchwork of extenders and shared passwords.",
       ],
       points: [
@@ -660,7 +743,14 @@ export const wifiSitelinkPages: WifiSitelinkPage[] = [
     solution: {
       title: "Install a reliable wired backbone",
       paragraphs: [
-        "We plan and install Cat6 cabling between the router, network equipment and the points that need a dependable connection. That may be a wall outlet in an office, a feed for a ceiling access point, a camera location or a link between the NBN equipment and a better router position.",
+        [
+          "We plan and install Cat6 cabling between the router, network equipment and the points that need a dependable connection. That may be a wall outlet in an office, a feed for a ",
+          {
+            text: "ceiling access point",
+            href: "/wifi-solutions-perth/wifi-access-point-installation",
+          },
+          ", a camera location or a link between the NBN equipment and a better router position.",
+        ],
         "The improvement is simple: fixed devices get a stable connection, Wi-Fi equipment gets a proper backbone and the installation is neat, labelled where appropriate and tested before handover.",
       ],
       points: [
@@ -686,13 +776,25 @@ export const wifiSitelinkPages: WifiSitelinkPage[] = [
       },
       {
         title: "CCTV systems",
-        description:
-          "Network pathways for compatible wired cameras and recorders.",
+        description: [
+          "Network pathways for compatible ",
+          {
+            text: "wired cameras and recorders",
+            href: "/security-cameras-perth",
+          },
+          ".",
+        ],
       },
       {
         title: "Small business workstations",
-        description:
-          "Permanent outlets for desks, printers and operational equipment.",
+        description: [
+          "Permanent outlets for desks, printers and operational equipment as part of your ",
+          {
+            text: "business Wi-Fi network",
+            href: "/wifi-solutions-perth/business-wifi-installation",
+          },
+          ".",
+        ],
       },
       {
         title: "Renovations and fit-outs",

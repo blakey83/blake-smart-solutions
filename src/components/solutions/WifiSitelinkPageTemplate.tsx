@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { WifiSitelinkPage } from "@/content/solutions/wifiSitelinks";
+import type {
+  WifiSitelinkPage,
+  WifiSitelinkText,
+} from "@/content/solutions/wifiSitelinks";
 import { whyChooseUsWiFi } from "@/content/solutions/wifiSolutionContent";
 import { WifiSitelinkCtas } from "@/components/solutions/WifiSitelinkCtas";
 
@@ -16,6 +19,22 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
       {children}
     </p>
+  );
+}
+
+function InlineText({ content }: { content: WifiSitelinkText }) {
+  if (typeof content === "string") return content;
+
+  return content.map((part, index) =>
+    typeof part === "string" ? part : (
+      <Link
+        key={index}
+        href={part.href}
+        className="font-semibold underline! underline-offset-4 transition hover:text-[var(--color-ink)]! focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-ink)]"
+      >
+        {part.text}
+      </Link>
+    ),
   );
 }
 
@@ -212,14 +231,16 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
               <SectionLabel>The solution</SectionLabel>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">{page.solution.title}</h2>
               <div className="mt-5 space-y-4 text-base leading-7 text-[var(--color-muted)]">
-                {page.solution.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {page.solution.paragraphs.map((paragraph, index) => (
+                  <p key={index}><InlineText content={paragraph} /></p>
+                ))}
               </div>
             </div>
             <ul className="grid gap-3 self-start">
-              {page.solution.points.map((point) => (
-                <li key={point} className="flex items-start gap-4 rounded-2xl border border-[var(--color-border)] bg-white p-5 shadow-[0_10px_24px_rgba(15,23,42,0.04)]">
+              {page.solution.points.map((point, index) => (
+                <li key={index} className="flex items-start gap-4 rounded-2xl border border-[var(--color-border)] bg-white p-5 shadow-[0_10px_24px_rgba(15,23,42,0.04)]">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-sm font-bold text-[var(--color-accent)]">✓</span>
-                  <span className="pt-0.5 font-semibold leading-6">{point}</span>
+                  <span className="pt-0.5 font-semibold leading-6"><InlineText content={point} /></span>
                 </li>
               ))}
             </ul>
@@ -298,7 +319,7 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
             {page.useCases.map((useCase) => (
               <article key={useCase.title} className="rounded-[22px] border border-[var(--color-border)] bg-[var(--color-page)] p-6">
                 <h3 className="text-lg font-semibold tracking-tight">{useCase.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">{useCase.description}</p>
+                <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]"><InlineText content={useCase.description} /></p>
               </article>
             ))}
           </div>
