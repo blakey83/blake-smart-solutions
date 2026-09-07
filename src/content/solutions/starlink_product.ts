@@ -120,7 +120,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     subtitle:
       "Tell us your suburb and preferred install date. We’ll check availability and get back to you.",
     productName: "Starlink Installation",
-    delayAfterLoadMs: 20_000,
+    delayAfterLoadMs: 45_000,
   },
 
   primaryCta: {
