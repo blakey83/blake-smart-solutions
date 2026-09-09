@@ -9,7 +9,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
   },
   specialOffer: {
     title:
-      "10% off Ajax alarm installation for installations booked before 31st August 2026",
+      "10% off Ajax alarm installation for installations booked before 31st October 2026",
     price: "",
   },
   headline: "Ajax Security installation in Perth",
@@ -76,7 +76,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
         "Full system testing and customer handover",
       ],
       finePrint:
-        "*Price includes the 10% discount for installations booked before 31 August 2026.",
+        "*Price includes the 10% discount for installations booked before 31 October 2026.",
       image: "/images/solutions/ajaxSecurity/ajax_apartment_kit.png",
       imageAlt:
         "Ajax apartment alarm package with hub, motion detector, door detector, remote and mobile app",
@@ -97,7 +97,7 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
         "Professional installation, configuration and app setup",
       ],
       finePrint:
-        "*Price includes the 10% discount for installations booked before 31 August 2026.",
+        "*Price includes the 10% discount for installations booked before 31 October 2026.",
       image: "/images/solutions/ajaxSecurity/basic_ajax_kit.webp",
       imageAlt:
         "Ajax basic alarm package with hub, three motion detectors, external siren, internal siren, two control fobs and phone app",

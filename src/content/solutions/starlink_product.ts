@@ -317,10 +317,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const starlinkSolutionTrustItems = [
-  "Starlink Certified Installers",
+  "15+ Five-Star google reviews in 2026 (so far)",
   "10 Year Warranty",
-  "Perth Business offering local support",
-  "Full Public Liability Insurance",
+  "Starlink Certified Installers",
+  "Fully insured, licensed and ready to go",
 ];
 
 export const whyChooseUsStarlink = {
