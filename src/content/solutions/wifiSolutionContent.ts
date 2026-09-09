@@ -12,7 +12,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     "Installed, configured and tested, with local support afterwards",
   ],
   heroEyebrow: "WIFI & CONNECTIVITY SOLUTIONS PERTH",
-  heroBackgroundImage: "/images/solutions/wifi/kings-park-perth-aerial.avif",
+  heroBackgroundImage: "/images/solutions/wifi/wap2.png",
   // heroImage: "/images/work_gallery/wifi_survey.jpeg",
   // heroImageAlt: "Blake Smart Solutions WiFi",
 
@@ -20,9 +20,9 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     eyebrow: "Google review",
     ratingLabel: "Five star Google review",
     quote:
-      "...very very helpful in helping you get the best solution for your home... (they) answer all your questions. Highly recommend!",
+      "A big thank you to Daniel from Blake Smart Solutions. His communication was excellent, he was on time, and he went above and beyond to help us with our data connections.",
 
-    author: "Dhanushke Fernando",
+    author: "Mark Anthony",
   },
   heroReviewStrip: {
     heading: "Trusted by Perth homeowners and businesses",

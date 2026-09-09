@@ -93,7 +93,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   ],
 
   heroEyebrow: "FAST & RELIABLE STARLINK INSTALLATION",
-  heroBackgroundImage: "/images/solutions/wifi/kings-park-perth-aerial.avif",
+  heroBackgroundImage: "/images/solutions/starLink/starlink-roof-installation-hero.png",
 
   // heroImage: "/images/solutions/starLink/PXL_20260618_070344256.png",
 
