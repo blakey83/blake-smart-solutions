@@ -10,6 +10,18 @@ export const recentWifiInstallationsContent: WorkShowcaseContent = {
 
   completedJobs: [
     {
+      title: "One well-placed access point fixed Wi-Fi for the whole family",
+      location: "Kallaroo, WA",
+      description:
+        "The family had two different Wi-Fi problems in the same home. The kids were struggling with Roblox in the front room, while Mum was having Teams meetings drop out — not ideal when you’re trying to work professionally from home.\n\nThe existing Telstra NBN connection was fine. The problem was simply getting reliable Wi-Fi into the part of the house where it was needed.\n\nA single, carefully positioned ceiling-mounted access point was connected back to the existing Telstra system, extending strong coverage into the weak area without replacing everything they already had.",
+      outcome:
+        "The result: stable Teams calls, happier kids, and reliable Wi-Fi where the family actually uses it.",
+      image: {
+        src: "/images/work-photos/WiFi/kallaroo-ceiling-wifi-access-point.webp",
+        alt: "Ceiling-mounted Wi-Fi access point extending coverage in a Kallaroo family home",
+      },
+    },
+    {
       title: "Reliable internet for a backyard shed",
       location: "Wanneroo, WA",
       description: [

@@ -93,7 +93,7 @@ export function WorkShowcasePageTemplate({
                     <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-3xl">
                       {job.title}
                     </h2>
-                    <p className="mt-4 text-base leading-7 text-[var(--color-muted)]">
+                    <p className="mt-4 whitespace-pre-line text-base leading-7 text-[var(--color-muted)]">
                       {typeof job.description === "string"
                         ? job.description
                         : job.description.map((part, index) =>
