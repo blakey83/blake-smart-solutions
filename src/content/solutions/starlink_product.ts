@@ -87,9 +87,8 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "Starlink installed, tested and working before we leave",
     "Quality Australian-made roof mounting included",
     "Local support before and after the installation",
-    "Roof penetrations sealed correctly for peace of mind.",
     "10-Year workmanship guarantee",
-    "Standard single-storey installation from $449, including all mounting equipment",
+    "Standard single-storey installation from $449, including the mount",
   ],
 
   heroEyebrow: "FAST & RELIABLE STARLINK INSTALLATION",
