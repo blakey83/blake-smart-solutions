@@ -37,6 +37,10 @@ export const WIFI_SITELINK_ROUTES = [
   "/wifi-solutions-perth/data-cabling",
 ] as const;
 
+export const STARLINK_SITELINK_ROUTES = [
+  "/starlink-installation-perth/business-starlink-installation",
+] as const;
+
 export const UTILITY_ROUTES = [
   "/privacy-policy",
   "/quote-terms-and-conditions",
@@ -45,6 +49,7 @@ export const UTILITY_ROUTES = [
 export const INDEXABLE_ROUTES = [
   ...CORE_SERVICE_ROUTES,
   ...WIFI_SITELINK_ROUTES,
+  ...STARLINK_SITELINK_ROUTES,
   ...ARTICLE_RESOURCE_ROUTES,
   ...UTILITY_ROUTES,
 ] as const;

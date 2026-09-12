@@ -5,6 +5,7 @@ import type {
   WifiSitelinkText,
 } from "@/content/solutions/wifiSitelinks";
 import { whyChooseUsWiFi } from "@/content/solutions/wifiSolutionContent";
+import { whyChooseUsStarlink } from "@/content/solutions/starlink_product";
 import { WifiSitelinkCtas } from "@/components/solutions/WifiSitelinkCtas";
 
 const processSteps = [
@@ -149,7 +150,18 @@ function ReviewsSection({ reviews }: { reviews: Review[] }) {
   );
 }
 
-export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
+export function WifiSitelinkPageTemplate({ page, service = "wifi" }: {
+  page: WifiSitelinkPage;
+  service?: "wifi" | "starlink";
+}) {
+  const isStarlink = service === "starlink";
+  const reviews = (isStarlink ? whyChooseUsStarlink : whyChooseUsWiFi).whySection.reviews;
+  const steps = isStarlink ? [
+    { number: "01", title: "Assess", text: "We check your kit, roof access, sky view and where the connection is needed inside." },
+    { number: "02", title: "Quote", text: "You receive a fixed quote for the agreed mounting, cable route and setup work." },
+    { number: "03", title: "Install", text: "We mount the dish, route the cable and complete the agreed installation." },
+    { number: "04", title: "Test & hand over", text: "We test the installed connection and explain the setup and any remaining limitations." },
+  ] : processSteps;
   return (
     <main className="bg-[var(--color-page)] pb-[calc(5rem+env(safe-area-inset-bottom))] text-[var(--color-ink)] lg:pb-0">
       <section className="relative isolate overflow-hidden border-b border-white/15 bg-[var(--color-ink)] text-white">
@@ -165,8 +177,8 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
 
         <div className="mx-auto max-w-6xl px-5 pb-16 pt-6 sm:px-6 lg:px-8 lg:pb-20 lg:pt-8">
           <nav aria-label="Breadcrumb" className="text-xs text-white/65">
-            <Link href="/wifi-solutions-perth" className="transition hover:text-white">
-              Wi-Fi Solutions Perth
+            <Link href={isStarlink ? "/starlink-installation-perth" : "/wifi-solutions-perth"} className="transition hover:text-white">
+              {isStarlink ? "Starlink Installation Perth" : "Wi-Fi Solutions Perth"}
             </Link>
             <span aria-hidden="true" className="mx-2">/</span>
             <span>{page.enquiryName}</span>
@@ -175,7 +187,7 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
           <div className="mt-8 max-w-3xl">
             <FeaturedReview review={page.review} />
             <div className="mt-6">
-              <SectionLabel>Perth Wi-Fi &amp; Connectivity</SectionLabel>
+              <SectionLabel>{isStarlink ? "Perth Starlink Installation" : "Perth Wi-Fi & Connectivity"}</SectionLabel>
               <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
                 {page.h1}
               </h1>
@@ -199,14 +211,14 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
               </div>
 
               <div className="mt-5 hidden sm:block">
-                <WifiSitelinkCtas productName={page.enquiryName} />
+                <WifiSitelinkCtas productName={page.enquiryName} service={service} />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <HeroReviewStrip reviews={whyChooseUsWiFi.whySection.reviews} />
+      <HeroReviewStrip reviews={reviews} />
 
       <section className="border-b border-[var(--color-border)] bg-white">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-6 lg:grid-cols-[0.7fr_1.3fr] lg:px-8 lg:py-20">
@@ -366,7 +378,7 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
           <SectionLabel>What to expect</SectionLabel>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">A clear path from problem to working connection</h2>
           <div className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {processSteps.map((step) => (
+            {steps.map((step) => (
               <article key={step.number} className="rounded-[22px] border border-[var(--color-border)] bg-white p-6">
                 <p className="text-sm font-semibold text-[var(--color-accent)]">{step.number}</p>
                 <h3 className="mt-3 text-xl font-semibold tracking-tight">{step.title}</h3>
@@ -395,7 +407,7 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
         </div>
       </section>
 
-      <ReviewsSection reviews={whyChooseUsWiFi.whySection.reviews} />
+      <ReviewsSection reviews={reviews} />
 
       <section className="border-t border-[var(--color-border)] bg-[var(--color-page)]">
         <div className="mx-auto max-w-4xl px-5 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
@@ -405,13 +417,13 @@ export function WifiSitelinkPageTemplate({ page }: { page: WifiSitelinkPage }) {
             Tell us what you need connected and where the problem is. We’ll come back with a clear quote for the right solution.
           </p>
           <div className="mt-8">
-            <WifiSitelinkCtas productName={page.enquiryName} layout="center" />
+            <WifiSitelinkCtas productName={page.enquiryName} service={service} layout="center" />
           </div>
         </div>
       </section>
 
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--color-border)] bg-white/95 px-5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-3 shadow-[0_-8px_24px_rgba(15,23,42,0.1)] backdrop-blur lg:hidden">
-        <WifiSitelinkCtas productName={page.enquiryName} layout="mobile" />
+        <WifiSitelinkCtas productName={page.enquiryName} service={service} layout="mobile" />
       </div>
     </main>
   );

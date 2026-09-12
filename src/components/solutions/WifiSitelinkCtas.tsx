@@ -6,24 +6,28 @@ import { openEnquiryModal } from "@/lib/enquiryModal";
 
 type WifiSitelinkCtasProps = {
   productName: string;
+  service?: "wifi" | "starlink";
   layout?: "hero" | "center" | "mobile";
 };
 
 export function WifiSitelinkCtas({
   productName,
   layout = "hero",
+  service = "wifi",
 }: WifiSitelinkCtasProps) {
   const quoteButton = (
     <button
       type="button"
       onClick={() =>
         openEnquiryModal(productName, {
-          defaultMessage: `I’d like a quote for ${productName.toLowerCase()}. The area or connection I need help with is: `,
+          defaultMessage: service === "starlink"
+            ? `I’d like a quote for Starlink installation at my business. My suburb, premises type and Starlink kit are: `
+            : `I’d like a quote for ${productName.toLowerCase()}. The area or connection I need help with is: `,
         })
       }
       className={`inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-6 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,110,184,0.2)] transition hover:bg-[var(--color-accent-strong)] ${layout === "mobile" ? "w-full" : ""}`.trim()}
     >
-      Get a Connectivity Quote
+      {service === "starlink" ? "Get a Starlink Installation Quote" : "Get a Connectivity Quote"}
     </button>
   );
 

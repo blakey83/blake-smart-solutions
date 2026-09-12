@@ -1,3 +1,4 @@
+import { starlinkSitelinkPages } from "@/content/solutions/starlinkSitelinks";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -128,6 +129,38 @@ export default function StarlinkPage() {
         trustItems={starlinkSolutionTrustItems}
         content={whyChooseUsStarlink}
       />
+      <section className="border-t border-[var(--color-border)] bg-white">
+        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+            Explore Starlink services
+          </p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+            Starlink installation for your premises
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
+            Explore installation options for Perth businesses, including mounting, cabling, setup and connection testing.
+          </p>
+          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {starlinkSitelinkPages.map((page) => (
+              <Link
+                key={page.slug}
+                href={`/starlink-installation-perth/${page.slug}`}
+                className="group flex min-h-44 flex-col rounded-[24px] border border-[var(--color-border)] bg-[var(--color-page)] p-6 transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:bg-white hover:shadow-[0_16px_34px_rgba(15,23,42,0.07)]"
+              >
+                <h3 className="text-xl font-semibold tracking-tight text-[var(--color-ink)]">
+                  {page.enquiryName}
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-6 text-[var(--color-muted)]">
+                  {page.subhead}
+                </p>
+                <span className="mt-5 text-sm font-semibold text-[var(--color-accent)]">
+                  View service <span className="transition group-hover:translate-x-1">→</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="border-t border-[var(--color-border)] bg-[var(--color-page)]">
         <div className="mx-auto max-w-6xl space-y-6 px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="rounded-[28px] border border-[var(--color-border)] bg-white p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] sm:p-8">
