@@ -566,142 +566,158 @@ export const wifiSitelinkPages: WifiSitelinkPage[] = [
     finalTitle: "Want Wi-Fi that keeps working beyond the back door?",
   },
   {
-    slug: "business-wifi-installation",
-    metadata: {
-      title: "Business Wi-Fi Installation Perth | Small Business Networks",
-      description:
-        "Reliable Wi-Fi installation for Perth small businesses. Connect staff, POS, cameras and customer areas with a professionally designed and tested network.",
-    },
-    h1: "Reliable Wi-Fi for Perth Small Businesses",
-    subhead:
-      "Give staff, POS systems, cameras and day-to-day devices stable connectivity across the areas your business depends on.",
-    bullets: [
-      "Keep staff connected without dead spots, dropouts or unreliable work areas",
-      "Give POS systems, cameras and day-to-day devices the stable network they depend on",
-      "Provide reliable Wi-Fi across offices, workshops, retail areas and customer spaces",
-      "Keep guest access separate from the devices and systems your business relies on",
-      "Reduce disruption caused by weak Wi-Fi, overloaded routers and consumer-grade fixes",
-      "Know the network is working properly before the installation is handed over",
-    ],
-    heroCtaLines: [
-      "Tell us a little about your business, your site and where connectivity is letting you down.",
-      "We’ll arrange a short meeting to understand what you need and work out the right approach for your business.",
-    ],
-    enquiryName: "Business Wi-Fi Installation",
-    heroImage: "/images/solutions/wifi/busy_office.png",
-    heroImageAlt: "Business Wi-Fi coverage for a Perth small business",
-    review: {
-      quote: "Good communication and clean work.",
-      author: "Mark Lumacang · Google review",
-    },
-    problem: {
-      title: "Wi-Fi problems become business problems",
-      paragraphs: [
-        "The EFTPOS terminal disconnects at the counter, staff lose cloud applications in the back office, cameras drop offline or customers ask for a password to the same network used by business devices. A home router may work after hours but struggle once the site is busy.",
-        "If this is happening, this page is for you. Business Wi-Fi needs to support the layout, device count and daily workflow—not simply provide a signal near reception.",
-      ],
-    },
-    solution: {
-      title: "Build the network around how the business operates",
-      paragraphs: [
-        [
-          "We identify the areas and systems that rely on connectivity, then install ",
-          {
-            text: "access points",
-            href: "/wifi-solutions-perth/wifi-access-point-installation",
-          },
-          " and ",
-          { text: "cabling", href: "/wifi-solutions-perth/data-cabling" },
-          " in positions that support them. Where appropriate, we can separate staff, guest and operational device access to keep the setup organised and easier to manage.",
-        ],
-        "What improves is continuity: staff can work where they need to, connected systems have a stronger foundation and you have a clearer network than a patchwork of extenders and shared passwords.",
-      ],
-      points: [
-        "Site assessment and coverage planning",
-        "Business-grade access points and Cat6 cabling",
-        "Network separation and secure Wi-Fi configuration",
-        "Device checks, coverage testing and handover",
-      ],
-    },
-    useCases: [
-      {
-        title: "Retail and showrooms",
-        description: "Coverage for POS, tablets, staff and customer areas.",
-      },
-      {
-        title: "Offices",
-        description:
-          "Stable connectivity across desks, meeting rooms and shared spaces.",
-      },
-      {
-        title: "Workshops and warehouses",
-        description: "Reach operational areas beyond the front office.",
-      },
-      {
-        title: "Cafés and hospitality",
-        description:
-          "Keep business devices separate from optional guest access.",
-      },
-      {
-        title: "Clinics and consulting rooms",
-        description: "Consistent coverage across reception and work rooms.",
-      },
-    ],
-    whyProperly: {
-      title: "Why a consumer router can fail when the doors open",
-      paragraphs: [
-        "A small business can have dozens of active devices once staff, customers, POS terminals, cameras and smart equipment are counted. Interference, poor placement and shared access can make a basic router feel unpredictable even when the internet service itself is fast.",
-        "A properly planned setup spreads coverage deliberately, uses wired connections between network equipment and separates access where it makes sense. It is easier to support and far less dependent on one box hidden in a comms cupboard or back office.",
-      ],
-    },
-    proof: {
-      image: "/images/work_gallery/wifi_survey.jpeg",
-      imageAlt:
-        "Daniel from Blake Smart Solutions carrying out an on-site Wi-Fi assessment",
-      title: "Coverage checked where the network is used",
-      intro:
-        "This actual BSS job photo shows an on-site Wi-Fi assessment—the step that replaces guesswork with evidence before equipment is recommended or positioned.",
-      problem:
-        "The customer needed clarity on where coverage and performance were breaking down.",
-      solution:
-        "BSS assessed the live wireless environment and the spaces the network needed to serve.",
-      result:
-        "Recommendations can be based on measured conditions and real use areas, not a generic equipment bundle.",
-    },
-    faqs: [
-      {
-        question: "Can you install Wi-Fi without closing the business?",
-        answer:
-          "Often we can stage the work or schedule disruptive parts to reduce the impact on trading. We will discuss access, cable routes and timing before the quote is accepted.",
-      },
-      {
-        question: "Can staff and guest Wi-Fi be separated?",
-        answer:
-          "Yes, with suitable equipment we can configure separate networks for different users or device groups. We will recommend a sensible setup for the size and needs of the business.",
-      },
-      {
-        question: "Can you improve Wi-Fi for EFTPOS and POS systems?",
-        answer:
-          "We can improve the network those systems rely on and check coverage at the point of use. Some critical devices may be better connected by data cable, which we can include in the design.",
-      },
-      {
-        question: "Do you support warehouses and workshops?",
-        answer:
-          "Yes. High ceilings, metal structures, racking and detached work areas all affect design, so we assess the site and select locations and equipment accordingly.",
-      },
-      {
-        question: "Can you work with our existing internet provider?",
-        answer:
-          "Yes. Wi-Fi and the incoming internet service are separate parts of the setup. We can usually improve the local network while retaining the existing NBN, fibre or Starlink service.",
-      },
-      {
-        question: "What happens after installation?",
-        answer:
-          "We test the agreed areas, confirm key devices can connect and explain the finished setup. As a local Perth provider, BSS is available if you need help afterwards.",
-      },
-    ],
-    finalTitle: "Need a business network your team can rely on?",
+  slug: "business-wifi-installation",
+  metadata: {
+    title: "Business Wi-Fi & Network Installation Perth | Blake Smart Solutions",
+    description:
+      "Business Wi-Fi and network installation in Perth. Site assessments, staff and guest networks, cabling and links between buildings, with local support.",
   },
+  h1: "Business Wi-Fi & Networks That Keep Your Site Connected",
+  subhead:
+    "Connect your staff, customers and essential systems with a network designed around your property. Blake Smart Solutions plans, installs and tests business Wi-Fi and networking across Perth, with local help after handover.",
+  bullets: [
+    "Help staff work without recurring Wi-Fi dropouts and dead spots",
+    "Connect offices, workshops, customer areas and separate buildings",
+    "Give POS systems, cameras and business devices a reliable network foundation",
+    "Keep guest Wi-Fi separate from your business network",
+    "Plan for the devices and work areas you need today, with room to expand",
+    "Get a clear scope, tested installation and practical handover",
+  ],
+  heroCtaLines: [
+    "Tell us about your site, the problems you’re experiencing and any changes you’re planning.",
+    "We’ll discuss what you need and arrange a site assessment where required, with any assessment costs agreed beforehand.",
+  ],
+  enquiryName: "Business Wi-Fi & Network Assessment",
+  heroImage: "/images/solutions/wifi/busy_office.png",
+  heroImageAlt: "Office workspaces served by a business Wi-Fi network",
+  review: {
+    quote: "Good communication and clean work.",
+    author: "Mark Lumacang · Google review",
+  },
+  problem: {
+    title: "Your staff have a business to run. Wi-Fi problems keep interrupting it.",
+    paragraphs: [
+      "Payments drop out at the counter. Video calls break up in the meeting room. The workshop has barely any signal, and someone keeps restarting the router. As the business grows, extra devices and quick fixes can leave you with a network that is difficult to rely on or troubleshoot.",
+      "The next step is to understand where the problem starts: the incoming internet connection, the equipment, the cabling or the wireless coverage. That gives you a clear basis for deciding what needs fixing, what can stay and where an upgrade will make a difference.",
+    ],
+  },
+  solution: {
+    title: "One network plan for the way your site works",
+    paragraphs: [
+      "We start with your layout, the people using the network and the systems that depend on it. That includes busy periods, coverage between buildings and any plans to add work areas, cameras or guest access.",
+      [
+        "From there, we scope the network your site needs: appropriately placed ",
+        {
+          text: "Wi-Fi access points",
+          href: "/wifi-solutions-perth/wifi-access-point-installation",
+        },
+        ", suitable network equipment, ",
+        { text: "data cabling", href: "/wifi-solutions-perth/data-cabling" },
+        " and wireless links where appropriate. We can work with your existing internet service and retain equipment that is suitable for the agreed design.",
+      ],
+      "You receive a clear installation scope, an agreed plan for any interruptions and testing in the areas that matter to your business. We explain the finished setup and discuss how to arrange help afterwards.",
+    ],
+    points: [
+      "Site assessment, fault finding and network design",
+      "Business Wi-Fi, network equipment and structured cabling",
+      "Separate staff, guest and device networks where required",
+      "Outdoor coverage and connections between buildings",
+      "Coverage and connectivity testing against the agreed scope",
+      "Handover and local support by arrangement",
+    ],
+  },
+  useCases: [
+    {
+      title: "Workshops and warehouses",
+      description:
+        "Extend connectivity from the office into work bays, storage areas and yards, with a design that accounts for metal structures, racking and the devices in use.",
+    },
+    {
+      title: "Offices and consulting rooms",
+      description:
+        "Support everyday work across desks, meeting rooms and reception, with separate guest access and wired connections where they make sense.",
+    },
+    {
+      title: "Retail, cafés and hospitality",
+      description:
+        "Plan connectivity around counters, ordering devices, staff areas and customers, keeping guest access separate from business systems.",
+    },
+    {
+      title: "Accommodation and guest properties",
+      description:
+        "Plan guest Wi-Fi around rooms, shared spaces and outdoor areas, taking the property layout, expected usage and available internet capacity into account.",
+    },
+    {
+      title: "Sites with separate buildings",
+      description:
+        "Connect offices, sheds and outbuildings using suitable cabling or wireless links, including sites with an existing NBN or Starlink service.",
+    },
+  ],
+  whyProperly: {
+    title: "Design for a busy working day—and the next stage of your business",
+    paragraphs: [
+      "A signal on a phone is only part of the picture. Your network also needs enough capacity for the people and devices using it, suitable connections between equipment and coverage where work actually happens. A faster internet plan alone may not resolve problems within the site.",
+      "Planning those elements together helps you make better upgrade decisions. If you expect to add staff, expand into another building or install more cameras, we can account for that in the design and explain what can be staged over time.",
+    ],
+  },
+  proof: {
+    image: "/images/work_gallery/wifi_survey.jpeg",
+    imageAlt: "On-site Wi-Fi assessment",
+    title: "Check the site. Agree the scope. Test the result.",
+    intro:
+      "A useful assessment connects what you experience day to day with the conditions on site. It helps establish what needs to change and how the finished installation should be checked.",
+    problem:
+      "Identify where connectivity breaks down, which devices are affected and when the problems occur.",
+    solution:
+      "Review the existing setup, check the relevant work areas and plan equipment and connections around the findings.",
+    result:
+      "Test the agreed coverage areas and key connections at handover, explain any remaining limitations and show you how to arrange further help.",
+  },
+  faqs: [
+    {
+      question: "Can you fix our existing network, or do we need to replace everything?",
+      answer:
+        "We assess what is already installed and what is causing the problems. Suitable equipment can stay. The recommended scope may involve configuration changes, cabling, extra access points or replacing equipment that no longer meets your needs.",
+    },
+    {
+      question: "Can you work with our existing internet provider or IT company?",
+      answer:
+        "Yes. We can usually retain your existing internet service and coordinate network changes with your IT provider. We agree who is responsible for each part of the work so the installation fits the systems you already use.",
+    },
+    {
+      question: "Can you separate guest Wi-Fi from our business systems?",
+      answer:
+        "Yes. With suitable equipment, we can configure separate networks and access rules for staff, guests and connected devices. The design depends on what each group needs to access and which systems should remain isolated.",
+    },
+    {
+      question: "Can you connect workshops, outdoor areas or separate buildings?",
+      answer:
+        "Yes, subject to the site layout and suitable installation routes. We assess distance, obstructions, power and the intended use before recommending data cabling, outdoor access points or wireless links.",
+    },
+    {
+      question: "Can you improve connectivity for EFTPOS, POS systems and cameras?",
+      answer:
+        "We can assess and improve the network connection those devices use. Some equipment is better connected by cable. If the fault sits with the device, software or incoming internet service, we explain what we find and where the relevant provider needs to be involved.",
+    },
+    {
+      question: "Can installation be planned around trading hours?",
+      answer:
+        "We discuss access and any expected interruptions before work starts. Where practical, we stage the installation and agree suitable times for changes that will interrupt connectivity. Scheduling is confirmed as part of the scope.",
+    },
+    {
+      question: "How much does a business network installation cost?",
+      answer:
+        "The cost depends on your layout, existing equipment, cabling requirements, coverage areas and the number of users and devices. We start with a discussion, agree any assessment costs before a visit and provide a written scope and quote before installation.",
+    },
+    {
+      question: "What support is available after installation?",
+      answer:
+        "At handover, we explain the setup and how to contact Blake Smart Solutions for further help. Follow-up troubleshooting, changes and maintenance can be arranged, with availability and any charges confirmed when you book. Standard installation does not include continuous monitoring or 24/7 support.",
+    },
+  ],
+  finalTitle: "Let’s plan a better network for your business",
+},
+
   {
     slug: "data-cabling",
     metadata: {

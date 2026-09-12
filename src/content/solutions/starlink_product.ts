@@ -89,7 +89,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "Local support before and after the installation",
     "Roof penetrations sealed correctly for peace of mind.",
     "10-Year workmanship guarantee",
-    "Standard single-storey installation from $499",
+    "Standard single-storey installation from $449, including all mounting equipment",
   ],
 
   heroEyebrow: "FAST & RELIABLE STARLINK INSTALLATION",
