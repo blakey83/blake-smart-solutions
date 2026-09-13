@@ -11,7 +11,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     "Keep security cameras, smart devices and workstations reliably connected",
     "Installed, configured and tested, with local support afterwards",
   ],
-  heroEyebrow: "WIFI & CONNECTIVITY SOLUTIONS PERTH",
+  heroEyebrow: "WIFI & CONNECTIVITY INSTALLATIONS PERTH",
   heroBackgroundImage: "/images/solutions/wifi/wap2.png",
   // heroImage: "/images/work_gallery/wifi_survey.jpeg",
   // heroImageAlt: "Blake Smart Solutions WiFi",
@@ -70,6 +70,22 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
       imageAlt:
         "Ceiling-mounted WiFi access point installed by Blake Smart Solutions",
     },
+    {
+      eyebrow: "INTERNET TO SHEDS, WORKSHOPS AND GRANNY FLATS",
+      title: "Get reliable internet to the buildings your router cannot reach",
+      intro:
+        "Stop trying to stretch weak WiFi across the yard. A dedicated wireless link can carry your network between buildings, giving your shed, workshop or granny flat its own strong, reliable connection without trenching where a wireless bridge is suitable.",
+      points: [
+        "Get dependable internet inside detached buildings instead of a weak signal at the doorway",
+        "Point-to-point wireless bridges can connect sheds, workshops and other detached buildings back to your main network.",
+        "Run workstations, streaming, cameras and smart equipment without constant dropouts",
+        "Avoid wasting money on range extenders or mesh units that cannot cover the distance properly",
+        "Get the link installed, aligned, configured and tested end to end",
+      ],
+      image: "/images/solutions/wifi/wireless_bridge_darlington.jpg",
+      imageAlt:
+      "Wireless bridge installed on a roof to carry WiFi to a detached shed",
+    },
 
     {
       eyebrow: "RELIABLE WIFI BEYOND THE WALLS",
@@ -88,21 +104,6 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
         "Outdoor WiFi access point mounted beside a covered entertaining area",
     },
 
-    {
-      eyebrow: "INTERNET TO SHEDS, WORKSHOPS AND GRANNY FLATS",
-      title: "Get reliable internet to the buildings your router cannot reach",
-      intro:
-        "Stop trying to stretch weak WiFi across the yard. A dedicated wireless link can carry your network between buildings, giving your shed, workshop or granny flat its own strong, reliable connection without trenching where a wireless bridge is suitable.",
-      points: [
-        "Get dependable internet inside detached buildings instead of a weak signal at the doorway",
-        "Run workstations, streaming, cameras and smart equipment without constant dropouts",
-        "Avoid wasting money on range extenders or mesh units that cannot cover the distance properly",
-        "Get the link installed, aligned, configured and tested end to end",
-      ],
-      image: "/images/solutions/wifi/shed-wireless-bridge.webp",
-      imageAlt:
-        "Wireless bridge installed on a roof to carry WiFi to a detached shed",
-    },
   ],
 
   problemSolutionEyebrow: "",
