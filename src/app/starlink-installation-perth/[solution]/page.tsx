@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { WifiSitelinkPageTemplate } from "@/components/solutions/WifiSitelinkPageTemplate";
+import { SolutionDetailPageTemplate } from "@/components/solutions/SolutionDetailPageTemplate";
 import {
-  starlinkSitelinkPages,
-  starlinkSitelinkPagesBySlug,
-} from "@/content/solutions/starlinkSitelinks";
+  starlinkSolutionPages,
+  starlinkSolutionPagesBySlug,
+} from "@/content/solutions/starlinkSolutionPages";
 import { buildFaqPageNode, buildSchemaGraph, buildServiceNode } from "@/lib/jsonLd";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
-type PageProps = { params: Promise<{ sitelink: string }> };
+type PageProps = { params: Promise<{ solution: string }> };
 
 export function generateStaticParams() {
-  return starlinkSitelinkPages.map((page) => ({ sitelink: page.slug }));
+  return starlinkSolutionPages.map((page) => ({ solution: page.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { sitelink } = await params;
-  const page = starlinkSitelinkPagesBySlug[sitelink];
+  const { solution } = await params;
+  const page = starlinkSolutionPagesBySlug[solution];
   if (!page) return {};
 
   return buildSeoMetadata({
@@ -27,9 +27,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
-export default async function StarlinkSitelinkPage({ params }: PageProps) {
-  const { sitelink } = await params;
-  const page = starlinkSitelinkPagesBySlug[sitelink];
+export default async function StarlinkSolutionPage({ params }: PageProps) {
+  const { solution } = await params;
+  const page = starlinkSolutionPagesBySlug[solution];
   if (!page) notFound();
 
   const path = `/starlink-installation-perth/${page.slug}`;
@@ -47,7 +47,7 @@ export default async function StarlinkSitelinkPage({ params }: PageProps) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <WifiSitelinkPageTemplate page={page} service="starlink" />
+      <SolutionDetailPageTemplate page={page} service="starlink" />
     </>
   );
 }

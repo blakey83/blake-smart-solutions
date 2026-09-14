@@ -291,9 +291,9 @@ function SolutionFeatureSection({
           </p>
 
           <ul className="mt-7 space-y-4">
-            {content.points.map((point) => (
+            {content.points.map((point, index) => (
               <li
-                key={point}
+                key={index}
                 className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)]"
               >
                 <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
@@ -312,13 +312,13 @@ function SolutionFeatureSection({
         <div
           className={`relative overflow-hidden rounded-[24px] bg-[var(--color-card)] shadow-[0_18px_42px_rgba(15,23,42,0.1)] ${imageClasses}`}
         >
-          <div className="relative aspect-[4/3] w-full">
+          <div className={`relative w-full ${content.imageAspect === "portrait" ? "aspect-[1600/2125]" : "aspect-[4/3]"}`}>
             <Image
               src={content.image}
               alt={content.imageAlt}
               fill
               sizes="(min-width: 1024px) 28rem, 100vw"
-              className="object-cover"
+              className={content.imageFit === "top" ? "object-cover object-top" : "object-cover"}
             />
           </div>
         </div>
@@ -565,11 +565,11 @@ export function SolutionPageTemplate({
                     {problem.title}
                   </h3>
                   <div className="mt-4 space-y-5">
-                    <div>
+                    {problem.problem ? <div>
                       <p className="text-sm leading-6 text-[var(--color-muted)] sm:text-base">
                         {problem.problem}
                       </p>
-                    </div>
+                    </div> : null}
                     <div>
                       <p className="text-sm leading-6 text-[var(--color-muted)] sm:text-base">
                         {problem.solution}

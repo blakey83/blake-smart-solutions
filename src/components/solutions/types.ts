@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type CtaButton = {
   label: string;
   action: "link" | "enquiry";
@@ -9,7 +11,7 @@ export type CtaButton = {
 export type InfoCard = {
   title: string;
   problem: string;
-  solution: string;
+  solution: ReactNode;
   image?: string;
   imageAlt?: string;
 };
@@ -54,12 +56,14 @@ export type RecentWorkSection = {
 export type FeatureSection = {
   eyebrow: string;
   title: string;
-  intro: string;
-  points: string[];
+  intro: ReactNode;
+  points: ReactNode[];
   finePrint?: string;
   image: string;
   imageAlt: string;
   imageEmphasis?: "standard" | "large";
+  imageFit?: "cover" | "top";
+  imageAspect?: "landscape" | "portrait";
 };
 
 export type FaqItem = {

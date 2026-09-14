@@ -1,4 +1,4 @@
-import { starlinkSitelinkPages } from "@/content/solutions/starlinkSitelinks";
+import { starlinkSolutionPages } from "@/content/solutions/starlinkSolutionPages";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -141,7 +141,7 @@ export default function StarlinkPage() {
             Explore installation options for Perth businesses, including mounting, cabling, setup and connection testing.
           </p>
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {starlinkSitelinkPages.map((page) => (
+            {starlinkSolutionPages.map((page) => (
               <Link
                 key={page.slug}
                 href={`/starlink-installation-perth/${page.slug}`}

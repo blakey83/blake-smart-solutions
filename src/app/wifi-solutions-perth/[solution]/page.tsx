@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { WifiSitelinkPageTemplate } from "@/components/solutions/WifiSitelinkPageTemplate";
+import { SolutionDetailPageTemplate } from "@/components/solutions/SolutionDetailPageTemplate";
 import {
-  wifiSitelinkPages,
-  wifiSitelinkPagesBySlug,
-} from "@/content/solutions/wifiSitelinks";
+  wifiSolutionPages,
+  wifiSolutionPagesBySlug,
+} from "@/content/solutions/wifiSolutionPages";
 import { buildFaqPageNode, buildSchemaGraph, buildServiceNode } from "@/lib/jsonLd";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
-type PageProps = { params: Promise<{ sitelink: string }> };
+type PageProps = { params: Promise<{ solution: string }> };
 
 export function generateStaticParams() {
-  return wifiSitelinkPages.map((page) => ({ sitelink: page.slug }));
+  return wifiSolutionPages.map((page) => ({ solution: page.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { sitelink } = await params;
-  const page = wifiSitelinkPagesBySlug[sitelink];
+  const { solution } = await params;
+  const page = wifiSolutionPagesBySlug[solution];
   if (!page) return {};
 
   return buildSeoMetadata({
@@ -27,9 +27,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
-export default async function WifiSitelinkPage({ params }: PageProps) {
-  const { sitelink } = await params;
-  const page = wifiSitelinkPagesBySlug[sitelink];
+export default async function WifiSolutionPage({ params }: PageProps) {
+  const { solution } = await params;
+  const page = wifiSolutionPagesBySlug[solution];
   if (!page) notFound();
 
   const path = `/wifi-solutions-perth/${page.slug}`;
@@ -47,7 +47,7 @@ export default async function WifiSitelinkPage({ params }: PageProps) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <WifiSitelinkPageTemplate page={page} />
+      <SolutionDetailPageTemplate page={page} />
     </>
   );
 }

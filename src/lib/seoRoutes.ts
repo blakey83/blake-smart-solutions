@@ -29,7 +29,7 @@ export const ARTICLE_RESOURCE_ROUTES = [
   "/recent-installations/wifi",
 ] as const;
 
-export const WIFI_SITELINK_ROUTES = [
+export const WIFI_SOLUTION_ROUTES = [
   "/wifi-solutions-perth/wifi-access-point-installation",
   "/wifi-solutions-perth/internet-to-sheds-workshops",
   "/wifi-solutions-perth/outdoor-wifi-installation",
@@ -37,7 +37,7 @@ export const WIFI_SITELINK_ROUTES = [
   "/wifi-solutions-perth/data-cabling",
 ] as const;
 
-export const STARLINK_SITELINK_ROUTES = [
+export const STARLINK_SOLUTION_ROUTES = [
   "/starlink-installation-perth/business-starlink-installation",
 ] as const;
 
@@ -48,8 +48,8 @@ export const UTILITY_ROUTES = [
 
 export const INDEXABLE_ROUTES = [
   ...CORE_SERVICE_ROUTES,
-  ...WIFI_SITELINK_ROUTES,
-  ...STARLINK_SITELINK_ROUTES,
+  ...WIFI_SOLUTION_ROUTES,
+  ...STARLINK_SOLUTION_ROUTES,
   ...ARTICLE_RESOURCE_ROUTES,
   ...UTILITY_ROUTES,
 ] as const;

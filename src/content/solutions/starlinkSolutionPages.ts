@@ -1,6 +1,6 @@
-import type { WifiSitelinkPage } from "./wifiSitelinks";
+import type { SolutionDetailPage } from "./solutionDetailTypes";
 
-export const starlinkSitelinkPages: WifiSitelinkPage[] = [
+export const starlinkSolutionPages: SolutionDetailPage[] = [
 {
   "slug": "business-starlink-installation",
   "metadata": {
@@ -126,6 +126,6 @@ export const starlinkSitelinkPages: WifiSitelinkPage[] = [
 }
 ];
 
-export const starlinkSitelinkPagesBySlug = Object.fromEntries(
-  starlinkSitelinkPages.map((page) => [page.slug, page]),
-) as Record<string, WifiSitelinkPage>;
+export const starlinkSolutionPagesBySlug = Object.fromEntries(
+  starlinkSolutionPages.map((page) => [page.slug, page]),
+) as Record<string, SolutionDetailPage>;

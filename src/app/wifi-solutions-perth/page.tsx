@@ -5,7 +5,7 @@ import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplat
 import { whyNbnFeelsSlowContent } from "@/content/articles/whyNbnFeelsSlow";
 import { wifiLandingPageContent } from "@/content/articles/wifiLandingPage";
 import { wifiSolutionsPerthPageContent } from "@/content/solutions/wifiSolutionsPerth";
-import { wifiSitelinkPages } from "@/content/solutions/wifiSitelinks";
+import { wifiSolutionPages } from "@/content/solutions/wifiSolutionPages";
 import { wifiSolutionContent } from "@/content/solutions/wifiSolutionContent";
 import { wifiSolutionTrustItems } from "@/content/solutions/wifiSolutionContent";
 import { whyChooseUsWiFi } from "@/content/solutions/wifiSolutionContent";
@@ -85,7 +85,7 @@ export default function WifiSolutionsPerthPage() {
             See how we approach the most common Wi-Fi and network jobs for Perth homes and small businesses.
           </p>
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {wifiSitelinkPages.map((page) => (
+            {wifiSolutionPages.map((page) => (
               <Link
                 key={page.slug}
                 href={`/wifi-solutions-perth/${page.slug}`}
