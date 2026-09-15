@@ -66,6 +66,14 @@ solution: {
       },
       ". Either way, the outcome is the same: reliable internet inside the shed or workshop, not just a signal arriving at the outside wall.",
     ],
+    [
+      "See how our ",
+      {
+        text: "Darlington shed internet project",
+        href: "/case-studies/starlink-wifi-wireless-bridge-darlington",
+      },
+      " used a dedicated wireless bridge to carry the house network to a detached shed, with its own access point inside.",
+    ],
   ],
   points: [
     "Site and line-of-sight assessment",
@@ -117,7 +125,7 @@ solution: {
     },
     proof: {
       image:
-            "/images/solutions/wifi/shed-building-link/wireless-bridge-close-up.webp",
+            "/images/solutions/wifi/darlington/house-to-shed-link.webp",
           imageAlt:
             "Outdoor wireless bridge mounted with protected cabling to connect a detached building",
           title: "From the house towards the shed",

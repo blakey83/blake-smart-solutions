@@ -27,7 +27,7 @@ export const businessWifiInstallation: SolutionDetailPage = {
   heroImageAlt: "Office workspaces served by a business Wi-Fi network",
   review: {
     quote: "Good communication and clean work.",
-    author: "Mark Lumacang · Google review",
+    author: "Mark Lumacang",
   },
   problem: {
     title: "Your staff have a business to run. Wi-Fi problems keep interrupting it.",
@@ -51,6 +51,14 @@ export const businessWifiInstallation: SolutionDetailPage = {
         " and wireless links where appropriate. We can work with your existing internet service and retain equipment that is suitable for the agreed design.",
       ],
       "You receive a clear installation scope, an agreed plan for any interruptions and testing in the areas that matter to your business. We explain the finished setup and discuss how to arrange help afterwards.",
+      [
+        "For an example of wired access points and a dedicated link between buildings working together, see our ",
+        {
+          text: "Darlington property network case study",
+          href: "/case-studies/starlink-wifi-wireless-bridge-darlington",
+        },
+        ". This residential project shows how one planned network can serve several separate areas.",
+      ],
     ],
     points: [
       "Site assessment, fault finding and network design",

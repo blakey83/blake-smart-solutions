@@ -1,8 +1,14 @@
+import { darlingtonWholePropertyNetworkCaseStudy } from "./darlingtonWholePropertyNetwork";
+
+export { darlingtonWholePropertyNetworkCaseStudy };
+
 export type CaseStudySection = {
   title: string;
   paragraphs?: string[];
   bullets?: string[];
+  links?: { label: string; href: string }[];
   image?: {
+    variant?: "topology";
     src: string;
     alt: string;
     caption: string;
@@ -308,6 +314,7 @@ export const starlinkOakfordCaseStudy: CaseStudyContent = {
 };
 
 export const caseStudies = [
+  darlingtonWholePropertyNetworkCaseStudy,
   starlinkOakfordCaseStudy,
   starlinkCityBeachCaseStudy,
 ] as const;

@@ -64,6 +64,14 @@ export const outdoorWifiInstallation: SolutionDetailPage = {
           },
           " may be more suitable than general yard coverage.",
         ],
+        [
+          "For a real example of connecting separate buildings across a leafy property, see our ",
+          {
+            text: "Darlington whole-property network case study",
+            href: "/case-studies/starlink-wifi-wireless-bridge-darlington",
+          },
+          ". A dedicated outdoor bridge links the house and shed, with local Wi-Fi provided inside each building.",
+        ],
       ],
       points: [
         "Outdoor coverage and mounting assessment",

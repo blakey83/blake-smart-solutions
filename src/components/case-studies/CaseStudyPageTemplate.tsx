@@ -28,6 +28,32 @@ function BulletList({ items }: { items?: string[] }) {
 }
 
 function SectionImage({ image }: { image: NonNullable<CaseStudySection["image"]> }) {
+  if (image.variant === "topology") {
+    return (
+      <figure className="my-10 overflow-hidden rounded-[8px] border border-[var(--color-border)] bg-white">
+        <div
+          className="overflow-x-auto focus-visible:outline-2 focus-visible:outline-[var(--color-accent)]"
+          tabIndex={0}
+          role="region"
+          aria-label="Network topology diagram. Scroll horizontally on smaller screens."
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={1072}
+            height={1074}
+            sizes="(min-width: 768px) 48rem, 48rem"
+            className="h-auto w-full min-w-[768px]"
+          />
+        </div>
+        <figcaption className="border-t border-[var(--color-border)] px-5 py-4 text-sm leading-6 text-[var(--color-muted)]">
+          {image.caption}
+          <span className="mt-2 block">Scroll across the diagram on smaller screens, or <a href={image.src} className="text-[var(--color-accent)] underline underline-offset-4">view the full-size network diagram</a>.</span>
+        </figcaption>
+      </figure>
+    );
+  }
+
   return (
     <figure className="my-10 overflow-hidden rounded-[8px] border border-[var(--color-border)] bg-white shadow-[0_14px_30px_rgba(15,23,42,0.05)]">
       <div className="relative aspect-[3/4] w-full bg-[var(--color-section)]">
@@ -121,6 +147,13 @@ export function CaseStudyPageTemplate({ content }: CaseStudyPageTemplateProps) {
                     </p>
                   ))}
                   <BulletList items={section.bullets} />
+                  {section.links?.map((link) => (
+                    <p key={link.href} className="text-base leading-7 sm:text-lg">
+                      <Link href={link.href} className="text-[var(--color-accent)] underline underline-offset-4">
+                        {link.label}
+                      </Link>
+                    </p>
+                  ))}
                 </div>
               </section>
               {section.image ? <SectionImage image={section.image} /> : null}

@@ -29,7 +29,7 @@ export const dataCabling: SolutionDetailPage = {
     review: {
       quote:
         "Daniel did a great job installing my setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
-      author: "Alan Star · Google review",
+      author: "Alan Star",
     },
     problem: {
       title: "Some connections should not be left to Wi-Fi",
@@ -50,6 +50,14 @@ export const dataCabling: SolutionDetailPage = {
           ", a camera location or a link between the NBN equipment and a better router position.",
         ],
         "The improvement is simple: fixed devices get a stable connection, Wi-Fi equipment gets a proper backbone and the installation is neat, labelled where appropriate and tested before handover.",
+        [
+          "See our ",
+          {
+            text: "Darlington network installation",
+            href: "/case-studies/starlink-wifi-wireless-bridge-darlington",
+          },
+          " for an example of wired connections linking the house access points to a central switch, alongside a wireless bridge to the detached shed.",
+        ],
       ],
       points: [
         "Cat6 data points and equipment links",

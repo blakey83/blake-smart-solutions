@@ -22,6 +22,7 @@ export const ARTICLE_RESOURCE_ROUTES = [
   "/articles/what-makes-a-great-starlink-installer",
   "/articles/why-nbn-feels-slow",
   "/case-studies",
+  "/case-studies/starlink-wifi-wireless-bridge-darlington",
   "/case-studies/starlink-installation-city-beach-gen-3-router-bracket",
   "/case-studies/starlink-installation-oakford-poor-nbn-fixed-wireless",
   "/recent-installations/ajax",

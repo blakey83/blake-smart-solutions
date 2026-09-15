@@ -103,6 +103,23 @@ export default function WifiSolutionsPerthPage() {
               </Link>
             ))}
           </div>
+          <Link
+            href="/case-studies/starlink-wifi-wireless-bridge-darlington"
+            className="group mt-8 block rounded-[24px] border border-[var(--color-border)] bg-[var(--color-page)] p-6 transition hover:border-[var(--color-accent)] hover:bg-white"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+              Darlington case study
+            </p>
+            <h3 className="mt-3 text-xl font-semibold tracking-tight text-[var(--color-ink)]">
+              One network connecting the house and shed
+            </h3>
+            <p className="mt-3 max-w-3xl text-base leading-7 text-[var(--color-muted)]">
+              See how Starlink, wired Wi-Fi access points and a dedicated wireless bridge brought reliable connectivity to a Darlington home and its detached shed.
+            </p>
+            <span className="mt-5 block text-sm font-semibold text-[var(--color-accent)] group-hover:text-[var(--color-accent-strong)]">
+              Read the Darlington case study →
+            </span>
+          </Link>
         </div>
       </section>
       <section className="border-t border-[var(--color-border)] bg-[var(--color-page)]">

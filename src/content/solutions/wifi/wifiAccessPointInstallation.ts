@@ -57,6 +57,14 @@ export const wifiAccessPointInstallation: SolutionDetailPage = {
           },
           " when coverage needs to extend beyond the main building.",
         ],
+        [
+          "See our ",
+          {
+            text: "Darlington Wi-Fi installation",
+            href: "/case-studies/starlink-wifi-wireless-bridge-darlington",
+          },
+          " for a real example of two wired access points serving the main house and a separate access point providing Wi-Fi inside the shed.",
+        ],
       ],
       points: [
         "Coverage assessment and access point placement",
