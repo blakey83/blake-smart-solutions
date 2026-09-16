@@ -29,8 +29,8 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     reviewCount: 3,
   },
   heroCtaLines: [
-    "Tell us where the network isn’t reaching and what you need connected.",
-    "We’ll come back with a clear quote for the right solution.",
+    "Tell us which rooms need better WiFi and what you need connected.", 
+    "Get a recommended installation approach and a clear quote.",
   ],
 
   primaryCta: {
