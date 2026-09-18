@@ -159,7 +159,10 @@ function validatePayload(payload: EnquiryPayload) {
   return null;
 }
 
-async function createEspoCrmLead(payload: EnquiryPayload) {
+async function createEspoCrmLead(
+  payload: EnquiryPayload,
+  debugAttribution: boolean,
+) {
   const baseUrl = process.env.ESPOCRM_BASE_URL?.replace(/\/+$/, "");
   const apiKey = process.env.ESPOCRM_API_KEY;
 
@@ -188,6 +191,14 @@ async function createEspoCrmLead(payload: EnquiryPayload) {
     description,
   };
 
+  if (debugAttribution) {
+    console.info("Enquiry attribution", {
+      stage: "crm_request",
+      field: "cGoogleAdsClickId",
+      gclidIncluded: Boolean(leadPayload.cGoogleAdsClickId),
+    });
+  }
+
   const response = await fetch(`${baseUrl}/api/v1/Lead`, {
     method: "POST",
     headers: {
@@ -197,10 +208,32 @@ async function createEspoCrmLead(payload: EnquiryPayload) {
     body: JSON.stringify(leadPayload),
   });
 
+  if (debugAttribution) {
+    // Inspect only the existing create response; never log its contents or
+    // perform another CRM write. An omitted field can also mean no read access.
+    const result: unknown = response.ok
+      ? await response.json().catch(() => null)
+      : null;
+    const record =
+      result && typeof result === "object" && !Array.isArray(result)
+        ? (result as Record<string, unknown>)
+        : null;
+
+    console.info("Enquiry attribution", {
+      stage: "crm_response",
+      status: response.status,
+      responseIsRecord: record !== null,
+      fieldReturned: record !== null && Object.hasOwn(record, "cGoogleAdsClickId"),
+      fieldMatches: payload.gclid
+        ? record?.cGoogleAdsClickId === payload.gclid
+        : null,
+    });
+  }
+
   if (!response.ok) {
-    const responseBody = await response.text().catch(() => "");
+    // CRM error bodies may echo contact details, identifiers or credentials.
     throw new Error(
-      `EspoCRM Lead creation failed with ${response.status} ${response.statusText}: ${responseBody}`,
+      `EspoCRM Lead creation failed with HTTP ${response.status}`,
     );
   }
 }
@@ -244,6 +277,15 @@ export async function POST(request: NextRequest) {
 
   if (validationError) {
     return NextResponse.json({ error: validationError }, { status: 400 });
+  }
+
+  const debugAttribution = process.env.ENQUIRY_ATTRIBUTION_DEBUG === "true";
+  if (debugAttribution) {
+    console.info("Enquiry attribution", {
+      stage: "received",
+      gclidProvided: body.gclid !== undefined && body.gclid !== null,
+      gclidAccepted: Boolean(payload.gclid),
+    });
   }
 
   const smtpHost = process.env.SMTP_HOST;
@@ -307,7 +349,7 @@ export async function POST(request: NextRequest) {
     });
 
     try {
-      await createEspoCrmLead(payload);
+      await createEspoCrmLead(payload, debugAttribution);
     } catch (error) {
       console.error("Failed to create EspoCRM lead", error);
     }

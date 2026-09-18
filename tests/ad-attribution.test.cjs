@@ -66,9 +66,14 @@ test('actual enquiry route sends optional GCLID to mocked Espo; preserves email 
   const originalFetch = global.fetch;
   const originalEnv = { ...process.env };
   const originalError = console.error;
+  const originalInfo = console.info;
   const emails = [];
   const crm = [];
+  const diagnostics = [];
+  const errors = [];
   let failCrm = false;
+  let crmResponse = '{}';
+  console.info = (...args) => diagnostics.push(args);
   Module._load = function(id, ...args) {
     if (id === 'nodemailer') return { createTransport: () => ({ sendMail: async (mail) => emails.push(mail) }) };
     return originalLoad.call(this, id, ...args);
@@ -78,12 +83,13 @@ test('actual enquiry route sends optional GCLID to mocked Espo; preserves email 
     assert.equal(url, 'https://crm.invalid/api/v1/Lead');
     assert.equal(options.headers['X-Api-Key'], 'fake-test-key');
     crm.push(JSON.parse(options.body));
-    return new Response('{}', { status: failCrm ? 500 : 200 });
+    return new Response(crmResponse, { status: failCrm ? 500 : 200 });
   };
   Object.assign(process.env, {
     ESPOCRM_BASE_URL: 'https://crm.invalid/', ESPOCRM_API_KEY: 'fake-test-key',
     SMTP_HOST: 'smtp.invalid', SMTP_USER: 'test', SMTP_PASS: 'test',
     LEADS_TO_EMAIL: 'to@example.invalid', LEADS_FROM_EMAIL: 'from@example.invalid',
+    ENQUIRY_ATTRIBUTION_DEBUG: 'false',
   });
   try {
     const { POST } = require('../src/app/api/enquiry/route.ts');
@@ -104,17 +110,53 @@ test('actual enquiry route sends optional GCLID to mocked Espo; preserves email 
     }
     assert.equal(emails.length, 5);
     assert.equal(crm.length, 5);
+    assert.equal(diagnostics.length, 0, 'diagnostics are off by default');
+
+    process.env.ENQUIRY_ATTRIBUTION_DEBUG = 'true';
+    const diagnosticClick = 'Test_Click_123';
+    for (const [responseBody, fieldReturned, fieldMatches, responseIsRecord] of [
+      [JSON.stringify({ cGoogleAdsClickId: diagnosticClick, emailAddress: 'private@example.invalid' }), true, true, true],
+      ['{}', false, false, true],
+      ['{"cGoogleAdsClickId":""}', true, false, true],
+      ['{"cGoogleAdsClickId":"different-private-click"}', true, false, true],
+      ['not JSON: private response', false, false, false],
+    ]) {
+      diagnostics.length = 0;
+      crmResponse = responseBody;
+      const result = await POST(new Request('https://website.invalid/api/enquiry', {
+        method: 'POST', headers: { 'x-forwarded-for': `diagnostic-${count++}` },
+        body: JSON.stringify({ name: 'Test', email: 'test@example.invalid', message: 'Test', productName: 'Test', formStartedAt: Date.now() - 10000, gclid: diagnosticClick }),
+      }));
+      assert.equal(result.status, 200);
+      assert.deepEqual(await result.json(), { ok: true }, 'diagnostics do not change the public response');
+      assert.deepEqual(diagnostics, [
+        ['Enquiry attribution', { stage: 'received', gclidProvided: true, gclidAccepted: true }],
+        ['Enquiry attribution', { stage: 'crm_request', field: 'cGoogleAdsClickId', gclidIncluded: true }],
+        ['Enquiry attribution', { stage: 'crm_response', status: 200, responseIsRecord, fieldReturned, fieldMatches }],
+      ]);
+      const logs = JSON.stringify(diagnostics);
+      for (const sensitive of [diagnosticClick, 'private@example.invalid', 'fake-test-key', 'different-private-click', 'private response']) {
+        assert.equal(logs.includes(sensitive), false, 'diagnostics never contain raw identifiers, PII or credentials');
+      }
+    }
+
     failCrm = true;
-    console.error = () => {};
+    crmResponse = 'private-error-body';
+    console.error = (...args) => errors.push(args.map(String).join(' '));
     const result = await POST(new Request('https://website.invalid/api/enquiry', {
       method: 'POST', headers: { 'x-forwarded-for': 'crm-failure' },
       body: JSON.stringify({ name: 'Test', email: 'test@example.invalid', message: 'Test', productName: 'Test', formStartedAt: Date.now() - 10000 }),
     }));
     assert.equal(result.status, 200);
+    assert.equal(diagnostics.at(-1)[1].status, 500);
+    assert.equal(diagnostics.at(-1)[1].fieldMatches, null, 'no identifier is not reported as a mismatch');
+    assert.ok(errors.some(error => error.includes('HTTP 500')));
+    assert.ok(errors.every(error => !error.includes('private-error-body')));
   } finally {
     Module._load = originalLoad;
     global.fetch = originalFetch;
     console.error = originalError;
+    console.info = originalInfo;
     process.env = originalEnv;
     delete global.window;
   }

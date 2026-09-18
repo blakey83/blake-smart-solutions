@@ -1,5 +1,11 @@
 # Google Ads → website enquiry → EspoCRM
 
+## Current diagnosis
+
+The user confirmed **Edit: No** for Google Ads Click ID in the role assigned to the website API user. This is an identified field-permission restriction; the browser has already been verified to send `gclid` correctly. In Espo, change **only this field's Edit permission to Yes** on that role and save. Check effective access if the API user has multiple roles. No website deployment is needed for this CRM permission change; the optional diagnostic code can remain undeployed unless further investigation is needed.
+
+The permission change and subsequent CRM persistence have not yet been verified. Validate on staging or the next genuine enquiry that `cGoogleAdsClickId` contains the submitted ID. Changing permissions does not populate earlier blank leads. No additional production test enquiry is authorized by this finding.
+
 ## Repository audit
 
 - `src/app/layout.tsx`: production-only direct Google tag `AW-18035265737`, phone conversion configuration `AW-18035265737/ia68COyZw8YcEMmh8ZdD` for `0477 948 079`, and GA4 `G-ZFPD80HG5B`. No GTM container found.
@@ -82,3 +88,22 @@ The deployment issue above is resolved. The repository is clean at commit `529c6
 The downloaded production attribution helper and General Quote Request submit handler were executed locally with simulated localStorage, React hooks and a fetch mock. The helper stored `Test_Click_123` under `bss.googleAdsClick`, retained it after simulated navigation, and the actual deployed submit handler included `gclid: "Test_Click_123"` in its intercepted `/api/enquiry` JSON. This tests deployed JavaScript logic; it is not proof of hydration/storage/network behaviour in the user's actual browser. No live submission occurred.
 
 `npm run test:attribution` also passes, including the local server mapping to `cGoogleAdsClickId`. No connected browser/CRM session or server CRM credentials are available here. The remaining reported failure is therefore not yet localized: inspect the user's actual localStorage at the **www** origin, the existing enquiry request payload, deployed server payload, and Espo field Name/API field permissions. Do not conclude the field permissions are wrong from these tests alone. No new application patch or further deployment is currently established as necessary.
+
+
+## Browser evidence and server diagnostics — 18 September 2026
+
+User-provided screenshots now confirm that localStorage on the www origin contains `Test_Click_123` and the actual General Quote Request JSON includes that exact `gclid`. The selected `/api/enquiry` POST returned HTTP 200 at 05:12:12 UTC (13:12:12 Perth). This confirms delivery to the website API; its success response does not confirm CRM persistence. The field editor screenshot also shows `cGoogleAdsClickId`, Varchar, max length 512, not required, and not read-only. It does not establish the API role's access or the stored value on the specific lead.
+
+The remaining failure is between processing the website API request and the field as read in Espo. Check the lead created by this latest request, rather than an older pre-deployment test. Inspect the role assigned to the website API user: Field Level Security → Lead → Google Ads Click ID, especially Edit and Read. A field absent from Field Level Security is not automatically denied; see [Espo role rules](https://docs.espocrm.com/administration/roles-management/). Do not widen permissions without checking the effective role.
+
+An opt-in server diagnostic is now implemented to distinguish these stages. It requires deploying the updated API route and setting the **server-only** environment variable `ENQUIRY_ATTRIBUTION_DEBUG=true`. In Vercel runtime logs for an enquiry invocation, filter for `Enquiry attribution`. Each log contains only fixed labels, booleans and an HTTP status, never the identifier, lead ID, contact details, API key or raw CRM response:
+
+- `received`: `gclidProvided` and `gclidAccepted` show whether the API received and validated the field.
+- `crm_request`: `gclidIncluded` shows whether the outgoing Espo JSON includes `cGoogleAdsClickId`.
+- `crm_response`: `status`, `responseIsRecord`, `fieldReturned`, and `fieldMatches` describe Espo's existing create response. A matching field supports successful creation with attribution. A missing field may mean response filtering/read permissions, unknown field configuration, or lack of persistence; it does not by itself prove write denial. A returned but different/empty field needs examination of Espo permissions, field settings and save hooks/workflows. With no submitted ID, `fieldMatches` is null.
+
+If `received` exists without `crm_request`, check the invocation's email/configuration logs; email runs first and missing CRM configuration skips creation. If `crm_request` exists without `crm_response`, inspect fetch/network failures in that invocation. HTTP 200 from the website can still accompany a CRM failure. Error messages now retain the CRM HTTP status but omit raw CRM error bodies to avoid disclosure.
+
+These diagnostics inspect the existing create response only: no extra CRM requests, writes, retry, altered user-facing success response or Google events are added. They are disabled unless the flag is exactly `true`. Remove/disable the flag after diagnosis. Use staging or the next genuine enquiry; another live test enquiry still requires explicit approval. Existing submissions cannot be diagnosed retroactively with newly added logs.
+
+Mock tests cover diagnostics disabled, matching/omitted/empty/different response fields, malformed responses, HTTP failure, unchanged enquiry success and absence of sensitive values in diagnostic logs. No live lead or email was sent by the assistant.
