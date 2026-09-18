@@ -50,7 +50,7 @@ The test loads the actual TypeScript attribution and API modules, replaces SMTP 
 
 ## Live failure diagnosis — 18 September 2026
 
-**Confirmed cause: the public deployment does not include the attribution changes. Deployment is still required.**
+**Initial diagnosis (resolved by the subsequent deployment): the public deployment did not include the attribution changes. See the post-deployment retest below for current status.**
 
 Read-only downloads of the live homepage at `/?gclid=Test_Click_123`, including a cache-busted request with `Cache-Control: no-cache`, referenced the same 11 JavaScript files. None contained `bss.googleAdsClick` or `gclid`. The deployed modal in `/_next/static/immutable/chunks/2c7v4lhnxc552.js` constructs the enquiry body as:
 
@@ -73,3 +73,12 @@ Publish the complete attribution changes through the normal deployment process, 
 After deployment, verify the live bundle contains `bss.googleAdsClick`. In a fresh browser, visit `/?gclid=Test_Click_123`, then inspect Application → Local Storage for the current origin: the key should contain `gclid: "Test_Click_123"` and a capture timestamp. Navigate to another page and confirm it remains. These checks need no enquiry submission. On staging, inspect the form request's `gclid` and read back Espo's `cGoogleAdsClickId`; only send another production test enquiry with explicit approval. If the field is still blank despite a verified outbound CRM payload, inspect Espo's exact attribute name and the API role's field write access.
 
 Re-ran `npm run test:attribution`, `npm run lint`, and `npx tsc --noEmit`: all passed. No live leads or emails were created, and no credentials were displayed.
+
+
+## Post-deployment retest — 18 September 2026
+
+The deployment issue above is resolved. The repository is clean at commit `529c6bf` (`Added google ads leads attributions`). A fresh public homepage response now loads `0lg0cjq9iri5u.js` (capture component and form) and `0o4ar0u5pfrkl.js` (attribution helper). The redirect from the non-www test URL ends at `https://www.blakesmartsolutions.com.au/?gclid=Test_Click_123`, preserving the identifier.
+
+The downloaded production attribution helper and General Quote Request submit handler were executed locally with simulated localStorage, React hooks and a fetch mock. The helper stored `Test_Click_123` under `bss.googleAdsClick`, retained it after simulated navigation, and the actual deployed submit handler included `gclid: "Test_Click_123"` in its intercepted `/api/enquiry` JSON. This tests deployed JavaScript logic; it is not proof of hydration/storage/network behaviour in the user's actual browser. No live submission occurred.
+
+`npm run test:attribution` also passes, including the local server mapping to `cGoogleAdsClickId`. No connected browser/CRM session or server CRM credentials are available here. The remaining reported failure is therefore not yet localized: inspect the user's actual localStorage at the **www** origin, the existing enquiry request payload, deployed server payload, and Espo field Name/API field permissions. Do not conclude the field permissions are wrong from these tests alone. No new application patch or further deployment is currently established as necessary.
