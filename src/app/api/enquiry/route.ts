@@ -1,3 +1,4 @@
+import { normaliseGclid } from "../../../lib/adClickId";
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -16,6 +17,7 @@ type EnquiryPayload = {
   suburb: string;
   message: string;
   productName: string;
+  gclid?: string;
   website?: string;
   formStartedAt?: number;
 };
@@ -182,6 +184,7 @@ async function createEspoCrmLead(payload: EnquiryPayload) {
     ...(phoneNumber ? { phoneNumber } : {}),
     addressCity: payload.suburb || undefined,
     source: "Website",
+    ...(payload.gclid ? { cGoogleAdsClickId: payload.gclid } : {}),
     description,
   };
 
@@ -225,6 +228,7 @@ export async function POST(request: NextRequest) {
   const body = (await request.json()) as Partial<EnquiryPayload>;
 
   const payload: EnquiryPayload = {
+    gclid: normaliseGclid(body.gclid),
     name: trimField(body.name),
     phone: trimField(body.phone),
     email: trimField(body.email),

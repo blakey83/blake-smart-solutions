@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { getEnquiryGclid } from "@/lib/adAttribution";
 import { usePathname } from "next/navigation";
 import {
   enquiryModalContent,
@@ -246,6 +247,7 @@ export default function EnquiryModal({
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          gclid: getEnquiryGclid(),
           ...formData,
           ...contactPayload,
           productName: product.name,

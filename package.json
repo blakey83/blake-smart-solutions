@@ -6,7 +6,8 @@
     "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:attribution": "node --test tests/ad-attribution.test.cjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.4",

@@ -1,6 +1,6 @@
 export const privacyPolicyContent = {
   title: "Privacy Policy",
-  lastUpdated: "29th May 2026",
+  lastUpdated: "18th September 2026",
   intro: [
     "Blake Smart Solutions Pty Ltd respects your privacy and is committed to handling your personal information responsibly.",
     "This Privacy Policy explains what information we collect, how we use it, when we may share it, how we store it, and how you can contact us about your information.",
@@ -89,7 +89,7 @@ export const privacyPolicyContent = {
     {
       title: "Website analytics and advertising",
       paragraphs: [
-        "Our website may use analytics, cookies, tracking pixels or similar technologies to understand how visitors use the site and to improve our services, advertising and marketing.",
+        "Our website may use analytics, cookies, tracking pixels or similar technologies to understand how visitors use the site and to improve our services, advertising and marketing. When you arrive from a Google ad, we store the ad click identifier in your browser for up to 90 days and include it with any enquiry you submit in our CRM to connect advertising with enquiries and resulting jobs.",
         "This may include tools such as Google Analytics, Google Ads, Meta/Facebook advertising tools or similar services.",
         "These tools may collect information such as:",
       ],

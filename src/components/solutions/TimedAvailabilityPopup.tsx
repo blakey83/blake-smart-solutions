@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { getEnquiryGclid } from "@/lib/adAttribution";
 import { enquiryModalContent } from "@/content/components/siteContent";
 import {
   trackEnquirySubmit,
@@ -128,6 +129,7 @@ export function TimedAvailabilityPopup({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          gclid: getEnquiryGclid(),
           name: formData.name,
           suburb: formData.suburb,
           message: `Starlink ${formData.preferredDate}`,

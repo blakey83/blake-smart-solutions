@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import { AdClickCapture } from "@/components/AdClickCapture";
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -73,6 +75,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Suspense fallback={null}>
+          <AdClickCapture />
+        </Suspense>
         <NavBar />
         <script
           type="application/ld+json"
