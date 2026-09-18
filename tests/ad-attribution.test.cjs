@@ -104,7 +104,10 @@ test('actual enquiry route sends optional GCLID to mocked Espo; preserves email 
       }));
       assert.equal(result.status, 200);
       assert.deepEqual(await result.json(), { ok: true });
-      assert.equal(crm.at(-1).cGoogleAdsClickId, typeof gclid === 'string' && gclid === 'End_to_End-123' ? gclid : undefined);
+      const acceptedGclid = typeof gclid === 'string' && gclid === 'End_to_End-123';
+      assert.equal(crm.at(-1).cCGoogleAdsClickId, acceptedGclid ? gclid : undefined);
+      assert.equal(Object.hasOwn(crm.at(-1), 'cCGoogleAdsClickId'), acceptedGclid);
+      assert.equal(Object.hasOwn(crm.at(-1), 'cGoogleAdsClickId'), false, 'do not send the previously assumed field name');
       assert.equal(crm.at(-1).phoneNumber, '+61412345678');
       assert.equal(crm.at(-1).source, 'Website');
     }
@@ -115,10 +118,11 @@ test('actual enquiry route sends optional GCLID to mocked Espo; preserves email 
     process.env.ENQUIRY_ATTRIBUTION_DEBUG = 'true';
     const diagnosticClick = 'Test_Click_123';
     for (const [responseBody, fieldReturned, fieldMatches, responseIsRecord] of [
-      [JSON.stringify({ cGoogleAdsClickId: diagnosticClick, emailAddress: 'private@example.invalid' }), true, true, true],
+      [JSON.stringify({ cCGoogleAdsClickId: diagnosticClick, emailAddress: 'private@example.invalid' }), true, true, true],
+      [JSON.stringify({ cGoogleAdsClickId: diagnosticClick }), false, false, true],
       ['{}', false, false, true],
-      ['{"cGoogleAdsClickId":""}', true, false, true],
-      ['{"cGoogleAdsClickId":"different-private-click"}', true, false, true],
+      ['{"cCGoogleAdsClickId":""}', true, false, true],
+      ['{"cCGoogleAdsClickId":"different-private-click"}', true, false, true],
       ['not JSON: private response', false, false, false],
     ]) {
       diagnostics.length = 0;
@@ -131,7 +135,7 @@ test('actual enquiry route sends optional GCLID to mocked Espo; preserves email 
       assert.deepEqual(await result.json(), { ok: true }, 'diagnostics do not change the public response');
       assert.deepEqual(diagnostics, [
         ['Enquiry attribution', { stage: 'received', gclidProvided: true, gclidAccepted: true }],
-        ['Enquiry attribution', { stage: 'crm_request', field: 'cGoogleAdsClickId', gclidIncluded: true }],
+        ['Enquiry attribution', { stage: 'crm_request', field: 'cCGoogleAdsClickId', gclidIncluded: true }],
         ['Enquiry attribution', { stage: 'crm_response', status: 200, responseIsRecord, fieldReturned, fieldMatches }],
       ]);
       const logs = JSON.stringify(diagnostics);

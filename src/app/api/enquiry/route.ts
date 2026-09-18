@@ -7,6 +7,8 @@ export const runtime = "nodejs";
 const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
 const MIN_FORM_FILL_MS = 4000;
+// Exact attribute confirmed by this Espo instance's Lead metadata and API.
+const ESPO_GCLID_FIELD = "cCGoogleAdsClickId";
 
 const requestLog = new Map<string, number[]>();
 
@@ -187,15 +189,15 @@ async function createEspoCrmLead(
     ...(phoneNumber ? { phoneNumber } : {}),
     addressCity: payload.suburb || undefined,
     source: "Website",
-    ...(payload.gclid ? { cGoogleAdsClickId: payload.gclid } : {}),
+    ...(payload.gclid ? { [ESPO_GCLID_FIELD]: payload.gclid } : {}),
     description,
   };
 
   if (debugAttribution) {
     console.info("Enquiry attribution", {
       stage: "crm_request",
-      field: "cGoogleAdsClickId",
-      gclidIncluded: Boolean(leadPayload.cGoogleAdsClickId),
+      field: ESPO_GCLID_FIELD,
+      gclidIncluded: Boolean(leadPayload[ESPO_GCLID_FIELD]),
     });
   }
 
@@ -223,9 +225,9 @@ async function createEspoCrmLead(
       stage: "crm_response",
       status: response.status,
       responseIsRecord: record !== null,
-      fieldReturned: record !== null && Object.hasOwn(record, "cGoogleAdsClickId"),
+      fieldReturned: record !== null && Object.hasOwn(record, ESPO_GCLID_FIELD),
       fieldMatches: payload.gclid
-        ? record?.cGoogleAdsClickId === payload.gclid
+        ? record?.[ESPO_GCLID_FIELD] === payload.gclid
         : null,
     });
   }
