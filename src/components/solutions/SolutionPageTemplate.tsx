@@ -1,13 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { heroSectionContent } from "@/content/components/home/heroSection";
 import { solutionPageTemplateContent } from "@/content/components/siteContent";
 import type { WhyChooseUsContent } from "@/lib/types";
-import { trackPhoneClick } from "@/lib/analytics";
-import { openEnquiryModal } from "@/lib/enquiryModal";
+import { SolutionCta } from "@/components/solutions/SolutionCta";
 import type {
   ApproachStep,
   CtaButton,
@@ -19,52 +16,6 @@ import type {
 import { TimedAvailabilityPopup } from "@/components/solutions/TimedAvailabilityPopup";
 import { TrustStrip } from "../home/TrustStrip";
 import { WhyBSS } from "../landingPages/WhyBSS";
-
-type SolutionCtaProps = {
-  button: CtaButton;
-  variant?: "primary" | "secondary";
-  className?: string;
-};
-
-function SolutionCta({
-  button,
-  variant = "primary",
-  className = "",
-}: SolutionCtaProps) {
-  const baseClasses =
-    "inline-flex min-h-12 items-center justify-center rounded-full px-5 text-sm font-semibold transition";
-  const variantClasses =
-    variant === "primary"
-      ? "bg-[var(--color-accent)] text-white shadow-[0_10px_24px_rgba(0,110,184,0.16)] hover:bg-[var(--color-accent-strong)]"
-      : "border border-[var(--color-border-strong)] bg-white !text-black hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]";
-  const classes = `${baseClasses} ${variantClasses} ${className}`.trim();
-
-  if (button.action === "enquiry") {
-    return (
-      <button
-        type="button"
-        onClick={() =>
-          openEnquiryModal(button.enquiryProductName, {
-            defaultMessage: button.enquiryDefaultMessage,
-          })
-        }
-        className={classes}
-      >
-        {button.label}
-      </button>
-    );
-  }
-
-  return (
-    <Link
-      href={button.href ?? "/"}
-      onClick={button.href?.startsWith("tel:") ? trackPhoneClick : undefined}
-      className={classes}
-    >
-      {button.label}
-    </Link>
-  );
-}
 
 function mergeEnquiryDefaults(button: CtaButton, defaults: CtaButton) {
   if (button.action !== "enquiry") {
@@ -403,6 +354,7 @@ export function SolutionPageTemplate({
           fill
           sizes="100vw"
           loading="eager"
+          fetchPriority="high"
           className="absolute inset-0 -z-20 scale-[0.96] object-cover object-[58%_top] sm:scale-100 sm:object-center"
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(31,41,55,0.88)_0%,rgba(31,41,55,0.78)_46%,rgba(31,41,55,0.92)_100%)] lg:bg-[linear-gradient(90deg,rgba(31,41,55,0.92)_0%,rgba(31,41,55,0.78)_56%,rgba(13,160,245,0.18)_100%)]" />

@@ -4,12 +4,24 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { enquiryProductContent } from "@/content/components/siteContent";
 import type { Product } from "@/lib/types";
-import EnquiryModal from "@/components/EnquiryModal";
+import dynamic from "next/dynamic";
 import type { EnquiryOpenTrackingParams } from "@/lib/analytics";
 import {
   ENQUIRY_MODAL_EVENT,
   type EnquiryModalEventDetail,
 } from "@/lib/enquiryModal";
+
+// Download the form only after an enquiry is opened.
+const EnquiryModal = dynamic(() => import("@/components/EnquiryModal"), {
+  ssr: false,
+  loading: () => (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50">
+      <p role="status" className="rounded-2xl bg-white px-6 py-4 text-[var(--color-ink)]">
+        Loading enquiry form…
+      </p>
+    </div>
+  ),
+});
 
 const PAGE_ENQUIRY_PRODUCT_NAMES = [
   {
@@ -93,6 +105,8 @@ export function EnquiryModalProvider() {
       window.removeEventListener(ENQUIRY_MODAL_EVENT, handleOpenModal);
     };
   }, [pathname]);
+
+  if (selectedProduct === null) return null;
 
   return (
     <EnquiryModal
