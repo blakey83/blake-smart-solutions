@@ -1,6 +1,7 @@
 import { normaliseGclid } from "../../../lib/adClickId";
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { enquiryProductContent } from "../../../content/components/siteContent";
 
 export const runtime = "nodejs";
 
@@ -133,7 +134,10 @@ function validatePayload(payload: EnquiryPayload) {
     return "Form submitted too quickly.";
   }
 
-  if (!payload.name || !payload.productName || !payload.message) {
+  const isMessageRequired =
+    payload.productName !== enquiryProductContent.starlinkInstallation;
+
+  if (!payload.name || !payload.productName || (isMessageRequired && !payload.message)) {
     return "Please complete the required fields.";
   }
 

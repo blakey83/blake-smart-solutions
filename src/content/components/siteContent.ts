@@ -100,11 +100,11 @@ export const enquiryModalContent = {
     submitCta: "Request a Quote",
   },
   starlinkInstallationQuote: {
-    title: "Get a Starlink Installation Quote",
+    title: "Get Your Starlink Installation Quote",
     intro:
-      "Tell us when and where you need Starlink installed. Include whether your kit has arrived and anything useful about the property or roof. We’ll come back with a fixed price and a time to install.",
+      "Tell us where you need it installed. We’ll confirm the details and your fixed price.",
     messagePlaceholder:
-      "Tell us about your installation.\ne.g. “My Starlink kit has arrived and I’d like it installed in Baldivis around 18 September. It’s a single-storey home with a Colorbond roof.”",
+      "Anything you’d like us to know? (Optional)",
     submitCta: "Request an Installation Quote",
   },
 };

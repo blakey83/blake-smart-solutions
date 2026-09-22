@@ -392,7 +392,7 @@ export default function EnquiryModal({
               value={formData.message}
               onChange={handleChange}
               rows={5}
-              required
+              required={!isStarlinkInstallationQuote}
               className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
             />
 

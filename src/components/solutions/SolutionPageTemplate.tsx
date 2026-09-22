@@ -425,6 +425,14 @@ export function SolutionPageTemplate({
 
       <TrustStrip trustItems={trustItems} />
 
+      {heroReviewStrip ? (
+        <HeroReviewStripView
+          strip={heroReviewStrip}
+          reviews={content.whySection.reviews}
+          addTopSpacing
+        />
+      ) : null}
+
       {recentWork ? (
         <section id={sectionIds?.recentWork} className="bg-white">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
@@ -461,14 +469,6 @@ export function SolutionPageTemplate({
             </Link>
           </div>
         </section>
-      ) : null}
-
-      {heroReviewStrip ? (
-        <HeroReviewStripView
-          strip={heroReviewStrip}
-          reviews={content.whySection.reviews}
-          addTopSpacing={!recentWork}
-        />
       ) : null}
 
       {resolvedFeatureSections.map((section, index) => (

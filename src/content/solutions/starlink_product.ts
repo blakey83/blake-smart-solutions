@@ -80,19 +80,19 @@ export const starlinkProducts: Product[] = [
 ];
 
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
-  headline: "Starlink Installation Perth",
+  headline: "Get your Starlink Installed at Home for $449*",
   subHeadline:
-    "Get your Starlink securely mounted, neatly cabled, configured and tested by a local Perth installer; with an Australian-made roof mount and 10-year workmanship guarantee.",
+    "Mounting equipment, installation, alignment and testing: all included. You’ll be shown how to use your Starlink before the job is finished.",
   bulletPoints: [
-    "Starlink installed, tested and working before we leave",
-    "Quality Australian-made roof mounting included",
-    "Local support before and after the installation",
-    "10-Year workmanship guarantee",
-    "Standard single-storey installation from $449, including the mount",
+    "Australian-made roof mount supplied and installed",
+    "Your dish securely mounted and aligned, with all cabling protected",
+    "Your Starlink connected, configured and tested",
+    "A practical walkthrough so you know how it works",
+    "10-year workmanship guarantee",
   ],
 
-  heroEyebrow: "FAST & RELIABLE STARLINK INSTALLATION",
-  heroBackgroundImage: "/images/solutions/starLink/starlink-roof-installation-hero.png",
+  heroEyebrow: "STARLINK INSTALLATION PERTH",
+  heroBackgroundImage: "/images/products/rural-starlink/blake_rural.webp",
 
   // heroImage: "/images/solutions/starLink/PXL_20260618_070344256.png",
 
@@ -110,8 +110,8 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     reviewCount: 3,
   },
   heroCtaLines: [
-    "Tell us when you need Starlink installation",
-    "We'll come back with a fixed price, and book a time to install",
+    "$449 for a standard single-storey installation using your Starlink kit.",
+    "Tell us your suburb and preferred timing. Any additional work is quoted before booking.",
   ],
   timedAvailabilityPopup: {
     enabled: true,
@@ -123,7 +123,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   },
 
   primaryCta: {
-    label: "Request an Installation Quote",
+    label: "Get a Free Installation Quote",
     action: "enquiry",
     enquiryProductName: "Starlink Installation",
   },
