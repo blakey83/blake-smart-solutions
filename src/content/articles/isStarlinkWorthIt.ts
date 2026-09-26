@@ -35,12 +35,13 @@ export const isStarlinkWorthItContent: {
     description: string;
     href: string;
   }>;
-  finalCta: {
-    eyebrow: string;
+  referralUrl: string;
+  referralCtas: Record<"top" | "cost" | "bottom", {
     title: string;
     description: string;
     buttonLabel: string;
-  };
+    disclosure: string;
+  }>;
 } = {
   pagePath: "/articles/is-starlink-worth-it",
   pageTitle: "Is Starlink Worth It? A Perth Installer's Honest Opinion",
@@ -184,13 +185,13 @@ export const isStarlinkWorthItContent: {
         {
           title: "Typical Perth speeds",
           paragraphs: [
-            "In and around Perth, users generally report download speeds between 100 and 200 Mbps. That's more than enough for HD streaming, gaming and large downloads.",
+            "In and around Perth, users generally report download speeds between 250 and 350 Mbps. That's more than enough for HD streaming, gaming and large downloads.",
           ],
         },
         {
           title: "Upload speeds",
           paragraphs: [
-            "Upload speeds are usually in the 10-25 Mbps range. That's good news if you need to upload big files, do video calls or back up photos to the cloud.",
+            "Upload speeds are usually in the 20-30 Mbps range. That's good news if you need to upload big files, do video calls or back up photos to the cloud.",
           ],
         },
         {
@@ -409,11 +410,29 @@ export const isStarlinkWorthItContent: {
       href: "/articles/why-nbn-feels-slow",
     },
   ],
-  finalCta: {
-    eyebrow: "Need a hand?",
-    title: "Looking at installing Starlink professionally?",
-    description:
-      "If you're looking at installing Starlink professionally, feel free to get in touch. We can help with dish mounting, cable routing, setup and Wi-Fi coverage.",
-    buttonLabel: "Get in touch about Starlink",
+  referralUrl: "https://starlink.com?referral=RC-DF-13664949-53628-12",
+  referralCtas: {
+    top: {
+      title: "Think Starlink is right for you?",
+      description:
+        "New eligible Starlink customers who order through our referral link can receive one month of Starlink service free, applied to their second month.",
+      buttonLabel: "Get Starlink + 1 Month Free",
+      disclosure: "Referral link. Eligibility and Starlink referral terms apply.",
+    },
+    cost: {
+      title: "Ready to order Starlink?",
+      description:
+        "Order through our referral link and eligible new customers can receive their second month of Starlink service free.",
+      buttonLabel: "Order Starlink",
+      disclosure: "Referral link. Eligibility and Starlink referral terms apply.",
+    },
+    bottom: {
+      title: "Decided Starlink is right for you?",
+      description:
+        "If Starlink makes sense for your property, you can order directly from Starlink using our referral link. Eligible new customers receive one month of service free, applied to their second month.",
+      buttonLabel: "Get Starlink + 1 Month Free",
+      disclosure:
+        "This is our Starlink referral link. If you sign up through it and meet Starlink's eligibility requirements, you receive the applicable referral benefit and Blake Smart Solutions may also receive a referral reward.",
+    },
   },
 };

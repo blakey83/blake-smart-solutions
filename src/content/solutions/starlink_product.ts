@@ -110,8 +110,8 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     reviewCount: 3,
   },
   heroCtaLines: [
-    "$449 for a standard single-storey installation using your Starlink kit.",
-    "Tell us your suburb and preferred timing. Any additional work is quoted before booking.",
+    "$449 for a complete single-storey installation using your Starlink kit.",
+    "Tell us your suburb and preferred timing. All work is quoted before booking.",
   ],
   timedAvailabilityPopup: {
     enabled: true,

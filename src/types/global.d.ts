@@ -9,7 +9,8 @@ declare global {
         | "enquiry_submit"
         | "handshake_trig"
         | "handshake_dec"
-        | "phone_click",
+        | "phone_click"
+        | "starlink_referral_click",
       params: {
         event_category: "engagement" | "lead";
         event_label: string;
@@ -17,6 +18,7 @@ declare global {
         default_message?: string;
         page_path?: string;
         phone_number?: string;
+        cta_position?: "top" | "cost" | "bottom";
       },
     ) => void;
   }

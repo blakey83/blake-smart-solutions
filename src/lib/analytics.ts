@@ -3,6 +3,18 @@ export type EnquiryOpenTrackingParams = {
   default_message?: string;
 };
 
+export function trackStarlinkReferralClick(ctaPosition: "top" | "cost" | "bottom") {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "starlink_referral_click", {
+    event_category: "engagement",
+    event_label: "Starlink referral CTA clicked",
+    cta_position: ctaPosition,
+  });
+}
+
 export function trackEnquiryOpen(params: EnquiryOpenTrackingParams = {}) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") {
     return;

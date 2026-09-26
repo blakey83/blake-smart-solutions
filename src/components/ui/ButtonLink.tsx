@@ -9,12 +9,18 @@ type ButtonLinkProps = {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary";
+  target?: React.HTMLAttributeAnchorTarget;
+  rel?: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 export function ButtonLink({
   href,
   children,
   variant = "primary",
+  target,
+  rel,
+  onClick,
 }: ButtonLinkProps) {
   const baseClasses =
     "inline-flex min-h-12 w-full items-center justify-center rounded-full px-4 py-3 text-base font-semibold transition sm:w-auto sm:px-5";
@@ -39,7 +45,7 @@ export function ButtonLink({
 
   if (href.startsWith("/")) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} target={target} rel={rel} onClick={onClick}>
         {children}
       </Link>
     );
@@ -48,7 +54,12 @@ export function ButtonLink({
   return (
     <a
       href={href}
-      onClick={href.startsWith("tel:") ? trackPhoneClick : undefined}
+      target={target}
+      rel={rel}
+      onClick={(event) => {
+        if (href.startsWith("tel:")) trackPhoneClick();
+        onClick?.(event);
+      }}
       className={classes}
     >
       {children}

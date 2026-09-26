@@ -9,7 +9,7 @@ import {
   buildFaqPageNode,
   buildSchemaGraph,
 } from "@/lib/jsonLd";
-import { StarlinkSetupCta } from "../starlink-setup-wa/StarlinkSetupCta";
+import { StarlinkReferralCta } from "./StarlinkReferralCta";
 
 const pagePath = isStarlinkWorthItContent.pagePath;
 const pageUrl = `${siteMetadataContent.website}${pagePath}`;
@@ -201,6 +201,12 @@ export default function IsStarlinkWorthItPage() {
                   ))}
                 </div>
               </section>
+              {section.title === "Is Starlink Worth It?" && (
+                <StarlinkReferralCta position="top" />
+              )}
+              {section.title === "How Much Does Starlink Cost?" && (
+                <StarlinkReferralCta position="cost" />
+              )}
               {images[index] ? <ArticleImage image={images[index]} /> : null}
             </Fragment>
           ))}
@@ -241,19 +247,8 @@ export default function IsStarlinkWorthItPage() {
 
       <section className="bg-white">
         <div className="mx-auto max-w-4xl px-5 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
-            {isStarlinkWorthItContent.finalCta.eyebrow}
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-            {isStarlinkWorthItContent.finalCta.title}
-          </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
-            {isStarlinkWorthItContent.finalCta.description}
-          </p>
+          <StarlinkReferralCta position="bottom" />
           <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3">
-            <StarlinkSetupCta className="w-full">
-              {isStarlinkWorthItContent.finalCta.buttonLabel}
-            </StarlinkSetupCta>
             <Link
               href="/starlink-installation-perth"
               className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
