@@ -413,23 +413,23 @@ export const isStarlinkWorthItContent: {
   referralUrl: "https://starlink.com?referral=RC-DF-13664949-53628-12",
   referralCtas: {
     top: {
-      title: "Think Starlink is right for you?",
+      title: "Looking for the easiest way to get Starlink?",
       description:
-        "New eligible Starlink customers who order through our referral link can receive one month of Starlink service free, applied to their second month.",
+        "Starlink is offering packages from $75 a month, with free kit rental and discounted installation. Plus, get your second month free when you use our link.",
       buttonLabel: "Get Starlink + 1 Month Free",
       disclosure: "Referral link. Eligibility and Starlink referral terms apply.",
     },
     cost: {
-      title: "Ready to order Starlink?",
+      title: "Looking for the easiest way to get Starlink?",
       description:
-        "Order through our referral link and eligible new customers can receive their second month of Starlink service free.",
+        "Starlink is offering packages from $75 a month, with free kit rental and discounted installation. Plus, get your second month free when you use our link.",
       buttonLabel: "Order Starlink",
       disclosure: "Referral link. Eligibility and Starlink referral terms apply.",
     },
     bottom: {
-      title: "Decided Starlink is right for you?",
+      title: "Looking for the easiest way to get Starlink?",
       description:
-        "If Starlink makes sense for your property, you can order directly from Starlink using our referral link. Eligible new customers receive one month of service free, applied to their second month.",
+        "Starlink is offering packages from $75 a month, with free kit rental and discounted installation. Plus, get your second month free when you use our link.",
       buttonLabel: "Get Starlink + 1 Month Free",
       disclosure:
         "This is our Starlink referral link. If you sign up through it and meet Starlink's eligibility requirements, you receive the applicable referral benefit and Blake Smart Solutions may also receive a referral reward.",

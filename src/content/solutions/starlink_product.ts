@@ -80,7 +80,7 @@ export const starlinkProducts: Product[] = [
 ];
 
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
-  headline: "Get your Starlink Installed at Home for $449*",
+  headline: "Get your Starlink Installed at Home for $449",
   subHeadline:
     "Mounting equipment, installation, alignment and testing: all included. You’ll be shown how to use your Starlink before the job is finished.",
   bulletPoints: [
