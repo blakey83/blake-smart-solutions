@@ -11,7 +11,7 @@ export const starlinkProducts: Product[] = [
   {
     name: "Starlink Installation",
     description:
-      "Get your Starlink set up properly the first time. We install the dish in the best position for a clear signal, run the cabling neatly, and make sure everything is working before we leave. Ideal for homes, new builds, and rural properties across Perth and surrounds.",
+      "Get your Starlink set up properly the first time. We install the dish in the best position for a clear signal, run the cabling neatly, and make sure everything is working before we leave. Professional Starlink installation for homes, new builds and rural properties across Perth and surrounds.",
     image: "/images/products/starlink/Starlink_on_roof.jpg",
     imageAlt:
       "Starlink dish installed on a roof with clear sky view in a Perth home",
@@ -82,7 +82,7 @@ export const starlinkProducts: Product[] = [
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
   headline: "Get your Starlink Installed at Home for $449",
   subHeadline:
-    "Mounting equipment, installation, alignment and testing: all included. You’ll be shown how to use your Starlink before the job is finished.",
+    "Professional Starlink installation across Perth, including mounting, alignment and testing. We’ll show you how everything works before we leave.",
   bulletPoints: [
     "Australian-made roof mount supplied and installed",
     "Your dish securely mounted and aligned, with all cabling protected",
@@ -136,8 +136,8 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   recentWork: {
     image: "/images/solutions/starLink/PXL_20260618_070344256.png",
     imageAlt: "Starlink dish installed on a Perth roof",
-    eyebrow: "RECENT INSTALLATIONS",
-    title: "Check out some of our recent installations",
+    eyebrow: "RECENT STARLINK INSTALLATIONS",
+    title: "See Recent Starlink Installations Around Perth",
     href: "/recent-installations/starlink",
   },
 
