@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { heroSectionContent } from "@/content/components/home/heroSection";
@@ -325,6 +325,13 @@ export function SolutionPageTemplate({
   const finalCtaWithDefaults = mergeEnquiryDefaults(finalCtaButton, primaryCta);
   const resolvedFeatureSections =
     featureSections ?? (featureSection ? [featureSection] : []);
+  const { props: desktopHero } = getImageProps({
+    src: heroBackgroundImage,
+    alt: "",
+    fill: true,
+    sizes: "100vw",
+    quality: 60,
+  });
 
   return (
     <div className="pb-20 bg-[var(--color-page)] text-[var(--color-ink)] sm:pb-0">
@@ -348,16 +355,22 @@ export function SolutionPageTemplate({
       ) : null}
 
       <section className="relative isolate overflow-hidden border-b border-white/15 bg-[var(--color-ink)] text-white">
-        <Image
-          src={heroBackgroundImage}
-          quality={60}
-          alt=""
-          fill
-          sizes="100vw"
-          loading="eager"
-          fetchPriority="high"
-          className="absolute inset-0 -z-20 scale-[0.96] object-cover object-[58%_top] sm:scale-100 sm:object-center"
-        />
+        {/* A media-qualified source prevents mobile from downloading the photo. */}
+        <picture>
+          <source
+            media="(min-width: 640px)"
+            srcSet={desktopHero.srcSet}
+            sizes={desktopHero.sizes}
+          />
+          <img
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            alt=""
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 -z-20 hidden h-full w-full object-cover object-center sm:block"
+          />
+        </picture>
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(31,41,55,0.88)_0%,rgba(31,41,55,0.78)_46%,rgba(31,41,55,0.92)_100%)] lg:bg-[linear-gradient(90deg,rgba(31,41,55,0.92)_0%,rgba(31,41,55,0.78)_56%,rgba(13,160,245,0.18)_100%)]" />
         <div className="mx-auto max-w-6xl px-5 pb-14 pt-4 sm:px-6 sm:pb-16 sm:pt-6 lg:px-8 lg:pb-20 lg:pt-8">
           <div className="max-w-3xl">
