@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import { AdClickCapture } from "@/components/AdClickCapture";
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -105,7 +104,12 @@ export default function RootLayout({
                 });
               `}
             </Script>
-            <GoogleAnalytics gaId="G-ZFPD80HG5B" />
+            {/* One gtag.js loader serves both destinations; keep GA4 configuration explicit. */}
+            <Script id="_next-ga-init" strategy="afterInteractive">
+              {`
+                gtag('config', 'G-ZFPD80HG5B');
+              `}
+            </Script>
           </>
         )}
       </body>
