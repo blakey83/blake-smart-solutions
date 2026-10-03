@@ -40,10 +40,10 @@ function HeroSocialProofCard({
 }) {
   return (
     <div
-      className={`max-w-2xl rounded-2xl border border-white/20 bg-[var(--color-ink)]/75 p-5 shadow-[0_18px_44px_rgba(15,23,42,0.26)] backdrop-blur-sm ${className}`.trim()}
+      className={`max-w-2xl rounded-2xl border border-[var(--color-border)] bg-white p-5 shadow-sm sm:border-white/20 sm:bg-[var(--color-ink)]/75 sm:shadow-[0_18px_44px_rgba(15,23,42,0.26)] sm:backdrop-blur-sm ${className}`.trim()}
     >
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent-soft)]">
+        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)] sm:text-[var(--color-accent-soft)]">
           {proof.eyebrow}
         </span>
         <span
@@ -53,10 +53,10 @@ function HeroSocialProofCard({
           ★★★★★
         </span>
       </div>
-      <p className="mt-3 text-xs leading-5 text-white/90 sm:text-sm">
+      <p className="mt-3 text-xs leading-5 text-[var(--color-ink)] sm:text-sm sm:text-white/90">
         &quot;{proof.quote}&quot;
       </p>
-      <p className="mt-3 text-sm font-semibold text-white/70">{proof.author}</p>
+      <p className="mt-3 text-sm font-semibold text-[var(--color-muted)] sm:text-white/70">{proof.author}</p>
     </div>
   );
 }
@@ -354,7 +354,7 @@ export function SolutionPageTemplate({
         </section>
       ) : null}
 
-      <section className="relative isolate overflow-hidden border-b border-white/15 bg-[var(--color-ink)] text-white">
+      <section className="relative isolate overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-page)] text-[var(--color-ink)] sm:border-white/15 sm:bg-[var(--color-ink)] sm:text-white">
         {/* A media-qualified source prevents mobile from downloading the photo. */}
         <picture>
           <source
@@ -371,7 +371,7 @@ export function SolutionPageTemplate({
             className="absolute inset-0 -z-20 hidden h-full w-full object-cover object-center sm:block"
           />
         </picture>
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(31,41,55,0.88)_0%,rgba(31,41,55,0.78)_46%,rgba(31,41,55,0.92)_100%)] lg:bg-[linear-gradient(90deg,rgba(31,41,55,0.92)_0%,rgba(31,41,55,0.78)_56%,rgba(13,160,245,0.18)_100%)]" />
+        <div className="absolute inset-0 -z-10 hidden sm:block bg-[linear-gradient(180deg,rgba(31,41,55,0.88)_0%,rgba(31,41,55,0.78)_46%,rgba(31,41,55,0.92)_100%)] lg:bg-[linear-gradient(90deg,rgba(31,41,55,0.92)_0%,rgba(31,41,55,0.78)_56%,rgba(13,160,245,0.18)_100%)]" />
         <div className="mx-auto max-w-6xl px-5 pb-14 pt-4 sm:px-6 sm:pb-16 sm:pt-6 lg:px-8 lg:pb-20 lg:pt-8">
           <div className="max-w-3xl">
             <div>
@@ -380,10 +380,10 @@ export function SolutionPageTemplate({
                 <p className="hidden text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-soft)] lg:block">
                   {heroEyebrow}
                 </p>
-                <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl sm:text-white">
                   {headline}
                 </h1>
-                <p className="mt-5 text-base leading-7 text-white/85 sm:text-lg">
+                <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg sm:text-white/85">
                   {subHeadline}
                 </p>
                 {heroImage ? (
@@ -406,7 +406,7 @@ export function SolutionPageTemplate({
                     {bulletPoints.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-3 text-base leading-7 text-white"
+                        className="flex items-start gap-3 text-base leading-7 text-[var(--color-ink)] sm:text-white"
                       >
                         <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
                         <span>{item}</span>
@@ -416,7 +416,7 @@ export function SolutionPageTemplate({
                 ) : null}
 
                 {heroCtaLines?.length ? (
-                  <div className="mt-8 space-y-1 text-sm font-semibold leading-6 text-white sm:text-base">
+                  <div className="mt-8 space-y-1 text-sm font-semibold leading-6 text-[var(--color-ink)] sm:text-base sm:text-white">
                     {heroCtaLines.map((line) => (
                       <p key={line}>{line}</p>
                     ))}
