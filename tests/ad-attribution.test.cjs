@@ -76,7 +76,9 @@ test('actual enquiry route sends optional GCLID to mocked Espo; preserves email 
   console.info = (...args) => diagnostics.push(args);
   Module._load = function(id, ...args) {
     if (id === 'nodemailer') return { createTransport: () => ({ sendMail: async (mail) => emails.push(mail) }) };
-    return originalLoad.call(this, id, ...args);
+    // Resolve the same source alias as Next.js, including transitive content imports.
+    const resolvedId = id.startsWith('@/') ? path.resolve(__dirname, '../src', id.slice(2)) : id;
+    return originalLoad.call(this, resolvedId, ...args);
   };
   // Every outbound HTTP request is intercepted and checked, never forwarded.
   global.fetch = async (url, options) => {

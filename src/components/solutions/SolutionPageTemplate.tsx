@@ -350,6 +350,7 @@ export function SolutionPageTemplate({
       <section className="relative isolate overflow-hidden border-b border-white/15 bg-[var(--color-ink)] text-white">
         <Image
           src={heroBackgroundImage}
+          quality={60}
           alt=""
           fill
           sizes="100vw"

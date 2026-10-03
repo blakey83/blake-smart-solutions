@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { AdClickCapture } from "@/components/AdClickCapture";
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
@@ -15,11 +15,6 @@ import { SITE_URL } from "@/lib/seoConfig";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -74,7 +69,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={geistSans.variable}>
         <Suspense fallback={null}>
           <AdClickCapture />
         </Suspense>
