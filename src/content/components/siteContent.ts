@@ -74,7 +74,6 @@ export const enquiryModalContent = {
   homeIntroEnding: "shortly",
   preferPrompt: "Prefer to speak to someone?",
   callCta: "Call 0477 948 079",
-  smsCta: "SMS anytime",
   successTitle: "Thanks for your enquiry",
   okCta: "OK",
   placeholders: {
@@ -105,7 +104,7 @@ export const enquiryModalContent = {
       "Tell us where you need it installed. We’ll confirm the details and your fixed price.",
     messagePlaceholder:
       "Anything you’d like us to know? (Optional)",
-    submitCta: "Request an Installation Quote",
+    submitCta: "Get My Free Quote",
   },
 };
 

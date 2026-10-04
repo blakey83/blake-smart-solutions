@@ -375,7 +375,9 @@ export function SolutionPageTemplate({
         <div className="mx-auto max-w-6xl px-5 pb-14 pt-4 sm:px-6 sm:pb-16 sm:pt-6 lg:px-8 lg:pb-20 lg:pt-8">
           <div className="max-w-3xl">
             <div>
-              <HeroSocialProofCard proof={heroSocialProof} />
+              <div className="hidden sm:block">
+                <HeroSocialProofCard proof={heroSocialProof} />
+              </div>
               <div className="lg:mt-6">
                 <p className="hidden text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-soft)] lg:block">
                   {heroEyebrow}
@@ -422,6 +424,10 @@ export function SolutionPageTemplate({
                     ))}
                   </div>
                 ) : null}
+
+                <div className="mt-6 sm:hidden">
+                  <HeroSocialProofCard proof={heroSocialProof} />
+                </div>
 
                 <div
                   className={`${heroCtaLines?.length ? "mt-5" : "mt-8"} hidden flex-col gap-3 sm:flex sm:flex-row`}

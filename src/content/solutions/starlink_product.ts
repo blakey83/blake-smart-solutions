@@ -80,15 +80,13 @@ export const starlinkProducts: Product[] = [
 ];
 
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
-  headline: "Get your Starlink Installed at Home from $449",
+  headline: "Get your Starlink Professionally Installed at Home for $449",
   subHeadline:
-    "Professional Starlink installation across Perth, including mounting, alignment and testing. We’ll show you how everything works before we leave.",
+    "A neat, secure Starlink installation with the right roof mount, protected cabling, setup and testing. So you’re online and know exactly how everything works before we leave.",
   bulletPoints: [
-    "Australian-made roof mount supplied and installed",
-    "Your dish securely mounted and aligned, with all cabling protected",
-    "Your Starlink connected, configured and tested",
-    "A practical walkthrough so you know how it works",
-    "10-year workmanship guarantee",
+    "Secure roof installation, Australian-made mount, correct placement and protected cabling.",
+    "Connected and tested before we leave Dish, router and Starlink app configured and checked.",
+    "Installed properly, backed for 10 years. Neat workmanship with a 10-year workmanship guarantee.",
   ],
 
   heroEyebrow: "STARLINK INSTALLATION PERTH",
@@ -110,8 +108,8 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     reviewCount: 3,
   },
   heroCtaLines: [
-    "$449 for a complete single-storey installation using your Starlink kit.",
-    "Tell us your suburb and preferred timing. All work is quoted before booking.",
+    "$449 for a complete single-storey installation using your Starlink kit, including all mounting gear.",
+    "Leave your details and we’ll get back to you with a free quote.",
   ],
   timedAvailabilityPopup: {
     enabled: true,
@@ -123,7 +121,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   },
 
   primaryCta: {
-    label: "Get a Free Installation Quote",
+    label: "Get a Free Quote Today",
     action: "enquiry",
     enquiryProductName: "Starlink Installation",
   },

@@ -316,12 +316,6 @@ export default function EnquiryModal({
               >
                 {enquiryModalContent.callCta}
               </a>
-              <a
-                href="sms:0477948079"
-                className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:border-sky-500 hover:text-sky-600"
-              >
-                {enquiryModalContent.smsCta}
-              </a>
             </div>
           </div>
         </div>
