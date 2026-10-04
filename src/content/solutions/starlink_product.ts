@@ -85,7 +85,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "A neat, secure Starlink installation with the right roof mount, protected cabling, setup and testing. So you’re online and know exactly how everything works before we leave.",
   bulletPoints: [
     "Secure roof installation, Australian-made mount, correct placement and protected cabling.",
-    "Connected and tested before we leave Dish, router and Starlink app configured and checked.",
+    "Connected and tested before we leave. The dish, router and Starlink app configured and checked.",
     "Installed properly, backed for 10 years. Neat workmanship with a 10-year workmanship guarantee.",
   ],
 
