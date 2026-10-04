@@ -379,7 +379,7 @@ export function SolutionPageTemplate({
                 <HeroSocialProofCard proof={heroSocialProof} />
               </div>
               <div className="lg:mt-6">
-                <p className="hidden text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-soft)] lg:block">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)] sm:text-[var(--color-accent-soft)]">
                   {heroEyebrow}
                 </p>
                 <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl sm:text-white">
