@@ -42,7 +42,8 @@ export const quoteTermsContent = {
     {
       title: "Variations and Additional Work",
       paragraphs: [
-        "Where additional work becomes necessary or is requested after commencement, Blake Smart Solutions will advise the customer where practicable before proceeding.",
+        "Where additional work becomes necessary or is requested after commencement, Blake Smart Solutions will advise the customer of the change in scope and any additional cost before proceeding with that additional work. Chargeable variations will not be carried out without the customer's approval.",
+        "Blake Smart Solutions may take reasonable action without prior approval where necessary to make the site safe or prevent damage, but any additional chargeable work will require customer approval before proceeding.",
         "Variations may include, but are not limited to:",
       ],
       list: [
