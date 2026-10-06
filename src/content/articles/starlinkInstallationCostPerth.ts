@@ -53,7 +53,7 @@ export const starlinkInstallationCostPerthContent: {
     "professional starlink installation perth",
   ],
   publishedTime: "2026-07-04",
-  modifiedTime: "2026-07-04",
+  modifiedTime: "2026-10-06",
   hero: {
     eyebrow: "Starlink installation cost",
     intro:
@@ -64,7 +64,7 @@ export const starlinkInstallationCostPerthContent: {
     },
   },
   summary:
-    "For most standard homes in Perth, professional Starlink installation commonly sits between $499 and $900. The final cost depends on roof access, mounting, cable routing, weatherproofing, Wi-Fi requirements and the complexity of the property.",
+    "Blake Smart Solutions offers a complete single-storey Starlink installation in Perth for $449 using your Starlink kit, including all mounting gear. More complex installations and extra Wi-Fi work are quoted separately based on roof access, mounting, cable routing and property requirements.",
   images: [
     {
       src: "/images/solutions/starLink/Baldivis/PXL_20260703_082705789.jpg",
@@ -102,11 +102,11 @@ export const starlinkInstallationCostPerthContent: {
     {
       title: "What Is a Typical Starlink Installation Cost in Perth?",
       paragraphs: [
-        "For most standard homes in Perth, you can expect a Starlink installation to cost between $499 and $900. That range reflects real differences in property type, roof access and installation requirements.",
+        "Our advertised price is $449 for a complete standard single-storey Starlink installation using your Starlink kit, including all mounting gear. Double-storey homes, difficult roof access, custom mounting, long cable runs and extra Wi-Fi work may require a separate quote.",
       ],
       bullets: [
-        "Lower end: simple single-storey homes with good roof access and a short cable run.",
-        "Higher end: double-storey homes, awkward roofs, long cable runs, tile roofs or jobs requiring extra Wi-Fi work.",
+        "$449 standard installation: single-storey homes using your Starlink kit, including all mounting gear.",
+        "Quoted separately: double-storey homes, awkward roofs, custom mounting, long cable runs or jobs requiring extra Wi-Fi work.",
       ],
       image: {
         src: "/images/products/starlink/Starlink_on_roof.jpg",

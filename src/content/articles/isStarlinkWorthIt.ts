@@ -48,7 +48,7 @@ export const isStarlinkWorthItContent: {
   pageDescription:
     "A Perth Starlink installer's honest guide to when Starlink is worth it, when NBN or 5G is better, costs, speeds, setup issues and professional installation.",
   publishedTime: "2026-06-28",
-  modifiedTime: "2026-06-28",
+  modifiedTime: "2026-10-06",
   hero: {
     eyebrow: "Starlink guide",
     intro:
@@ -227,8 +227,8 @@ export const isStarlinkWorthItContent: {
         {
           title: "Professional installation",
           paragraphs: [
-            "You can install Starlink yourself, but if you need help, professional installation might cost an additional $450-$700 depending on your location and the complexity of the setup.",
-            "We offer a professional installation service that includes a Hills Australian-made mount, covered cable run, after-install support and a 10 year warranty for $549.",
+            "You can install Starlink yourself, but if you need help, Blake Smart Solutions offers a complete single-storey installation for $449 using your Starlink kit, including all mounting gear. More complex installations and extra Wi-Fi work are quoted separately.",
+            "We offer a professional installation service that includes a Hills Australian-made mount, covered cable run, after-install support and a 10 year warranty for $449 for a standard single-storey home using your Starlink kit.",
           ],
         },
         {
