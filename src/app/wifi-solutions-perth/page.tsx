@@ -95,7 +95,7 @@ export default function WifiSolutionsPerthPage() {
                   {page.enquiryName}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-6 text-[var(--color-muted)]">
-                  {page.subhead}
+                  {page.content.subHeadline}
                 </p>
                 <span className="mt-5 text-sm font-semibold text-[var(--color-accent)]">
                   View service <span className="transition group-hover:translate-x-1">→</span>

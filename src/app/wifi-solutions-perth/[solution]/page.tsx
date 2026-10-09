@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SolutionDetailPageTemplate } from "@/components/solutions/SolutionDetailPageTemplate";
+import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
 import {
   wifiSolutionPages,
   wifiSolutionPagesBySlug,
 } from "@/content/solutions/wifiSolutionPages";
+import { wifiSolutionTrustItems, whyChooseUsWiFi } from "@/content/solutions/wifiSolutionContent";
 import { buildFaqPageNode, buildSchemaGraph, buildServiceNode } from "@/lib/jsonLd";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
 
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: page.metadata.title,
     description: page.metadata.description,
     path: `/wifi-solutions-perth/${page.slug}`,
-    image: { url: page.proof.image, alt: page.proof.imageAlt },
+    image: page.image,
   });
 }
 
@@ -39,15 +40,19 @@ export default async function WifiSolutionPage({ params }: PageProps) {
       description: page.metadata.description,
       path,
       serviceType: page.enquiryName,
-      image: { url: page.proof.image, alt: page.proof.imageAlt },
+      image: page.image,
     }),
-    buildFaqPageNode(path, page.faqs),
+    buildFaqPageNode(path, page.content.faqs),
   ]);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <SolutionDetailPageTemplate page={page} />
+      <SolutionPageTemplate
+        {...page.content}
+        trustItems={wifiSolutionTrustItems}
+        content={whyChooseUsWiFi}
+      />
     </>
   );
 }
