@@ -84,9 +84,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   subHeadline:
     "A neat, secure Starlink installation with the right roof mount, protected cabling, setup and testing. So you’re online and know exactly how everything works before we leave.",
   bulletPoints: [
-    "Secure roof installation, Australian-made mount, correct placement and protected cabling.",
-    "Connected and tested before we leave. The dish, router and Starlink app configured and checked.",
-    "Installed properly, backed for 10 years. Neat workmanship with a 10-year workmanship guarantee.",
+    "Peace of mind for your property, with secure roof mounting, neat cabling and careful installation.",
+    "Get the best possible performance from your Starlink setup, with professional positioning, configuration and testing.",
+    "Know how to use your new Starlink from day one, with everything set up and explained before we leave.",
+    "Get your Starlink installation organised without the runaround, with prompt replies and clear communication.",
   ],
 
   heroEyebrow: "STARLINK INSTALLATION PERTH",
