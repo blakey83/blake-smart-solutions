@@ -20,8 +20,8 @@ export const wifiAccessPointInstallation: SolutionPageTemplateProps = {
   },
   bulletPoints: [
     "Reliable Wi-Fi coverage throughout your home, wherever you need to connect.",
-    "Smooth streaming, video calls and gaming, more dependable connectivity.",
-    "Wall and Cieling mounted for a neater installation that's less intrusive.",
+    "Smooth streaming, video calls and gaming, with more dependable connectivity.",
+    "Wall or ceiling mounted for a neater installation that's less intrusive.",
     "Know what you're paying for before work begins, with a clear, upfront quote.",
   ],
   heroCtaLines: [
