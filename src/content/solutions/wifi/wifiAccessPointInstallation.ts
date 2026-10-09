@@ -19,9 +19,10 @@ export const wifiAccessPointInstallation: SolutionPageTemplateProps = {
     author: "Mark Anthony",
   },
   bulletPoints: [
-    "Reliable WiFi coverage throughout your home",
-    "Neatly installed access points with professional cabling.",
-    "Configured and coverage-tested before we leave.",
+    "Reliable Wi-Fi coverage throughout your home, wherever you need to connect.",
+    "Smooth streaming, video calls and gaming, more dependable connectivity.",
+    "Wall and Cieling mounted for a neater installation that's less intrusive.",
+    "Know what you're paying for before work begins, with a clear, upfront quote.",
   ],
   heroCtaLines: [
     "",
