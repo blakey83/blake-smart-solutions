@@ -124,8 +124,7 @@ export const wifiAccessPointInstallation: SolutionPageTemplateProps = {
         "Ceiling or wall-mounted access points are placed in suitable positions and configured as part of one consistent network.",
         "You get Wi-Fi broadcast from where coverage is needed, discreet hardware and measured performance before the job is handed over.",
       ],
-      image:
-        "/images/solutions/wifi/attadale-access-points/wall-mounted-access-point.webp",
+      image: "/images/solutions/wifi/attadale-access-points/neat_wap.jpg",
       imageAlt:
         "Discreet wall-mounted Wi-Fi access point installed by Blake Smart Solutions",
     },
