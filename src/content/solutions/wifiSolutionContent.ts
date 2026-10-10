@@ -1,17 +1,16 @@
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const wifiSolutionContent: SolutionPageTemplateProps = {
-  headline: "Get WiFi Where It Doesn't Reach Today",
+  headline: "Professional Wi-Fi Solutions for Your Home or Business",
   subHeadline:
-    "Reliable WiFi and connectivity across your home or business. From sheds and workshops to offices, outdoor areas and large homes where standard routers fall short.",
+    "We design and install professional Wi-Fi networks for Perth homes and small businesses, using wired access points, wireless bridges and data cabling to get reliable connectivity where you need it.",
   bulletPoints: [
-    "Eliminate dead spots, weak signal and frustrating WiFi dropouts",
-    "Get internet to sheds, workshops, granny flats and outdoor areas",
-    "Extend Starlink and NBN connections beyond the room with the router",
-    "Keep security cameras, smart devices and workstations reliably connected",
-    "Installed, configured and tested, with local support afterwards",
+    "Enjoy reliable Wi-Fi throughout your home, wherever you need to connect.",
+    "Stream, work from home and game with fewer interruptions, even with multiple devices connected.",
+    "Get more from your existing NBN or Starlink connection, with better Wi-Fi coverage around your home.",
+    "Get your home Wi-Fi sorted without the runaround, with straightforward advice and clear communication.",
   ],
-  heroEyebrow: "WIFI & CONNECTIVITY INSTALLATIONS PERTH",
+  heroEyebrow: "HOME & BUSINESS WI-FI INSTALLATION · PERTH",
   heroBackgroundImage: "/images/products/rural-starlink/blake_rural.webp",
   // heroImage: "/images/work_gallery/wifi_survey.jpeg",
   // heroImageAlt: "Blake Smart Solutions WiFi",
@@ -29,12 +28,12 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     reviewCount: 3,
   },
   heroCtaLines: [
-    "Tell us which rooms need better WiFi and what you need connected.", 
+    "",
     "Get a recommended installation approach and a clear quote.",
   ],
 
   primaryCta: {
-    label: "Get a connectivity quote",
+    label: "Get a free quote",
     action: "enquiry",
     enquiryProductName: "WiFi Solutions",
   },
@@ -84,7 +83,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
       ],
       image: "/images/solutions/wifi/wireless_bridge_darlington.jpg",
       imageAlt:
-      "Wireless bridge installed on a roof to carry WiFi to a detached shed",
+        "Wireless bridge installed on a roof to carry WiFi to a detached shed",
     },
 
     {
@@ -103,7 +102,6 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
       imageAlt:
         "Outdoor WiFi access point mounted beside a covered entertaining area",
     },
-
   ],
 
   problemSolutionEyebrow: "",
