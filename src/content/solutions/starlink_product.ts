@@ -80,9 +80,10 @@ export const starlinkProducts: Product[] = [
 ];
 
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
-  headline: "Get your Starlink Professionally Installed at Home for $449",
+  headline:
+    "Starlink Installation in Perth for $449 Including Roof Mount & Setup",
   subHeadline:
-    "A neat, secure Starlink installation with the right roof mount, protected cabling, setup and testing. So you’re online and know exactly how everything works before we leave.",
+    "$449 complete installation for single-storey homes with Colorbond or tiled roofing. Includes standard mounting hardware, secure installation, cable routing, Starlink setup and connection testing. You’ll be online and know exactly how everything works before we leave.",
   bulletPoints: [
     "Peace of mind for your property, with secure roof mounting, neat cabling and careful installation.",
     "Get the best possible performance from your Starlink setup, with professional positioning, configuration and testing.",
@@ -315,7 +316,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const starlinkSolutionTrustItems = [
-  "15+ Five-Star google reviews in 2026 (so far)",
+  "20+ Five-Star google reviews in 2026 (so far)",
   "10 Year Warranty",
   "Starlink Certified Installers",
   "Fully insured, licensed and ready to go",
