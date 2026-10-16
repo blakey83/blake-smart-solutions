@@ -100,7 +100,13 @@ export default function RootLayout({
             <Script id="google-ads-phone-conversion" strategy="afterInteractive">
               {`
                 gtag('config', 'AW-18035265737/ia68COyZw8YcEMmh8ZdD', {
-                  'phone_conversion_number': '0477 948 079'
+                  'phone_conversion_number': '0477 948 079',
+                  'phone_conversion_callback': function(formatted, mobile) {
+                    if (typeof formatted !== 'string' || !formatted.trim() ||
+                        typeof mobile !== 'string' || !/^\\+?[0-9]+$/.test(mobile)) return;
+                    window.bssForwardingNumber = { formatted: formatted, mobile: mobile };
+                    window.dispatchEvent(new Event('bss:forwarding-number'));
+                  }
                 });
               `}
             </Script>

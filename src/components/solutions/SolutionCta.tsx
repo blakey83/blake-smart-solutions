@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { trackPhoneClick } from "@/lib/analytics";
+import { PhoneLink } from "@/components/PhoneLink";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type { CtaButton } from "@/components/solutions/types";
 
@@ -40,10 +40,13 @@ export function SolutionCta({
     );
   }
 
+  if (button.href?.startsWith("tel:")) {
+    return <PhoneLink href={button.href} className={classes}>{button.label}</PhoneLink>;
+  }
+
   return (
     <Link
       href={button.href ?? "/"}
-      onClick={button.href?.startsWith("tel:") ? trackPhoneClick : undefined}
       className={classes}
     >
       {button.label}

@@ -1,7 +1,7 @@
 "use client";
 
+import { PhoneLink } from "@/components/PhoneLink";
 import { securityLandingPageContent } from "@/content/components/securityLandingPage";
-import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 const trustIcons = {
@@ -68,14 +68,13 @@ export function LandingHero() {
               {hero.primaryCta}
             </button>
 
-            <a
+            <PhoneLink
               href="tel:0477948079"
-              onClick={trackPhoneClick}
               className="inline-flex min-h-16 items-center justify-center gap-3 rounded-md border border-white/45 bg-black/35 px-6 text-base font-black uppercase text-white transition hover:border-white hover:bg-white/10 sm:px-8 sm:text-lg"
             >
               <PhoneIcon />
               {hero.secondaryCta}
-            </a>
+            </PhoneLink>
           </div>
 
           <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

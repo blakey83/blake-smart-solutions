@@ -1,11 +1,11 @@
 "use client";
 
+import { PhoneLink } from "@/components/PhoneLink";
 import { useState, type ReactNode } from "react";
 import type { CtaButton } from "@/components/solutions/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navContent } from "@/content/components/siteContent";
-import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 
 type NavEnquiryCta = { path: string; cta: CtaButton };
@@ -47,9 +47,8 @@ export default function NavBarClient({ enquiryCtas, logo }: {
             {logo}
           </Link>
 
-          <a
+          <PhoneLink
             href="tel:0477948079"
-            onClick={trackPhoneClick}
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-4 text-xs font-semibold !text-black transition hover:bg-white/85 lg:hidden"
           >
             <svg
@@ -65,7 +64,7 @@ export default function NavBarClient({ enquiryCtas, logo }: {
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.64a2 2 0 0 1-.45 2.11L8.01 9.74a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0 1 22 16.92Z" />
             </svg>
             0477 948 079 for a Free Quote
-          </a>
+          </PhoneLink>
 
           <nav className="hidden items-center gap-6 xl:flex">
             {navContent.links.map((link) => (

@@ -81,3 +81,59 @@ test('queue preserves conversion routing, value and currency without sending a r
     send_to: 'AW-18035265737/offline-test', value: 123.45, currency: 'AUD', transaction_id: 'offline-only',
   }]);
 });
+
+test('Google callback drives React phone text and dial targets across mounts and renders', () => {
+  const { context } = initialise();
+  const listeners = new Set();
+  context.Event = class { constructor(type) { this.type = type; } };
+  context.addEventListener = (type, listener) => listeners.add(listener);
+  context.removeEventListener = (type, listener) => listeners.delete(listener);
+  context.dispatchEvent = () => listeners.forEach(listener => listener());
+  const callback = context.dataLayer.find(c => c[1] === 'AW-18035265737/ia68COyZw8YcEMmh8ZdD')[2].phone_conversion_callback;
+  assert.equal(typeof callback, 'function');
+  const React = require('react');
+  let server = false;
+  let notifications = 0;
+  const react = { ...React, useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot) {
+    subscribe(() => notifications++);
+    return server ? getServerSnapshot() : getSnapshot();
+  } };
+  function load(file, dependencies) {
+    const exports = {};
+    const code = ts.transpileModule(fs.readFileSync(path.join(__dirname, '../src', file), 'utf8'), {
+      compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX },
+    }).outputText;
+    vm.runInNewContext(code, { exports, window: context, require: name => dependencies[name] ?? require(name) });
+    return exports;
+  }
+  const forwarding = load('lib/phoneForwarding.tsx', { react });
+  let clicks = 0;
+  const { PhoneLink } = load('components/PhoneLink.tsx', {
+    '@/lib/phoneForwarding': forwarding,
+    '@/lib/analytics': { trackPhoneClick: () => clicks++ },
+  });
+  const props = { href: 'tel:0477948079', children: ['Call ', React.createElement('span', { key: 'number' }, '0477 948 079'), ' for a Free Quote'] };
+  const html = () => require('react-dom/server').renderToStaticMarkup(PhoneLink(props));
+  assert.match(html(), /href="tel:0477948079"/);
+  assert.match(html(), /0477 948 079/);
+  callback(undefined, undefined);
+  callback('bad', 'javascript:bad');
+  assert.equal(context.bssForwardingNumber, undefined);
+  // Test fixture supplied directly to the isolated callback; no Google request or call.
+  callback('TEST FORWARDING NUMBER', '+61123456789');
+  assert.ok(notifications > 0);
+  for (let render = 0; render < 3; render++) {
+    assert.match(html(), /href="tel:\+61123456789"/);
+    assert.match(html(), /Call <span>TEST FORWARDING NUMBER<\/span> for a Free Quote/);
+    assert.doesNotMatch(html(), /0477 948 079/);
+  }
+  assert.equal(PhoneLink({ href: 'tel:1800123456', children: 'Other number' }).props.href, 'tel:1800123456');
+  assert.equal(PhoneLink({ href: 'tel:+61477948079' }).props.href, 'tel:+61123456789');
+  server = true;
+  assert.match(html(), /href="tel:0477948079"/, 'SSR/hydration snapshot keeps the original number');
+  server = false;
+  let suppliedHandler = 0;
+  PhoneLink({ ...props, onClick: () => suppliedHandler++ }).props.onClick({});
+  assert.equal(clicks, 1);
+  assert.equal(suppliedHandler, 1);
+});

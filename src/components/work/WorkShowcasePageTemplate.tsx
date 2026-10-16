@@ -1,8 +1,8 @@
 "use client";
 
+import { PhoneLink } from "@/components/PhoneLink";
 import Image from "next/image";
 import Link from "next/link";
-import { trackPhoneClick } from "@/lib/analytics";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type { WorkShowcaseContent } from "@/lib/types";
 
@@ -20,13 +20,12 @@ function WorkShowcaseCtas() {
       >
         Make an Enquiry
       </button>
-      <a
+      <PhoneLink
         href="tel:0477948079"
-        onClick={trackPhoneClick}
         className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white px-5 text-sm font-semibold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
       >
         Call 0477 948 079
-      </a>
+      </PhoneLink>
     </div>
   );
 }
