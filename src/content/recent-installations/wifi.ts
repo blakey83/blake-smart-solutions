@@ -10,6 +10,30 @@ export const recentWifiInstallationsContent: WorkShowcaseContent = {
 
   completedJobs: [
     {
+      title: "Reliable internet for a workshop, office and the entire property",
+      location: "Oakford, WA",
+      description:
+        "A carpenter in Oakford had started his own business, working from a large shed on his property with a dedicated office inside. But with no reliable internet reaching the shed and poor 5G coverage in the area, getting connected was a real challenge.\n\nWe installed a wireless bridge to bring the home's existing internet connection across to the shed, then added a wireless access point for dependable Wi-Fi throughout the workshop and a wired Ethernet connection for the office.\n\nWe also installed an outdoor wireless access point on the house roof, extending coverage across the property for future security cameras and gate connectivity — and letting the owner stream music while mowing the lawn.",
+      outcome:
+        "The result: a connected workshop and office, reliable outdoor Wi-Fi, and a network ready to support the growing business and property.",
+      image: {
+        src: "/images/work-photos/WiFi/oakford-workshop-outdoor-wifi.webp",
+        alt: "Roof-mounted outdoor wireless access point overlooking the workshop on an Oakford property",
+      },
+    },
+    {
+      title: "Fast NBN, but weak Wi-Fi in the home office",
+      location: "Alkimos, WA",
+      description:
+        "A family in Alkimos had recently upgraded to a superfast 1 Gbps NBN plan, but their home office at the back of the house was still struggling with poor Wi-Fi coverage. The internet connection was fast — the wireless signal simply wasn't reaching where they needed it.\n\nWe installed a discreet, ceiling-mounted wireless access point to extend reliable Wi-Fi coverage to the rear of the home, helping the family make better use of their new NBN connection.",
+      outcome:
+        "The result: stronger, more reliable Wi-Fi in the home office, without having to move closer to the router to get connected.",
+      image: {
+        src: "/images/work-photos/WiFi/alkimos-ceiling-wifi-access-point.webp",
+        alt: "Discreet ceiling-mounted wireless access point extending Wi-Fi coverage to the home office in an Alkimos home",
+      },
+    },
+    {
       title: "One well-placed access point fixed Wi-Fi for the whole family",
       location: "Kallaroo, WA",
       description:
