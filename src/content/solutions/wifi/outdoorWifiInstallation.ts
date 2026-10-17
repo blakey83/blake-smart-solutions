@@ -19,7 +19,7 @@ export const outdoorWifiInstallation: SolutionPageTemplateProps = {
   bulletPoints: [
     "Strong, reliable Wi-Fi across the outdoor areas you actually use",
     "Keep cameras, speakers, gates and smart devices reliably online",
-    "Equipment designed the aussie outdoors, backed by a 3-year manufacturer's warranty.",
+    "Equipment designed for the aussie outdoors, backed by a 3-year manufacturer's warranty.",
     "Solutions from WiFi in Patios and Pools, up to large acreages and beyond",
     "Get your outdoor Wi-Fi organised without the runaround, with straightforward advice and clear communication.",
   ],

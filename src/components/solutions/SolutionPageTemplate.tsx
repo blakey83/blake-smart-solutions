@@ -388,9 +388,6 @@ export function SolutionPageTemplate({
                 <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl sm:text-white">
                   {headline}
                 </h1>
-                <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg sm:text-white/85">
-                  {subHeadline}
-                </p>
                 <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-[24px] sm:hidden">
                   <Image
                     src={heroBackgroundImage}
@@ -401,6 +398,9 @@ export function SolutionPageTemplate({
                     className="object-cover"
                   />
                 </div>
+                <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg sm:text-white/85">
+                  {subHeadline}
+                </p>
                 {heroImage ? (
                   <div className="relative mt-6 overflow-hidden rounded-[28px] border border-white/20 bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.22)]">
                     <div className="relative aspect-[4/3] w-full">
