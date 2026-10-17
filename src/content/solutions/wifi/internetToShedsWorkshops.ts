@@ -14,8 +14,8 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:
-      "A big thank you to Daniel from Blake Smart Solutions. His communication was excellent, he was on time, and he went above and beyond to help us with our data connections.",
-    author: "Mark Anthony",
+      "Fantastic service, very friendly and knowledgeable. Good to have no more WiFi issues",
+    author: "David Kelly",
   },
   bulletPoints: [
     "Use your existing home internet in your shed, without paying for a second internet service.",
@@ -25,7 +25,7 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
   ],
   heroCtaLines: [
     "",
-    "Leave your details and we’ll get back to you with a free quote.",
+    "Leave you details, and we'll get back to you with a free, easy-to-understand quote.",
   ],
   primaryCta: {
     label: "Get a free quote today",

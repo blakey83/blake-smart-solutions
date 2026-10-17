@@ -13,13 +13,14 @@ export const outdoorWifiInstallation: SolutionPageTemplateProps = {
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:
-      "A big thank you to Daniel from Blake Smart Solutions. His communication was excellent, he was on time, and he went above and beyond to help us with our data connections.",
-    author: "Mark Anthony",
+      "Fantastic service, very friendly and knowledgeable. Good to have no more WiFi issues",
+    author: "David Kelly",
   },
   bulletPoints: [
     "Strong, reliable Wi-Fi across the outdoor areas you actually use",
     "Keep cameras, speakers, gates and smart devices reliably online",
     "Equipment designed the aussie outdoors, backed by a 3-year manufacturer's warranty.",
+    "Solutions from WiFi in Patios and Pools, up to large acreages and beyond",
     "Get your outdoor Wi-Fi organised without the runaround, with straightforward advice and clear communication.",
   ],
   heroCtaLines: [

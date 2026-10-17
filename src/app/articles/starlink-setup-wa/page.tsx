@@ -1,3 +1,4 @@
+import { StarlinkReferralCta } from "../is-starlink-worth-it/StarlinkReferralCta";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -231,6 +232,10 @@ export default function StarlinkSetupWaPage() {
         </div>
       </section>
 
+      <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8">
+        <StarlinkReferralCta position="top" />
+      </div>
+
       {starlinkSetupGuideContent.sections.map((section, index) => (
         <section
           key={section.id}
@@ -276,6 +281,10 @@ export default function StarlinkSetupWaPage() {
           </div>
         </section>
       ))}
+
+      <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8">
+        <StarlinkReferralCta position="bottom" />
+      </div>
 
       <section
         id="final-cta"

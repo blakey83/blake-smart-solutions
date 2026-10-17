@@ -1,3 +1,4 @@
+import { StarlinkReferralCta } from "../is-starlink-worth-it/StarlinkReferralCta";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -194,6 +195,8 @@ export default function WhereToBookAStarlinkInstallerPerthPage() {
             </p>
           </div>
 
+          <StarlinkReferralCta position="top" />
+
           {bookStarlinkInstallerPerthContent.sections.map((section, index) => {
             const imageIndex = Math.floor(index / 2);
             const shouldShowImage = index % 2 === 1 && images[imageIndex];
@@ -223,6 +226,7 @@ export default function WhereToBookAStarlinkInstallerPerthPage() {
               </Fragment>
             );
           })}
+          <StarlinkReferralCta position="bottom" />
         </article>
       </main>
 

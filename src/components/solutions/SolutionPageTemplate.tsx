@@ -355,7 +355,7 @@ export function SolutionPageTemplate({
       ) : null}
 
       <section className="relative isolate overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-page)] text-[var(--color-ink)] sm:border-white/15 sm:bg-[var(--color-ink)] sm:text-white">
-        {/* A media-qualified source prevents mobile from downloading the photo. */}
+        {/* Keep the background photo on desktop; mobile displays it inline below. */}
         <picture>
           <source
             media="(min-width: 640px)"
@@ -382,12 +382,25 @@ export function SolutionPageTemplate({
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)] sm:text-[var(--color-accent-soft)]">
                   {heroEyebrow}
                 </p>
+                <div className="my-6 sm:hidden">
+                  <HeroSocialProofCard proof={heroSocialProof} />
+                </div>
                 <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl sm:text-white">
                   {headline}
                 </h1>
                 <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg sm:text-white/85">
                   {subHeadline}
                 </p>
+                <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-[24px] sm:hidden">
+                  <Image
+                    src={heroBackgroundImage}
+                    alt={heroImageAlt ?? headline}
+                    fill
+                    sizes="(max-width: 639px) calc(100vw - 40px), 1px"
+                    loading="eager"
+                    className="object-cover"
+                  />
+                </div>
                 {heroImage ? (
                   <div className="relative mt-6 overflow-hidden rounded-[28px] border border-white/20 bg-[var(--color-card)] shadow-[0_18px_40px_rgba(15,23,42,0.22)]">
                     <div className="relative aspect-[4/3] w-full">
@@ -424,10 +437,6 @@ export function SolutionPageTemplate({
                     ))}
                   </div>
                 ) : null}
-
-                <div className="mt-6 sm:hidden">
-                  <HeroSocialProofCard proof={heroSocialProof} />
-                </div>
 
                 <div
                   className={`${heroCtaLines?.length ? "mt-5" : "mt-8"} hidden flex-col gap-3 sm:flex sm:flex-row`}

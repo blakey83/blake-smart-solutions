@@ -11,7 +11,8 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     "Get your home Wi-Fi sorted without the runaround, with straightforward advice and clear communication.",
   ],
   heroEyebrow: "HOME & BUSINESS WI-FI INSTALLATION · PERTH",
-  heroBackgroundImage: "/images/products/rural-starlink/blake_rural.webp",
+  heroBackgroundImage:
+    "/images/work-photos/WiFi/kallaroo-ceiling-wifi-access-point2.webp",
   // heroImage: "/images/work_gallery/wifi_survey.jpeg",
   // heroImageAlt: "Blake Smart Solutions WiFi",
 
@@ -19,9 +20,8 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     eyebrow: "Google review",
     ratingLabel: "Five star Google review",
     quote:
-      "A big thank you to Daniel from Blake Smart Solutions. His communication was excellent, he was on time, and he went above and beyond to help us with our data connections.",
-
-    author: "Mark Anthony",
+      "Fantastic service, very friendly and knowledgeable. Good to have no more WiFi issues",
+    author: "David Kelly",
   },
   heroReviewStrip: {
     heading: "Trusted by Perth homeowners and businesses",
@@ -29,7 +29,7 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   },
   heroCtaLines: [
     "",
-    "Get a recommended installation approach and a clear quote.",
+    "Leave you details, and we'll get back to you with a free, easy-to-understand quote.",
   ],
 
   primaryCta: {
@@ -48,9 +48,9 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     imageAlt:
       "Daniel from Blake Smart Solutions drilling for a neat Wi-Fi access point installation",
     eyebrow: "RECENT INSTALLATIONS",
-    title: "See some of our recent successful Wi-Fi installations",
+    title: "See some of our recent Wi-Fi installations",
     href: "/recent-installations/wifi",
-    linkLabel: "View recent Wi-Fi installations",
+    linkLabel: "Our work speaks for itself",
   },
 
   featureSections: [
@@ -233,9 +233,9 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const wifiSolutionTrustItems = [
-  "5-Star Google Reviews",
-  "ACMA Registered and Fully Insured",
-  "Installed, Configured & Tested",
+  "20+ 5-Star Google Reviews in 2026",
+  "20 Years Experience in Networking",
+  "3 Year Warrany on all Parts and Labour",
   "Local Perth Support",
 ];
 

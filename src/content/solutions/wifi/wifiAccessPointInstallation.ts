@@ -6,27 +6,28 @@ export const wifiAccessPointInstallation: SolutionPageTemplateProps = {
   ...wifiSolutionContent,
   currentPath: "/wifi-solutions-perth/wifi-access-point-installation",
   headline:
-    "Reliable Wi-Fi Where You Need It, With Professionally Installed Access Points",
+    "Reliable Wi-Fi Where You Need It With Professionally Installed Access Points",
   subHeadline:
-    "We install Wi-Fi access points in Perth homes and small businesses, planning their placement around your property and handling the cabling, configuration and coverage testing.",
+    "We install Wi-Fi access points in Perth homes, planning their placement around your property and handling the cabling, configuration and coverage testing.",
   heroEyebrow: "WI-FI ACCESS POINT INSTALLATION · PERTH",
   heroBackgroundImage:
     "/images/solutions/wifi/attadale-access-points/ceiling-ap-wooden-cabinet.webp",
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:
-      "A big thank you to Daniel from Blake Smart Solutions. His communication was excellent, he was on time, and he went above and beyond to help us with our data connections.",
-    author: "Mark Anthony",
+      "Fantastic service, very friendly and knowledgeable. Good to have no more WiFi issues",
+    author: "David Kelly",
   },
   bulletPoints: [
     "Reliable Wi-Fi coverage throughout your home, wherever you need to connect.",
     "Smooth streaming, video calls and gaming, with more dependable connectivity.",
+    "Professional placement, means you're maximizing your home network",
     "Wall or ceiling mounted for a neater installation that's less intrusive.",
     "Know what you're paying for before work begins, with a clear, upfront quote.",
   ],
   heroCtaLines: [
     "",
-    "Leave your details and we’ll get back to you with a free quote.",
+    "Leave you details, and we'll get back to you with a free, easy-to-understand quote.",
   ],
   primaryCta: {
     label: "Get a free quote today",

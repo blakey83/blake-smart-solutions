@@ -1,3 +1,4 @@
+import { StarlinkReferralCta } from "../is-starlink-worth-it/StarlinkReferralCta";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -192,6 +193,8 @@ export default function StarlinkInstallationCostPerthPage() {
             </p>
           </div>
 
+          <StarlinkReferralCta position="top" />
+
           {starlinkInstallationCostPerthContent.sections.map((section) => (
             <Fragment key={section.title}>
               <section className="pt-8 first:pt-0">
@@ -206,6 +209,7 @@ export default function StarlinkInstallationCostPerthPage() {
               {section.image ? <ArticleImage image={section.image} /> : null}
             </Fragment>
           ))}
+          <StarlinkReferralCta position="bottom" />
         </article>
       </main>
 

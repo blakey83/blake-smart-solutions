@@ -87,23 +87,23 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   bulletPoints: [
     "Peace of mind for your property, with secure roof mounting, neat cabling and careful installation.",
     "Get the best possible performance from your Starlink setup, with professional positioning, configuration and testing.",
+    "Fully protected cabling for a neat, professional installation that's built to last.",
     "Know how to use your new Starlink from day one, with everything set up and explained before we leave.",
     "Get your Starlink installation organised without the runaround, with prompt replies and clear communication.",
   ],
 
   heroEyebrow: "STARLINK INSTALLATION PERTH",
-  heroBackgroundImage: "/images/products/rural-starlink/blake_rural.webp",
+  heroBackgroundImage: "/images/solutions/starLink/starlink-roof-mount-woodland-hero.webp",
 
   // heroImage: "/images/solutions/starLink/PXL_20260618_070344256.png",
 
   // heroImageAlt: "Starlink dish installed on a Perth roof",
 
   heroSocialProof: {
-    eyebrow: "Recent Customer Feedback",
+    eyebrow: "Google Review",
     ratingLabel: "Five star Google review",
-    quote:
-      "Daniel came and installed our Starlink on the roof, great experience, he replied to my initial email very quickly. Friendly and prompt service.",
-    author: " - Paris Rose",
+    quote: "Daniel did a great job installing my starlink set up",
+    author: "Alan Star",
   },
   heroReviewStrip: {
     heading: "Trusted by Perth Starlink customers",
