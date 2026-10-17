@@ -10,7 +10,7 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
     "We connect detached buildings to your existing home or business network using wireless bridges or data cabling, providing a stable connection and Wi-Fi coverage inside.",
   heroEyebrow: "INTERNET TO SHEDS & WORKSHOPS · PERTH",
   heroBackgroundImage:
-    "/images/solutions/wifi/shed-building-link/detached-sheds-distance.webp",
+    "/images/solutions/wifi/shed-building-link/oakford-shed-wifi-hero.webp",
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:

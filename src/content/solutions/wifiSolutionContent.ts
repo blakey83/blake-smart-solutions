@@ -3,7 +3,7 @@ import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 export const wifiSolutionContent: SolutionPageTemplateProps = {
   headline: "Professional Wi-Fi Solutions for Your Home or Business",
   subHeadline:
-    "We design and install professional Wi-Fi networks for Perth homes and small businesses, using wired access points, wireless bridges and data cabling to get reliable connectivity where you need it.",
+    "We design and install professional Wi-Fi and Smart wired networks for Perth homes and small businesses, using wired access points, wireless bridges and data cabling to get reliable connectivity where you need it.",
   bulletPoints: [
     "Enjoy reliable Wi-Fi throughout your home, wherever you need to connect.",
     "Stream, work from home and game with fewer interruptions, even with multiple devices connected.",
