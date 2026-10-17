@@ -93,7 +93,8 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   ],
 
   heroEyebrow: "STARLINK INSTALLATION PERTH",
-  heroBackgroundImage: "/images/solutions/starLink/starlink-roof-mount-woodland-hero.webp",
+  heroBackgroundImage:
+    "/images/solutions/starLink/starlink-roof-mount-woodland-hero.webp",
 
   // heroImage: "/images/solutions/starLink/PXL_20260618_070344256.png",
 
@@ -136,9 +137,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   recentWork: {
     image: "/images/solutions/starLink/PXL_20260618_070344256.png",
     imageAlt: "Starlink dish installed on a Perth roof",
-    eyebrow: "RECENT STARLINK INSTALLATIONS",
-    title: "See Recent Starlink Installations Around Perth",
+    eyebrow: "RECENT INSTALLATIONS",
+    title: "See some of our recent Stalink installations",
     href: "/recent-installations/starlink",
+    linkLabel: "Our work speaks for itself",
   },
 
   featureSection: {
