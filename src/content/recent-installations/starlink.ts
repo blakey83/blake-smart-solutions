@@ -8,6 +8,18 @@ export const recentStarlinkInstallationsContent: WorkShowcaseContent = {
 
   completedJobs: [
     {
+      title: "Bringing reliable, high-speed internet to a rural Jarrahdale property",
+      location: "Jarrahdale, WA",
+      description:
+        "Living on a rural property has plenty of advantages, but reliable internet isn't always one of them. For this property in Jarrahdale, limited connectivity options meant finding a dependable internet connection was a challenge.\n\nWe installed a Starlink system on the home's Colorbond roof, carefully positioning and securely mounting the dish to provide a clear view of the sky. The installation included neatly routed cabling and a professional finish, helping bring modern broadband connectivity to a property well beyond Perth's suburbs.",
+      outcome:
+        "The result: fast, reliable internet for everyday use, working from home and streaming — without the limitations of traditional rural broadband options.",
+      image: {
+        src: "/images/work-photos/Starlink/Jarrahdale.jpg",
+        alt: "Starlink installation overlooking a rural property in Jarrahdale",
+      },
+    },
+    {
       title: "Getting a new family home connected with Starlink",
       location: "Clarkson, WA",
       description:
@@ -79,16 +91,6 @@ export const recentStarlinkInstallationsContent: WorkShowcaseContent = {
       },
     },
 
-    {
-      title: "Bringing high-speed internet to a rural property",
-      location: "Jarrahdale, WA",
-      description:
-        "This rural property had limited connectivity options and required a more reliable internet solution. A professionally mounted Starlink system delivered fast broadband speeds, improving connectivity for work, streaming and everyday online activities.",
-      image: {
-        src: "/images/work-photos/Starlink/Jarrahdale.jpg",
-        alt: "Starlink installation overlooking a rural property in Jarrahdale",
-      },
-    },
 
     {
       title: "Commercial installation on a seven-metre structure",
