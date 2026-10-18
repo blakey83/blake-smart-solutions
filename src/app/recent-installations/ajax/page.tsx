@@ -15,5 +15,5 @@ export const metadata: Metadata = buildSeoMetadata({
 });
 
 export default function RecentAjaxInstallationsPage() {
-  return <WorkShowcasePageTemplate content={recentAjaxInstallationsContent} />;
+  return <WorkShowcasePageTemplate content={recentAjaxInstallationsContent} enquiryProductName="Ajax Alarm Systems" />;
 }

@@ -126,7 +126,6 @@ function HeroReviewStripView({
               key={review.name}
               className={[
                 "rounded-2xl border border-[var(--color-border)] bg-[var(--color-page)] p-4 text-left shadow-[0_10px_24px_rgba(15,23,42,0.04)]",
-                index === 1 ? "hidden lg:block" : "",
                 index > 1 ? "hidden xl:block" : "",
               ]
                 .filter(Boolean)
@@ -138,7 +137,7 @@ function HeroReviewStripView({
               >
                 ★★★★★
               </div>
-              <p className="mt-2 max-h-[3.75rem] overflow-hidden text-xs leading-5 text-[var(--color-muted)]">
+              <p className="mt-2 text-xs leading-5 text-[var(--color-muted)]">
                 &quot;{review.text}&quot;
               </p>
               <p className="mt-2 text-xs font-semibold text-[var(--color-ink)]">

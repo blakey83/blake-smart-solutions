@@ -5,17 +5,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { openEnquiryModal } from "@/lib/enquiryModal";
 import type { WorkShowcaseContent } from "@/lib/types";
+import { usePathname } from "next/navigation";
 
 type WorkShowcasePageTemplateProps = {
   content: WorkShowcaseContent;
+  enquiryProductName: string;
 };
 
-function WorkShowcaseCtas() {
+function WorkShowcaseCtas({ enquiryProductName }: { enquiryProductName: string }) {
   return (
     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
       <button
         type="button"
-        onClick={() => openEnquiryModal("Recent Work Enquiry")}
+        onClick={() => openEnquiryModal(enquiryProductName)}
         className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,110,184,0.16)] transition hover:bg-[var(--color-accent-strong)]"
       >
         Make an Enquiry
@@ -32,9 +34,12 @@ function WorkShowcaseCtas() {
 
 export function WorkShowcasePageTemplate({
   content,
+  enquiryProductName,
 }: WorkShowcasePageTemplateProps) {
+  const pathname = usePathname();
+
   return (
-    <main className="bg-[var(--color-page)] text-[var(--color-ink)]">
+    <main className="bg-[var(--color-page)] pb-[calc(6rem+env(safe-area-inset-bottom))] text-[var(--color-ink)] sm:pb-0">
       <section className="border-b border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="max-w-3xl">
@@ -49,7 +54,7 @@ export function WorkShowcasePageTemplate({
             <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg">
               {content.description}
             </p>
-            <WorkShowcaseCtas />
+            <WorkShowcaseCtas enquiryProductName={enquiryProductName} />
           </div>
         </div>
       </section>
@@ -96,7 +101,9 @@ export function WorkShowcasePageTemplate({
                       {typeof job.description === "string"
                         ? job.description
                         : job.description.map((part, index) =>
-                            typeof part === "string" ? part : (
+                            typeof part === "string" ? part : "bold" in part ? (
+                              <strong key={index}>{part.text}</strong>
+                            ) : (
                               <Link
                                 key={index}
                                 href={part.href}
@@ -133,10 +140,21 @@ export function WorkShowcasePageTemplate({
               "Send a few details through or call directly, and we can talk through the best way to approach your installation."}
           </p>
           <div className="flex justify-center">
-            <WorkShowcaseCtas />
+            <WorkShowcaseCtas enquiryProductName={enquiryProductName} />
           </div>
         </div>
       </section>
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--color-border)] bg-white/95 px-5 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(15,23,42,0.1)] backdrop-blur sm:hidden">
+        <button
+          type="button"
+          onClick={() => openEnquiryModal(enquiryProductName, {
+            tracking: { source: `${pathname}:mobile-sticky` },
+          })}
+          className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,110,184,0.16)] transition hover:bg-[var(--color-accent-strong)]"
+        >
+          Get in touch Today
+        </button>
+      </div>
     </main>
   );
 }

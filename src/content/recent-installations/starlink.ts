@@ -8,6 +8,45 @@ export const recentStarlinkInstallationsContent: WorkShowcaseContent = {
 
   completedJobs: [
     {
+      title: "Getting a new family home connected with Starlink",
+      location: "Clarkson, WA",
+      description:
+        "A family had recently moved into their new home in Clarkson but couldn't get the internet connectivity they needed. With unreliable internet making it difficult to get settled, they turned to Starlink for a solution.\n\nWe installed their Starlink dish on the home's Colorbond roof, with secure mounting and neatly protected cabling for a tidy, professional finish.",
+      outcome:
+        "The result: a professionally installed Starlink system, giving the family a practical way to get connected and enjoy their new home.",
+      image: {
+        src: "/images/work-photos/Starlink/clarkson-family-home-starlink.webp",
+        alt: "Starlink dish securely mounted on a Clarkson home's Colorbond roof with neatly protected cabling",
+      },
+    },
+    {
+      title: "Starlink keeps working from home possible in the Perth Hills",
+      location: "Darlington, WA",
+      description: [
+        "A couple had recently moved into their dream home in the hills of Darlington, but reliable internet was proving difficult. NBN had quoted more than $10,000 to connect fibre to the property, leaving them with limited connectivity and the prospect of giving up their work-from-home days.\n\nWith tall trees surrounding the house, finding a suitable location for Starlink was particularly important.\n\nWe carefully assessed the available mounting positions and installed their Starlink dish where it could achieve a clear view of the sky, despite the surrounding tree coverage.\n\nThe installation achieved ",
+        { text: "100% connectivity in the obstruction assessment", bold: true },
+        ", giving the couple a reliable internet connection without the substantial cost of extending NBN fibre to their home.",
+      ],
+      outcome:
+        "The result: a happy couple who can continue working from their dream home in Darlington, rather than making extra trips to the office.",
+      image: {
+        src: "/images/work-photos/Starlink/darlington-hills-starlink.webp",
+        alt: "Roof-mounted Starlink dish surrounded by tall trees at a home in Darlington in the Perth Hills",
+      },
+    },
+    {
+      title: "Reliable Starlink connectivity for a WA port services business",
+      location: "Bibra Lake, WA",
+      description:
+        "A port services business in Bibra Lake needed dependable internet to stay connected with ports and operations throughout Western Australia. Their existing Telstra connection wasn't delivering the reliability they needed for day-to-day business.\n\nWe installed a Starlink system on the roof of their two-storey office building, providing an alternative internet connection for the business.\n\nWorking alongside the company's engineers, we coordinated the installation and network changeover to keep the team working while the new connection was brought online.",
+      outcome:
+        "The result: a professionally installed Starlink connection, a carefully managed switchover and improved connectivity for a business that depends on staying in touch with operations across WA.",
+      image: {
+        src: "/images/work-photos/Starlink/bibra-lake-port-services-starlink.webp",
+        alt: "Starlink dish professionally mounted on the office roof of a Bibra Lake port services business",
+      },
+    },
+    {
       title: "Reliable internet for working from home",
       location: "Baldivis, WA",
       description:

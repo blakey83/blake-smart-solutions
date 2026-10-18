@@ -16,6 +16,6 @@ export const metadata: Metadata = buildSeoMetadata({
 
 export default function RecentStarlinkInstallationsPage() {
   return (
-    <WorkShowcasePageTemplate content={recentStarlinkInstallationsContent} />
+    <WorkShowcasePageTemplate content={recentStarlinkInstallationsContent} enquiryProductName="Starlink Installation" />
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import type { WhyChooseUsContent } from "@/lib/types";
 import Image from "next/image";
+import { WhyChooseUsReview } from "./WhyChooseUsReview";
 
 type WhyBSSProps = {
   content: WhyChooseUsContent;
@@ -56,6 +57,7 @@ export const WhyBSS = ({
                   </li>
                 ))}
               </ul>
+              <WhyChooseUsReview />
             </div>
           </div>
 

@@ -17,5 +17,5 @@ export const metadata: Metadata = buildSeoMetadata({
 });
 
 export default function RecentWifiInstallationsPage() {
-  return <WorkShowcasePageTemplate content={recentWifiInstallationsContent} />;
+  return <WorkShowcasePageTemplate content={recentWifiInstallationsContent} enquiryProductName="WiFi Solutions" />;
 }

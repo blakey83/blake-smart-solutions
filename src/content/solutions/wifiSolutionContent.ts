@@ -259,12 +259,36 @@ export const whyChooseUsWiFi = {
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {
+        name: "Mark Anthony",
+        text: "A big thank you to Daniel from Blake Smart Solutions. His communication was excellent, he was on time, and he went above and beyond to help us with our data connections. Nothing was ever too much trouble, and his advice was always spot on. Highly recommend his services.",
+      },
+      {
+        name: "Dhanushke Fernando",
+        text: "Daniel is very very helpful in helping you get the best solution for your home. He is flexible and willing to answer all your questions in making what is a big investment for you home. Highly recommend!",
+      },
+      {
+        name: "Darren Sparks",
+        text: "Very insightful and presented multiple options to solve the wifi problem we have been experiencing",
+      },
+      {
+        name: "Skeeter Willow",
+        text: "Daniel was fantastic to deal with. He communicated clearly, explained exactly what he was going to do, and delivered the product exactly as described. He’s a friendly guy, very professional, and his workmanship was extremely neat. He cleaned up thoroughly after the job, and the end result has massively improved my internet access I now have reliable coverage throughout the whole house. Very reasonable price and I highly recommend Daniel.",
+      },
+      {
         name: "Sue Haynes",
         text: "Daniel arrived on time and installed our replacement system without problems. Neat and tidy install. No hesitation to recommend Daniel.",
       },
       {
         name: "Paris Rose",
         text: "Great experience, he replied to my initial email very quickly. Friendly and prompt service.",
+      },
+      {
+        name: "Mark Bignell",
+        text: "Dan was amazing, great communication from start to finish. Awesome work",
+      },
+      {
+        name: "Juan Munoz",
+        text: "Clear explanation of the job to be done and completed with excellent quality and no issues",
       },
       {
         name: "Mark Lumacang",

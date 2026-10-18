@@ -80,8 +80,7 @@ export const starlinkProducts: Product[] = [
 ];
 
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
-  headline:
-    "Starlink Installation in Perth for $449 Including Roof Mount & Setup",
+  headline: "Starlink Installation for $449 Including Roof Mount & Setup",
   subHeadline:
     "$449 complete installation for single-storey homes with Colorbond or tiled roofing. Includes standard mounting hardware, secure installation, cable routing, Starlink setup and connection testing. You’ll be online and know exactly how everything works before we leave.",
   bulletPoints: [
@@ -318,10 +317,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const starlinkSolutionTrustItems = [
-  "20+ Five-Star google reviews in 2026 (so far)",
-  "10 Year Warranty",
-  "Starlink Certified Installers",
-  "Fully insured, licensed and ready to go",
+  "5.0★ Google Rating",
+  "20+ Years Experience",
+  "Fully Insured for Peace of Mind",
+  "Local support when you need it",
 ];
 
 export const whyChooseUsStarlink = {
@@ -345,12 +344,20 @@ export const whyChooseUsStarlink = {
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {
+        name: "Skeeter Willow",
+        text: "Daniel was fantastic to deal with. He communicated clearly, explained exactly what he was going to do, and delivered the product exactly as described. He’s a friendly guy, very professional, and his workmanship was extremely neat. He cleaned up thoroughly after the job, and the end result has massively improved my internet access I now have reliable coverage throughout the whole house. Very reasonable price and I highly recommend Daniel.",
+      },
+      {
+        name: "D D",
+        text: "Absolutely outstanding service from start to finish. The installation of my Starlink system was handled with exceptional professionalism, precision and genuine pride in the quality of the work. Punctual, knowledgeable and meticulous throughout, the entire installation was completed to an incredibly high standard. It is refreshing to see this level of craftsmanship and attention to detail. An exceptional job and a first-class experience. I could not recommend them more highly.",
+      },
+      {
         name: "Sue Haynes",
         text: "Daniel arrived on time and installed our replacement system without problems. Neat and tidy install. No hesitation to recommend Daniel for your Starlink installations.",
       },
       {
-        name: "Alan Star",
-        text: "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
+        name: "Paris Rose",
+        text: "Daniel came and installed our Starlink on the roof, great experience, he replied to my initial email very quickly. Friendly and prompt service. Will get him back for future projects.",
       },
       {
         name: "Sid Chahal",
@@ -361,8 +368,8 @@ export const whyChooseUsStarlink = {
         text: "Good communication and clean work.",
       },
       {
-        name: "Lesley Middleton",
-        text: "Came over at the appointed time and fixed my security camera system efficiently. Really went above and beyond.",
+        name: "Wayne Gellately",
+        text: "Excellent service from Daniel, great communication as well.",
       },
       {
         name: "Paris Rose",

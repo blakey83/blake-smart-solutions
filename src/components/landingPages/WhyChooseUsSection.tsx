@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { securityLandingPageContent } from "@/content/components/securityLandingPage";
+import { WhyChooseUsReview } from "./WhyChooseUsReview";
 
 export function WhyChooseUsSection() {
   const { whyChooseUs } = securityLandingPageContent;
@@ -42,6 +43,7 @@ export function WhyChooseUsSection() {
                 </div>
               </div>
             </div>
+            <WhyChooseUsReview />
           </div>
 
           <div className="grid gap-5">
