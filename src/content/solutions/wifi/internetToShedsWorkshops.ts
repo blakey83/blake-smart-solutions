@@ -8,7 +8,7 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
   headline: "Get Reliable Internet to Your Shed, Workshop or Granny Flat",
   subHeadline:
     "We connect detached buildings to your existing home or business network using wireless bridges or data cabling, providing a stable connection and Wi-Fi coverage inside.",
-  heroEyebrow: "INTERNET TO SHEDS & WORKSHOPS · PERTH",
+  heroEyebrow: "OINT-TO-POINT WIFI & WIRELESS BRIDGE INSTALLATION · PERTH",
   heroBackgroundImage:
     "/images/solutions/wifi/shed-building-link/oakford-shed-wifi-hero.webp",
   heroSocialProof: {
@@ -30,15 +30,14 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
   primaryCta: {
     label: "Get a free quote today",
     action: "enquiry",
-    enquiryProductName: "Wi-Fi Access Point Installation",
+    enquiryProductName: "Internet to Sheds & Workshops",
     enquiryDefaultMessage:
-      "I’d like a quote for wi-fi access point installation. The area or connection I need help with is: ",
+      "d like a quote for a wireless bridge or internet connection to another building. ",
   },
   featureSections: [
     {
-      eyebrow: "THE RIGHT SOLUTION FOR YOUR PROPERTY",
-      title:
-        "Bring the network to the building, then provide proper Wi-Fi inside",
+      eyebrow: "PROFESSIONAL WIRELESS BRIDGE INSTALLATION",
+      title: "Point-to-point WiFi links that connect your buildings reliably",
       intro: solutionParagraphs([
         [
           "Where there is suitable line of sight, a dedicated outdoor wireless bridge can carry the network from the main building to the shed or workshop. At the destination, a ",
@@ -66,6 +65,7 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
         ],
       ]),
       points: [
+        "Professional point-to-point wireless bridge installation and alignment",
         "Site and line-of-sight assessment",
         "Dedicated link between the main building and shed",
         "Wi-Fi access point installed inside the destination building",
@@ -148,6 +148,16 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
       question: "Will metal shed walls block the signal?",
       answer:
         "Metal walls are one reason we terminate the outdoor link at the shed and provide Wi-Fi from an access point inside. Trying to transmit through the wall from the house is usually unreliable.",
+    },
+    {
+      question: "What is a point-to-point WiFi bridge?",
+      answer:
+        "A point-to-point wireless bridge uses dedicated equipment to connect two buildings over a wireless link. It carries your existing network from one location to another, where we can install WiFi access points or wired data outlets.",
+    },
+    {
+      question: "Do you install wireless bridges in Perth?",
+      answer:
+        "Yes. Blake Smart Solutions installs point-to-point wireless bridges across Perth for sheds, workshops, granny flats, offices and other detached buildings. We assess the link, install and align the equipment, configure the network and test the connection.",
     },
   ],
   finalCtaTitle: "Need a dependable connection at the other end of the yard?",
