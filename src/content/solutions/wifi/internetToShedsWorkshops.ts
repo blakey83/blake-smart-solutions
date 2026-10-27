@@ -76,6 +76,42 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
       imageAlt:
         "Outdoor wireless bridge mounted with protected cabling to connect a detached building",
     },
+    {
+      eyebrow: "UNDERGROUND DATA CABLING TO DETACHED BUILDINGS",
+      title: "A dedicated wired network connection to your shed or granny flat",
+      intro: solutionParagraphs([
+        [
+          "For sheds, granny flats and detached buildings, a dedicated underground cable can provide a reliable connection back to your main network. Where trenching is practical, we can install suitable data cabling through underground conduit, giving the building its own dependable network connection without relying on a wireless link.",
+        ],
+        [
+          "Whether you're building a new granny flat, fitting out a workshop or connecting an existing shed, we'll assess the distance, cable route and installation requirements. We can work with an existing suitable conduit or arrange a new trench and conduit installation where required.",
+        ],
+        [
+          "Once the connection reaches the building, we can install ",
+          {
+            text: "WiFi access points",
+            href: "/wifi-solutions-perth/wifi-access-point-installation",
+          },
+          " and ",
+          {
+            text: "wired data outlets",
+            href: "/wifi-solutions-perth/data-cabling",
+          },
+          " for computers, TVs, cameras and other devices. Everything is configured and tested so the connection works properly from end to end.",
+        ],
+      ]),
+      points: [
+        "Underground conduit and suitable data cabling between buildings",
+        "Trenching and cable routes planned around your property",
+        "Use existing suitable underground conduit where available",
+        "Dedicated wired connections for granny flats, sheds and workshops",
+        "WiFi access points and Ethernet outlets installed at the destination",
+        "Installation, network configuration and end-to-end testing",
+      ].map(solutionText),
+      image: "/images/solutions/wifi/underground-data-cabling-trench.webp",
+      imageAlt:
+        "Excavated trench through grass for underground conduit and data cabling",
+    },
   ],
   problemSolutionEyebrow: "WHERE WE CAN HELP",
   problemSolutionTitle: "The signal reaches the yard, but not the building",
