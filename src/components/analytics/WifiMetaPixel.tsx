@@ -12,7 +12,8 @@ export function WifiMetaPixel() {
     <>
       <Script
         id="wifi-meta-pixel"
-        strategy="afterInteractive"
+        // Keep Meta's library and configuration downloads out of initial rendering.
+        strategy="lazyOnload"
         onReady={() => {
           const fbq = (window as Window & {
             fbq?: (...args: string[]) => void;
