@@ -38,6 +38,33 @@ export const wifiAccessPointInstallation: SolutionPageTemplateProps = {
   },
   featureSections: [
     {
+      eyebrow: "WIFI ACCESS POINT INSTALLATION PERTH",
+      title: "Professional WiFi access points, supplied and installed",
+      intro: solutionParagraphs([
+        [
+          "A properly installed WiFi access point can give you stronger, more consistent coverage without relying on plug-in extenders or wireless repeaters. We supply and install quality access points for Perth homes and small businesses, with placement planned around the areas where you actually need reliable WiFi.",
+        ],
+        [
+          "Our installations include mounting, suitable Ethernet cabling, network configuration and performance testing. Where practical, we use wired connections back to your network so your access point isn't relying on an already weak wireless signal.",
+        ],
+        [
+          "Not sure whether you need one access point or several? We'll recommend a solution based on your property, existing equipment and coverage requirements, rather than simply selling you more hardware than you need.",
+        ],
+      ]),
+      points: [
+        "Quality WiFi access points supplied and professionally installed",
+        "Ceiling-mounted and wall-mounted options to suit your property",
+        "Ethernet cabling and PoE power where required",
+        "Network configuration, WiFi setup and performance testing",
+        "Improve coverage without relying on basic wireless repeaters",
+        "Clear, upfront quote tailored to your installation",
+      ].map(solutionText),
+      image: "/images/solutions/wifi/sorrento-ceiling-wifi-access-point.webp",
+      imageAlt:
+        "Ceiling-mounted WiFi access point installed in a Sorrento home by Blake Smart Solutions",
+    },
+
+    {
       eyebrow: "THE RIGHT SOLUTION FOR YOUR PROPERTY",
       title: "Put the Wi-Fi signal where people actually need it",
       intro: solutionParagraphs([
