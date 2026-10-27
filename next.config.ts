@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Avoid a render-blocking stylesheet request on first visits.
+    inlineCss: true,
+  },
   images: {
     qualities: [60, 75],
   },

@@ -68,6 +68,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        {isProduction && (
+          <>
+            <link rel="preconnect" href="https://www.googletagmanager.com" />
+            <link rel="preconnect" href="https://ad.doubleclick.net" />
+          </>
+        )}
+      </head>
       <body className={geistSans.variable}>
         <Suspense fallback={null}>
           <AdClickCapture />
@@ -87,7 +95,7 @@ export default function RootLayout({
           <>
             <Script
               src="https://www.googletagmanager.com/gtag/js?id=AW-18035265737"
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
             <Script id="google-ads-tag" strategy="afterInteractive">
               {`

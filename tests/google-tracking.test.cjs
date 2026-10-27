@@ -34,11 +34,12 @@ function commands(context) {
   return JSON.parse(JSON.stringify(context.dataLayer.map(entry => Array.from(entry))));
 }
 
-test('one explicit Google loader, with existing afterInteractive timing', () => {
+test('one deferred Google loader, with configuration and event queue available after hydration', () => {
   assert.deepEqual(scripts.filter(s => s.src).map(s => s.src), [
     'https://www.googletagmanager.com/gtag/js?id=AW-18035265737',
   ]);
-  assert.ok(scripts.every(s => s.strategy === 'afterInteractive'));
+  assert.ok(scripts.filter(s => s.src).every(s => s.strategy === 'lazyOnload'));
+  assert.ok(scripts.filter(s => !s.src).every(s => s.strategy === 'afterInteractive'));
   assert.ok(!source.includes('@next/third-parties/google'), 'no second loader hidden in a wrapper');
 });
 

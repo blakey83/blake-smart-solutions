@@ -394,6 +394,7 @@ export function SolutionPageTemplate({
                     fill
                     sizes="(max-width: 639px) calc(100vw - 40px), 1px"
                     loading="eager"
+                    fetchPriority="high"
                     className="object-cover"
                   />
                 </div>
@@ -409,6 +410,7 @@ export function SolutionPageTemplate({
                         fill
                         sizes="(min-width: 1024px) 40rem, 100vw"
                         loading="eager"
+                        fetchPriority="high"
                         className="object-cover"
                       />
                     </div>
