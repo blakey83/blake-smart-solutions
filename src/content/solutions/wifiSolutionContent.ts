@@ -1,16 +1,16 @@
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const wifiSolutionContent: SolutionPageTemplateProps = {
-  headline: "Professional Wi-Fi Solutions for Your Home or Business",
+  headline: "Reliable Home Network Installation, WiFi & Connectivity Solutions",
   subHeadline:
-    "We design and install professional Wi-Fi and Smart wired networks for Perth homes and small businesses, using wired access points, wireless bridges and data cabling to get reliable connectivity where you need it.",
+    "We install reliable home and business connectivity systems across Perth, including WiFi access points, Ethernet cabling, wireless links and properly configured network equipment.",
   bulletPoints: [
-    "Enjoy reliable Wi-Fi throughout your home, wherever you need to connect.",
+    "Enjoy reliable internet throughout your home, wherever you need to connect.",
     "Stream, work from home and game with fewer interruptions, even with multiple devices connected.",
-    "Get more from your existing NBN or Starlink connection, with better Wi-Fi coverage around your home.",
-    "Get your home Wi-Fi sorted without the runaround, with straightforward advice and clear communication.",
+    "Get more from your existing NBN or Starlink connection, with better connectivity and WiFi coverage around your home.",
+    "Get your home network sorted without the runaround, with straightforward advice and clear communication.",
   ],
-  heroEyebrow: "HOME & BUSINESS WI-FI INSTALLATION · PERTH",
+  heroEyebrow: "HOME NETWORK & WIFI INSTALLATION · PERTH",
   heroBackgroundImage:
     "/images/work-photos/WiFi/kallaroo-ceiling-wifi-access-point2.webp",
   // heroImage: "/images/work_gallery/wifi_survey.jpeg",
@@ -20,8 +20,8 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     eyebrow: "Google review",
     ratingLabel: "Five star Google review",
     quote:
-      "Fantastic service, very friendly and knowledgeable. Good to have no more WiFi issues",
-    author: "David Kelly",
+      "We now have fabulous wifi range. Excellent product and service, thankyou!",
+    author: "Jules Palmer",
   },
   heroReviewStrip: {
     heading: "Trusted by Perth homeowners and businesses",
@@ -54,6 +54,23 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   },
 
   featureSections: [
+    {
+      eyebrow: "HOME NETWORK INSTALLATION",
+      title: "Wired and wireless home networks designed around your needs",
+      intro:
+        "A proper home network is more than just a router in the corner. We install and configure reliable wired and wireless networks for homes and small businesses, including Ethernet cabling, data points, routers, switches and WiFi access points.",
+      points: [
+        "Install Ethernet cabling and data points for TVs, desks, offices, access points and fixed devices",
+        "Improve network reliability with a properly planned mix of wired connections and strong WiFi coverage",
+        "Set up routers, switches and WiFi access points so the network works as one system",
+        "Reduce guesswork, weak links and messy DIY fixes with a network that is installed, configured and tested properly",
+        "Get clear recommendations based on your layout, internet service and how you actually use the space",
+      ],
+      image:
+        "/images/work-photos/WiFi/balcatta-home-network-installation2.webp",
+      imageAlt:
+        "Wall-mounted WiFi access point with Ethernet ports installed in a Balcatta home by Blake Smart Solutions",
+    },
     {
       eyebrow: "RELIABLE WIFI THROUGHOUT THE BUILDING",
       title: "Strong, consistent WiFi in the rooms where you actually need it",
@@ -233,10 +250,10 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
 };
 
 export const wifiSolutionTrustItems = [
-  "20+ 5-Star Google Reviews in 2026",
-  "20 Years Experience in Networking",
-  "3 Year Warrany on all Parts and Labour",
-  "Local Perth Support",
+  "5.0★ Google Rating",
+  "20+ Years Experience",
+  "Fully Insured for Peace of Mind",
+  "Local support when you need it",
 ];
 
 export const whyChooseUsWiFi = {

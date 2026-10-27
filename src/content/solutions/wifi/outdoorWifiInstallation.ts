@@ -13,8 +13,8 @@ export const outdoorWifiInstallation: SolutionPageTemplateProps = {
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:
-      "Fantastic service, very friendly and knowledgeable. Good to have no more WiFi issues",
-    author: "David Kelly",
+      "We now have fabulous wifi range. Excellent product and service, thankyou!",
+    author: "Jules Palmer",
   },
   bulletPoints: [
     "Strong, reliable Wi-Fi across the outdoor areas you actually use",

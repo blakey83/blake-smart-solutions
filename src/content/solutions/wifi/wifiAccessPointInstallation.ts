@@ -15,8 +15,8 @@ export const wifiAccessPointInstallation: SolutionPageTemplateProps = {
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:
-      "Fantastic service, very friendly and knowledgeable. Good to have no more WiFi issues",
-    author: "David Kelly",
+      "We now have fabulous wifi range. Excellent product and service, thankyou!",
+    author: "Jules Palmer",
   },
   bulletPoints: [
     "Reliable Wi-Fi coverage throughout your home, wherever you need to connect.",

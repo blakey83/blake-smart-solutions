@@ -14,8 +14,8 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:
-      "Fantastic service, very friendly and knowledgeable. Good to have no more WiFi issues",
-    author: "David Kelly",
+      "We now have fabulous wifi range. Excellent product and service, thankyou!",
+    author: "Jules Palmer",
   },
   bulletPoints: [
     "Use your existing home internet in your shed, without paying for a second internet service.",
