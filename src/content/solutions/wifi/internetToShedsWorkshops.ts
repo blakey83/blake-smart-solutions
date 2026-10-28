@@ -8,7 +8,7 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
   headline: "Get Reliable Internet to Your Shed, Workshop or Granny Flat",
   subHeadline:
     "We connect detached buildings to your existing home or business network using wireless bridges or data cabling, providing a stable connection and Wi-Fi coverage inside.",
-  heroEyebrow: "OINT-TO-POINT WIFI & WIRELESS BRIDGE INSTALLATION · PERTH",
+  heroEyebrow: "POINT-TO-POINT WIFI & WIRELESS BRIDGE INSTALLATION · PERTH",
   heroBackgroundImage:
     "/images/solutions/wifi/shed-building-link/oakford-shed-wifi-hero.webp",
   heroSocialProof: {

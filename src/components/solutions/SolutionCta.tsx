@@ -20,7 +20,7 @@ export function SolutionCta({
     "inline-flex min-h-12 items-center justify-center rounded-full px-5 text-sm font-semibold transition";
   const variantClasses =
     variant === "primary"
-      ? "bg-[var(--color-accent)] text-white shadow-[0_10px_24px_rgba(0,110,184,0.16)] hover:bg-[var(--color-accent-strong)]"
+      ? "bg-[var(--color-accent-text)] text-white shadow-[0_10px_24px_rgba(0,110,184,0.16)] hover:bg-[var(--color-accent-strong)]"
       : "border border-[var(--color-border-strong)] bg-white !text-black hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]";
   const classes = `${baseClasses} ${variantClasses} ${className}`.trim();
 

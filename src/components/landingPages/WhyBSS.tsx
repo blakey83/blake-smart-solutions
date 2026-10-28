@@ -1,6 +1,6 @@
 import React from "react";
 import type { WhyChooseUsContent } from "@/lib/types";
-import Image from "next/image";
+import { ServerImage as Image } from "@/components/ui/ServerImage";
 import { WhyChooseUsReview } from "./WhyChooseUsReview";
 
 type WhyBSSProps = {
@@ -37,7 +37,7 @@ export const WhyBSS = ({
             </div>
 
             <div className="max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
                 {content.whySection.eyebrow}
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">

@@ -1,4 +1,6 @@
-import Image, { getImageProps } from "next/image";
+import { getImageProps } from "next/image";
+import { preload } from "react-dom";
+import { ServerImage as Image } from "@/components/ui/ServerImage";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { heroSectionContent } from "@/content/components/home/heroSection";
@@ -43,7 +45,7 @@ function HeroSocialProofCard({
       className={`max-w-2xl rounded-2xl border border-[var(--color-border)] bg-white p-5 shadow-sm sm:border-white/20 sm:bg-[var(--color-ink)]/75 sm:shadow-[0_18px_44px_rgba(15,23,42,0.26)] sm:backdrop-blur-sm ${className}`.trim()}
     >
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)] sm:text-[var(--color-accent-soft)]">
+        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-accent-text)] sm:text-[var(--color-accent-soft)]">
           {proof.eyebrow}
         </span>
         <span
@@ -117,7 +119,7 @@ function HeroReviewStripView({
       <div
         className={`mx-auto max-w-6xl px-5 pb-14 sm:px-6 lg:px-8 ${addTopSpacing ? "pt-14 lg:pt-20" : ""}`}
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
           {strip.heading}
         </p>
         <div className="mt-3 grid gap-3 lg:grid-cols-2 xl:grid-cols-3">
@@ -227,7 +229,7 @@ function SolutionFeatureSection({
       >
         <div className={copyClasses}>
           {content.eyebrow ? (
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent-text)]">
               {content.eyebrow}
             </p>
           ) : null}
@@ -331,6 +333,22 @@ export function SolutionPageTemplate({
     sizes: "100vw",
     quality: 60,
   });
+  const { props: mobileHero } = getImageProps({
+    src: heroBackgroundImage,
+    alt: heroImageAlt ?? headline,
+    fill: true,
+    sizes: "(max-width: 639px) calc(100vw - 40px), 1px",
+    quality: 60,
+    loading: "eager",
+    fetchPriority: "high",
+  });
+  preload(mobileHero.src, {
+    as: "image",
+    imageSrcSet: mobileHero.srcSet,
+    imageSizes: mobileHero.sizes,
+    media: "(max-width: 639px)",
+    fetchPriority: "high",
+  });
 
   return (
     <div className="pb-20 bg-[var(--color-page)] text-[var(--color-ink)] sm:pb-0">
@@ -378,7 +396,7 @@ export function SolutionPageTemplate({
                 <HeroSocialProofCard proof={heroSocialProof} />
               </div>
               <div className="lg:mt-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)] sm:text-[var(--color-accent-soft)]">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)] sm:text-[var(--color-accent-soft)]">
                   {heroEyebrow}
                 </p>
                 <div className="my-6 sm:hidden">
@@ -388,15 +406,8 @@ export function SolutionPageTemplate({
                   {headline}
                 </h1>
                 <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-[24px] sm:hidden">
-                  <Image
-                    src={heroBackgroundImage}
-                    alt={heroImageAlt ?? headline}
-                    fill
-                    sizes="(max-width: 639px) calc(100vw - 40px), 1px"
-                    loading="eager"
-                    fetchPriority="high"
-                    className="object-cover"
-                  />
+                  {/* eslint-disable-next-line @next/next/no-img-element -- Optimized server props match the mobile-only preload above. */}
+                  <img {...mobileHero} alt={mobileHero.alt} className="object-cover" />
                 </div>
                 <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg sm:text-white/85">
                   {subHeadline}
@@ -480,13 +491,13 @@ export function SolutionPageTemplate({
                 />
               </div>
               <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-12">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
                   {recentWork.eyebrow}
                 </p>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
                   {recentWork.title}
                 </h2>
-                <span className="mt-7 inline-flex items-center text-sm font-semibold text-[var(--color-accent)]">
+                <span className="mt-7 inline-flex items-center text-sm font-semibold text-[var(--color-accent-text)]">
                   {recentWork.linkLabel ?? "View recent work"}
                   <span
                     aria-hidden="true"
@@ -579,7 +590,7 @@ export function SolutionPageTemplate({
                 key={step.title}
                 className="flex min-h-28 items-center gap-5 rounded-[24px] border border-[var(--color-border)] bg-white p-5 shadow-[0_12px_28px_rgba(15,23,42,0.05)]"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[var(--color-page)] text-[var(--color-accent)]">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[var(--color-page)] text-[var(--color-accent-text)]">
                   <ApproachIcon icon={step.icon} />
                 </div>
                 <div>
@@ -609,7 +620,7 @@ export function SolutionPageTemplate({
               <details key={faq.question} className="group p-6">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-base font-semibold text-[var(--color-ink)] marker:hidden">
                   {faq.question}
-                  <span className="text-2xl font-light leading-none text-[var(--color-accent)] transition group-open:rotate-45">
+                  <span className="text-2xl font-light leading-none text-[var(--color-accent-text)] transition group-open:rotate-45">
                     +
                   </span>
                 </summary>
@@ -629,7 +640,7 @@ export function SolutionPageTemplate({
         className="border-t border-[var(--color-border)] bg-white"
       >
         <div className="mx-auto max-w-4xl px-5 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
             {finalCtaEyebrow}
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">

@@ -52,6 +52,7 @@ export default function NavBar() {
             alt={logo.alt}
             width={logo.width}
             height={logo.height}
+            style={{ aspectRatio: `${logo.width} / ${logo.height}` }}
             decoding="async"
             className="h-auto w-[330px]"
           />

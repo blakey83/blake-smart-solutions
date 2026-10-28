@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ServerImage as Image } from "@/components/ui/ServerImage";
 import Link from "next/link";
 import { PhoneLink } from "@/components/PhoneLink";
 import { footerContent } from "@/content/components/siteContent";
