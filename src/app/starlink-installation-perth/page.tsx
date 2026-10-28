@@ -1,6 +1,6 @@
 import { starlinkSolutionPages } from "@/content/solutions/starlinkSolutionPages";
 import type { Metadata } from "next";
-import Image from "next/image";
+import { ServerImage as Image } from "@/components/ui/ServerImage";
 import Link from "next/link";
 import { SolutionPageTemplate } from "@/components/solutions/SolutionPageTemplate";
 import { servicePageMetadataContent } from "@/content/solutions/pageMetadata";
@@ -116,7 +116,7 @@ const relatedStarlinkArticles = [
 
 export default function StarlinkPage() {
   return (
-    <>
+    <div className="starlink-landing">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -131,7 +131,7 @@ export default function StarlinkPage() {
       />
       <section className="border-t border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
             Explore Starlink services
           </p>
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
@@ -153,7 +153,7 @@ export default function StarlinkPage() {
                 <p className="mt-3 flex-1 text-sm leading-6 text-[var(--color-muted)]">
                   {page.subhead}
                 </p>
-                <span className="mt-5 text-sm font-semibold text-[var(--color-accent)]">
+                <span className="mt-5 text-sm font-semibold text-[var(--color-accent-text)]">
                   View service <span className="transition group-hover:translate-x-1">→</span>
                 </span>
               </Link>
@@ -164,7 +164,7 @@ export default function StarlinkPage() {
       <section className="border-t border-[var(--color-border)] bg-[var(--color-page)]">
         <div className="mx-auto max-w-6xl space-y-6 px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="rounded-[28px] border border-[var(--color-border)] bg-white p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
               Starlink installation case studies
             </p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-3xl">
@@ -200,7 +200,7 @@ export default function StarlinkPage() {
                     <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
                       {caseStudy.pageDescription}
                     </p>
-                    <span className="mt-5 inline-flex text-sm font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
+                    <span className="mt-5 inline-flex text-sm font-semibold text-[var(--color-accent-text)] transition group-hover:text-[var(--color-accent-strong)]">
                       Read case study
                     </span>
                   </div>
@@ -218,7 +218,7 @@ export default function StarlinkPage() {
           </div>
 
           <div className="rounded-[28px] border border-[var(--color-border)] bg-white p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
               Starlink Installation Perth guides
             </p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-3xl">
@@ -242,7 +242,7 @@ export default function StarlinkPage() {
                   <p className="mt-3 flex-1 text-sm leading-6 text-[var(--color-muted)]">
                     {article.description}
                   </p>
-                  <span className="mt-5 text-sm font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
+                  <span className="mt-5 text-sm font-semibold text-[var(--color-accent-text)] transition group-hover:text-[var(--color-accent-strong)]">
                     {article.cta}
                   </span>
                 </Link>
@@ -251,6 +251,6 @@ export default function StarlinkPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
