@@ -295,6 +295,7 @@ export function SolutionPageTemplate({
   subHeadline,
   heroEyebrow = solutionPageTemplateContent.heroEyebrow,
   heroBackgroundImage = heroSectionContent.imageSrc,
+  heroMobileSources,
   heroImage,
   heroImageAlt,
   bulletPoints,
@@ -344,8 +345,9 @@ export function SolutionPageTemplate({
   });
   preload(mobileHero.src, {
     as: "image",
-    imageSrcSet: mobileHero.srcSet,
+    imageSrcSet: heroMobileSources?.avif ?? mobileHero.srcSet,
     imageSizes: mobileHero.sizes,
+    type: heroMobileSources ? "image/avif" : undefined,
     media: "(max-width: 639px)",
     fetchPriority: "high",
   });
@@ -406,8 +408,22 @@ export function SolutionPageTemplate({
                   {headline}
                 </h1>
                 <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-[24px] sm:hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element -- Optimized server props match the mobile-only preload above. */}
-                  <img {...mobileHero} alt={mobileHero.alt} className="object-cover" />
+                  <picture>
+                    {heroMobileSources ? (
+                      <>
+                        <source media="(max-width: 639px)" type="image/avif" srcSet={heroMobileSources.avif} sizes={mobileHero.sizes} />
+                        <source media="(max-width: 639px)" type="image/webp" srcSet={heroMobileSources.webp} sizes={mobileHero.sizes} />
+                      </>
+                    ) : null}
+                    {/* Sources match the mobile-only preload; desktop uses the inline fallback. */}
+                    <img
+                      {...mobileHero}
+                      src={heroMobileSources ? "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" : mobileHero.src}
+                      srcSet={heroMobileSources ? undefined : mobileHero.srcSet}
+                      alt={mobileHero.alt}
+                      className="object-cover"
+                    />
+                  </picture>
                 </div>
                 <p className="mt-5 text-base leading-7 text-[var(--color-muted)] sm:text-lg sm:text-white/85">
                   {subHeadline}

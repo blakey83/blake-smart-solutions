@@ -104,6 +104,7 @@ export type SolutionPageTemplateProps = {
   subHeadline: string;
   heroEyebrow?: string;
   heroBackgroundImage?: string;
+  heroMobileSources?: { avif: string; webp: string };
   heroImage?: string;
   heroImageAlt?: string;
   bulletPoints: string[];

@@ -125,6 +125,10 @@ export default function StarlinkPage() {
       />
       <SolutionPageTemplate
         {...starlinkSolutionContent}
+        heroMobileSources={{
+          avif: "/images/solutions/starLink/starlink-woodland-mobile-480.avif 480w, /images/solutions/starLink/starlink-woodland-mobile-750.avif 750w, /images/solutions/starLink/starlink-woodland-mobile-1030.avif 1030w",
+          webp: "/images/solutions/starLink/starlink-woodland-mobile-480.webp 480w, /images/solutions/starLink/starlink-woodland-mobile-750.webp 750w, /images/solutions/starLink/starlink-woodland-mobile-1030.webp 1030w",
+        }}
         currentPath={pagePath}
         trustItems={starlinkSolutionTrustItems}
         content={whyChooseUsStarlink}
