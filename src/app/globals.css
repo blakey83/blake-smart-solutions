@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
-/* Render the landing page's distant sections as they approach the viewport.
+/* Render opted-in WiFi pages' distant sections as they approach the viewport.
    Keep the hero and fixed quote button outside containment. */
 @supports (content-visibility: auto) {
   .wifi-landing [data-solution-page] > section:not(:first-of-type),
+  .wifi-deferred-sections [data-solution-page] > section:not(:first-of-type),
   .wifi-landing > section {
     content-visibility: auto;
     contain-intrinsic-size: auto 900px;

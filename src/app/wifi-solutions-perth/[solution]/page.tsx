@@ -46,13 +46,13 @@ export default async function WifiSolutionPage({ params }: PageProps) {
   ]);
 
   return (
-    <>
+    <div className={solution === "wifi-access-point-installation" ? "wifi-deferred-sections" : undefined}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <SolutionPageTemplate
         {...page.content}
         trustItems={wifiSolutionTrustItems}
         content={whyChooseUsWiFi}
       />
-    </>
+    </div>
   );
 }
