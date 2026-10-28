@@ -59,7 +59,7 @@ const relatedWifiArticles = [
 
 export default function WifiSolutionsPerthPage() {
   return (
-    <>
+    <div className="wifi-landing">
       {process.env.NODE_ENV === "production" && <WifiMetaPixel />}
       <script
         type="application/ld+json"
@@ -75,7 +75,7 @@ export default function WifiSolutionsPerthPage() {
       />
       <section className="border-t border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
             Explore Wi-Fi services
           </p>
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
@@ -97,7 +97,7 @@ export default function WifiSolutionsPerthPage() {
                 <p className="mt-3 flex-1 text-sm leading-6 text-[var(--color-muted)]">
                   {page.content.subHeadline}
                 </p>
-                <span className="mt-5 text-sm font-semibold text-[var(--color-accent)]">
+                <span className="mt-5 text-sm font-semibold text-[var(--color-accent-text)]">
                   View service <span className="transition group-hover:translate-x-1">→</span>
                 </span>
               </Link>
@@ -107,7 +107,7 @@ export default function WifiSolutionsPerthPage() {
             href="/case-studies/starlink-wifi-wireless-bridge-darlington"
             className="group mt-8 block rounded-[24px] border border-[var(--color-border)] bg-[var(--color-page)] p-6 transition hover:border-[var(--color-accent)] hover:bg-white"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
               Darlington case study
             </p>
             <h3 className="mt-3 text-xl font-semibold tracking-tight text-[var(--color-ink)]">
@@ -116,7 +116,7 @@ export default function WifiSolutionsPerthPage() {
             <p className="mt-3 max-w-3xl text-base leading-7 text-[var(--color-muted)]">
               See how Starlink, wired Wi-Fi access points and a dedicated wireless bridge brought reliable connectivity to a Darlington home and its detached shed.
             </p>
-            <span className="mt-5 block text-sm font-semibold text-[var(--color-accent)] group-hover:text-[var(--color-accent-strong)]">
+            <span className="mt-5 block text-sm font-semibold text-[var(--color-accent-text)] group-hover:text-[var(--color-accent-strong)]">
               Read the Darlington case study →
             </span>
           </Link>
@@ -125,7 +125,7 @@ export default function WifiSolutionsPerthPage() {
       <section className="border-t border-[var(--color-border)] bg-[var(--color-page)]">
         <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="rounded-[28px] border border-[var(--color-border)] bg-white p-6 shadow-[0_14px_30px_rgba(15,23,42,0.04)] sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
               {wifiSolutionsPerthPageContent.guide.eyebrow}
             </p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-3xl">
@@ -147,7 +147,7 @@ export default function WifiSolutionsPerthPage() {
                   <p className="mt-3 flex-1 text-sm leading-6 text-[var(--color-muted)]">
                     {article.description}
                   </p>
-                  <span className="mt-5 text-sm font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
+                  <span className="mt-5 text-sm font-semibold text-[var(--color-accent-text)] transition group-hover:text-[var(--color-accent-strong)]">
                     {article.cta}
                   </span>
                 </Link>
@@ -156,6 +156,6 @@ export default function WifiSolutionsPerthPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

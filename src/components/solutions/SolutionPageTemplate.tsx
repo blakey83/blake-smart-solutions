@@ -351,7 +351,7 @@ export function SolutionPageTemplate({
   });
 
   return (
-    <div className="pb-20 bg-[var(--color-page)] text-[var(--color-ink)] sm:pb-0">
+    <div data-solution-page className="pb-20 bg-[var(--color-page)] text-[var(--color-ink)] sm:pb-0">
       {timedAvailabilityPopup?.enabled ? (
         <TimedAvailabilityPopup content={timedAvailabilityPopup} />
       ) : null}
