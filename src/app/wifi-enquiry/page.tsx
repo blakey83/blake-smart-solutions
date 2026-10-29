@@ -1,3 +1,4 @@
+import { EnquiryContactFallback } from "@/components/EnquiryContactFallback";
 import type { Metadata } from "next";
 import { EnquiryPageClient } from "@/app/enquiry/EnquiryPageClient";
 import { enquiryProductContent } from "@/content/components/siteContent";
@@ -30,6 +31,7 @@ export default function WifiEnquiryPage() {
           productName={enquiryProductContent.wifiSolutions}
           redirectTo="/wifi-solutions-perth"
         />
+        <EnquiryContactFallback />
       </div>
     </section>
   );

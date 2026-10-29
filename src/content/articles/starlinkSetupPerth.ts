@@ -251,7 +251,7 @@ export const starlinkSetupGuideContent = {
       title: "Shed WiFi",
       description:
         "Extend internet from the main house to a shed, granny flat or workshop.",
-      href: "/wifi-solutions-perth",
+      href: "/wifi-solutions-perth/internet-to-sheds-workshops",
     },
   ],
 };

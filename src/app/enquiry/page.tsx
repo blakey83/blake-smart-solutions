@@ -1,3 +1,4 @@
+import { EnquiryContactFallback } from "@/components/EnquiryContactFallback";
 import type { Metadata } from "next";
 import { enquiryPageContent } from "@/content/pages/enquiryPage";
 import { buildSeoMetadata } from "@/lib/seoMetadata";
@@ -23,6 +24,7 @@ export default function EnquiryPage() {
           {enquiryPageContent.intro}
         </p>
         <EnquiryPageClient />
+        <EnquiryContactFallback />
       </div>
     </section>
   );

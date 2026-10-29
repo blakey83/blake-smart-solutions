@@ -1,3 +1,4 @@
+import { ContextualArticleText } from "@/components/ContextualArticleText";
 import { StarlinkReferralCta } from "../is-starlink-worth-it/StarlinkReferralCta";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -119,7 +120,19 @@ function Paragraphs({ paragraphs }: { paragraphs?: string[] }) {
           key={paragraph}
           className="text-base leading-7 text-[var(--color-muted)] sm:text-lg"
         >
-          {paragraph}
+          <ContextualArticleText
+            text={paragraph}
+            links={[
+              {
+                phrase: "request a quote",
+                href: "/articles/where-to-book-starlink-installer-perth",
+              },
+              {
+                phrase: "A recent Oakford install",
+                href: "/case-studies/starlink-installation-oakford-poor-nbn-fixed-wireless",
+              },
+            ]}
+          />
         </p>
       ))}
     </>

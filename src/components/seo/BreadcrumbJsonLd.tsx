@@ -20,31 +20,15 @@ const breadcrumbRoutes: Record<string, BreadcrumbConfig> = {
   },
   "/articles/7-ways-to-fix-wifi": {
     title: "7 Ways to Fix Wi-Fi Problems at Home",
-    section: {
-      title: "Articles",
-      path: "/articles",
-    },
   },
   "/articles/is-starlink-worth-it": {
     title: "Is Starlink Worth It? A Perth Installer's Honest Opinion",
-    section: {
-      title: "Articles",
-      path: "/articles",
-    },
   },
   "/articles/starlink-setup-wa": {
     title: "How To Set Up Starlink In WA",
-    section: {
-      title: "Articles",
-      path: "/articles",
-    },
   },
   "/articles/starlink-vs-nbn-perth": {
     title: "Starlink vs NBN: Which Is Better in Perth?",
-    section: {
-      title: "Articles",
-      path: "/articles",
-    },
   },
   "/articles/what-makes-a-great-starlink-installer": {
     title: "What Makes a Great Starlink Installer?",
@@ -62,10 +46,6 @@ const breadcrumbRoutes: Record<string, BreadcrumbConfig> = {
   },
   "/articles/why-nbn-feels-slow": {
     title: "Why Fast NBN (or Starlink) Still Feels Slow",
-    section: {
-      title: "Articles",
-      path: "/articles",
-    },
   },
   "/enquiry": {
     title: "Enquiry",
