@@ -93,17 +93,16 @@ export const enquiryModalContent = {
   wifiConnectivityQuote: {
     title: "Get a Connectivity Quote",
     intro:
-      "Tell us where the network isn’t reaching and what you need to connect. We’ll come back with a clear quote for the right solution.",
+      "Tell us a little about what you need, and we'll recommend a solution and provide a clear, fixed-price quote.",
     messagePlaceholder:
-      "Tell us what you’re trying to connect and where the problem is.\ne.g. “WiFi is weak in the back bedrooms” or “I need internet to a shed about 30m from the house.”",
+      "What would you like help with? A brief description is fine.",
     submitCta: "Request a Quote",
   },
   starlinkInstallationQuote: {
     title: "Get Your Starlink Installation Quote",
     intro:
       "Tell us where you need it installed. We’ll confirm the details and your fixed price.",
-    messagePlaceholder:
-      "Anything you’d like us to know? (Optional)",
+    messagePlaceholder: "Anything you’d like us to know? (Optional)",
     submitCta: "Get My Free Quote",
   },
 };
@@ -119,8 +118,7 @@ export const wifiArticleCtaContent = {
   defaultMessage:
     "I’d like a connectivity quote. The areas or devices I need connected are: ",
   inlinePrompt: "Need help in Perth?",
-  inlineCta:
-    "Get a quote for reliable Wi-Fi where you need it.",
+  inlineCta: "Get a quote for reliable Wi-Fi where you need it.",
   defaultPrimaryLabel: "Get a connectivity quote",
   defaultSecondaryLabel: "Call Blake Smart Solutions",
 };
