@@ -109,7 +109,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     reviewCount: 3,
   },
   heroCtaLines: [
-    "For standard single-storey Colorbond and tiled roof installations using your supplied Starlink kit. Call us now, or leave your details, and we'll be in touch",
+    "For standard single-storey Colorbond and tiled roofs using your own Starlink kit. Call us now, or leave your details and we'll be in touch.",
   ],
   timedAvailabilityPopup: {
     enabled: true,
