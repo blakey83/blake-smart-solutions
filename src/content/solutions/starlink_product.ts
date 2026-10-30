@@ -82,13 +82,12 @@ export const starlinkProducts: Product[] = [
 export const starlinkSolutionContent: SolutionPageTemplateProps = {
   headline: "Starlink Installation for $449 Including Roof Mount & Setup",
   subHeadline:
-    "$449 complete installation for single-storey homes with Colorbond or tiled roofing. Includes standard mounting hardware, secure installation, cable routing, Starlink setup and connection testing. You’ll be online and know exactly how everything works before we leave.",
+    "Have your Starlink professionally mounted, connected and tested by a local Perth installer. Your $449 Installation includes:",
   bulletPoints: [
-    "Peace of mind for your property, with secure roof mounting, neat cabling and careful installation.",
-    "Get the best possible performance from your Starlink setup, with professional positioning, configuration and testing.",
-    "Fully protected cabling for a neat, professional installation that's built to last.",
-    "Know how to use your new Starlink from day one, with everything set up and explained before we leave.",
-    "Get your Starlink installation organised without the runaround, with prompt replies and clear communication.",
+    "Roof mounting hardware and installation",
+    "Neat, protected cable routing",
+    "Router setup and connection testing",
+    "Full handover so you're ready to go",
   ],
 
   heroEyebrow: "STARLINK INSTALLATION PERTH",
@@ -110,8 +109,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     reviewCount: 3,
   },
   heroCtaLines: [
-    "$449 for a complete single-storey installation using your Starlink kit, including all mounting gear.",
-    "Leave your details and we’ll get back to you with a free quote.",
+    "For standard single-storey Colorbond and tiled roof installations using your supplied Starlink kit. Non-standard installations quoted before work begins.",
   ],
   timedAvailabilityPopup: {
     enabled: true,
@@ -123,7 +121,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   },
 
   primaryCta: {
-    label: "Get a Free Quote Today",
+    label: "Book an installation",
     action: "enquiry",
     enquiryProductName: "Starlink Installation",
   },
@@ -137,7 +135,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     image: "/images/solutions/starLink/PXL_20260618_070344256.png",
     imageAlt: "Starlink dish installed on a Perth roof",
     eyebrow: "RECENT INSTALLATIONS",
-    title: "See some of our recent Stalink installations",
+    title: "See some of our recent Starlink installations",
     href: "/recent-installations/starlink",
     linkLabel: "Our work speaks for itself",
   },
