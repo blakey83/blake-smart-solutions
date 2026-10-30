@@ -85,9 +85,9 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "Have your Starlink professionally mounted, connected and tested by a local Perth installer. Your $449 Installation includes:",
   bulletPoints: [
     "Quality, Australian made mounting equipment designed for Australian conditions",
-    "Fully Protected Cable Routing. All external cabling protected in conduit, with concealed routing through the mount and a neat, weatherproof roof entry.",
-    "We connect, configure and test your Starlink so it's ready to use before we leave.",
-    "We'll show you how everything works and provide ongoing support, if you need assistance afterwards.",
+    "Fully protected cable routing and neat roof entry methods for a cleaner, more professional result. No loose cabling exposed across your roof",
+    "Complete Starlink setup so everything is working before we leave.",
+    "Demonstration on how everything works and we provide ongoing support, if you need assistance afterwards.",
   ],
 
   heroEyebrow: "STARLINK INSTALLATION PERTH",
