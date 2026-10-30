@@ -109,7 +109,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     reviewCount: 3,
   },
   heroCtaLines: [
-    "For standard single-storey Colorbond and tiled roof installations using your supplied Starlink kit. Non-standard installations quoted before work begins.",
+    "For standard single-storey Colorbond and tiled roof installations using your supplied Starlink kit. Call us now, or leave you're details, and we'll be in touch",
   ],
   timedAvailabilityPopup: {
     enabled: true,
@@ -121,12 +121,12 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   },
 
   primaryCta: {
-    label: "Book an installation",
+    label: "Leave your details",
     action: "enquiry",
     enquiryProductName: "Starlink Installation",
   },
   secondaryCta: {
-    label: "Call 0477 948 079",
+    label: "Call 0477 948 079 now",
     action: "link",
     href: "tel:0477948079",
   },
