@@ -15,7 +15,7 @@ export const recentStarlinkInstallationsContent: WorkShowcaseContent = {
       outcome:
         "The result: fast, reliable internet for everyday use, working from home and streaming — without the limitations of traditional rural broadband options.",
       image: {
-        src: "/images/work-photos/Starlink/Jarrahdale.jpg",
+        src: "/images/work-photos/Starlink/jarrahdale-installation.webp",
         alt: "Starlink installation overlooking a rural property in Jarrahdale",
       },
     },

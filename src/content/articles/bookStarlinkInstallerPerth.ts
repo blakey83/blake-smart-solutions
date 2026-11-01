@@ -83,8 +83,8 @@ export const bookStarlinkInstallerPerthContent: {
       alt: "Starlink dish mounted on a roof in City Beach",
     },
     {
-      src: "/images/case-studies/starlink-oakford/starlink-dish-install-oakford.jpg",
-      alt: "Starlink dish installed on a rural Oakford roof",
+      src: "/images/work-photos/Starlink/clarkson-gen-3-router-bracket.webp",
+      alt: "Starlink Gen 3 router and power supply wall-mounted together on a bracket in a Clarkson home",
     },
     {
       src: "/images/work-photos/Starlink/baldivis-starlink-work-from-home-card.jpg",

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ServerImage as Image } from "@/components/ui/ServerImage";
 import Link from "next/link";
 import { homeRecentInstallationsContent } from "@/content/components/home/recentInstallations";
 import type { CompletedJob } from "@/lib/types";
@@ -41,7 +41,8 @@ export function RecentInstallationsSection({
                 src={job.image.src}
                 alt={job.image.alt}
                 fill
-                sizes="(min-width: 1152px) 350px, (min-width: 1024px) 30vw, (min-width: 640px) 46vw, 100vw"
+                quality={60}
+                sizes="(min-width: 1152px) 350px, (min-width: 1024px) calc((100vw - 104px) / 3), (min-width: 640px) calc((100vw - 68px) / 2), calc(100vw - 40px)"
                 className="object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-105"
                 style={{ objectPosition: job.image.objectPosition }}
               />

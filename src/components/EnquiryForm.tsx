@@ -268,7 +268,7 @@ export function EnquiryForm({
         </button> : null}
 
         <div className={isInline ? "" : "pr-10"}>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-500">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">
             {enquiryModalContent.eyebrow}
           </p>
           <h2 className={`mt-2 font-bold tracking-tight text-slate-900 ${isInline ? "text-2xl" : "text-3xl"}`}>

@@ -40,7 +40,7 @@ export function ServicesSection() {
                 {service.description}
               </p>
 
-              <span className="mt-5 inline-flex min-h-12 items-center text-base font-semibold text-[var(--color-accent)] transition group-hover:text-[var(--color-accent-strong)]">
+              <span className="mt-5 inline-flex min-h-12 items-center text-base font-semibold text-[var(--color-accent-text)] transition group-hover:text-[var(--color-accent-strong)]">
                 {servicesSectionContent.cta}
               </span>
             </Link>

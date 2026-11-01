@@ -42,7 +42,7 @@ export function ProblemPathsSelection() {
                 <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
                   {problem.description}
                 </p>
-                <p className="mt-4 text-base font-medium text-[var(--color-accent)]">
+                <p className="mt-4 text-base font-medium text-[var(--color-accent-text)]">
                   {problemPathsSectionContent.cta}
                 </p>
               </div>

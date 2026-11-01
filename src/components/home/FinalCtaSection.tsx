@@ -8,7 +8,7 @@ export function FinalCtaSection() {
       className="border-t border-[var(--color-border)] bg-white"
     >
       <div className="mx-auto max-w-4xl px-5 py-12 text-center sm:px-6 lg:px-8 lg:py-20">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
           {finalCtaSectionContent.eyebrow}
         </p>
 

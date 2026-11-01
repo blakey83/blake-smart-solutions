@@ -5,7 +5,7 @@ export const heroSectionContent = {
     { label: "Ajax alarms", value: "Ajax Alarm Systems" },
     { label: "Starlink", value: "Starlink Installation" },
   ],
-  imageSrc: "/Blake_shop_front.jpeg",
+  imageSrc: "/images/branding/home-hero.webp",
   imageAlt: "Blake Smart Solutions ute parked outside the workshop",
   review: {
     rating: "★★★★★",
