@@ -82,6 +82,7 @@ export function WorkShowcasePageTemplate({
                         fill
                         sizes="(min-width: 1024px) 34rem, 100vw"
                         className="object-cover"
+                        style={{ objectPosition: job.image.objectPosition }}
                       />
                     </div>
                   </div>

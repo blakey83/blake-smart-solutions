@@ -1,6 +1,13 @@
+import { recentSecurityCameraInstallationsContent } from "@/content/recent-installations/security-cameras";
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const cctvSolutionContent: SolutionPageTemplateProps = {
+  recentWork: {
+    eyebrow: "Recent security camera installations",
+    title: "See our recent security camera installations across Perth",
+    href: "/recent-installations/security-cameras",
+    installations: recentSecurityCameraInstallationsContent.completedJobs.slice(0, 3),
+  },
   specialOffer: {
     title: "Two Camera HiLook CCTV System Fully Installed",
     price: "$1,399",
@@ -18,7 +25,9 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     "Ongoing local support if you need help after installation",
   ],
   heroEyebrow: "ATTENTION PERTH HOMEOWNERS",
-  heroBackgroundImage: "/Blake_shop_front.jpeg",
+  heroBackgroundImage: "/images/solutions/cctv/security-camera-hero.webp",
+  heroDesktopImageClassName: "object-center lg:w-[130%] lg:max-w-none lg:object-[center_44%]",
+  heroImageAlt: "Dahua security camera installed on an exterior brick wall with its warning light illuminated",
   // heroImage: "/images/solutions/cctv/blake_installation.jpg",
   // heroImageAlt: "Security camera installation by Blake Smart Solutions",
 
@@ -28,6 +37,11 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     quote:
       "I wanted a camera system that I didn’t have to pay for subscription and Blake had come up with a commercial grade option for me.",
     author: "Juan B",
+  },
+
+  heroReviewStrip: {
+    heading: "Trusted by Perth Homeowners and Businesses",
+    reviewCount: 3,
   },
 
   primaryCta: {
@@ -176,16 +190,28 @@ export const whyChooseUsSecurity = {
     reviewsHeading: "Recent customer feedback",
     reviews: [
       {
-        name: "Juan B",
-        text: "Fantastic service and can sleep at night knowing I have a full CCTV camera system installed at my house.",
+        name: "Sue Haynes",
+        text: "Daniel arrived on time and installed our replacement system without problems. Neat and tidy install. No hesitation to recommend Daniel for your Starlink installations.",
+      },
+      {
+        name: "Alan Star",
+        text: "Daniel did a great job installing my setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
+      },
+      {
+        name: "Paris Rose",
+        text: "Great experience, he replied to my initial email very quickly. Friendly and prompt service.",
+      },
+      {
+        name: "Mark Lumacang",
+        text: "Good communication and clean work.",
       },
       {
         name: "Lesley Middleton",
         text: "Came over at the appointed time and fixed my security camera system efficiently. Really went above and beyond.",
       },
       {
-        name: "Alan Star",
-        text: "Daniel did a great job installing my Starlink setup and helped me out to route another data cable while he was at it. Recommended, thank you.",
+        name: "Sid Chahal",
+        text: "recently had Blake install my Starlink system at my property, and I couldn’t be happier with the service. From the first call to the final cleanup, Blake was professional, knowledgeable, and incredibly efficient.",
       },
     ],
   },

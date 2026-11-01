@@ -36,7 +36,7 @@ export function SolutionDetailPageTemplate({ page, service = "wifi" }: {
     enquiryProductName: page.enquiryName,
     enquiryDefaultMessage: isStarlink
       ? "I’d like a quote for Starlink installation at my business. My suburb, premises type and Starlink kit are: "
-      : `I’d like a quote for ${page.enquiryName.toLowerCase()}. The area or connection I need help with is: `,
+      : undefined,
   };
   const gallery = page.installationGallery;
   const features: FeatureSection[] = [

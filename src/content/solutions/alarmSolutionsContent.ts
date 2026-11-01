@@ -1,3 +1,4 @@
+import { recentAjaxInstallationsContent } from "@/content/recent-installations/ajax";
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const alarmsSolutionContent: SolutionPageTemplateProps = {
@@ -7,11 +8,11 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
     whyChooseUs: "why-blake",
     faqs: "ajax-faqs",
   },
-  specialOffer: {
-    title:
-      "10% off Ajax alarm installation for installations booked before 31st October 2026",
-    price: "",
-  },
+  // specialOffer: {
+  //   title:
+  //     "2 Year warrany including full technical support",
+  //   price: "",
+  // },
   headline: "Ajax Security installation in Perth",
   subHeadline:
     "Professionally installed Ajax alarm systems that help you know who came in, what triggered the alert and whether you need to act. Get instant notifications, photo verification and complete control from your phone, with no ongoing app fees.",
@@ -24,6 +25,8 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
   ],
   heroEyebrow: "AJAX INSTALLATION PERTH",
   heroBackgroundImage: "/images/solutions/ajaxSecurity/ajax_blake.png",
+  heroDesktopImageClassName:
+    "object-center lg:left-[40%] lg:w-[60%] lg:max-w-none lg:bottom-auto lg:top-[-15%] lg:h-[115%] lg:object-top lg:[mask-image:linear-gradient(to_right,transparent,black_20%)]",
 
   // heroImage: "/images/solutions/ajaxSecurity/ajax_hero.png",
   // heroImageAlt: "Ajax alarm installation by Blake Smart Solutions",
@@ -53,38 +56,15 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
 
   recentWork: {
     eyebrow: "Recent Ajax installations",
-    image: "/images/work-photos/Ajax/recent-ajax-installations.jpg",
-    imageAlt:
-      "Daniel from Blake Smart Solutions drilling during an Ajax alarm installation",
     title: "Check out our recent Ajax installations in Perth",
     href: "/recent-installations/ajax",
-    linkLabel: "View recent Ajax installations",
+    installations: recentAjaxInstallationsContent.completedJobs.slice(0, 3),
   },
 
   featureSections: [
     {
       eyebrow: "",
-      title: "Professionally installed Ajax apartment systems from $1,160*",
-      intro:
-        "A compact Ajax security package designed for apartments, units and smaller properties. Control the system from your phone, receive instant alerts and expand it later as your needs change.",
-      points: [
-        "Ajax Hub 2 with mobile app control",
-        "1 × Ajax MotionProtect detector",
-        "1 × Ajax DoorProtect entry detector",
-        "1 × Ajax SpaceControl remote",
-        "Professional installation, configuration and app setup",
-        "Full system testing and customer handover",
-      ],
-      finePrint:
-        "*Price includes the 10% discount for installations booked before 31 October 2026.",
-      image: "/images/solutions/ajaxSecurity/ajax_apartment_kit.png",
-      imageAlt:
-        "Ajax apartment alarm package with hub, motion detector, door detector, remote and mobile app",
-      imageEmphasis: "large",
-    },
-    {
-      eyebrow: "",
-      title: "Professionally installed Ajax systems from $1,849*",
+      title: "Professionally installed Ajax home systems from $1,699",
       intro:
         "Ajax delivers top-of-the-range, cutting-edge wireless security controlled through a smartphone app. The ultimate protection for your home.",
       points: [
@@ -96,11 +76,31 @@ export const alarmsSolutionContent: SolutionPageTemplateProps = {
         "2 × Ajax SpaceControl remotes",
         "Professional installation, configuration and app setup",
       ],
-      finePrint:
-        "*Price includes the 10% discount for installations booked before 31 October 2026.",
+      // finePrint:
+      //   "Price includes",
       image: "/images/solutions/ajaxSecurity/basic_ajax_kit.webp",
       imageAlt:
         "Ajax basic alarm package with hub, three motion detectors, external siren, internal siren, two control fobs and phone app",
+      imageEmphasis: "large",
+    },
+    {
+      eyebrow: "",
+      title: "Professionally installed Ajax apartment systems from $1,160",
+      intro:
+        "A compact Ajax security package designed for apartments, units and smaller properties. Control the system from your phone, receive instant alerts and expand it later as your needs change.",
+      points: [
+        "Ajax Hub 2 with mobile app control",
+        "1 × Ajax MotionProtect detector",
+        "1 × Ajax DoorProtect entry detector",
+        "1 × Ajax SpaceControl remote",
+        "Professional installation, configuration and app setup",
+        "Full system testing and customer handover",
+      ],
+      // finePrint:
+      //   "Includes 2",
+      image: "/images/solutions/ajaxSecurity/ajax_apartment_kit.png",
+      imageAlt:
+        "Ajax apartment alarm package with hub, motion detector, door detector, remote and mobile app",
       imageEmphasis: "large",
     },
   ],

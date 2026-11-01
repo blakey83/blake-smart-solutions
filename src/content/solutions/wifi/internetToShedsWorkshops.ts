@@ -11,6 +11,8 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
   heroEyebrow: "POINT-TO-POINT WIFI & WIRELESS BRIDGE INSTALLATION · PERTH",
   heroBackgroundImage:
     "/images/solutions/wifi/shed-building-link/oakford-shed-wifi-hero.webp",
+  heroDesktopImageClassName:
+    "object-center lg:left-[5%] lg:w-[85%] lg:h-auto lg:bottom-auto lg:top-[-20%] lg:[mask-image:linear-gradient(to_right,transparent,black_20%,black_85%,transparent),linear-gradient(to_bottom,black_80%,transparent)] lg:[mask-composite:intersect]",
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:
@@ -23,16 +25,11 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
     "A dependable connection using equipment built to handle Australian outdoor conditions.",
     "Get your installation organised without the runaround, with straightforward advice and communication.",
   ],
-  heroCtaLines: [
-    "",
-    "Leave you details, and we'll get back to you with a free, easy-to-understand quote.",
-  ],
+
   primaryCta: {
     label: "Get a free quote today",
     action: "enquiry",
     enquiryProductName: "Internet to Sheds & Workshops",
-    enquiryDefaultMessage:
-      "d like a quote for a wireless bridge or internet connection to another building. ",
   },
   featureSections: [
     {
@@ -203,7 +200,5 @@ export const internetToShedsWorkshops: SolutionPageTemplateProps = {
     label: "Get a connectivity quote",
     action: "enquiry",
     enquiryProductName: "Internet to Sheds & Workshops",
-    enquiryDefaultMessage:
-      "I’d like a quote for internet to sheds & workshops. The area or connection I need help with is: ",
   },
 };

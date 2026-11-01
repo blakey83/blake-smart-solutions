@@ -1,7 +1,8 @@
+import { RecentInstallationsSection } from "@/components/home/RecentInstallationsSection";
+import { HeroEnquiryForm } from "@/components/HeroEnquiryForm";
 import { getImageProps } from "next/image";
 import { preload } from "react-dom";
 import { ServerImage as Image } from "@/components/ui/ServerImage";
-import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { heroSectionContent } from "@/content/components/home/heroSection";
 import { solutionPageTemplateContent } from "@/content/components/siteContent";
@@ -295,6 +296,7 @@ export function SolutionPageTemplate({
   subHeadline,
   heroEyebrow = solutionPageTemplateContent.heroEyebrow,
   heroBackgroundImage = heroSectionContent.imageSrc,
+  heroDesktopImageClassName = "object-center lg:bottom-auto lg:top-[-25%] lg:h-[125%]",
   heroMobileSources,
   heroImage,
   heroImageAlt,
@@ -387,12 +389,12 @@ export function SolutionPageTemplate({
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            className="absolute inset-0 -z-20 hidden h-full w-full object-cover object-center sm:block"
+            className={`absolute inset-0 -z-20 hidden h-full w-full object-cover sm:block ${heroDesktopImageClassName}`}
           />
         </picture>
-        <div className="absolute inset-0 -z-10 hidden sm:block bg-[linear-gradient(180deg,rgba(31,41,55,0.88)_0%,rgba(31,41,55,0.78)_46%,rgba(31,41,55,0.92)_100%)] lg:bg-[linear-gradient(90deg,rgba(31,41,55,0.92)_0%,rgba(31,41,55,0.78)_56%,rgba(13,160,245,0.18)_100%)]" />
+        <div className="absolute inset-0 -z-10 hidden sm:block bg-[linear-gradient(180deg,rgba(31,41,55,0.88)_0%,rgba(31,41,55,0.78)_46%,rgba(31,41,55,0.92)_100%)] lg:bg-[linear-gradient(0deg,#000_0%,rgba(0,0,0,0.85)_18%,transparent_70%),linear-gradient(90deg,rgba(31,41,55,0.92)_0%,rgba(31,41,55,0.65)_56%,rgba(13,160,245,0.1)_100%)]" />
         <div className="mx-auto max-w-6xl px-5 pb-14 pt-4 sm:px-6 sm:pb-16 sm:pt-6 lg:px-8 lg:pb-20 lg:pt-8">
-          <div className="max-w-3xl">
+          <div className="grid items-center gap-10 lg:min-h-[54.5rem] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-end lg:gap-12">
             <div>
               <div className="hidden sm:block">
                 <HeroSocialProofCard proof={heroSocialProof} />
@@ -476,6 +478,10 @@ export function SolutionPageTemplate({
                 </div>
               </div>
             </div>
+            <HeroEnquiryForm
+              productName={primaryCta.enquiryProductName}
+              defaultMessage={primaryCta.enquiryDefaultMessage}
+            />
           </div>
         </div>
       </section>
@@ -491,41 +497,18 @@ export function SolutionPageTemplate({
       ) : null}
 
       {recentWork ? (
-        <section id={sectionIds?.recentWork} className="bg-white">
-          <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-20">
-            <Link
-              href={recentWork.href}
-              className="group grid overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-white shadow-[0_16px_34px_rgba(15,23,42,0.06)] transition hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-[0_20px_42px_rgba(15,23,42,0.1)] md:grid-cols-[1.05fr_0.95fr]"
-            >
-              <div className="relative min-h-72 bg-[var(--color-card)] md:min-h-[24rem]">
-                <Image
-                  src={recentWork.image}
-                  alt={recentWork.imageAlt ?? recentWork.title}
-                  fill
-                  sizes="(min-width: 1024px) 34rem, 100vw"
-                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                />
-              </div>
-              <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-12">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
-                  {recentWork.eyebrow}
-                </p>
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-                  {recentWork.title}
-                </h2>
-                <span className="mt-7 inline-flex items-center text-sm font-semibold text-[var(--color-accent-text)]">
-                  {recentWork.linkLabel ?? "View recent work"}
-                  <span
-                    aria-hidden="true"
-                    className="ml-2 transition group-hover:translate-x-1"
-                  >
-                    →
-                  </span>
-                </span>
-              </div>
-            </Link>
-          </div>
-        </section>
+        <RecentInstallationsSection
+          id={sectionIds?.recentWork}
+          content={{
+            eyebrow: recentWork.eyebrow,
+            title: recentWork.title,
+            installations: recentWork.installations.slice(0, 3).map((job) => ({
+              job,
+              title: job.title,
+              href: recentWork.href,
+            })),
+          }}
+        />
       ) : null}
 
       {resolvedFeatureSections.map((section, index) => (

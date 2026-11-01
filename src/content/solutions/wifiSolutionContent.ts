@@ -1,18 +1,22 @@
+import { recentWifiInstallationsContent } from "@/content/recent-installations/wifi";
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
 export const wifiSolutionContent: SolutionPageTemplateProps = {
-  headline: "Reliable Home Network Installation, WiFi & Connectivity Solutions",
+  headline: "Get a Home Network That Works Where You Need It",
   subHeadline:
-    "We install reliable home and business connectivity systems across Perth, including WiFi access points, Ethernet cabling, wireless links and properly configured network equipment.",
+    "Whether you're planning a new home network or struggling with your existing Wi-Fi, we can help you find the right solution and get everything working together.",
   bulletPoints: [
-    "Enjoy reliable internet throughout your home, wherever you need to connect.",
+    "Move around your home with reliable Wi-Fi in the areas where you use it most.",
     "Stream, work from home and game with fewer interruptions, even with multiple devices connected.",
     "Get more from your existing NBN or Starlink connection, with better connectivity and WiFi coverage around your home.",
     "Get your home network sorted without the runaround, with straightforward advice and clear communication.",
   ],
   heroEyebrow: "HOME NETWORK & WIFI INSTALLATION · PERTH",
-  heroBackgroundImage:
-    "/images/work-photos/WiFi/kallaroo-ceiling-wifi-access-point2.webp",
+  heroBackgroundImage: "/images/solutions/wifi/alkimos-access-point-hero.webp",
+  heroDesktopImageClassName:
+    "object-center lg:w-[150%] lg:max-w-none lg:object-[center_28%]",
+  heroImageAlt:
+    "Ceiling-mounted Wi-Fi access point professionally installed in an Alkimos home",
   // heroImage: "/images/work_gallery/wifi_survey.jpeg",
   // heroImageAlt: "Blake Smart Solutions WiFi",
 
@@ -27,10 +31,6 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
     heading: "Trusted by Perth homeowners and businesses",
     reviewCount: 3,
   },
-  heroCtaLines: [
-    "",
-    "Leave you details, and we'll get back to you with a free, easy-to-understand quote.",
-  ],
 
   primaryCta: {
     label: "Get a free quote",
@@ -44,13 +44,10 @@ export const wifiSolutionContent: SolutionPageTemplateProps = {
   },
 
   recentWork: {
-    image: "/images/work-photos/WiFi/recent-wifi-installations-card.webp",
-    imageAlt:
-      "Daniel from Blake Smart Solutions drilling for a neat Wi-Fi access point installation",
     eyebrow: "RECENT INSTALLATIONS",
     title: "See some of our recent Wi-Fi installations",
     href: "/recent-installations/wifi",
-    linkLabel: "Our work speaks for itself",
+    installations: recentWifiInstallationsContent.completedJobs.slice(0, 3),
   },
 
   featureSections: [
@@ -263,7 +260,7 @@ export const whyChooseUsWiFi = {
       src: "/images/me_and_charlotte.png",
       alt: "Daniel from Blake Smart Solutions with Charlotte",
     },
-    title: "WiFi help from someone who understands communications",
+    title: "Help from someone who understands home internet",
     paragraph:
       "Blake Smart Solutions is built on more than 20 years of experience working with communications and technology systems across military, industrial and commercial environments. In those industries, systems are expected to perform reliably, planning matters, and attention to detail is essential. That same approach is applied to every installation, delivering practical solutions that are designed to work reliably in the real world.",
     bullets: [

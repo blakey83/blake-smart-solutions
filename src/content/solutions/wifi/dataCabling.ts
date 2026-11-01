@@ -30,7 +30,6 @@ export const dataCabling: SolutionPageTemplateProps = {
     label: "Get a connectivity quote",
     action: "enquiry",
     enquiryProductName: "Data Cabling",
-    enquiryDefaultMessage: "I’d like a quote for data cabling. The area or connection I need help with is: "
   },
   featureSections: [
     {
@@ -141,6 +140,5 @@ export const dataCabling: SolutionPageTemplateProps = {
     label: "Get a connectivity quote",
     action: "enquiry",
     enquiryProductName: "Data Cabling",
-    enquiryDefaultMessage: "I’d like a quote for data cabling. The area or connection I need help with is: "
   },
 };

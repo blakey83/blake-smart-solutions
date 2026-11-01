@@ -1,3 +1,4 @@
+import { recentStarlinkInstallationsContent } from "@/content/recent-installations/starlink";
 import type { Product } from "@/lib/types";
 import type { SolutionPageTemplateProps } from "@/components/solutions/types";
 
@@ -86,13 +87,15 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   bulletPoints: [
     "Quality, Australian made mounting equipment designed for Australian conditions",
     "Fully protected cable routing and neat roof entry methods for a cleaner, more professional result. No loose cabling exposed across your roof",
-    "Complete Starlink setup so everything is working before we leave.",
-    "Demonstration on how everything works and we provide ongoing support, if you need assistance afterwards.",
+    "Get the most from your Starlink equipment, with professional positioning, configuration and testing.",
+    "Know how to use your Starlink from day one, with a practical walkthrough and ongoing support when you need it.",
   ],
 
   heroEyebrow: "STARLINK INSTALLATION PERTH",
   heroBackgroundImage:
     "/images/solutions/starLink/starlink-roof-mount-woodland-hero.webp",
+  heroDesktopImageClassName:
+    "object-center lg:bottom-auto lg:top-[-40%] lg:h-[140%]",
 
   // heroImage: "/images/solutions/starLink/PXL_20260618_070344256.png",
 
@@ -112,7 +115,7 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
     "For standard single-storey Colorbond and tiled roofs using your own Starlink kit. Call us now, or leave your details and we'll be in touch.",
   ],
   timedAvailabilityPopup: {
-    enabled: true,
+    enabled: false,
     title: "Looking for an installation date?",
     subtitle:
       "Tell us your suburb and preferred install date. We’ll check availability and get back to you.",
@@ -132,12 +135,10 @@ export const starlinkSolutionContent: SolutionPageTemplateProps = {
   },
 
   recentWork: {
-    image: "/images/solutions/starLink/PXL_20260618_070344256.png",
-    imageAlt: "Starlink dish installed on a Perth roof",
     eyebrow: "RECENT INSTALLATIONS",
     title: "See some of our recent Starlink installations",
     href: "/recent-installations/starlink",
-    linkLabel: "Our work speaks for itself",
+    installations: recentStarlinkInstallationsContent.completedJobs.slice(0, 3),
   },
 
   featureSection: {
@@ -362,16 +363,8 @@ export const whyChooseUsStarlink = {
         text: "recently had Blake install my Starlink system at my property, and I couldn’t be happier with the service. From the first call to the final cleanup, Blake was professional, knowledgeable, and incredibly efficient.",
       },
       {
-        name: "Mark Lumacang",
-        text: "Good communication and clean work.",
-      },
-      {
         name: "Wayne Gellately",
         text: "Excellent service from Daniel, great communication as well.",
-      },
-      {
-        name: "Paris Rose",
-        text: "Daniel came and installed our Starlink on the roof, great experience, he replied to my initial email very quickly. Friendly and prompt service.",
       },
     ],
   },

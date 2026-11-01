@@ -1,6 +1,7 @@
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ProblemPathsSelection } from "@/components/home/ProblemPathsSelection";
+import { RecentInstallationsSection } from "@/components/home/RecentInstallationsSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { WhyBSS } from "@/components/landingPages/WhyBSS";
@@ -12,6 +13,7 @@ export default function Home() {
     <div className="bg-[var(--color-page)] text-[var(--color-ink)]">
       <HeroSection />
       <TrustStrip trustItems={trustItems} />
+      <RecentInstallationsSection />
       <WhyBSS content={whyChooseUsHome} background="section" />
       <ProblemPathsSelection />
       <ServicesSection />

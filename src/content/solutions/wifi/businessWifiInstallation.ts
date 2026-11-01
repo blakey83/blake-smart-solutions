@@ -30,7 +30,6 @@ export const businessWifiInstallation: SolutionPageTemplateProps = {
     label: "Get a connectivity quote",
     action: "enquiry",
     enquiryProductName: "Business Wi-Fi & Network Assessment",
-    enquiryDefaultMessage: "I’d like a quote for business wi-fi & network assessment. The area or connection I need help with is: "
   },
   featureSections: [
     {
@@ -142,6 +141,5 @@ export const businessWifiInstallation: SolutionPageTemplateProps = {
     label: "Get a connectivity quote",
     action: "enquiry",
     enquiryProductName: "Business Wi-Fi & Network Assessment",
-    enquiryDefaultMessage: "I’d like a quote for business wi-fi & network assessment. The area or connection I need help with is: "
   },
 };

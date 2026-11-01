@@ -8,6 +8,28 @@ export const recentAjaxInstallationsContent: WorkShowcaseContent = {
 
   completedJobs: [
     {
+      title: "Everyday peace of mind for a Canning Vale retiree",
+      location: "Canning Vale, WA",
+      description:
+        "This security-conscious retiree wanted greater peace of mind about protecting their Canning Vale home. We installed an Ajax alarm system with carefully positioned detection, including a discreet motion detector beside the front entrance. The neat placement keeps the equipment unobtrusive while helping monitor a key area of the home, bringing added reassurance to everyday life.",
+      image: {
+        src: "/images/work-photos/Ajax/canning-vale-ajax-motion-detector.webp",
+        alt: "White Ajax motion detector installed in the corner beside the front entrance of a Canning Vale home",
+        objectPosition: "center top",
+      },
+    },
+    {
+      title: "Seamless Ajax security in East Fremantle",
+      location: "East Fremantle, WA",
+      description:
+        "Careful placement and thoughtful colour matching help this Ajax installation blend beautifully with the home's entrance. Positioned neatly beside the front door, the detector complements the surrounding finishes while leaving the decorative glass and timber detailing to take centre stage. It's a discreet, considered finish that brings modern security into the home without compromising its character.",
+      image: {
+        src: "/images/work-photos/Ajax/east-fremantle-ajax-entrance.webp",
+        alt: "Ajax detector neatly positioned beside the front door, with a finish that complements an East Fremantle home's entrance",
+        objectPosition: "center bottom",
+      },
+    },
+    {
       title: "Ajax alarm installation for family home protection",
       location: "Kelmscott, WA",
       description:

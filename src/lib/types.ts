@@ -36,6 +36,7 @@ export type CompletedJob = {
   image: {
     src: string;
     alt: string;
+    objectPosition?: string;
   };
 };
 

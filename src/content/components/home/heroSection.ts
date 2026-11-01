@@ -1,4 +1,10 @@
 export const heroSectionContent = {
+  enquiryServices: [
+    { label: "Wi-Fi & networks", value: "WiFi Solutions" },
+    { label: "Security cameras", value: "Security Cameras" },
+    { label: "Ajax alarms", value: "Ajax Alarm Systems" },
+    { label: "Starlink", value: "Starlink Installation" },
+  ],
   imageSrc: "/Blake_shop_front.jpeg",
   imageAlt: "Blake Smart Solutions ute parked outside the workshop",
   review: {
@@ -9,11 +15,12 @@ export const heroSectionContent = {
     author: "Paris Rose",
   },
   eyebrow: "",
-  title: "CCTV, Wi-Fi & Smart Security Installed Across Perth",
+  title:
+    "Wi-Fi, Home Networks & Security Installed Across the Perth Metro Area",
   mobileDescription:
-    "Clean CCTV, Wi-Fi, Starlink and smart security installs for Perth homes and businesses.",
+    "Professional installation, maintenance and repair of home networks, security cameras, alarms and Starlink, including wired and wireless connectivity across your property. Straightforward advice, neat workmanship and local support.",
   description:
-    "Perth homes and businesses trust Blake Smart Solutions for clean installations, practical advice and reliable technology. From security cameras and alarms to Wi-Fi and Starlink installation, we help people stay connected, secure and supported.",
+    "Professional installation, maintenance and repair of home networks, security cameras, alarms and Starlink, including wired and wireless connectivity across your property. Straightforward advice, neat workmanship and local support.",
   callCTA: "Call 0477 948 079",
   quoteCTA: "Request a Quote",
 };

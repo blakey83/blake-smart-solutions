@@ -69,9 +69,9 @@ export const enquiryModalContent = {
   sendError: "We could not send your enquiry right now. Please try again.",
   successMessage: "We’ve received your message and will be in touch shortly.",
   closeLabel: "Close enquiry form",
-  eyebrow: "Send an enquiry",
-  introPrefix: "Fill this out and we’ll get back to you ",
-  homeIntroEnding: "shortly",
+  eyebrow: "Get in touch",
+  intro:
+    "Tell us a little about what you need and how you'd prefer to be contacted, and we'll be in touch.",
   preferPrompt: "Prefer to speak to someone?",
   callCta: "Call 0477 948 079",
   successTitle: "Thanks for your enquiry",
@@ -80,30 +80,72 @@ export const enquiryModalContent = {
     name: "Your name",
     contact: "Phone Number or Email",
     suburb: "Suburb",
-    message: "Tell me what you need",
+    message: "How can we help? (optional)",
   },
   contactInvalidError: "Please enter a valid phone number or email address.",
   privacyDisclaimerBeforeLink:
-    "We'll use your contact details only to respond to this enquiry and provide the service you've asked about. View our",
+    "No Spam! We'll use your contact details only to respond to this enquiry and provide the service you've asked about. View our",
   privacyDisclaimerAfterLink: ".",
   privacyPolicyLabel: "Privacy Policy",
   privacyPolicyHref: "/privacy-policy",
   sendingCta: "Sending...",
-  submitCta: "Send Message",
+  submitCta: "Send My Details",
   wifiConnectivityQuote: {
-    title: "Get a Connectivity Quote",
+    productNames: [
+      "WiFi Solutions",
+      "Wi-Fi Help",
+      "Wi-Fi Access Point Installation",
+      "Internet to Sheds & Workshops",
+      "Outdoor Wi-Fi Installation",
+      "Business Wi-Fi & Network Assessment",
+    ],
+    title: "Need some professional help?",
     intro:
-      "Tell us a little about what you need, and we'll recommend a solution and provide a clear, fixed-price quote.",
-    messagePlaceholder:
-      "What would you like help with? A brief description is fine.",
-    submitCta: "Request a Quote",
+      "Have a question about Wi-Fi or home networking, need some advice or want a quote? Let us know how you'd prefer to be contacted and we'll be in touch.",
+    messagePlaceholder: "What can we help you with? (Optional)",
+    submitCta: "Send My Details",
   },
   starlinkInstallationQuote: {
-    title: "Get Your Starlink Installation Quote",
+    productNames: ["Starlink Installation"],
+    title: "Need your Starlink installed?",
     intro:
-      "Tell us where you need it installed. We’ll confirm the details and your fixed price.",
-    messagePlaceholder: "Anything you’d like us to know? (Optional)",
-    submitCta: "Get My Free Quote",
+      "Already have your Starlink kit? Leave your details and we'll get in touch to arrange your installation.",
+    messagePlaceholder: "What can we help you with? (Optional)",
+    submitCta: "Send My Details",
+  },
+  ajaxSecurityQuote: {
+    productNames: ["Ajax Alarm Systems"],
+    title: "Need some professional help?",
+    intro:
+      "Tell us how we can help, and how you'd prefer to be contacted, and we'll be in touch.",
+    messagePlaceholder: "What can we help you with? (Optional)",
+    submitCta: "Send My Details",
+  },
+  cctvQuote: {
+    productNames: ["Security Cameras"],
+    title: "Need some profeesional help?",
+    intro:
+      "We can help you with brands, features, camera placement, or a free quote. Let us know how you'd prefer to be contacted, and we'll be in touch.",
+    messagePlaceholder: "What can we help you with? (Optional)",
+    submitCta: "Send My Details",
+  },
+  dataCablingQuote: {
+    productNames: ["Data Cabling"],
+    title: "Get Your Data Cabling Quote",
+    intro:
+      "Tell us what you need connected and how you'd prefer to be contacted, and we'll be in touch.",
+    messagePlaceholder:
+      "Tell us where you need data points or a wired connection.",
+    submitCta: "Send My Details",
+  },
+  tvAntennaQuote: {
+    productNames: ["TV Antennas"],
+    title: "Get Your TV Antenna Quote",
+    intro:
+      "Tell us about your TV reception or antenna needs and how you'd prefer to be contacted, and we'll be in touch.",
+    messagePlaceholder:
+      "Tell us about your reception problem or the installation you need.",
+    submitCta: "Send My Details",
   },
 };
 

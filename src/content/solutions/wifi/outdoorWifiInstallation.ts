@@ -10,6 +10,7 @@ export const outdoorWifiInstallation: SolutionPageTemplateProps = {
     "We extend your network into outdoor areas, with professionally installed outdoor Wi-Fi access points, giving you internet access for streaming, working and connecting your devices around your property.",
   heroEyebrow: "OUTDOOR WI-FI INSTALLATION · PERTH",
   heroBackgroundImage: "/images/solutions/wifi/oakford-outdoor-wifi-hero.webp",
+  heroDesktopImageClassName: "object-center lg:object-[center_85%]",
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:
@@ -23,16 +24,11 @@ export const outdoorWifiInstallation: SolutionPageTemplateProps = {
     "Solutions from WiFi in Patios and Pools, up to large acreages and beyond",
     "Get your outdoor Wi-Fi organised without the runaround, with straightforward advice and clear communication.",
   ],
-  heroCtaLines: [
-    "",
-    "Leave your details and we’ll get back to you with a free quote.",
-  ],
+  heroCtaLines: [],
   primaryCta: {
     label: "Get a Free Quote Today",
     action: "enquiry",
     enquiryProductName: "Outdoor Wi-Fi Installation",
-    enquiryDefaultMessage:
-      "I’d like a quote for outdoor wi-fi installation. The area or connection I need help with is: ",
   },
   featureSections: [
     {
@@ -213,7 +209,5 @@ export const outdoorWifiInstallation: SolutionPageTemplateProps = {
     label: "Get a connectivity quote",
     action: "enquiry",
     enquiryProductName: "Outdoor Wi-Fi Installation",
-    enquiryDefaultMessage:
-      "I’d like a quote for outdoor wi-fi installation. The area or connection I need help with is: ",
   },
 };

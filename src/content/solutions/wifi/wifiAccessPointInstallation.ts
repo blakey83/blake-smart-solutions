@@ -12,6 +12,8 @@ export const wifiAccessPointInstallation: SolutionPageTemplateProps = {
   heroEyebrow: "WI-FI ACCESS POINT INSTALLATION · PERTH",
   heroBackgroundImage:
     "/images/solutions/wifi/attadale-access-points/ceiling-ap-wooden-cabinet.webp",
+  heroDesktopImageClassName:
+    "object-center lg:w-[125%] lg:max-w-none lg:object-[center_60%]",
   heroSocialProof: {
     ...wifiSolutionContent.heroSocialProof,
     quote:
@@ -21,20 +23,15 @@ export const wifiAccessPointInstallation: SolutionPageTemplateProps = {
   bulletPoints: [
     "Reliable Wi-Fi coverage throughout your home, wherever you need to connect.",
     "Smooth streaming, video calls and gaming, with more dependable connectivity.",
-    "Professional placement, means you're maximizing your home network",
+    "Professional placement and testing, means you're maximizing your home network",
     "Wall or ceiling mounted for a neater installation that's less intrusive.",
     "Know what you're paying for before work begins, with a clear, upfront quote.",
   ],
-  heroCtaLines: [
-    "",
-    "Leave you details, and we'll get back to you with a free, easy-to-understand quote.",
-  ],
+
   primaryCta: {
     label: "Get a free quote today",
     action: "enquiry",
     enquiryProductName: "Wi-Fi Access Point Installation",
-    enquiryDefaultMessage:
-      "I’d like a quote for wi-fi access point installation. The area or connection I need help with is: ",
   },
   featureSections: [
     {
@@ -227,7 +224,5 @@ export const wifiAccessPointInstallation: SolutionPageTemplateProps = {
     label: "Get a connectivity quote",
     action: "enquiry",
     enquiryProductName: "Wi-Fi Access Point Installation",
-    enquiryDefaultMessage:
-      "I’d like a quote for wi-fi access point installation. The area or connection I need help with is: ",
   },
 };

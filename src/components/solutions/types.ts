@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { CompletedJob } from "@/lib/types";
 
 export type CtaButton = {
   label: string;
@@ -45,8 +46,7 @@ export type HeroReviewStrip = {
 };
 
 export type RecentWorkSection = {
-  image: string;
-  imageAlt?: string;
+  installations: CompletedJob[];
   eyebrow: string;
   title: string;
   href: string;
@@ -104,6 +104,7 @@ export type SolutionPageTemplateProps = {
   subHeadline: string;
   heroEyebrow?: string;
   heroBackgroundImage?: string;
+  heroDesktopImageClassName?: string;
   heroMobileSources?: { avif: string; webp: string };
   heroImage?: string;
   heroImageAlt?: string;

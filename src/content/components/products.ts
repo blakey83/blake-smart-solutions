@@ -103,7 +103,7 @@ export const heroContent = {
 
 export const trustItems = [
   "WA Police Licensed (SA 84208)",
-  "Fully Insured",
+  "5.0★ Google Rating",
   "Perth-Based Local Business",
   "20+ Years Technology Experience",
 ];

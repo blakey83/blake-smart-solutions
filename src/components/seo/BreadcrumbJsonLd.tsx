@@ -60,6 +60,13 @@ const breadcrumbRoutes: Record<string, BreadcrumbConfig> = {
       path: "/recent-installations",
     },
   },
+  "/recent-installations/security-cameras": {
+    title: "Recent Security Camera Installations",
+    section: {
+      title: "Security Cameras Perth",
+      path: "/security-cameras-perth",
+    },
+  },
   "/recent-installations/starlink": {
     title: "Recent Starlink Installations",
     section: {
