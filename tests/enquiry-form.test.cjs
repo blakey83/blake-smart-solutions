@@ -45,6 +45,7 @@ for (const presentation of ['inline', 'modal']) {
     assert.equal(h.states[3].type, 'success');
     assert.deepEqual(h.tracking, ['submit']);
     assert.equal(h.nodes.find(n => n.type === 'textarea').props.required, false);
+    assert.equal(h.nodes.find(n => n.props?.name === 'contact').props.autoComplete, 'off');
   });
 }
 test('invalid contact, server failure and network failure do not track a successful lead', async () => {

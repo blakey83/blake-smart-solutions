@@ -235,7 +235,7 @@ export function TimedAvailabilityPopup({
               onChange={handleChange}
               required
               inputMode="email"
-              autoComplete="email tel"
+              autoComplete="off"
               className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"
             />
             <input

@@ -355,7 +355,7 @@ export function EnquiryForm({
               onChange={handleChange}
               required
               inputMode="email"
-              autoComplete="email tel"
+              autoComplete="off"
               className={isInline ? "min-w-0 w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-base text-slate-900 outline-none transition focus:border-sky-500" : "w-full rounded-2xl border border-slate-200 px-4 py-3 text-base outline-none transition focus:border-sky-500"}
             />
 
