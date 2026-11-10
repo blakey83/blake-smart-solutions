@@ -6,11 +6,15 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
     eyebrow: "Recent security camera installations",
     title: "See our recent security camera installations across Perth",
     href: "/recent-installations/security-cameras",
-    installations: recentSecurityCameraInstallationsContent.completedJobs.slice(0, 3),
+    installations: recentSecurityCameraInstallationsContent.completedJobs.slice(
+      0,
+      3,
+    ),
   },
   specialOffer: {
-    title: "Two Camera HiLook CCTV System Fully Installed",
-    price: "$1,399",
+    title:
+      "Western Australian Seniors Card members can now claim up to $400 per household on a new CCTV system",
+    price: "",
   },
   headline:
     "Security Cameras Installed Properly. Explained Clearly. Supported Locally.",
@@ -26,8 +30,10 @@ export const cctvSolutionContent: SolutionPageTemplateProps = {
   ],
   heroEyebrow: "ATTENTION PERTH HOMEOWNERS",
   heroBackgroundImage: "/images/solutions/cctv/security-camera-hero.webp",
-  heroDesktopImageClassName: "object-center lg:w-[130%] lg:max-w-none lg:object-[center_44%]",
-  heroImageAlt: "Dahua security camera installed on an exterior brick wall with its warning light illuminated",
+  heroDesktopImageClassName:
+    "object-center lg:w-[130%] lg:max-w-none lg:object-[center_44%]",
+  heroImageAlt:
+    "Dahua security camera installed on an exterior brick wall with its warning light illuminated",
   // heroImage: "/images/solutions/cctv/blake_installation.jpg",
   // heroImageAlt: "Security camera installation by Blake Smart Solutions",
 
